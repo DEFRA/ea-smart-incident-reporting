@@ -1,0 +1,235 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "jtokDataObject&StateMachine_1",
+        "SystemException&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "strProcessType&StateMachine_1",
+        "boolRunProcess&StateMachine_1",
+        "strWorkLogFilepath&StateMachine_1",
+        "boolLastTransaction&StateMachine_1",
+        "boolContinue&StateMachine_1",
+        "boolSkipEndConfirmation&StateMachine_1",
+        "swProcessingTimer&StateMachine_1",
+        "intConSysEx&StateMachine_1",
+        "Credentials&StateMachine_1",
+        "TransactionItem&StateMachine_1",
+        "strUserFolder&Sequence_72",
+        "arrFilePath&Sequence_82",
+        "listConfigFilepaths&Sequence_82",
+        "strFullFilepath&Sequence_81",
+        "boolFolderExists&Sequence_79",
+        "boolShouldStop&Sequence_93",
+        "dateCaseStartTime&State_3",
+        "arrCaseID&State_3",
+        "arrExitPoint&State_3",
+        "strCaseIDText&Sequence_28",
+        "strOutcome&Sequence_85",
+        "strOutcomeMessage&Sequence_85"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_boolUnattended"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "DeleteMe.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strHorizonInstance&Sequence_16",
+        "strNIRSInstance&Sequence_16",
+        "credVMWare&Sequence_16",
+        "collProcesses&Sequence_9"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_Config"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/SetTransactionStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "QueueRetry&Sequence_13",
+        "strLogNote&Sequence_13"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_arrCaseID",
+        "in_arrExitPoint",
+        "in_BusinessException",
+        "in_dateCaseStartTime",
+        "in_strWorkLogFilepath",
+        "in_swProcessingTimer",
+        "in_SystemException",
+        "in_TransactionItem",
+        "io_Config",
+        "io_intConSysEx",
+        "io_RetryNumber",
+        "io_TransactionNumber"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/GetTransactionData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "intRecordResponseStatus&Sequence_4",
+        "intOAuthResponseStatus&Sequence_4",
+        "jarRecordResponse&Sequence_4",
+        "objRecordResponse&Sequence_4",
+        "strRecordResponse&Sequence_4",
+        "objOAuth2Response&Sequence_4",
+        "strOAuth2Response&Sequence_4",
+        "credDataverse&Sequence_4",
+        "listMailMessages&Sequence_1",
+        "credNetworkCredentials&Sequence_1",
+        "mailInProgressMessage&Sequence_1",
+        "mailCurrentMessage&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_jtokDataObject",
+        "io_Config",
+        "in_TransactionNumber",
+        "out_TransactionItem",
+        "out_boolLastTransaction",
+        "in_strProcessType",
+        "in_boolContinue"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllSettings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "intStatusCode&Sequence_1",
+        "strJson&Sequence_1",
+        "objJson&Sequence_1",
+        "arrJson&Sequence_1",
+        "strUser&Sequence_1",
+        "strError&Sequence_1",
+        "strPass&Flowchart_3",
+        "strAsset&Flowchart_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_Config",
+        "out_Credentials",
+        "in_OrchestratorFolders",
+        "in_RetrieveCredentials"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Transaction.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strNIRSIdMessage&Sequence_5",
+        "strPausePointText&Sequence_3",
+        "jobRoboticsJSON&Flowchart_1",
+        "jobPassDetailsToRoboticsJSON&Sequence_1",
+        "strPassDetailsToRobotics&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_jtokDataObject",
+        "in_TransactionItem",
+        "io_arrExitPoint",
+        "io_swProcessingTimer",
+        "io_Config",
+        "io_arrCaseID"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Subflows/Validate JSON Schema.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtPassFields&Sequence_13",
+        "dtAssessmentFields&Sequence_11",
+        "dtExtOrgFields&Sequence_9",
+        "dtMoPFields&Sequence_7",
+        "dtNotificationFields&Sequence_3",
+        "dtFieldGroupings&Flowchart_1",
+        "listDataErrors&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_jobRoboticsJSON",
+        "in_jtokDataObject"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Subflows/Enter Report Details.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "booContactLookup&Sequence_42",
+        "strOrganisation&Sequence_53",
+        "ieChildren&Sequence_53",
+        "listDropdownOptions&Sequence_53",
+        "booValidOption&Sequence_53",
+        "strDropdownOption&Sequence_54",
+        "strOrganisationType&Sequence_49",
+        "ieChildren&Sequence_49",
+        "listDropdownOptions&Sequence_49",
+        "booValidOption&Sequence_49",
+        "strDropdownOption&Sequence_50",
+        "strSelectedItem&Sequence_18",
+        "strSelectedItem&Sequence_19",
+        "strContactDetailsIndex&Sequence_20",
+        "strContactTypeIndex&Sequence_20",
+        "strTimeReported&Flowchart_1",
+        "matDateReported&Sequence_1",
+        "strDateReported&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_jobRoboticsJSON",
+        "in_jtokDataObject"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/KillAllProcesses.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/CloseAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+Stage,Field
+Notification,datetimeReported
+Notification,reporterSurname
+External Organisation,Organisation
+Member of Public,reporterSurname
+External Organisation,Organisation Type
+Notification,reportType
+Notification,suspectedSource
+Notification,Event Description
+Notification,datetimeObserved
+Notification,Quadrant
+Notification,National Grid Reference 1
+Notification,National Grid Reference 2
+Assess,typeOfIncident
+Assess,dateOfInitialAssessment
+Assess,timeOfinitialAssessment
+Assess,actualPotentialEAIncident
+Assess,assessmentCategory
+Assess,attendance
+Pass,passUser
