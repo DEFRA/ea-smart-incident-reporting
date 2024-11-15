@@ -1,0 +1,307 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Initialize_Applications" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:c="clr-namespace:Credentials;assembly=Credentials" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Diagnostics;assembly=System" xmlns:sn="clr-namespace:System.Net;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="io_Config" Type="InOutArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1226,3046</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="54">
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Management.Automation</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>Credentials</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="48">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>TimeSpan2</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>Credentials</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="610,2981" sap2010:WorkflowViewState.IdRef="Sequence_9">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sco:Collection(sd:Process)" Name="collProcesses" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="548,94" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Opening applications...&quot;]" />
+    <Sequence DisplayName="Launch NIRS" sap:VirtualizedContainerService.HintSize="548,2705" sap2010:WorkflowViewState.IdRef="Sequence_16">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="sn:NetworkCredential" Name="credVMWare" />
+        <Variable x:TypeArguments="x:String" Name="strNIRSInstance" />
+        <Variable x:TypeArguments="x:String" Name="strHorizonInstance" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start VMWare" FileName="[io_Config(&quot;VMWare Application Filepath&quot;).ToString]" sap:VirtualizedContainerService.HintSize="486,88" sap2010:WorkflowViewState.IdRef="StartProcess_2" />
+      <Assign DisplayName="Assign Horizon Instance" sap:VirtualizedContainerService.HintSize="486,83" sap2010:WorkflowViewState.IdRef="Assign_3">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[strHorizonInstance]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[io_Config("Horizon Instance").ToString]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="486,235" sap2010:WorkflowViewState.IdRef="BlockUserInput_1" KeyModifiers="Alt" SpecialKey="True">
+        <ui:BlockUserInput.Body>
+          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Click Horizon Instance" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition Position="Center">
+                <ui:CursorPosition.OffsetX>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetX>
+                <ui:CursorPosition.OffsetY>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetY>
+              </ui:CursorPosition>
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4335b83c-252a-4a91-8c93-3467b7a023f4" InformativeScreenshot="c8d39d04706529a8396de229dc4f017f" Selector="&lt;wnd app='vmware-view.exe' cls='HwndWrapper*' title='VMware Horizon Client' /&gt;&lt;ctrl name='{{strHorizonInstance}}' role='list item' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:Click.Target>
+          </ui:Click>
+        </ui:BlockUserInput.Body>
+      </ui:BlockUserInput>
+      <c:Get_Credential DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="486,25" IN_strCredentialName="SIRP Horizon VM Credentials" IN_strRequestMessage="Please enter the credentials for the Horizon VM Client." IN_strRequestTitle="Enter Credentials" sap2010:WorkflowViewState.IdRef="Get_Credential_1" OUT_credNetworkCredential="[credVMWare]" />
+      <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="486,668" sap2010:WorkflowViewState.IdRef="BlockUserInput_2" KeyModifiers="Alt" SpecialKey="True">
+        <ui:BlockUserInput.Body>
+          <Sequence DisplayName="Type Username &amp; Password" sap:VirtualizedContainerService.HintSize="450,540" sap2010:WorkflowViewState.IdRef="Sequence_17">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Username" EmptyField="True" sap:VirtualizedContainerService.HintSize="388,135" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[credVMWare.UserName]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="32c57717-b38d-4bb0-b087-9870594c1893" InformativeScreenshot="0426421e0a92d44acd2fd5fd7884c9ef" Selector="&lt;wnd app='vmware-view.exe' cls='HwndWrapper*' title='VMware Horizon Client' /&gt;&lt;ctrl name='Enter your user name' role='editable text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:TypeSecureText AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Private: Type Password" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="TypeSecureText_1" SecureText="[credVMWare.SecurePassword]">
+              <ui:TypeSecureText.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="867395d6-d43f-4ce2-81a6-6c1a653f54db" InformativeScreenshot="351536d5e53bc054d908bd7009f5175f" Selector="&lt;wnd app='vmware-view.exe' cls='HwndWrapper*' title='VMware Horizon Client' /&gt;&lt;ctrl name='Enter your password' role='editable text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeSecureText.Target>
+            </ui:TypeSecureText>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Login" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b4347c65-6243-4fa4-b526-79b46228eb35" InformativeScreenshot="c0b5b1e20b470db978f798b27a22bcd7" Selector="&lt;wnd app='vmware-view.exe' cls='HwndWrapper*' title='VMware Horizon Client' /&gt;&lt;ctrl name='Login' role='push button' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+          </Sequence>
+        </ui:BlockUserInput.Body>
+      </ui:BlockUserInput>
+      <TryCatch DisplayName="Wait for Horizon to Load" sap:VirtualizedContainerService.HintSize="486,340" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+        <TryCatch.Try>
+          <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Check Horizon Landing Page Loaded" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+            <ui:WaitUiElementAppear.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9bc58b25-089d-486c-9950-d74591b52058" InformativeScreenshot="60421574ab06277440a14f764cff46c6" Selector="&lt;wnd app='vmware-view.exe' cls='HwndWrapper*' title='VMware Horizon Client' /&gt;&lt;ctrl name='Settings' role='push button' /&gt;" TimeoutMS="10000">
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:WaitUiElementAppear.Target>
+          </ui:WaitUiElementAppear>
+        </TryCatch.Try>
+        <TryCatch.Catches>
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ActivityAction x:TypeArguments="s:Exception">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+              </ActivityAction.Argument>
+              <Throw DisplayName="Throw BRE" Exception="[New BusinessRuleException(&quot;Login to Horizon Client has failed.&quot;)]" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Throw_1" />
+            </ActivityAction>
+          </Catch>
+        </TryCatch.Catches>
+      </TryCatch>
+      <Assign DisplayName="Assign NIRS Instance" sap:VirtualizedContainerService.HintSize="486,83" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[strNIRSInstance]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[io_Config("NIRS Instance").ToString]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="486,235" sap2010:WorkflowViewState.IdRef="BlockUserInput_3" KeyModifiers="Alt" SpecialKey="True">
+        <ui:BlockUserInput.Body>
+          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Click NIRS Instance" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition Position="Center">
+                <ui:CursorPosition.OffsetX>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetX>
+                <ui:CursorPosition.OffsetY>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetY>
+              </ui:CursorPosition>
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d39eaec1-4759-4b3b-b114-eb3b59afbe02" InformativeScreenshot="3f14fa7c0b8ffa8c1209cf8de765a583" Selector="&lt;wnd app='vmware-view.exe' cls='HwndWrapper*' title='VMware Horizon Client' /&gt;&lt;ctrl name='{{strNIRSInstance}}' role='list item' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:Click.Target>
+          </ui:Click>
+        </ui:BlockUserInput.Body>
+      </ui:BlockUserInput>
+      <TryCatch DisplayName="Wait for NIRS to Load" sap:VirtualizedContainerService.HintSize="486,517" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+        <TryCatch.Try>
+          <ui:RetryScope DisplayName="Retry - Check for NIRS Open" sap:VirtualizedContainerService.HintSize="376,284" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="60" RetryInterval="00:00:00">
+            <ui:RetryScope.ActivityBody>
+              <ActivityAction>
+                <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Check NIRS Landing Page Loaded" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
+                  <ui:WaitUiElementAppear.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9bc58b25-089d-486c-9950-d74591b52058" InformativeScreenshot="0de1435a3cfc6c04016926dc803f40ad" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='Incident Recording System - *' /&gt;" TimeoutMS="5000">
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:WaitUiElementAppear.Target>
+                </ui:WaitUiElementAppear>
+              </ActivityAction>
+            </ui:RetryScope.ActivityBody>
+            <ui:RetryScope.Condition>
+              <ActivityFunc x:TypeArguments="x:Boolean" />
+            </ui:RetryScope.Condition>
+          </ui:RetryScope>
+        </TryCatch.Try>
+        <TryCatch.Catches>
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ActivityAction x:TypeArguments="s:Exception">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+              </ActivityAction.Argument>
+              <Throw DisplayName="Throw" Exception="[New Exception(&quot;NIRS Application has failed to launch: &quot;+exception.Message)]" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Throw_2" />
+            </ActivityAction>
+          </Catch>
+        </TryCatch.Catches>
+      </TryCatch>
+    </Sequence>
+  </Sequence>
+</Activity>
