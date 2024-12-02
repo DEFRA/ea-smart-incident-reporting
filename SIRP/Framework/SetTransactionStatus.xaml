@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SetTransactionStatus___Sequence" this:SetTransactionStatus___Sequence.in_TransactionItem="[Nothing]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:l="clr-namespace:Logging;assembly=Logging" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:Pop_Ups;assembly=Pop Ups" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Diagnostics;assembly=System" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SetTransactionStatus___Sequence" this:SetTransactionStatus___Sequence.in_TransactionItem="[Nothing]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:l="clr-namespace:Logging;assembly=Logging" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Diagnostics;assembly=System" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_arrCaseID" Type="InArgument(s:String[])" />
     <x:Property Name="in_arrExitPoint" Type="InArgument(s:Int32[])" />
@@ -16,7 +16,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1236,1291</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>879,1291</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SetTransactionStatus___Sequence_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -278,9 +278,9 @@
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message (Business Exception)" sap:VirtualizedContainerService.HintSize="594.5,94" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Error" Message="[in_BusinessException.Message]" />
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="594.5,94" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Warn" Message="[&quot;Remember to configure the BUSINESS set transaction status activity!&quot;]" />
-                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="594.5,271" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                <ui:LogMessage DisplayName="Log Message (Business Exception)" sap:VirtualizedContainerService.HintSize="595,94" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Error" Message="[in_BusinessException.Message]" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="595,94" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Warn" Message="[&quot;Remember to configure the BUSINESS set transaction status activity!&quot;]" />
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="595,271" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                   <ui:CommentOut.Body>
                     <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,192" sap2010:WorkflowViewState.IdRef="Sequence_15">
                       <sap:WorkflowViewStateService.ViewState>
@@ -299,34 +299,33 @@
                     </Sequence>
                   </ui:CommentOut.Body>
                 </ui:CommentOut>
-                <InvokeMethod DisplayName="Stop Stopwatch" sap:VirtualizedContainerService.HintSize="594.5,137" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="Stop">
+                <InvokeMethod DisplayName="Stop Stopwatch" sap:VirtualizedContainerService.HintSize="595,136" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="Stop">
                   <InvokeMethod.TargetObject>
                     <InArgument x:TypeArguments="sd:Stopwatch">[in_swProcessingTimer]</InArgument>
                   </InvokeMethod.TargetObject>
                 </InvokeMethod>
-                <l:LogTransaction DisplayName="LogTransaction - SQL" sap:VirtualizedContainerService.HintSize="594.5,25" IN_dateEndDateTime="[Now]" IN_dateStartDateTime="[in_dateCaseStartTime]" IN_intExitPoint="[in_arrExitPoint(0)]" IN_strFileName="[io_Config(&quot;SQLTransactionLogFilepath&quot;).ToString]" IN_strOutcome="Business Exception" IN_strOutcomeNotes="[in_BusinessException.Message]" IN_strTotalTime="[(Math.Round(in_swProcessingTimer.Elapsed.TotalSeconds, 2)).ToString]" IN_strTransactionID="[String.Join(&quot;, &quot;, in_arrCaseID.Where(Function(s) not String.IsNullOrEmpty(s)))]" IN_strUser="[io_Config(&quot;Username&quot;).ToString]" IN_strVersion="[io_Config(&quot;WorkPackageVersion&quot;).ToString]" IN_strWorkPackage="[io_Config(&quot;WorkPackageID&quot;).ToString]" sap2010:WorkflowViewState.IdRef="LogTransaction_2">
+                <l:LogTransaction DisplayName="LogTransaction - SQL" sap:VirtualizedContainerService.HintSize="595,25" IN_dateEndDateTime="[Now]" IN_dateStartDateTime="[in_dateCaseStartTime]" IN_intExitPoint="[in_arrExitPoint(0)]" IN_strFileName="[io_Config(&quot;SQLTransactionLogFilepath&quot;).ToString]" IN_strOutcome="Business Exception" IN_strOutcomeNotes="[in_BusinessException.Message]" IN_strTotalTime="[(Math.Round(in_swProcessingTimer.Elapsed.TotalSeconds, 2)).ToString]" IN_strTransactionID="[String.Join(&quot;, &quot;, in_arrCaseID.Where(Function(s) not String.IsNullOrEmpty(s)))]" IN_strUser="[io_Config(&quot;Username&quot;).ToString]" IN_strVersion="[io_Config(&quot;WorkPackageVersion&quot;).ToString]" IN_strWorkPackage="[io_Config(&quot;WorkPackageID&quot;).ToString]" sap2010:WorkflowViewState.IdRef="LogTransaction_2">
                   <l:LogTransaction.IN_strMiscNotes>
                     <InArgument x:TypeArguments="x:String">
                       <Literal x:TypeArguments="x:String" DisplayName="Literal&lt;String&gt;" Value="" />
                     </InArgument>
                   </l:LogTransaction.IN_strMiscNotes>
                 </l:LogTransaction>
-                <If Condition="[Cbool(io_Config(&quot;Unattended&quot;))]" DisplayName="If - unattended" sap:VirtualizedContainerService.HintSize="594.4,362.4" sap2010:WorkflowViewState.IdRef="If_5">
+                <If Condition="[Cbool(io_Config(&quot;Unattended&quot;))]" DisplayName="If - unattended" sap:VirtualizedContainerService.HintSize="595,297" sap2010:WorkflowViewState.IdRef="If_5">
                   <If.Else>
-                    <Sequence sap:VirtualizedContainerService.HintSize="450,200.8" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                    <Sequence sap:VirtualizedContainerService.HintSize="450,136" sap2010:WorkflowViewState.IdRef="Sequence_17">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <l:Log_Case DisplayName="Log Case - Local File" sap:VirtualizedContainerService.HintSize="388,24.8" IN_dateCaseEndTime="[Now]" IN_dateCaseStartTime="[in_dateCaseStartTime]" IN_dateCaseTotalTime="[(Now - in_dateCaseStartTime).ToString]" IN_strCaseID="[String.Join(&quot;, &quot;, in_arrCaseID.Where(Function(s) not String.IsNullOrEmpty(s)))]" IN_strFilePath="[in_strWorkLogFilepath]" IN_strOutcome="Business Exception" IN_strOutcomeMessage="[in_BusinessException.Message]" IN_strUser="[io_Config(&quot;Username&quot;).ToString]" IN_strWorkpackageName="[io_Config(&quot;BusinessProcessName&quot;).ToString]" sap2010:WorkflowViewState.IdRef="Log_Case_2" in_dblCaseProcessingTime="[Math.Round(in_swProcessingTimer.Elapsed.TotalSeconds, 2)]">
+                      <l:Log_Case DisplayName="Log Case - Local File" sap:VirtualizedContainerService.HintSize="388,25" IN_dateCaseEndTime="[Now]" IN_dateCaseStartTime="[in_dateCaseStartTime]" IN_dateCaseTotalTime="[(Now - in_dateCaseStartTime).ToString]" IN_strCaseID="[String.Join(&quot;, &quot;, in_arrCaseID.Where(Function(s) not String.IsNullOrEmpty(s)))]" IN_strFilePath="[in_strWorkLogFilepath]" IN_strOutcome="Business Exception" IN_strOutcomeMessage="[in_BusinessException.Message]" IN_strUser="[io_Config(&quot;Username&quot;).ToString]" IN_strWorkpackageName="[io_Config(&quot;BusinessProcessName&quot;).ToString]" sap2010:WorkflowViewState.IdRef="Log_Case_2" in_dblCaseProcessingTime="[Math.Round(in_swProcessingTimer.Elapsed.TotalSeconds, 2)]">
                         <l:Log_Case.IN_strNotes>
                           <InArgument x:TypeArguments="x:String">
                             <Literal x:TypeArguments="x:String" Value="" />
                           </InArgument>
                         </l:Log_Case.IN_strNotes>
                       </l:Log_Case>
-                      <p:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="Business Exception Form" sap:VirtualizedContainerService.HintSize="388,24.8" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\Exception.css&quot;]" IN_ErrorMessage="The stop button was pressed" IN_PopupMessage="[&quot;&lt;h1&gt;Business Exception Encountered&lt;/h1&gt;&lt;P&gt;A Business Exception has occured during processing of '&quot;+in_BusinessException.Source+&quot;'.&lt;BR&gt;&lt;BR&gt; Error Message: &quot;+in_BusinessException.Message+&quot;&lt;BR&gt;&lt;BR&gt;More details can be found within: &quot;+in_strWorkLogFilepath+&quot;&lt;/P&gt;&lt;BR&gt;&quot;]" IN_PopupTitle="Department for Environment, Food and Rural Affairs" IN_WidthHeight="[{850,450}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_1" />
                     </Sequence>
                   </If.Else>
                 </If>
@@ -344,7 +343,7 @@
                   <av:Size x:Key="ShapeSize">200,175</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence sap2010:Annotation.AnnotationText="If a system exception occurs during the process, the transaction item's status is updated as Failed (Exception Type: Application)." DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="657,2713.5" sap2010:WorkflowViewState.IdRef="Sequence_13">
+              <Sequence sap2010:Annotation.AnnotationText="If a system exception occurs during the process, the transaction item's status is updated as Failed (Exception Type: Application)." DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="657,2647" sap2010:WorkflowViewState.IdRef="Sequence_13">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Boolean" Name="QueueRetry" />
                   <Variable x:TypeArguments="x:String" Name="strLogNote" />
@@ -441,20 +440,19 @@
                   </InvokeMethod.TargetObject>
                 </InvokeMethod>
                 <l:LogTransaction DisplayName="LogTransaction - SQL" sap:VirtualizedContainerService.HintSize="595,25" IN_dateEndDateTime="[Now]" IN_dateStartDateTime="[in_dateCaseStartTime]" IN_intExitPoint="[in_arrExitPoint(0)]" IN_strFileName="[io_Config(&quot;SQLTransactionLogFilepath&quot;).ToString]" IN_strMiscNotes="[strLogNote]" IN_strOutcome="System Exception" IN_strOutcomeNotes="[in_SystemException.Message]" IN_strTotalTime="[(Math.Round(in_swProcessingTimer.Elapsed.TotalSeconds, 2)).ToString]" IN_strTransactionID="[String.Join(&quot;, &quot;, in_arrCaseID.Where(Function(s) not String.IsNullOrEmpty(s)))]" IN_strUser="[io_Config(&quot;Username&quot;).ToString]" IN_strVersion="[io_Config(&quot;WorkPackageVersion&quot;).ToString]" IN_strWorkPackage="[io_Config(&quot;WorkPackageID&quot;).ToString]" sap2010:WorkflowViewState.IdRef="LogTransaction_3" />
-                <If Condition="[Cbool(io_Config(&quot;Unattended&quot;))]" DisplayName="If - unattended" sap:VirtualizedContainerService.HintSize="595,363" sap2010:WorkflowViewState.IdRef="If_4">
+                <If Condition="[Cbool(io_Config(&quot;Unattended&quot;))]" DisplayName="If - unattended" sap:VirtualizedContainerService.HintSize="595,298" sap2010:WorkflowViewState.IdRef="If_4">
                   <If.Else>
-                    <Sequence sap:VirtualizedContainerService.HintSize="450,201" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                    <Sequence sap:VirtualizedContainerService.HintSize="450,136" sap2010:WorkflowViewState.IdRef="Sequence_18">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <l:Log_Case DisplayName="Log Case" sap:VirtualizedContainerService.HintSize="388,24.8" IN_dateCaseEndTime="[Now]" IN_dateCaseStartTime="[in_dateCaseStartTime]" IN_dateCaseTotalTime="[(Now - in_dateCaseStartTime).ToString]" IN_strCaseID="[String.Join(&quot;, &quot;, in_arrCaseID.Where(Function(s) not String.IsNullOrEmpty(s)))]" IN_strFilePath="[in_strWorkLogFilepath]" IN_strNotes="[strLogNote]" IN_strOutcome="System Exception" IN_strOutcomeMessage="[in_SystemException.Message]" IN_strUser="[io_Config(&quot;Username&quot;).ToString]" IN_strWorkpackageName="[io_Config(&quot;BusinessProcessName&quot;).ToString]" sap2010:WorkflowViewState.IdRef="Log_Case_3" in_dblCaseProcessingTime="[Math.Round(in_swProcessingTimer.Elapsed.TotalSeconds, 2)]" />
-                      <p:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="System Exception Form" sap:VirtualizedContainerService.HintSize="388,24.8" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\Exception.css&quot;]" IN_ErrorMessage="The stop button was pressed" IN_PopupMessage="[&quot;&lt;h1&gt;System Exception Encountered&lt;/h1&gt;&lt;P&gt;A System Exception has occured during processing.&lt;BR&gt;&lt;BR&gt;More details can be found within: &quot;+in_strWorkLogFilepath+&quot;&lt;/P&gt;&lt;BR&gt;&quot;]" IN_PopupTitle="Department for Environment, Food and Rural Affairs" IN_WidthHeight="[{600,350}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_2" />
+                      <l:Log_Case DisplayName="Log Case" sap:VirtualizedContainerService.HintSize="388,25" IN_dateCaseEndTime="[Now]" IN_dateCaseStartTime="[in_dateCaseStartTime]" IN_dateCaseTotalTime="[(Now - in_dateCaseStartTime).ToString]" IN_strCaseID="[String.Join(&quot;, &quot;, in_arrCaseID.Where(Function(s) not String.IsNullOrEmpty(s)))]" IN_strFilePath="[in_strWorkLogFilepath]" IN_strNotes="[strLogNote]" IN_strOutcome="System Exception" IN_strOutcomeMessage="[in_SystemException.Message]" IN_strUser="[io_Config(&quot;Username&quot;).ToString]" IN_strWorkpackageName="[io_Config(&quot;BusinessProcessName&quot;).ToString]" sap2010:WorkflowViewState.IdRef="Log_Case_3" in_dblCaseProcessingTime="[Math.Round(in_swProcessingTimer.Elapsed.TotalSeconds, 2)]" />
                     </Sequence>
                   </If.Else>
                 </If>
-                <TryCatch sap2010:Annotation.AnnotationText="Close all applications before returning to the Initialization state and opening them again.&#xA;If applications cannot be closed, kill their respective processes." DisplayName="Try closing applications" sap:VirtualizedContainerService.HintSize="594.4,408.4" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                <TryCatch sap2010:Annotation.AnnotationText="Close all applications before returning to the Initialization state and opening them again.&#xA;If applications cannot be closed, kill their respective processes." DisplayName="Try closing applications" sap:VirtualizedContainerService.HintSize="595,407" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -463,14 +461,14 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <TryCatch.Try>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CloseAllApplications workflow" sap:VirtualizedContainerService.HintSize="365.6,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Framework\CloseAllApplications.xaml">
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CloseAllApplications workflow" sap:VirtualizedContainerService.HintSize="365,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Framework\CloseAllApplications.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <scg:Dictionary x:TypeArguments="x:String, Argument" />
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                   </TryCatch.Try>
                   <TryCatch.Catches>
-                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.6,22.8" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -481,13 +479,13 @@
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="s:Exception" Name="Exception" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Close applications" sap:VirtualizedContainerService.HintSize="500,584.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                        <Sequence DisplayName="Close applications" sap:VirtualizedContainerService.HintSize="500,584" sap2010:WorkflowViewState.IdRef="Sequence_12">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log message (CloseAllApplications failed)" sap:VirtualizedContainerService.HintSize="438,94.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Warn" Message="[&quot;CloseAllApplications failed. &quot;+Exception.Message+&quot; at Source: &quot;+Exception.Source]" />
+                          <ui:LogMessage DisplayName="Log message (CloseAllApplications failed)" sap:VirtualizedContainerService.HintSize="438,94" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Warn" Message="[&quot;CloseAllApplications failed. &quot;+Exception.Message+&quot; at Source: &quot;+Exception.Source]" />
                           <TryCatch DisplayName="Try killing processes" sap:VirtualizedContainerService.HintSize="438,339" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">

@@ -1,8 +1,8 @@
 Stage,Field
 Notification,datetimeReported
+Notification,reporterName
 Notification,reporterSurname
 External Organisation,Organisation
-Member of Public,reporterSurname
 External Organisation,Organisation Type
 Notification,reportType
 Notification,suspectedSource
