@@ -51,6 +51,8 @@
       "Path": "Framework/InitAllApplications.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "booObjectVar&Sequence_28",
+        "booModalForm&Sequence_16",
         "strHorizonInstance&Sequence_16",
         "strNIRSInstance&Sequence_16",
         "credVMWare&Sequence_16",
@@ -66,10 +68,14 @@
       "Path": "Framework/SetTransactionStatus.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "strBody&Sequence_25",
+        "strBody&Sequence_26",
+        "strBody&Sequence_27",
         "QueueRetry&Sequence_13",
         "strLogNote&Sequence_13"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_jtokDataObject",
         "in_arrCaseID",
         "in_arrExitPoint",
         "in_BusinessException",
@@ -141,6 +147,9 @@
       "Path": "Process/Process Transaction.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "booSpellCheck&Sequence_27",
+        "strPausePointText&Sequence_26",
+        "strPausePointText&Sequence_22",
         "strPausePointText&Sequence_20",
         "strPausePointText&Sequence_15",
         "booValidationError&Sequence_16",
@@ -232,7 +241,9 @@
       "Path": "Framework/KillAllProcesses.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
     },
@@ -240,7 +251,9 @@
       "Path": "Framework/CloseAllApplications.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
     },
@@ -248,20 +261,10 @@
       "Path": "Process/Process Subflows/Reset NIRS.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "booDialogBox&Sequence_2",
+        "intLoopCounter&Sequence_1",
         "booCancelConfirm&Sequence_2",
         "booHomePage&Sequence_1"
-      ],
-      "ArgumentsSectionElementsOrder": [],
-      "ConstantsSectionElementsOrder": null,
-      "AddedNamespaces": null
-    },
-    {
-      "Path": "DeleteMe - Add Queue Item.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "booLoginSuccess&Sequence_1",
-        "credVMWare&Sequence_1",
-        "strNIRSInstance&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": null,
@@ -348,14 +351,75 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Process/Process Subflows/Pass Record.xaml",
+      "Path": "Process/Process Subflows/Search for NIRS ID.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "strSearchOpen&Flowchart_1"
+        "strSearchOpen&Flowchart_1",
+        "strFilterStatus&Flowchart_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_Config",
         "in_jobRoboticsJSON",
         "in_jtokDataObject"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Subflows/Enter Closure Details.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strValue&Sequence_15",
+        "strLeadOfficer&Sequence_12",
+        "strLeadOfficer&Sequence_10",
+        "strLeadOfficer&Sequence_8",
+        "strLeadOfficer&Sequence_6",
+        "strLeadOfficer&Sequence_5",
+        "ieChildren&Sequence_3",
+        "listDropdownOptions&Sequence_3",
+        "strTypeOfIncident&Sequence_3",
+        "listValidChildren&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_Config",
+        "in_jobRoboticsJSON",
+        "in_jtokDataObject"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "DeleteMe.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strBody&Sequence_13",
+        "jBody&Sequence_13",
+        "strBearerToken&Sequence_1",
+        "jtokDataObject&Sequence_1",
+        "credDataverse&Sequence_2",
+        "strOAuth2Response&Sequence_2",
+        "objOAuth2Response&Sequence_2",
+        "strRecordResponse&Sequence_2",
+        "objRecordResponse&Sequence_2",
+        "jarRecordResponse&Sequence_2",
+        "intOAuthResponseStatus&Sequence_2",
+        "intRecordResponseStatus&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Subflows/Update Dataverse Record.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strRecordResponse&Sequence_1",
+        "intRecordResponseStatus&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_Config",
+        "in_strBody",
+        "in_RecordID"
       ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
