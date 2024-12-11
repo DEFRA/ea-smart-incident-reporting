@@ -11,7 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1226,3219</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1170,3707</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetTransactionData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="54">
@@ -101,10 +101,11 @@
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
       <AssemblyReference>Credentials</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Get a transaction item from a specified source (e.g., Orchestrator queues, spreadsheets, databases, mailboxes or web APIs). &#xA;&#xA;This framework is setup by default to look for an Outlook MailMessage from a config-specified mailbox, this should be changed on a work package basis with out_TransactionItem being set to a single transaction from whatever source is required.&#xA;&#xA;If there are no transaction items remaining, out_TransactionItem should be set to Nothing, which leads to the End Process state. &#xA;&#xA;out_boolLastTransaction should be set to True where it is possible to determine that a transaction is the last in the batch. If this is not possible to derive then changes will need to be made to the &quot;Final Transaction&quot; transition at the framework's parent level. " DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="889,3154" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Get a transaction item from a specified source (e.g., Orchestrator queues, spreadsheets, databases, mailboxes or web APIs). &#xA;&#xA;This framework is setup by default to look for an Outlook MailMessage from a config-specified mailbox, this should be changed on a work package basis with out_TransactionItem being set to a single transaction from whatever source is required.&#xA;&#xA;If there are no transaction items remaining, out_TransactionItem should be set to Nothing, which leads to the End Process state. &#xA;&#xA;out_boolLastTransaction should be set to True where it is possible to determine that a transaction is the last in the batch. If this is not possible to derive then changes will need to be made to the &quot;Final Transaction&quot; transition at the framework's parent level. " DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="889,3642" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="listMailMessages" />
       <Variable x:TypeArguments="sn:NetworkCredential" Name="credNetworkCredentials" />
@@ -117,6 +118,16 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <If sap2010:Annotation.AnnotationText="Where the Process Type has been selected as &quot;Single&quot; mode and the framework has completed the first transaction then it should prompt the user to ask if it should continue processing. &#xA;&#xA;Before prompting it also checks to ensure there is more data to process before presenting the user with the option to continue." Condition="[in_strProcessType = &quot;single&quot; AND in_TransactionNumber &gt;1 AND in_boolContinue = False]" DisplayName="Present &quot;Single&quot; Mode Form?" sap:VirtualizedContainerService.HintSize="827,360" sap2010:WorkflowViewState.IdRef="If_14">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <p:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="Single Mode Form" sap:VirtualizedContainerService.HintSize="200,25" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\ProcessAnotherForm.css&quot;]" IN_ErrorMessage="The stop button was pressed" IN_PopupMessage="&lt;h1&gt;Continue processing?&lt;/h1&gt;&lt;P&gt;The robot has completed processing the previous case. Click Continue to process more cases.&lt;/P&gt;&lt;BR&gt;" IN_PopupTitle="Department for Environment, Food and Rural Affairs" IN_WidthHeight="[{500,275}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_6" />
+      </If.Then>
+    </If>
     <ui:RetryScope DisplayName="Retry Scope - Get Transaction Item" sap:VirtualizedContainerService.HintSize="827,202" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:02.5000000">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
@@ -127,9 +138,9 @@
         <ActivityFunc x:TypeArguments="x:Boolean" />
       </ui:RetryScope.Condition>
     </ui:RetryScope>
-    <If Condition="[NOT(out_TransactionItem Is Nothing)]" DisplayName="Transaction Item to Process?" sap:VirtualizedContainerService.HintSize="827,2645" sap2010:WorkflowViewState.IdRef="If_13">
+    <If Condition="[NOT(out_TransactionItem Is Nothing)]" DisplayName="Transaction Item to Process?" sap:VirtualizedContainerService.HintSize="827,2733" sap2010:WorkflowViewState.IdRef="If_13">
       <If.Then>
-        <Sequence DisplayName="Retrieve Dataverse Record" sap:VirtualizedContainerService.HintSize="791,2453" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence DisplayName="Retrieve Dataverse Record" sap:VirtualizedContainerService.HintSize="791,2541" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <Sequence.Variables>
             <Variable x:TypeArguments="sn:NetworkCredential" Name="credDataverse" />
             <Variable x:TypeArguments="x:String" Name="strOAuth2Response" />
@@ -145,24 +156,14 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap:VirtualizedContainerService.HintSize="729,1565" sap2010:WorkflowViewState.IdRef="Sequence_16">
+          <Sequence sap:VirtualizedContainerService.HintSize="729,1165" sap2010:WorkflowViewState.IdRef="Sequence_20">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If sap2010:Annotation.AnnotationText="Where the Process Type has been selected as &quot;Single&quot; mode and the framework has completed the first transaction then it should prompt the user to ask if it should continue processing. &#xA;&#xA;Before prompting it also checks to ensure there is more data to process before presenting the user with the option to continue." Condition="[in_strProcessType = &quot;single&quot; AND in_TransactionNumber &gt;1 AND in_boolContinue = False]" DisplayName="Present &quot;Single&quot; Mode Form?" sap:VirtualizedContainerService.HintSize="484,360" sap2010:WorkflowViewState.IdRef="If_14">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <If.Then>
-                <p:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="Single Mode Form" sap:VirtualizedContainerService.HintSize="200,25" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\ProcessAnotherForm.css&quot;]" IN_ErrorMessage="The stop button was pressed" IN_PopupMessage="&lt;h1&gt;Continue processing?&lt;/h1&gt;&lt;P&gt;The robot has completed processing the previous case. Click Continue to process more cases.&lt;/P&gt;&lt;BR&gt;" IN_PopupTitle="Department for Environment, Food and Rural Affairs" IN_WidthHeight="[{500,275}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_6" />
-              </If.Then>
-            </If>
             <c:Get_Credential DisplayName="Get Dataverse Creds" sap:VirtualizedContainerService.HintSize="484,25" IN_strCredentialName="Dataverse API Credentials" IN_strRequestMessage="Please enter the credentials for the Dataverse API Connection." IN_strRequestTitle="Enter Credentials" sap2010:WorkflowViewState.IdRef="Get_Credential_2" OUT_credNetworkCredential="[credDataverse]" />
-            <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" DisplayName="Private: Retrieve OAuth2 Token" EnableSSLVerification="True" EndPoint="[&quot;https://login.microsoftonline.com/&quot;+io_Config(&quot;Dataverse Tenant ID&quot;).ToString+&quot;/oauth2/v2.0/token&quot;]" sap:VirtualizedContainerService.HintSize="484,71" sap2010:WorkflowViewState.IdRef="HttpClient_3" Method="POST" Result="[strOAuth2Response]" StatusCode="[intOAuthResponseStatus]" TimeoutMS="6000">
+            <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" DisplayName="Private: Retrieve OAuth2 Token" EnableSSLVerification="True" EndPoint="[&quot;https://login.microsoftonline.com/&quot;+io_Config(&quot;Dataverse Tenant ID&quot;).ToString+&quot;/oauth2/v2.0/token&quot;]" sap:VirtualizedContainerService.HintSize="484,71" sap2010:WorkflowViewState.IdRef="HttpClient_3" Method="POST" Result="[strOAuth2Response]" StatusCode="[intOAuthResponseStatus]" TimeoutMS="30000">
               <ui:HttpClient.Attachments>
                 <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
               </ui:HttpClient.Attachments>
@@ -205,7 +206,7 @@
                 <InArgument x:TypeArguments="x:String">["Bearer "+objOAuth2Response("access_token").ToString]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" DisplayName="Retrieve Dataverse Records" EnableSSLVerification="True" EndPoint="[io_Config(&quot;Dataverse API URL&quot;).ToString+&quot;api/data/v9.2/sbs_roboticsdataoutputs?$filter=(sbs_parentreportid eq '&quot;+out_TransactionItem.Reference+&quot;')&quot;]" sap:VirtualizedContainerService.HintSize="484,71" sap2010:WorkflowViewState.IdRef="HttpClient_4" Method="GET" Result="[strRecordResponse]" StatusCode="[intRecordResponseStatus]" TimeoutMS="6000">
+            <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" DisplayName="Private: Retrieve Dataverse Records" EnableSSLVerification="True" EndPoint="[io_Config(&quot;Dataverse API URL&quot;).ToString+&quot;api/data/v9.2/&quot;+io_Config(&quot;Dataverse Robotics Table&quot;).ToString+&quot;?$filter=(sbs_parentreportid eq '&quot;+out_TransactionItem.Reference+&quot;')&quot;]" sap:VirtualizedContainerService.HintSize="484,71" sap2010:WorkflowViewState.IdRef="HttpClient_4" Method="GET" Result="[strRecordResponse]" StatusCode="[intRecordResponseStatus]" TimeoutMS="30000">
               <ui:HttpClient.Attachments>
                 <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
               </ui:HttpClient.Attachments>
@@ -268,6 +269,38 @@
               <InArgument x:TypeArguments="njl:JToken">[jarRecordResponse(0)]</InArgument>
             </Assign.Value>
           </Assign>
+          <Sequence DisplayName="Update Dataverse Record" sap:VirtualizedContainerService.HintSize="729,448" sap2010:WorkflowViewState.IdRef="Sequence_21">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="njl:JObject" Name="jBody" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON Body" sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_6" JsonObject="[jBody]" JsonString="[io_Config(&quot;Dataverse In Progress JSON&quot;).ToString]" />
+            <Assign DisplayName="Set Start Time" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_14">
+              <Assign.To>
+                <OutArgument x:TypeArguments="njl:JToken">[jBody("sbs_robotstarteddatetime")]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="njl:JToken">[Now.ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Set Dataverse Record In Progress" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Process\Process Subflows\Update Dataverse Record.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_Config">
+                  <mva:VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="io_Config" />
+                </InOutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_strBody">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="jBody.ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_RecordID">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="out_jtokDataObject(io_Config(&quot;Dataverse ID Column&quot;).ToString).ToString" />
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </Sequence>
         </Sequence>
       </If.Then>
       <If.Else>
