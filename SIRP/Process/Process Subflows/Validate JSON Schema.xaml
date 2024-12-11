@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1236,2694.5</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1170,2694.5</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Validate_JSON_Schema_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -107,7 +107,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID19</x:Reference>
+      <x:Reference>__ReferenceID20</x:Reference>
     </Flowchart.StartNode>
     <FlowDecision x:Name="__ReferenceID4" Condition="[in_jtokDataObject(&quot;sbs_uipathindicator&quot;).ToString = &quot;1&quot; OR in_jtokDataObject(&quot;sbs_uipathindicator&quot;).ToString = &quot;2&quot; OR in_jtokDataObject(&quot;sbs_uipathindicator&quot;).ToString = &quot;3&quot;]" DisplayName="Valid Journey Indicator?" sap:VirtualizedContainerService.HintSize="132.5,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
       <sap:WorkflowViewStateService.ViewState>
@@ -128,7 +128,7 @@
               <av:PointCollection x:Key="ConnectorLocation">390,681.5 390,731.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Check Populated Notification Fields" sap:VirtualizedContainerService.HintSize="580,981" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Check Populated Notification Fields" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="dtNotificationFields" />
             </Sequence.Variables>
@@ -218,6 +218,7 @@
                   <av:PointCollection x:Key="Member of PublicConnector">390,818.5 390,938.5</av:PointCollection>
                   <av:PointCollection x:Key="External OrganisationConnector">411.5,818.5 411.5,848.5 620,848.5 620,938.5</av:PointCollection>
                   <av:PointCollection x:Key="Default">433,775 813,775</av:PointCollection>
+                  <av:PointCollection x:Key="Operator ReportedConnector">368.5,818.5 368.5,848.5 160,848.5 160,938.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <FlowStep x:Key="Member of Public" x:Name="__ReferenceID8">
@@ -604,6 +605,70 @@
                   <x:Reference>__ReferenceID2</x:Reference>
                 </FlowStep.Next>
               </FlowStep>
+              <FlowStep x:Key="Operator Reported" x:Name="__ReferenceID19">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">60,938.5</av:Point>
+                    <av:Size x:Key="ShapeSize">200,83</av:Size>
+                    <av:PointCollection x:Key="ConnectorLocation">160,1021.5 160,1051.5 525.25,1051.5 525.25,1086.5</av:PointCollection>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence DisplayName="Check Populated Operator Reported" sap:VirtualizedContainerService.HintSize="580,689" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="sd:DataTable" Name="dtOpRepFields" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:FilterDataTable DataTable="[dtFieldGroupings]" DisplayName="Filter to Member of Public Fields" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="518,163" sap2010:WorkflowViewState.IdRef="FilterDataTable_6" OutputDataTable="[dtOpRepFields]" SelectColumnsMode="Keep">
+                    <ui:FilterDataTable.Filters>
+                      <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                        <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                          <ui:FilterOperationArgument.Column>
+                            <InArgument x:TypeArguments="x:String">["Stage"]</InArgument>
+                          </ui:FilterOperationArgument.Column>
+                          <ui:FilterOperationArgument.Operand>
+                            <InArgument x:TypeArguments="x:String">["Operator Reported"]</InArgument>
+                          </ui:FilterOperationArgument.Operand>
+                        </ui:FilterOperationArgument>
+                      </scg:List>
+                    </ui:FilterDataTable.Filters>
+                    <ui:FilterDataTable.SelectColumns>
+                      <scg:List x:TypeArguments="InArgument" Capacity="4">
+                        <x:Null />
+                      </scg:List>
+                    </ui:FilterDataTable.SelectColumns>
+                  </ui:FilterDataTable>
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtOpRepFields]" DisplayName="For Each Notification Field" sap:VirtualizedContainerService.HintSize="518,375" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
+                    <ui:ForEachRow.Body>
+                      <ActivityAction x:TypeArguments="sd:DataRow">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                        </ActivityAction.Argument>
+                        <If Condition="[String.IsNullOrEmpty(in_jobRoboticsJSON(CurrentRow(&quot;Field&quot;).ToString).ToString)]" DisplayName="Field Blank?" sap:VirtualizedContainerService.HintSize="484,252" sap2010:WorkflowViewState.IdRef="If_7">
+                          <If.Then>
+                            <AddToCollection x:TypeArguments="x:String" Collection="[listDataErrors]" DisplayName="Add Data Error" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="AddToCollection`1_13" Item="[CurrentRow(&quot;Field&quot;).ToString+&quot; value is not populated.&quot;]" />
+                          </If.Then>
+                          <If.Else>
+                            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_18">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                      </ActivityAction>
+                    </ui:ForEachRow.Body>
+                  </ui:ForEachRow>
+                </Sequence>
+                <FlowStep.Next>
+                  <x:Reference>__ReferenceID2</x:Reference>
+                </FlowStep.Next>
+              </FlowStep>
             </FlowSwitch>
           </FlowStep.Next>
         </FlowStep>
@@ -624,7 +689,7 @@
         </FlowStep>
       </FlowDecision.False>
     </FlowDecision>
-    <FlowStep x:Name="__ReferenceID19">
+    <FlowStep x:Name="__ReferenceID20">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">460,127.5</av:Point>
@@ -685,5 +750,6 @@
     <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID17</x:Reference>
     <x:Reference>__ReferenceID18</x:Reference>
+    <x:Reference>__ReferenceID19</x:Reference>
   </Flowchart>
 </Activity>
