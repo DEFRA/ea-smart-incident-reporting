@@ -82,6 +82,7 @@
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Enter_Report_Details" sap:VirtualizedContainerService.HintSize="644,3962" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -361,7 +362,7 @@
           <OutArgument x:TypeArguments="x:String">[strTimeObserved]</OutArgument>
         </Assign.To>
         <Assign.Value>
-          <InArgument x:TypeArguments="x:String">[CDate(in_jobRoboticsJSON("datetimeObserved").ToString).ToString("hh:mm")]</InArgument>
+          <InArgument x:TypeArguments="x:String">[CDate(in_jobRoboticsJSON("datetimeObserved").ToString).ToString("HH:mm")]</InArgument>
         </Assign.Value>
       </Assign>
       <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input - Enter Date/Time Observed" sap:VirtualizedContainerService.HintSize="486,549" sap2010:WorkflowViewState.IdRef="BlockUserInput_3" KeyModifiers="Alt" SpecialKey="True">

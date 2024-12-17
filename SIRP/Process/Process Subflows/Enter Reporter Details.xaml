@@ -83,6 +83,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="Enter_Report_Details" sap:VirtualizedContainerService.HintSize="804,953.5" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -138,7 +139,7 @@
             <OutArgument x:TypeArguments="x:String">[strTimeReported]</OutArgument>
           </Assign.To>
           <Assign.Value>
-            <InArgument x:TypeArguments="x:String">[CDate(in_jobRoboticsJSON("datetimeReported").ToString).ToString("hh:mm")]</InArgument>
+            <InArgument x:TypeArguments="x:String">[CDate(in_jobRoboticsJSON("datetimeReported").ToString).ToString("HH:mm")]</InArgument>
           </Assign.Value>
         </Assign>
         <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input - Enter Date/Time Notified" sap:VirtualizedContainerService.HintSize="486,549" sap2010:WorkflowViewState.IdRef="BlockUserInput_7" KeyModifiers="Alt" SpecialKey="True">
