@@ -75,19 +75,19 @@
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="Enter Attendance Details" sap:VirtualizedContainerService.HintSize="746,703" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
         <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,127.5</av:PointCollection>
@@ -258,7 +258,7 @@
                 <OutArgument x:TypeArguments="x:String">[strTimeAssessed]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">[CDate(in_jobRoboticsJSON("dateOfInitialAssessment").ToString).ToString("hh:mm")]</InArgument>
+                <InArgument x:TypeArguments="x:String">[CDate(in_jobRoboticsJSON("dateOfInitialAssessment").ToString).ToString("HH:mm")]</InArgument>
               </Assign.Value>
             </Assign>
             <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input - Enter Assessment Date/Time" sap:VirtualizedContainerService.HintSize="486,549" sap2010:WorkflowViewState.IdRef="BlockUserInput_6" KeyModifiers="Alt" SpecialKey="True">
@@ -308,7 +308,7 @@
             </ui:BlockUserInput>
           </Sequence>
           <FlowStep.Next>
-            <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID1" DisplayName="Actual/Potential EA Incident?" sap:VirtualizedContainerService.HintSize="159,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1">
+            <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID1" DisplayName="Actual/Potential EA Incident?" Expression="[in_jobRoboticsJSON(&quot;actualPotentialEAIncident&quot;).ToString.ToLower]" sap:VirtualizedContainerService.HintSize="159,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1">
               <FlowSwitch.Default>
                 <FlowStep x:Name="__ReferenceID2">
                   <sap:WorkflowViewStateService.ViewState>
@@ -320,9 +320,6 @@
                   <Throw DisplayName="Throw BRE" Exception="[New BusinessRuleException(&quot;Invalid actualPotentialEAIncident value - must be either 'Yes' or 'No'. Provided value: &quot;+in_jobRoboticsJSON(&quot;actualPotentialEAIncident&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Throw_7" />
                 </FlowStep>
               </FlowSwitch.Default>
-              <FlowSwitch.Expression>
-                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_jobRoboticsJSON(&quot;actualPotentialEAIncident&quot;).ToString.ToLower" />
-              </FlowSwitch.Expression>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">220.5,363.5</av:Point>
