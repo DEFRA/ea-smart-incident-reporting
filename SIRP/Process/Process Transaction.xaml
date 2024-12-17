@@ -13,7 +13,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1170,4638</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1198,4638</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Process_Transaction_2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -536,7 +536,7 @@
                                                           <av:PointCollection x:Key="ConnectorLocation">460,1714.5 460,1764.5</av:PointCollection>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <Sequence DisplayName="Submit Map Tab" sap:VirtualizedContainerService.HintSize="700,1376" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                                      <Sequence DisplayName="Submit Map Tab" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_7">
                                                         <Sequence.Variables>
                                                           <Variable x:TypeArguments="x:Boolean" Name="booMapWarning" />
                                                         </Sequence.Variables>
@@ -545,7 +545,19 @@
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Next&quot; - Map" sap:VirtualizedContainerService.HintSize="638,107" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                                        <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Wait for Map Tab to Load" sap:VirtualizedContainerService.HintSize="588,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_4">
+                                                          <ui:WaitUiElementAppear.Target>
+                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e4df3df0-cc16-4473-9e81-6eac6f39d7d2" InformativeScreenshot="63e4426327903d4cc7bfc4e378a24472" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification*' /&gt;&lt;wnd aaname='Zoom In' cls='ThunderRT6CommandButton' title='Zoom &amp;amp;In' /&gt;">
+                                                              <ui:Target.TimeoutMS>
+                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                              </ui:Target.TimeoutMS>
+                                                              <ui:Target.WaitForReady>
+                                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                              </ui:Target.WaitForReady>
+                                                            </ui:Target>
+                                                          </ui:WaitUiElementAppear.Target>
+                                                        </ui:WaitUiElementAppear>
+                                                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Next&quot; - Map" sap:VirtualizedContainerService.HintSize="588,107" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                                                           <ui:Click.CursorPosition>
                                                             <ui:CursorPosition Position="Center">
                                                               <ui:CursorPosition.OffsetX>
@@ -572,71 +584,78 @@
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
                                                         </ui:Click>
-                                                        <ui:RetryScope DisplayName="Retry Scope - Resolve Map Warning" sap:VirtualizedContainerService.HintSize="638,1118" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="3" RetryInterval="00:00:00">
+                                                        <ui:RetryScope DisplayName="Retry Scope - Close Map Pop-Up &amp; Confirm Duplicates Loaded" sap:VirtualizedContainerService.HintSize="588,1297" sap2010:WorkflowViewState.IdRef="RetryScope_7" NumberOfRetries="20" RetryInterval="00:00:00">
                                                           <ui:RetryScope.ActivityBody>
                                                             <ActivityAction>
-                                                              <Sequence DisplayName="Resolve Map Warning" sap:VirtualizedContainerService.HintSize="596,941" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                                              <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="546,1120" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                                                <Sequence.Variables>
+                                                                  <Variable x:TypeArguments="x:Boolean" Name="booDuplicatesLoaded" />
+                                                                </Sequence.Variables>
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                <ui:UiElementExists DisplayName="Check for Map Warning" Exists="[booMapWarning]" sap:VirtualizedContainerService.HintSize="534,107" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
+                                                                <ui:UiElementExists DisplayName="Check for Map Pop-up" Exists="[booMapWarning]" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="UiElementExists_12">
                                                                   <ui:UiElementExists.Target>
-                                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f653cfc3-24b6-4f07-a54d-db571eae90a6" InformativeScreenshot="cfeccd8ae040141fabbc9a2420f6c92c" Selector="&lt;wnd app='irs.exe' cls='#32770' isremoteapp='1' title='Incidents Recording System' /&gt;&lt;wnd ctrlid='65535' title='A 1:10 000 map has not been used to generate this NGR.*' /&gt;" TimeoutMS="2500">
+                                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="571e05e9-e7cb-4d9a-a606-55f4a493addb" InformativeScreenshot="db3e6be7311cbf26aec29b4d036e1586" Selector="&lt;wnd app='irs.exe' cls='#32770' isremoteapp='1' title='*' /&gt;&lt;ctrl name='*' role='dialog' /&gt;" TimeoutMS="3000">
                                                                       <ui:Target.WaitForReady>
                                                                         <InArgument x:TypeArguments="ui:WaitForReady" />
                                                                       </ui:Target.WaitForReady>
                                                                     </ui:Target>
                                                                   </ui:UiElementExists.Target>
                                                                 </ui:UiElementExists>
-                                                                <If Condition="[booMapWarning]" DisplayName="Map Warning Exists?" sap:VirtualizedContainerService.HintSize="534,683" sap2010:WorkflowViewState.IdRef="If_5">
+                                                                <If Condition="[booMapWarning]" DisplayName="Map Warning Pop-Up?" sap:VirtualizedContainerService.HintSize="484,425" sap2010:WorkflowViewState.IdRef="If_7">
                                                                   <If.Then>
-                                                                    <Sequence DisplayName="Click OK on Map Warning" sap:VirtualizedContainerService.HintSize="498,493" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                                                    <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="436,235" sap2010:WorkflowViewState.IdRef="BlockUserInput_8" KeyModifiers="Alt" SpecialKey="True">
+                                                                      <ui:BlockUserInput.Body>
+                                                                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;OK&quot;" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_57" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                                          <ui:Click.CursorPosition>
+                                                                            <ui:CursorPosition Position="Center">
+                                                                              <ui:CursorPosition.OffsetX>
+                                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                                              </ui:CursorPosition.OffsetX>
+                                                                              <ui:CursorPosition.OffsetY>
+                                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                                              </ui:CursorPosition.OffsetY>
+                                                                            </ui:CursorPosition>
+                                                                          </ui:Click.CursorPosition>
+                                                                          <ui:Click.Target>
+                                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3ba85ad1-572e-4600-b38e-5a50ece1996d" InformativeScreenshot="a21587615206f3770a488323fcadcf2e" Selector="&lt;wnd app='irs.exe' cls='#32770' isremoteapp='1' title='*' /&gt;&lt;wnd ctrlid='*' title='OK' /&gt;" TimeoutMS="10000">
+                                                                              <ui:Target.WaitForReady>
+                                                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                              </ui:Target.WaitForReady>
+                                                                            </ui:Target>
+                                                                          </ui:Click.Target>
+                                                                        </ui:Click>
+                                                                      </ui:BlockUserInput.Body>
+                                                                    </ui:BlockUserInput>
+                                                                  </If.Then>
+                                                                  <If.Else>
+                                                                    <Sequence sap2010:WorkflowViewState.IdRef="Sequence_43">
                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                         </scg:Dictionary>
                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                      <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="436,235" sap2010:WorkflowViewState.IdRef="BlockUserInput_5" KeyModifiers="Alt" SpecialKey="True">
-                                                                        <ui:BlockUserInput.Body>
-                                                                          <ui:Click AlterIfDisabled="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DelayBefore="200" DelayMS="300" DisplayName="Click &quot;OK&quot;" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_52" KeyModifiers="None" MouseButton="BTN_LEFT">
-                                                                            <ui:Click.CursorPosition>
-                                                                              <ui:CursorPosition Position="Center">
-                                                                                <ui:CursorPosition.OffsetX>
-                                                                                  <InArgument x:TypeArguments="x:Int32" />
-                                                                                </ui:CursorPosition.OffsetX>
-                                                                                <ui:CursorPosition.OffsetY>
-                                                                                  <InArgument x:TypeArguments="x:Int32" />
-                                                                                </ui:CursorPosition.OffsetY>
-                                                                              </ui:CursorPosition>
-                                                                            </ui:Click.CursorPosition>
-                                                                            <ui:Click.Target>
-                                                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e0fbb50a-07e9-4b65-90df-c25be2609826" InformativeScreenshot="dc197e1a336a55a621c7abe67c28e89a" Selector="&lt;wnd app='irs.exe' cls='#32770' isremoteapp='1' title='Incidents Recording System' /&gt;&lt;wnd ctrlid='2' title='OK' /&gt;">
-                                                                                <ui:Target.TimeoutMS>
-                                                                                  <InArgument x:TypeArguments="x:Int32" />
-                                                                                </ui:Target.TimeoutMS>
-                                                                                <ui:Target.WaitForReady>
-                                                                                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                                                </ui:Target.WaitForReady>
-                                                                              </ui:Target>
-                                                                            </ui:Click.Target>
-                                                                          </ui:Click>
-                                                                        </ui:BlockUserInput.Body>
-                                                                      </ui:BlockUserInput>
-                                                                      <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Check Next Page Loaded" sap:VirtualizedContainerService.HintSize="436,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_4">
-                                                                        <ui:WaitUiElementAppear.Target>
-                                                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d44ea158-a525-45cf-9a7e-6fe922afba17" InformativeScreenshot="33a83614dbca206cd87af6f91d8e9ca4" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification*' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='Potential Duplicates' /&gt;&lt;wnd cls='ThunderRT6ComboBox' idx='2' /&gt;" TimeoutMS="10000">
-                                                                            <ui:Target.WaitForReady>
-                                                                              <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                                            </ui:Target.WaitForReady>
-                                                                          </ui:Target>
-                                                                        </ui:WaitUiElementAppear.Target>
-                                                                      </ui:WaitUiElementAppear>
                                                                     </Sequence>
+                                                                  </If.Else>
+                                                                </If>
+                                                                <ui:UiElementExists DisplayName="Check for Potential Duplicates Tab" Exists="[booDuplicatesLoaded]" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="UiElementExists_14">
+                                                                  <ui:UiElementExists.Target>
+                                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f653cfc3-24b6-4f07-a54d-db571eae90a6" InformativeScreenshot="a2757d93332a7d4a8dd0cab1c31159da" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification*' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='Potential Duplicates' /&gt;" TimeoutMS="3000">
+                                                                      <ui:Target.WaitForReady>
+                                                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                      </ui:Target.WaitForReady>
+                                                                    </ui:Target>
+                                                                  </ui:UiElementExists.Target>
+                                                                </ui:UiElementExists>
+                                                                <If Condition="[NOT(booDuplicatesLoaded)]" DisplayName="Duplicates Tab Loaded?" sap:VirtualizedContainerService.HintSize="484,250" sap2010:WorkflowViewState.IdRef="If_8">
+                                                                  <If.Then>
+                                                                    <Throw Exception="[New SystemException(&quot;Duplicates tab not loaded successfully.&quot;)]" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Throw_7" />
                                                                   </If.Then>
                                                                   <If.Else>
-                                                                    <Sequence sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                                                    <Sequence sap2010:WorkflowViewState.IdRef="Sequence_44">
                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -813,7 +832,7 @@
                                                                                   <av:PointCollection x:Key="ConnectorLocation">280,2521.5 280,2581.5</av:PointCollection>
                                                                                 </scg:Dictionary>
                                                                               </sap:WorkflowViewStateService.ViewState>
-                                                                              <Sequence DisplayName="Forward Notification" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                                                              <Sequence DisplayName="Forward Notification" sap:VirtualizedContainerService.HintSize="548,1671" sap2010:WorkflowViewState.IdRef="Sequence_10">
                                                                                 <Sequence.Variables>
                                                                                   <Variable x:TypeArguments="x:Boolean" Name="booValidationError" />
                                                                                 </Sequence.Variables>
@@ -834,9 +853,19 @@
                                                                                     </ui:Target>
                                                                                   </ui:TypeInto.Target>
                                                                                 </ui:TypeInto>
-                                                                                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Submit &quot;ICS ICS&quot;" sap:VirtualizedContainerService.HintSize="486,156" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
-                                                                                  <ui:SendHotkey.Target>
-                                                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="57532c4f-5430-4018-a4f2-b65f6e7edea9" InformativeScreenshot="c6bc9fc57b84322bb066a414bba67bb8" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification*' /&gt;&lt;wnd cls='ThunderRT6PictureBoxDC' idx='3' /&gt;">
+                                                                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Next&quot; - Action" sap:VirtualizedContainerService.HintSize="486,107" sap2010:WorkflowViewState.IdRef="Click_56" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                                                                  <ui:Click.CursorPosition>
+                                                                                    <ui:CursorPosition Position="Center">
+                                                                                      <ui:CursorPosition.OffsetX>
+                                                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                                                      </ui:CursorPosition.OffsetX>
+                                                                                      <ui:CursorPosition.OffsetY>
+                                                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                                                      </ui:CursorPosition.OffsetY>
+                                                                                    </ui:CursorPosition>
+                                                                                  </ui:Click.CursorPosition>
+                                                                                  <ui:Click.Target>
+                                                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="de3a0312-b037-4f15-bbad-6947274ee8da" InformativeScreenshot="1bd36ca60eec598da2920c5e9dc88d8b" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification*' /&gt;&lt;wnd aaname='Next  &amp;gt;&amp;gt;' cls='ThunderRT6CommandButton' title='&amp;amp;Next  &amp;gt;&amp;gt;' /&gt;">
                                                                                       <ui:Target.TimeoutMS>
                                                                                         <InArgument x:TypeArguments="x:Int32" />
                                                                                       </ui:Target.TimeoutMS>
@@ -844,8 +873,13 @@
                                                                                         <InArgument x:TypeArguments="ui:WaitForReady" />
                                                                                       </ui:Target.WaitForReady>
                                                                                     </ui:Target>
-                                                                                  </ui:SendHotkey.Target>
-                                                                                </ui:SendHotkey>
+                                                                                  </ui:Click.Target>
+                                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                    </scg:Dictionary>
+                                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                                </ui:Click>
                                                                                 <ui:UiElementExists DisplayName="Check for Notification Validation Error" Exists="[booValidationError]" sap:VirtualizedContainerService.HintSize="486,107" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
                                                                                   <ui:UiElementExists.Target>
                                                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6a2f1275-9e03-4c4e-8b4a-4e8900fdfef3" InformativeScreenshot="d9d4a5033021cc392942ce477c400b1d" Selector="&lt;wnd app='irs.exe' cls='#32770' isremoteapp='1' title='Event Notification' /&gt;" TimeoutMS="2500">
@@ -1605,7 +1639,7 @@
                                                                                                                           <av:PointCollection x:Key="ConnectorLocation">280,3751.5 280,3801.5</av:PointCollection>
                                                                                                                         </scg:Dictionary>
                                                                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                                                                      <Sequence DisplayName="Open Record for Closure" sap:VirtualizedContainerService.HintSize="602,1131" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                                                                                                      <Sequence DisplayName="Open Record for Closure" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_24">
                                                                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2358,7 +2392,7 @@
           <av:PointCollection x:Key="ConnectorLocation">460,210.5 460,260.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Extract Robotics JSON Object" sap:VirtualizedContainerService.HintSize="496,394" sap2010:WorkflowViewState.IdRef="Sequence_1">
+      <Sequence DisplayName="Extract Robotics JSON Object" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_1">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:String" Name="strPassDetailsToRobotics" />
           <Variable x:TypeArguments="njl:JObject" Name="jobPassDetailsToRoboticsJSON" />
