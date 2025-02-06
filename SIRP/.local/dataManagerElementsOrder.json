@@ -148,6 +148,7 @@
       "Path": "Process/Process Transaction.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "booDuplicatesLoaded&Sequence_41",
         "booSpellCheck&Sequence_27",
         "strPausePointText&Sequence_26",
         "strPausePointText&Sequence_22",
