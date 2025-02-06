@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1170,1018.5</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1198,1018.5</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Enter_Report_Details_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -83,7 +83,6 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="Enter_Report_Details" sap:VirtualizedContainerService.HintSize="804,953.5" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -112,7 +111,7 @@
           <av:PointCollection x:Key="ConnectorLocation">390,210.5 390,260.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Enter Reported Date &amp; Time" sap:VirtualizedContainerService.HintSize="548,950" sap2010:WorkflowViewState.IdRef="Sequence_1">
+      <Sequence DisplayName="Enter Reported Date &amp; Time" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_1">
         <Sequence.Variables>
           <Variable x:TypeArguments="str:Match" Name="matDateReported" />
         </Sequence.Variables>
@@ -679,7 +678,7 @@
                                 </ui:CursorPosition>
                               </ui:Click.CursorPosition>
                               <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="37c794c9-3ff8-4dea-96d0-32e9556449bf" InformativeScreenshot="201b332885869a7b3abda1b3ba3cae26" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' idx='*' /&gt;&lt;ctrl name='EMail' role='list item' /&gt;" TimeoutMS="2500">
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="37c794c9-3ff8-4dea-96d0-32e9556449bf" InformativeScreenshot="201b332885869a7b3abda1b3ba3cae26" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' /&gt;&lt;ctrl name='EMail' role='list item' /&gt;" TimeoutMS="2500">
                                   <ui:Target.WaitForReady>
                                     <InArgument x:TypeArguments="ui:WaitForReady" />
                                   </ui:Target.WaitForReady>
@@ -864,7 +863,7 @@
                                 </ui:CursorPosition>
                               </ui:Click.CursorPosition>
                               <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="37c794c9-3ff8-4dea-96d0-32e9556449bf" InformativeScreenshot="a7d478500d66869c56a4822ebe9e0ee1" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' idx='*' /&gt;&lt;ctrl name='Mobile Telephone' role='list item' /&gt;" TimeoutMS="2500">
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="37c794c9-3ff8-4dea-96d0-32e9556449bf" InformativeScreenshot="a7d478500d66869c56a4822ebe9e0ee1" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' /&gt;&lt;ctrl name='Mobile Telephone' role='list item' /&gt;" TimeoutMS="2500">
                                   <ui:Target.WaitForReady>
                                     <InArgument x:TypeArguments="ui:WaitForReady" />
                                   </ui:Target.WaitForReady>
@@ -983,7 +982,7 @@
                 <av:PointCollection x:Key="ConnectorLocation">640,541.5 640,620.04 390,620.04 390,710.5</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Input External Organisation Data" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_67">
+            <Sequence DisplayName="Input External Organisation Data" sap:VirtualizedContainerService.HintSize="939,14663" sap2010:WorkflowViewState.IdRef="Sequence_67">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:Boolean" Name="booContactLookup" />
                 <Variable x:TypeArguments="x:String" Name="strContactNumberIndex" />
@@ -1016,9 +1015,9 @@
                   </ui:Target>
                 </ui:Click.Target>
               </ui:Click>
-              <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="877,1322" sap2010:WorkflowViewState.IdRef="BlockUserInput_4" KeyModifiers="Alt" SpecialKey="True">
+              <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="877,1323" sap2010:WorkflowViewState.IdRef="BlockUserInput_9" KeyModifiers="Alt" SpecialKey="True">
                 <ui:BlockUserInput.Body>
-                  <Sequence DisplayName="Select Organisation Type" sap:VirtualizedContainerService.HintSize="546,1194" sap2010:WorkflowViewState.IdRef="Sequence_68">
+                  <Sequence DisplayName="Select Organisation Type" sap:VirtualizedContainerService.HintSize="546,1195" sap2010:WorkflowViewState.IdRef="Sequence_68">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="ieChildren" />
                       <Variable x:TypeArguments="scg:List(x:String)" Default="[New List(Of String)]" Name="listDropdownOptions" />
@@ -1030,7 +1029,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign DisplayName="Assign strOrganisationType" sap:VirtualizedContainerService.HintSize="484,82" sap2010:WorkflowViewState.IdRef="Assign_16">
+                    <Assign DisplayName="Assign strOrganisationType" sap:VirtualizedContainerService.HintSize="484,83" sap2010:WorkflowViewState.IdRef="Assign_45">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[strOrganisationType]</OutArgument>
                       </Assign.To>
@@ -1062,7 +1061,7 @@
                     </ui:Click>
                     <ui:FindChildren Children="[ieChildren]" DisplayName="Retrieve Dropdown Children" Filter="&lt;ctrl /&gt;" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="FindChildren_7" Scope="FIND_DESCENDANTS">
                       <ui:FindChildren.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eb40dcb9-a257-4ac1-9d2c-d02060d404ce" InformativeScreenshot="a7b316958679991c24b093bec9d03bb3" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' idx='*' /&gt;">
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eb40dcb9-a257-4ac1-9d2c-d02060d404ce" InformativeScreenshot="a7b316958679991c24b093bec9d03bb3" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' /&gt;">
                           <ui:Target.TimeoutMS>
                             <InArgument x:TypeArguments="x:Int32" />
                           </ui:Target.TimeoutMS>
@@ -1096,7 +1095,7 @@
                     </If>
                     <ui:SetFocus DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Set Focus on Dropdown Option" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="SetFocus_4">
                       <ui:SetFocus.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f1868324-4366-4512-9923-c96f9625310b" InformativeScreenshot="50d001e4c57f1ab905a64b4ca102c039" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' idx='*' /&gt;&lt;ctrl name='{{strOrganisationType}}' role='list item' /&gt;">
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f1868324-4366-4512-9923-c96f9625310b" InformativeScreenshot="50d001e4c57f1ab905a64b4ca102c039" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' /&gt;&lt;ctrl name='{{strOrganisationType}}' role='list item' /&gt;">
                           <ui:Target.TimeoutMS>
                             <InArgument x:TypeArguments="x:Int32" />
                           </ui:Target.TimeoutMS>
@@ -1118,7 +1117,7 @@
                         </ui:CursorPosition>
                       </ui:Click.CursorPosition>
                       <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fb0f1ae1-2ffc-442e-aac3-74d4187931ae" InformativeScreenshot="dffa0bd28c73885d55eba78330b6da45" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' idx='*' /&gt;&lt;ctrl name='{{strOrganisationType}}' role='list item' /&gt;">
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fb0f1ae1-2ffc-442e-aac3-74d4187931ae" InformativeScreenshot="dffa0bd28c73885d55eba78330b6da45" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' /&gt;&lt;ctrl name='{{strOrganisationType}}' role='list item' /&gt;">
                           <ui:Target.TimeoutMS>
                             <InArgument x:TypeArguments="x:Int32" />
                           </ui:Target.TimeoutMS>
@@ -1557,7 +1556,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:BlockUserInput>
-              <Sequence sap2010:Annotation.AnnotationText="Organisations have pre-populated contacts which the SIRP project have confirmed must be deleted before the robot enters new details.&#xA;&#xA;As we don't know how many existing contacts are present we need to identify the next blank row.&#xA;&#xA;The blank contact row has a fixed index, even if you delete all existing contact rows. Therefore, we need to capture this for entering new contacts." DisplayName="Locate Blank Contact Row" sap:VirtualizedContainerService.HintSize="877,2099" sap2010:WorkflowViewState.IdRef="Sequence_133">
+              <Sequence sap2010:Annotation.AnnotationText="Organisations have pre-populated contacts which the SIRP project have confirmed must be deleted before the robot enters new details.&#xA;&#xA;As we don't know how many existing contacts are present we need to identify the next blank row.&#xA;&#xA;The blank contact row has a fixed index, even if you delete all existing contact rows. Therefore, we need to capture this for entering new contacts." DisplayName="Locate Blank Contact Row" sap:VirtualizedContainerService.HintSize="877,2106" sap2010:WorkflowViewState.IdRef="Sequence_133">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Boolean" Name="booLoop" />
                   <Variable x:TypeArguments="x:Int32" Name="intLoopCounter" />
@@ -1568,7 +1567,7 @@
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Assign sap2010:Annotation.AnnotationText="Index for &quot;Contact Type&quot; fields starts at IDX 3" DisplayName="Assign strContactTypeIndex" sap:VirtualizedContainerService.HintSize="815,113" sap2010:WorkflowViewState.IdRef="Assign_26">
+                <Assign sap2010:Annotation.AnnotationText="Index for &quot;Contact Type&quot; fields starts at IDX 3" DisplayName="Assign strContactTypeIndex" sap:VirtualizedContainerService.HintSize="815,114" sap2010:WorkflowViewState.IdRef="Assign_26">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[strContactTypeIndex]</OutArgument>
                   </Assign.To>
@@ -1581,7 +1580,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </Assign>
-                <Assign sap2010:Annotation.AnnotationText="Index for Contact &quot;Number&quot; fields starts at IDX 5" DisplayName="Assign strContactNumberIndex" sap:VirtualizedContainerService.HintSize="815,113" sap2010:WorkflowViewState.IdRef="Assign_18">
+                <Assign sap2010:Annotation.AnnotationText="Index for Contact &quot;Number&quot; fields starts at IDX 5" DisplayName="Assign strContactNumberIndex" sap:VirtualizedContainerService.HintSize="815,114" sap2010:WorkflowViewState.IdRef="Assign_18">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[strContactNumberIndex]</OutArgument>
                   </Assign.To>
@@ -1594,7 +1593,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </Assign>
-                <Assign DisplayName="Initialise booLoop" sap:VirtualizedContainerService.HintSize="815,82" sap2010:WorkflowViewState.IdRef="Assign_19">
+                <Assign DisplayName="Initialise booLoop" sap:VirtualizedContainerService.HintSize="815,83" sap2010:WorkflowViewState.IdRef="Assign_19">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Boolean">[booLoop]</OutArgument>
                   </Assign.To>
@@ -1602,7 +1601,7 @@
                     <InArgument x:TypeArguments="x:Boolean">True</InArgument>
                   </Assign.Value>
                 </Assign>
-                <Assign DisplayName="Initialise intLoopCounter" sap:VirtualizedContainerService.HintSize="815,82" sap2010:WorkflowViewState.IdRef="Assign_27">
+                <Assign DisplayName="Initialise intLoopCounter" sap:VirtualizedContainerService.HintSize="815,83" sap2010:WorkflowViewState.IdRef="Assign_27">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Int32">[intLoopCounter]</OutArgument>
                   </Assign.To>
@@ -1610,11 +1609,11 @@
                     <InArgument x:TypeArguments="x:Int32">1</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:InterruptibleDoWhile Condition="[booLoop]" DisplayName="Do While - Find Blank Contact" sap:VirtualizedContainerService.HintSize="815,1346" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+                <ui:InterruptibleDoWhile Condition="[booLoop]" DisplayName="Do While - Find Blank Contact" sap:VirtualizedContainerService.HintSize="815,1349" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
                   <ui:InterruptibleDoWhile.Body>
-                    <TryCatch DisplayName="Try Select Contact Rows" sap:VirtualizedContainerService.HintSize="779,1178" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                    <TryCatch DisplayName="Try Select Contact Rows" sap:VirtualizedContainerService.HintSize="779,1181" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                       <TryCatch.Try>
-                        <Sequence sap2010:Annotation.AnnotationText="When a populated &quot;Number&quot; row is selected, the simulate click activity executes successfully.&#xA;&#xA;When a blank &quot;Number&quot; row is selected the simulate click fails with UiElement is disabled as no Contact Type has been selected on the blank row.&#xA;&#xA;Using this, we can identify the index of the blank row." DisplayName="Click Contact Details" sap:VirtualizedContainerService.HintSize="741,945" sap2010:WorkflowViewState.IdRef="Sequence_121">
+                        <Sequence sap2010:Annotation.AnnotationText="When a populated &quot;Number&quot; row is selected, the simulate click activity executes successfully.&#xA;&#xA;When a blank &quot;Number&quot; row is selected the simulate click fails with UiElement is disabled as no Contact Type has been selected on the blank row.&#xA;&#xA;Using this, we can identify the index of the blank row." DisplayName="Click Contact Details" sap:VirtualizedContainerService.HintSize="741,948" sap2010:WorkflowViewState.IdRef="Sequence_121">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1643,7 +1642,7 @@
                               </ui:Target>
                             </ui:Click.Target>
                           </ui:Click>
-                          <Assign sap2010:Annotation.AnnotationText="Contact Type Index increments by 1 between rows." DisplayName="Increment strContactTypeIndex" sap:VirtualizedContainerService.HintSize="679,113" sap2010:WorkflowViewState.IdRef="Assign_28">
+                          <Assign sap2010:Annotation.AnnotationText="Contact Type Index increments by 1 between rows." DisplayName="Increment strContactTypeIndex" sap:VirtualizedContainerService.HintSize="679,114" sap2010:WorkflowViewState.IdRef="Assign_28">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:String">[strContactTypeIndex]</OutArgument>
                             </Assign.To>
@@ -1656,7 +1655,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </Assign>
-                          <Assign sap2010:Annotation.AnnotationText="Contact Number Index increments by 2 between rows." DisplayName="Increment strContactNumberIndex" sap:VirtualizedContainerService.HintSize="679,113" sap2010:WorkflowViewState.IdRef="Assign_29">
+                          <Assign sap2010:Annotation.AnnotationText="Contact Number Index increments by 2 between rows." DisplayName="Increment strContactNumberIndex" sap:VirtualizedContainerService.HintSize="679,114" sap2010:WorkflowViewState.IdRef="Assign_29">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:String">[strContactNumberIndex]</OutArgument>
                             </Assign.To>
@@ -1669,12 +1668,12 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </Assign>
-                          <If Condition="[intLoopCounter = 10]" DisplayName="Max Loop Counter Reached?" sap:VirtualizedContainerService.HintSize="679,273" sap2010:WorkflowViewState.IdRef="If_82">
+                          <If Condition="[intLoopCounter = 10]" DisplayName="Max Loop Counter Reached?" sap:VirtualizedContainerService.HintSize="679,274" sap2010:WorkflowViewState.IdRef="If_82">
                             <If.Then>
                               <Throw Exception="[New SystemException(&quot;Unable to locate blank contact row.&quot;)]" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Throw_16" />
                             </If.Then>
                             <If.Else>
-                              <Assign sap2010:Annotation.AnnotationText="Contact Number Index increments by 2 between rows." DisplayName="Increment intLoopCounter" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="Assign_32">
+                              <Assign sap2010:Annotation.AnnotationText="Contact Number Index increments by 2 between rows." DisplayName="Increment intLoopCounter" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_32">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:Int32">[intLoopCounter]</OutArgument>
                                 </Assign.To>
@@ -1731,7 +1730,7 @@
                   </ui:InterruptibleDoWhile.Body>
                 </ui:InterruptibleDoWhile>
               </Sequence>
-              <Sequence sap2010:Annotation.AnnotationText="Now that we know the index of the blank contact row, we have to delete all existing contact rows." DisplayName="Delete Existing Contact Row" sap:VirtualizedContainerService.HintSize="877,1909" sap2010:WorkflowViewState.IdRef="Sequence_135">
+              <Sequence sap2010:Annotation.AnnotationText="Now that we know the index of the blank contact row, we have to delete all existing contact rows." DisplayName="Delete Existing Contact Row" sap:VirtualizedContainerService.HintSize="877,1911" sap2010:WorkflowViewState.IdRef="Sequence_135">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Boolean" Name="booLoop" />
                   <Variable x:TypeArguments="x:Int32" Name="intLoopCounter" />
@@ -1742,7 +1741,7 @@
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Assign DisplayName="Initialise booLoop" sap:VirtualizedContainerService.HintSize="815,82" sap2010:WorkflowViewState.IdRef="Assign_34">
+                <Assign DisplayName="Initialise booLoop" sap:VirtualizedContainerService.HintSize="815,83" sap2010:WorkflowViewState.IdRef="Assign_34">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Boolean">[booLoop]</OutArgument>
                   </Assign.To>
@@ -1750,7 +1749,7 @@
                     <InArgument x:TypeArguments="x:Boolean">True</InArgument>
                   </Assign.Value>
                 </Assign>
-                <Assign DisplayName="Initialise intLoopCounter" sap:VirtualizedContainerService.HintSize="815,82" sap2010:WorkflowViewState.IdRef="Assign_35">
+                <Assign DisplayName="Initialise intLoopCounter" sap:VirtualizedContainerService.HintSize="815,83" sap2010:WorkflowViewState.IdRef="Assign_35">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Int32">[intLoopCounter]</OutArgument>
                   </Assign.To>
@@ -1906,7 +1905,7 @@
                   </ui:InterruptibleDoWhile.Body>
                 </ui:InterruptibleDoWhile>
               </Sequence>
-              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;reporterEmail&quot;).ToString))]" DisplayName="&quot;reporterEmail&quot; Populated?" sap:VirtualizedContainerService.HintSize="877,1792" sap2010:WorkflowViewState.IdRef="If_86">
+              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;reporterEmail&quot;).ToString))]" DisplayName="&quot;reporterEmail&quot; Populated?" sap:VirtualizedContainerService.HintSize="877,1793" sap2010:WorkflowViewState.IdRef="If_86">
                 <If.Then>
                   <Sequence DisplayName="Enter &quot;reporterEmail&quot;" sap:VirtualizedContainerService.HintSize="650,1601" sap2010:WorkflowViewState.IdRef="Sequence_118">
                     <sap:WorkflowViewStateService.ViewState>
@@ -1960,7 +1959,7 @@
                                 </ui:CursorPosition>
                               </ui:Click.CursorPosition>
                               <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="37c794c9-3ff8-4dea-96d0-32e9556449bf" InformativeScreenshot="201b332885869a7b3abda1b3ba3cae26" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' idx='*' /&gt;&lt;ctrl name='EMail' role='list item' /&gt;" TimeoutMS="2500">
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="37c794c9-3ff8-4dea-96d0-32e9556449bf" InformativeScreenshot="201b332885869a7b3abda1b3ba3cae26" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' /&gt;&lt;ctrl name='EMail' role='list item' /&gt;" TimeoutMS="2500">
                                   <ui:Target.WaitForReady>
                                     <InArgument x:TypeArguments="ui:WaitForReady" />
                                   </ui:Target.WaitForReady>
@@ -2058,7 +2057,7 @@
                   </Sequence>
                 </If.Else>
               </If>
-              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;reporterPhoneNumber&quot;).ToString))]" DisplayName="&quot;reporterPhoneNumber&quot; Populated?" sap:VirtualizedContainerService.HintSize="877,1484" sap2010:WorkflowViewState.IdRef="If_88">
+              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;reporterPhoneNumber&quot;).ToString))]" DisplayName="&quot;reporterPhoneNumber&quot; Populated?" sap:VirtualizedContainerService.HintSize="877,1485" sap2010:WorkflowViewState.IdRef="If_88">
                 <If.Then>
                   <Sequence DisplayName="Enter &quot;reporterPhoneNumber&quot;" sap:VirtualizedContainerService.HintSize="650,1293" sap2010:WorkflowViewState.IdRef="Sequence_138">
                     <Sequence.Variables>
@@ -2115,7 +2114,7 @@
                                 </ui:CursorPosition>
                               </ui:Click.CursorPosition>
                               <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="37c794c9-3ff8-4dea-96d0-32e9556449bf" InformativeScreenshot="a7d478500d66869c56a4822ebe9e0ee1" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' idx='*' /&gt;&lt;ctrl name='Mobile Telephone' role='list item' /&gt;" TimeoutMS="2500">
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="37c794c9-3ff8-4dea-96d0-32e9556449bf" InformativeScreenshot="a7d478500d66869c56a4822ebe9e0ee1" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' /&gt;&lt;ctrl name='Mobile Telephone' role='list item' /&gt;" TimeoutMS="2500">
                                   <ui:Target.WaitForReady>
                                     <InArgument x:TypeArguments="ui:WaitForReady" />
                                   </ui:Target.WaitForReady>
@@ -2672,7 +2671,7 @@
                                 </ui:CursorPosition>
                               </ui:Click.CursorPosition>
                               <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="37c794c9-3ff8-4dea-96d0-32e9556449bf" InformativeScreenshot="201b332885869a7b3abda1b3ba3cae26" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' idx='*' /&gt;&lt;ctrl name='EMail' role='list item' /&gt;" TimeoutMS="2500">
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="37c794c9-3ff8-4dea-96d0-32e9556449bf" InformativeScreenshot="201b332885869a7b3abda1b3ba3cae26" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' /&gt;&lt;ctrl name='EMail' role='list item' /&gt;" TimeoutMS="2500">
                                   <ui:Target.WaitForReady>
                                     <InArgument x:TypeArguments="ui:WaitForReady" />
                                   </ui:Target.WaitForReady>
@@ -2857,7 +2856,7 @@
                                 </ui:CursorPosition>
                               </ui:Click.CursorPosition>
                               <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="37c794c9-3ff8-4dea-96d0-32e9556449bf" InformativeScreenshot="a7d478500d66869c56a4822ebe9e0ee1" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' idx='*' /&gt;&lt;ctrl name='Mobile Telephone' role='list item' /&gt;" TimeoutMS="2500">
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="37c794c9-3ff8-4dea-96d0-32e9556449bf" InformativeScreenshot="a7d478500d66869c56a4822ebe9e0ee1" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' /&gt;&lt;ctrl name='Mobile Telephone' role='list item' /&gt;" TimeoutMS="2500">
                                   <ui:Target.WaitForReady>
                                     <InArgument x:TypeArguments="ui:WaitForReady" />
                                   </ui:Target.WaitForReady>
