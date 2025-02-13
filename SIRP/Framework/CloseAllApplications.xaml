@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1170,1745</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1235,1353</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CloseAllApplications_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -72,7 +72,7 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Do the necessary procedures for ending the process (e.g., logout) and close the used applications." DisplayName="Close All Applications" sap:VirtualizedContainerService.HintSize="548,1680" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="Do the necessary procedures for ending the process (e.g., logout) and close the used applications." DisplayName="Close All Applications" sap:VirtualizedContainerService.HintSize="548,1288" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -134,85 +134,11 @@
         </Sequence>
       </ui:BlockUserInput.Body>
     </ui:BlockUserInput>
-    <If Condition="[CBool(in_Config(&quot;Dev Flag&quot;))]" DisplayName="Dev?" sap:VirtualizedContainerService.HintSize="486,704" sap2010:WorkflowViewState.IdRef="If_1">
-      <If.Then>
-        <Sequence DisplayName="Close VMWare" sap:VirtualizedContainerService.HintSize="450,512" sap2010:WorkflowViewState.IdRef="Sequence_8">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  Cancel'" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-            <ui:Click.CursorPosition>
-              <ui:CursorPosition Position="Center">
-                <ui:CursorPosition.OffsetX>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:CursorPosition.OffsetX>
-                <ui:CursorPosition.OffsetY>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:CursorPosition.OffsetY>
-              </ui:CursorPosition>
-            </ui:Click.CursorPosition>
-            <ui:Click.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b31f8225-effa-49c4-a153-9ea9db87b7fb" InformativeScreenshot="2c872c09ac7dffeb90402ce6d5962f1b" Selector="&lt;wnd app='vmware-view.exe' cls='HwndWrapper*' title='VMware Horizon Client' /&gt;&lt;ctrl name='Cancel' role='push button' /&gt;" TimeoutMS="5000">
-                <ui:Target.WaitForReady>
-                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                </ui:Target.WaitForReady>
-              </ui:Target>
-            </ui:Click.Target>
-          </ui:Click>
-          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  Cancel'" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-            <ui:Click.CursorPosition>
-              <ui:CursorPosition Position="Center">
-                <ui:CursorPosition.OffsetX>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:CursorPosition.OffsetX>
-                <ui:CursorPosition.OffsetY>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:CursorPosition.OffsetY>
-              </ui:CursorPosition>
-            </ui:Click.CursorPosition>
-            <ui:Click.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b31f8225-effa-49c4-a153-9ea9db87b7fb" InformativeScreenshot="1845d0955b7cf1a6b2bed966cbbb5aaa" Selector="&lt;wnd app='vmware-view.exe' cls='HwndWrapper*' title='VMware Horizon Client' /&gt;&lt;ctrl automationid='PrimaryButton' /&gt;" TimeoutMS="5000">
-                <ui:Target.WaitForReady>
-                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                </ui:Target.WaitForReady>
-              </ui:Target>
-            </ui:Click.Target>
-          </ui:Click>
-          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  Close'" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-            <ui:Click.CursorPosition>
-              <ui:CursorPosition Position="Center">
-                <ui:CursorPosition.OffsetX>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:CursorPosition.OffsetX>
-                <ui:CursorPosition.OffsetY>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:CursorPosition.OffsetY>
-              </ui:CursorPosition>
-            </ui:Click.CursorPosition>
-            <ui:Click.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="914a5206-e3a0-40df-9bad-5e28f4d6d01f" InformativeScreenshot="7e2baf3463196141c70fc3fb63f0b125" Selector="&lt;wnd app='vmware-view.exe' cls='HwndWrapper*' title='VMware Horizon Client' /&gt;&lt;ctrl automationid='CloseButton' /&gt;">
-                <ui:Target.TimeoutMS>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:Target.TimeoutMS>
-                <ui:Target.WaitForReady>
-                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                </ui:Target.WaitForReady>
-              </ui:Target>
-            </ui:Click.Target>
-          </ui:Click>
-        </Sequence>
-      </If.Then>
-      <If.Else>
-        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_9">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-        </Sequence>
-      </If.Else>
-    </If>
+    <ui:CloseWindow UseWindow="{x:Null}" ContinueOnError="True" DisplayName="Close Window 'msedge.exe'" sap:VirtualizedContainerService.HintSize="486,107" sap2010:WorkflowViewState.IdRef="CloseWindow_1" InformativeScreenshot="a9be18f1b10e47938312a9e234610787" Selector="&lt;html app='msedge.exe' title='*' /&gt;" TimeoutMS="5000" WaitForReady="INTERACTIVE" />
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="For Each proc In System.Diagnostics.Process.GetProcessesByName(&quot;vmware-view&quot;)     &#xA;&#x9;proc.Kill() &#xA;Next" DisplayName="Kill Horizon Client" sap:VirtualizedContainerService.HintSize="486,165" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
+      <ui:InvokeCode.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
   </Sequence>
 </Activity>
