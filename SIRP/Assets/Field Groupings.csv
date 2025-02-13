@@ -1,7 +1,11 @@
 Stage,Field
 Notification,datetimeReported
-Notification,reporterName
-Notification,reporterSurname
+Member of Public,reporterName
+Member of Public,reporterSurname
+Operator Reported,reporterName
+Operator Reported,reporterSurname
+External Organisation,reporterName
+External Organisation,reporterSurname
 External Organisation,Organisation
 External Organisation,Organisation Type
 Notification,reportType

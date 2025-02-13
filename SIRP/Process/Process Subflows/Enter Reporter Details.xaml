@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1198,1018.5</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1235,1052</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Enter_Report_Details_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -85,7 +85,7 @@
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="Enter_Report_Details" sap:VirtualizedContainerService.HintSize="804,953.5" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="Enter_Report_Details" sap:VirtualizedContainerService.HintSize="1024,987" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="strDateReported" />
       <Variable x:TypeArguments="x:String" Name="strTimeReported" />
@@ -96,14 +96,14 @@
         <av:Point x:Key="ShapeLocation">360,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
         <av:PointCollection x:Key="ConnectorLocation">390,77.5 390,127.5</av:PointCollection>
-        <x:Double x:Key="Height">916.52</x:Double>
-        <x:Double x:Key="Width">770</x:Double>
+        <x:Double x:Key="Height">950</x:Double>
+        <x:Double x:Key="Width">990</x:Double>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID5</x:Reference>
+      <x:Reference>__ReferenceID6</x:Reference>
     </Flowchart.StartNode>
-    <FlowStep x:Name="__ReferenceID5">
+    <FlowStep x:Name="__ReferenceID6">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">290,127.5</av:Point>
@@ -194,8 +194,9 @@
               <av:Point x:Key="ShapeLocation">347,260.5</av:Point>
               <av:Size x:Key="ShapeSize">86,87</av:Size>
               <av:PointCollection x:Key="Member of PublicConnector">347,304 140,304 140,458.5</av:PointCollection>
-              <av:PointCollection x:Key="External OrganisationConnector">433,304 640,304 640,458.5</av:PointCollection>
+              <av:PointCollection x:Key="External OrganisationConnector">433,325.75 640,325.75 640,458.5</av:PointCollection>
               <av:PointCollection x:Key="Operator ReportedConnector">390,347.5 390,457.5</av:PointCollection>
+              <av:PointCollection x:Key="AnonymousConnector">433,282.25 890,282.25 890,473.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <FlowStep x:Key="Member of Public" x:Name="__ReferenceID2">
@@ -974,6 +975,748 @@
               </FlowStep>
             </FlowStep.Next>
           </FlowStep>
+          <FlowStep x:Key="Operator Reported" x:Name="__ReferenceID4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <av:Point x:Key="ShapeLocation">290,457.5</av:Point>
+                <av:Size x:Key="ShapeSize">200,83</av:Size>
+                <av:PointCollection x:Key="ConnectorLocation">390,540.5 390,710.5</av:PointCollection>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Input Operator Reported" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_106">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Operator Reported&quot;" sap:VirtualizedContainerService.HintSize="1005,107" sap2010:WorkflowViewState.IdRef="Click_34" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a21b54cb-ffe4-4b18-887b-8e9dc22ca14c" InformativeScreenshot="fb8fed33d6b566b2e26fbc83b01674bf" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd aaname='Operator Reported' cls='ThunderRT6OptionButton' title='&amp;amp;Operator Reported' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;reporterName&quot;).ToString))]" DisplayName="&quot;Forename&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,327" sap2010:WorkflowViewState.IdRef="If_54">
+                <If.Then>
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Forename&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_28" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;reporterName&quot;).ToString]">
+                    <ui:TypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="aaf7e568e25f52215053b7751f8a7368" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='19' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:TypeInto.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:TypeInto>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_88">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </If.Else>
+              </If>
+              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;reporterSurname&quot;).ToString))]" DisplayName="&quot;Surname&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,327" sap2010:WorkflowViewState.IdRef="If_55">
+                <If.Then>
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Surname&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_29" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;reporterSurname&quot;).ToString]">
+                    <ui:TypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="aaf7e568e25f52215053b7751f8a7368" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='20' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:TypeInto.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:TypeInto>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_89">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </If.Else>
+              </If>
+              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;Job Title&quot;).ToString))]" DisplayName="&quot;Job Title&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,327" sap2010:WorkflowViewState.IdRef="If_56">
+                <If.Then>
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Job Title&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_30" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;Job Title&quot;).ToString]">
+                    <ui:TypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="c94c10ad4ea8fb657eeb6e34da662a0c" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='6' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:TypeInto.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:TypeInto>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_90">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </If.Else>
+              </If>
+              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;Section&quot;).ToString))]" DisplayName="&quot;Section&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,327" sap2010:WorkflowViewState.IdRef="If_57">
+                <If.Then>
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Section&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_31" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;Section&quot;).ToString]">
+                    <ui:TypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="111fd8688d774b09906462a892e51234" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='7' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:TypeInto.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:TypeInto>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_91">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </If.Else>
+              </If>
+              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;Organisation&quot;).ToString))]" DisplayName="&quot;Organisation&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,327" sap2010:WorkflowViewState.IdRef="If_58">
+                <If.Then>
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Organisation&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_32" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;Organisation&quot;).ToString]">
+                    <ui:TypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="356b4cbd6cfcc7644cc862c9762c0f12" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='8' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:TypeInto.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:TypeInto>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_92">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </If.Else>
+              </If>
+              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;Address Line 1&quot;).ToString))]" DisplayName="&quot;Address Line 1&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,327" sap2010:WorkflowViewState.IdRef="If_59">
+                <If.Then>
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Address Line 1&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_33" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;Address Line 1&quot;).ToString]">
+                    <ui:TypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="1c72e2ca6e04e015a100be4a6f92a332" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='11' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:TypeInto.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:TypeInto>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_93">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </If.Else>
+              </If>
+              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;Address Line 2&quot;).ToString))]" DisplayName="&quot;Address Line 2&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,327" sap2010:WorkflowViewState.IdRef="If_60">
+                <If.Then>
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Address Line 2&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_34" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;Address Line 2&quot;).ToString]">
+                    <ui:TypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="dd61cf8566500aad2127197764f9948d" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='12' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:TypeInto.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:TypeInto>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_94">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </If.Else>
+              </If>
+              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;Address Line 3&quot;).ToString))]" DisplayName="&quot;Address Line 3&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,327" sap2010:WorkflowViewState.IdRef="If_61">
+                <If.Then>
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Address Line 3&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_35" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;Address Line 3&quot;).ToString]">
+                    <ui:TypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="75ae0e75002e8b642695e73b9b1f73e2" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='13' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:TypeInto.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:TypeInto>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_95">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </If.Else>
+              </If>
+              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;Address Line 4&quot;).ToString))]" DisplayName="&quot;Address Line 4&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,327" sap2010:WorkflowViewState.IdRef="If_62">
+                <If.Then>
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Address Line 4&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_36" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;Address Line 4&quot;).ToString]">
+                    <ui:TypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="720aa53c2b1d7c75ca414c4a6357a7e9" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='14' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:TypeInto.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:TypeInto>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_96">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </If.Else>
+              </If>
+              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;Town&quot;).ToString))]" DisplayName="&quot;Town&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,327" sap2010:WorkflowViewState.IdRef="If_63">
+                <If.Then>
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Town&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_37" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;Town&quot;).ToString]">
+                    <ui:TypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="d2d8eae2a794916eb7220b8e87fdb73d" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='15' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:TypeInto.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:TypeInto>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_97">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </If.Else>
+              </If>
+              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;County&quot;).ToString))]" DisplayName="&quot;County&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,327" sap2010:WorkflowViewState.IdRef="If_64">
+                <If.Then>
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;County&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_38" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;County&quot;).ToString]">
+                    <ui:TypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="756b079e439f72bc5be1d0631f42c173" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='16' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:TypeInto.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:TypeInto>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_98">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </If.Else>
+              </If>
+              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;Postcode&quot;).ToString))]" DisplayName="&quot;Postcode&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,327" sap2010:WorkflowViewState.IdRef="If_65">
+                <If.Then>
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Postcode&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_39" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;Postcode&quot;).ToString]">
+                    <ui:TypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="13f2a2026a7353ac82bd52453d7cba80" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='17' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:TypeInto.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:TypeInto>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_99">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </If.Else>
+              </If>
+              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;Country&quot;).ToString))]" DisplayName="&quot;Country&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,327" sap2010:WorkflowViewState.IdRef="If_66">
+                <If.Then>
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Country&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_40" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;Country&quot;).ToString]">
+                    <ui:TypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="cd8fd126c8769089609a970d83f204cd" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='18' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:TypeInto.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:TypeInto>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_100">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </If.Else>
+              </If>
+              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;reporterEmail&quot;).ToString))]" DisplayName="&quot;reporterEmail&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,1485" sap2010:WorkflowViewState.IdRef="If_68">
+                <If.Then>
+                  <Sequence DisplayName="Enter &quot;reporterEmail&quot;" sap:VirtualizedContainerService.HintSize="650,1293" sap2010:WorkflowViewState.IdRef="Sequence_102">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:RetryScope DisplayName="Retry - Select EMail Contact Type" sap:VirtualizedContainerService.HintSize="588,1007" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="3" RetryInterval="00:00:03">
+                      <ui:RetryScope.ActivityBody>
+                        <ActivityAction>
+                          <Sequence DisplayName="Select EMail Contact Type" sap:VirtualizedContainerService.HintSize="546,830" sap2010:WorkflowViewState.IdRef="Sequence_85">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="strSelectedItem" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click ''Contact Type'" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="Click_35" KeyModifiers="None" MouseButton="BTN_LEFT">
+                              <ui:Click.CursorPosition>
+                                <ui:CursorPosition Position="Center">
+                                  <ui:CursorPosition.OffsetX>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetX>
+                                  <ui:CursorPosition.OffsetY>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetY>
+                                </ui:CursorPosition>
+                              </ui:Click.CursorPosition>
+                              <ui:Click.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="37c794c9-3ff8-4dea-96d0-32e9556449bf" InformativeScreenshot="c84f785bc3dfb831262fa3052697b8e5" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6ComboBox' idx='2' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Click.Target>
+                            </ui:Click>
+                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'EMail'" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="Click_36" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                              <ui:Click.CursorPosition>
+                                <ui:CursorPosition Position="Center">
+                                  <ui:CursorPosition.OffsetX>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetX>
+                                  <ui:CursorPosition.OffsetY>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetY>
+                                </ui:CursorPosition>
+                              </ui:Click.CursorPosition>
+                              <ui:Click.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="37c794c9-3ff8-4dea-96d0-32e9556449bf" InformativeScreenshot="201b332885869a7b3abda1b3ba3cae26" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' /&gt;&lt;ctrl name='EMail' role='list item' /&gt;" TimeoutMS="2500">
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Click.Target>
+                            </ui:Click>
+                            <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="selecteditem" DisplayName="Get Selected Contact Type" sap:VirtualizedContainerService.HintSize="484,135" sap2010:WorkflowViewState.IdRef="GetAttribute_8">
+                              <ui:GetAttribute.Result>
+                                <OutArgument x:TypeArguments="x:String">[strSelectedItem]</OutArgument>
+                              </ui:GetAttribute.Result>
+                              <ui:GetAttribute.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e9dec6d0-8ab8-4746-a9f9-789bca3d6e98" InformativeScreenshot="f63c8dc256eefe68e50339f8281435b5" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6ComboBox' idx='2' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:GetAttribute.Target>
+                            </ui:GetAttribute>
+                            <If Condition="[NOT(strSelectedItem = &quot;EMail&quot;)]" DisplayName="Incorrect Item Selected?" sap:VirtualizedContainerService.HintSize="484,250" sap2010:WorkflowViewState.IdRef="If_67">
+                              <If.Then>
+                                <Throw Exception="[New Exception(&quot;Failed to select 'EMail' as Contact Type&quot;)]" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Throw_10" />
+                              </If.Then>
+                              <If.Else>
+                                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_101">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:RetryScope.ActivityBody>
+                      <ui:RetryScope.Condition>
+                        <ActivityFunc x:TypeArguments="x:Boolean" />
+                      </ui:RetryScope.Condition>
+                    </ui:RetryScope>
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;reporterEmail&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="588,135" sap2010:WorkflowViewState.IdRef="TypeInto_41" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;reporterEmail&quot;).ToString]">
+                      <ui:TypeInto.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="06f665adc3392f7b0f8138892d2ac96b" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='3' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:TypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:TypeInto>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_103">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </If.Else>
+              </If>
+              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;reporterPhoneNumber&quot;).ToString))]" DisplayName="&quot;reporterPhoneNumber&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,1863" sap2010:WorkflowViewState.IdRef="If_71">
+                <If.Then>
+                  <Sequence DisplayName="Enter &quot;reporterPhoneNumber&quot;" sap:VirtualizedContainerService.HintSize="969,1671" sap2010:WorkflowViewState.IdRef="Sequence_86">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="strContactTypeIndex" />
+                      <Variable x:TypeArguments="x:String" Name="strContactDetailsIndex" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If sap2010:Annotation.AnnotationText="If Email has been populated then Phone Number will be the second row in Contact Details, else it will be the first so we need to assign the Selector Indexes accordingly." Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;reporterEmail&quot;).ToString))]" DisplayName="&quot;reporterEmail&quot; Populated?" sap:VirtualizedContainerService.HintSize="907,338" sap2010:WorkflowViewState.IdRef="If_69">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <ui:MultipleAssign DisplayName="Assign Selector Index" sap:VirtualizedContainerService.HintSize="431,132" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+                          <ui:MultipleAssign.AssignOperations>
+                            <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:String">[strContactTypeIndex]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:String">3</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:String">[strContactDetailsIndex]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:String">5</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                            </scg:List>
+                          </ui:MultipleAssign.AssignOperations>
+                        </ui:MultipleAssign>
+                      </If.Then>
+                      <If.Else>
+                        <ui:MultipleAssign DisplayName="Assign Selector Indexes" sap:VirtualizedContainerService.HintSize="431,132" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+                          <ui:MultipleAssign.AssignOperations>
+                            <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:String">[strContactTypeIndex]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:String">2</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:String">[strContactDetailsIndex]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:String">3</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                            </scg:List>
+                          </ui:MultipleAssign.AssignOperations>
+                        </ui:MultipleAssign>
+                      </If.Else>
+                    </If>
+                    <ui:RetryScope DisplayName="Retry - Select Mobile Telephone Contact Type" sap:VirtualizedContainerService.HintSize="907,1007" sap2010:WorkflowViewState.IdRef="RetryScope_4" NumberOfRetries="3" RetryInterval="00:00:03">
+                      <ui:RetryScope.ActivityBody>
+                        <ActivityAction>
+                          <Sequence DisplayName="Select Mobile Telephone Contact Type" sap:VirtualizedContainerService.HintSize="546,830" sap2010:WorkflowViewState.IdRef="Sequence_87">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="strSelectedItem" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click ''Contact Type'" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="Click_37" KeyModifiers="None" MouseButton="BTN_LEFT">
+                              <ui:Click.CursorPosition>
+                                <ui:CursorPosition Position="Center">
+                                  <ui:CursorPosition.OffsetX>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetX>
+                                  <ui:CursorPosition.OffsetY>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetY>
+                                </ui:CursorPosition>
+                              </ui:Click.CursorPosition>
+                              <ui:Click.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="37c794c9-3ff8-4dea-96d0-32e9556449bf" InformativeScreenshot="c84f785bc3dfb831262fa3052697b8e5" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6ComboBox' idx='{{strContactTypeIndex}}' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Click.Target>
+                            </ui:Click>
+                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Mobile Telephone'" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="Click_38" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                              <ui:Click.CursorPosition>
+                                <ui:CursorPosition Position="Center">
+                                  <ui:CursorPosition.OffsetX>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetX>
+                                  <ui:CursorPosition.OffsetY>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetY>
+                                </ui:CursorPosition>
+                              </ui:Click.CursorPosition>
+                              <ui:Click.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="37c794c9-3ff8-4dea-96d0-32e9556449bf" InformativeScreenshot="a7d478500d66869c56a4822ebe9e0ee1" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' /&gt;&lt;ctrl name='Mobile Telephone' role='list item' /&gt;" TimeoutMS="2500">
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Click.Target>
+                            </ui:Click>
+                            <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="selecteditem" DisplayName="Get Selected Contact Type" sap:VirtualizedContainerService.HintSize="484,135" sap2010:WorkflowViewState.IdRef="GetAttribute_9">
+                              <ui:GetAttribute.Result>
+                                <OutArgument x:TypeArguments="x:String">[strSelectedItem]</OutArgument>
+                              </ui:GetAttribute.Result>
+                              <ui:GetAttribute.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e9dec6d0-8ab8-4746-a9f9-789bca3d6e98" InformativeScreenshot="62e0d6ca06ce072bc00010a3e75806ac" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6ComboBox' idx='{{strContactTypeIndex}}' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:GetAttribute.Target>
+                            </ui:GetAttribute>
+                            <If Condition="[NOT(strSelectedItem = &quot;Mobile Telephone&quot;)]" DisplayName="Incorrect Item Selected?" sap:VirtualizedContainerService.HintSize="484,250" sap2010:WorkflowViewState.IdRef="If_70">
+                              <If.Then>
+                                <Throw Exception="[New Exception(&quot;Failed to select 'Mobile Telephone' as Contact Type&quot;)]" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Throw_11" />
+                              </If.Then>
+                              <If.Else>
+                                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_104">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:RetryScope.ActivityBody>
+                      <ui:RetryScope.Condition>
+                        <ActivityFunc x:TypeArguments="x:Boolean" />
+                      </ui:RetryScope.Condition>
+                    </ui:RetryScope>
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;reporterPhoneNumber&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="907,135" sap2010:WorkflowViewState.IdRef="TypeInto_42" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;reporterPhoneNumber&quot;).ToString]">
+                      <ui:TypeInto.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="06f665adc3392f7b0f8138892d2ac96b" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='{{strContactDetailsIndex}}' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:TypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:TypeInto>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_105">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </If.Else>
+              </If>
+            </Sequence>
+            <FlowStep.Next>
+              <x:Reference>__ReferenceID0</x:Reference>
+            </FlowStep.Next>
+          </FlowStep>
           <FlowStep x:Key="External Organisation" x:Name="__ReferenceID3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -982,7 +1725,7 @@
                 <av:PointCollection x:Key="ConnectorLocation">640,541.5 640,620.04 390,620.04 390,710.5</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Input External Organisation Data" sap:VirtualizedContainerService.HintSize="939,14663" sap2010:WorkflowViewState.IdRef="Sequence_67">
+            <Sequence DisplayName="Input External Organisation Data" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_67">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:Boolean" Name="booContactLookup" />
                 <Variable x:TypeArguments="x:String" Name="strContactNumberIndex" />
@@ -2191,747 +2934,35 @@
               <x:Reference>__ReferenceID0</x:Reference>
             </FlowStep.Next>
           </FlowStep>
-          <FlowStep x:Key="Operator Reported" x:Name="__ReferenceID4">
+          <FlowStep x:Key="Anonymous" x:Name="__ReferenceID5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <av:Point x:Key="ShapeLocation">290,457.5</av:Point>
-                <av:Size x:Key="ShapeSize">200,83</av:Size>
-                <av:PointCollection x:Key="ConnectorLocation">390,540.5 390,710.5</av:PointCollection>
+                <av:Point x:Key="ShapeLocation">790,473.5</av:Point>
+                <av:Size x:Key="ShapeSize">200,53</av:Size>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Input Operator Reported" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_106">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Operator Reported&quot;" sap:VirtualizedContainerService.HintSize="1005,107" sap2010:WorkflowViewState.IdRef="Click_34" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                <ui:Click.CursorPosition>
-                  <ui:CursorPosition Position="Center">
-                    <ui:CursorPosition.OffsetX>
-                      <InArgument x:TypeArguments="x:Int32" />
-                    </ui:CursorPosition.OffsetX>
-                    <ui:CursorPosition.OffsetY>
-                      <InArgument x:TypeArguments="x:Int32" />
-                    </ui:CursorPosition.OffsetY>
-                  </ui:CursorPosition>
-                </ui:Click.CursorPosition>
-                <ui:Click.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a21b54cb-ffe4-4b18-887b-8e9dc22ca14c" InformativeScreenshot="fb8fed33d6b566b2e26fbc83b01674bf" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd aaname='Operator Reported' cls='ThunderRT6OptionButton' title='&amp;amp;Operator Reported' /&gt;">
-                    <ui:Target.TimeoutMS>
-                      <InArgument x:TypeArguments="x:Int32" />
-                    </ui:Target.TimeoutMS>
-                    <ui:Target.WaitForReady>
-                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                    </ui:Target.WaitForReady>
-                  </ui:Target>
-                </ui:Click.Target>
-              </ui:Click>
-              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;reporterName&quot;).ToString))]" DisplayName="&quot;Forename&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,327" sap2010:WorkflowViewState.IdRef="If_54">
-                <If.Then>
-                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Forename&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_28" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;reporterName&quot;).ToString]">
-                    <ui:TypeInto.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="aaf7e568e25f52215053b7751f8a7368" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='19' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:TypeInto.Target>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:TypeInto>
-                </If.Then>
-                <If.Else>
-                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_88">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </Sequence>
-                </If.Else>
-              </If>
-              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;reporterSurname&quot;).ToString))]" DisplayName="&quot;Surname&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,327" sap2010:WorkflowViewState.IdRef="If_55">
-                <If.Then>
-                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Surname&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_29" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;reporterSurname&quot;).ToString]">
-                    <ui:TypeInto.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="aaf7e568e25f52215053b7751f8a7368" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='20' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:TypeInto.Target>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:TypeInto>
-                </If.Then>
-                <If.Else>
-                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_89">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </Sequence>
-                </If.Else>
-              </If>
-              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;Job Title&quot;).ToString))]" DisplayName="&quot;Job Title&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,327" sap2010:WorkflowViewState.IdRef="If_56">
-                <If.Then>
-                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Job Title&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_30" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;Job Title&quot;).ToString]">
-                    <ui:TypeInto.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="c94c10ad4ea8fb657eeb6e34da662a0c" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='6' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:TypeInto.Target>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:TypeInto>
-                </If.Then>
-                <If.Else>
-                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_90">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </Sequence>
-                </If.Else>
-              </If>
-              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;Section&quot;).ToString))]" DisplayName="&quot;Section&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,327" sap2010:WorkflowViewState.IdRef="If_57">
-                <If.Then>
-                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Section&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_31" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;Section&quot;).ToString]">
-                    <ui:TypeInto.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="111fd8688d774b09906462a892e51234" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='7' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:TypeInto.Target>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:TypeInto>
-                </If.Then>
-                <If.Else>
-                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_91">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </Sequence>
-                </If.Else>
-              </If>
-              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;Organisation&quot;).ToString))]" DisplayName="&quot;Organisation&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,327" sap2010:WorkflowViewState.IdRef="If_58">
-                <If.Then>
-                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Organisation&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_32" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;Organisation&quot;).ToString]">
-                    <ui:TypeInto.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="356b4cbd6cfcc7644cc862c9762c0f12" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='8' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:TypeInto.Target>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:TypeInto>
-                </If.Then>
-                <If.Else>
-                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_92">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </Sequence>
-                </If.Else>
-              </If>
-              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;Address Line 1&quot;).ToString))]" DisplayName="&quot;Address Line 1&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,327" sap2010:WorkflowViewState.IdRef="If_59">
-                <If.Then>
-                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Address Line 1&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_33" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;Address Line 1&quot;).ToString]">
-                    <ui:TypeInto.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="1c72e2ca6e04e015a100be4a6f92a332" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='11' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:TypeInto.Target>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:TypeInto>
-                </If.Then>
-                <If.Else>
-                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_93">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </Sequence>
-                </If.Else>
-              </If>
-              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;Address Line 2&quot;).ToString))]" DisplayName="&quot;Address Line 2&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,327" sap2010:WorkflowViewState.IdRef="If_60">
-                <If.Then>
-                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Address Line 2&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_34" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;Address Line 2&quot;).ToString]">
-                    <ui:TypeInto.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="dd61cf8566500aad2127197764f9948d" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='12' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:TypeInto.Target>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:TypeInto>
-                </If.Then>
-                <If.Else>
-                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_94">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </Sequence>
-                </If.Else>
-              </If>
-              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;Address Line 3&quot;).ToString))]" DisplayName="&quot;Address Line 3&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,327" sap2010:WorkflowViewState.IdRef="If_61">
-                <If.Then>
-                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Address Line 3&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_35" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;Address Line 3&quot;).ToString]">
-                    <ui:TypeInto.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="75ae0e75002e8b642695e73b9b1f73e2" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='13' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:TypeInto.Target>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:TypeInto>
-                </If.Then>
-                <If.Else>
-                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_95">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </Sequence>
-                </If.Else>
-              </If>
-              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;Address Line 4&quot;).ToString))]" DisplayName="&quot;Address Line 4&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,327" sap2010:WorkflowViewState.IdRef="If_62">
-                <If.Then>
-                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Address Line 4&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_36" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;Address Line 4&quot;).ToString]">
-                    <ui:TypeInto.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="720aa53c2b1d7c75ca414c4a6357a7e9" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='14' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:TypeInto.Target>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:TypeInto>
-                </If.Then>
-                <If.Else>
-                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_96">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </Sequence>
-                </If.Else>
-              </If>
-              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;Town&quot;).ToString))]" DisplayName="&quot;Town&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,327" sap2010:WorkflowViewState.IdRef="If_63">
-                <If.Then>
-                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Town&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_37" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;Town&quot;).ToString]">
-                    <ui:TypeInto.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="d2d8eae2a794916eb7220b8e87fdb73d" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='15' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:TypeInto.Target>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:TypeInto>
-                </If.Then>
-                <If.Else>
-                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_97">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </Sequence>
-                </If.Else>
-              </If>
-              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;County&quot;).ToString))]" DisplayName="&quot;County&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,327" sap2010:WorkflowViewState.IdRef="If_64">
-                <If.Then>
-                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;County&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_38" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;County&quot;).ToString]">
-                    <ui:TypeInto.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="756b079e439f72bc5be1d0631f42c173" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='16' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:TypeInto.Target>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:TypeInto>
-                </If.Then>
-                <If.Else>
-                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_98">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </Sequence>
-                </If.Else>
-              </If>
-              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;Postcode&quot;).ToString))]" DisplayName="&quot;Postcode&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,327" sap2010:WorkflowViewState.IdRef="If_65">
-                <If.Then>
-                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Postcode&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_39" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;Postcode&quot;).ToString]">
-                    <ui:TypeInto.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="13f2a2026a7353ac82bd52453d7cba80" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='17' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:TypeInto.Target>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:TypeInto>
-                </If.Then>
-                <If.Else>
-                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_99">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </Sequence>
-                </If.Else>
-              </If>
-              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;Country&quot;).ToString))]" DisplayName="&quot;Country&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,327" sap2010:WorkflowViewState.IdRef="If_66">
-                <If.Then>
-                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Country&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_40" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;Country&quot;).ToString]">
-                    <ui:TypeInto.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="cd8fd126c8769089609a970d83f204cd" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='18' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:TypeInto.Target>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:TypeInto>
-                </If.Then>
-                <If.Else>
-                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_100">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </Sequence>
-                </If.Else>
-              </If>
-              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;reporterEmail&quot;).ToString))]" DisplayName="&quot;reporterEmail&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,1485" sap2010:WorkflowViewState.IdRef="If_68">
-                <If.Then>
-                  <Sequence DisplayName="Enter &quot;reporterEmail&quot;" sap:VirtualizedContainerService.HintSize="650,1293" sap2010:WorkflowViewState.IdRef="Sequence_102">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:RetryScope DisplayName="Retry - Select EMail Contact Type" sap:VirtualizedContainerService.HintSize="588,1007" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="3" RetryInterval="00:00:03">
-                      <ui:RetryScope.ActivityBody>
-                        <ActivityAction>
-                          <Sequence DisplayName="Select EMail Contact Type" sap:VirtualizedContainerService.HintSize="546,830" sap2010:WorkflowViewState.IdRef="Sequence_85">
-                            <Sequence.Variables>
-                              <Variable x:TypeArguments="x:String" Name="strSelectedItem" />
-                            </Sequence.Variables>
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click ''Contact Type'" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="Click_35" KeyModifiers="None" MouseButton="BTN_LEFT">
-                              <ui:Click.CursorPosition>
-                                <ui:CursorPosition Position="Center">
-                                  <ui:CursorPosition.OffsetX>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:CursorPosition.OffsetX>
-                                  <ui:CursorPosition.OffsetY>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:CursorPosition.OffsetY>
-                                </ui:CursorPosition>
-                              </ui:Click.CursorPosition>
-                              <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="37c794c9-3ff8-4dea-96d0-32e9556449bf" InformativeScreenshot="c84f785bc3dfb831262fa3052697b8e5" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6ComboBox' idx='2' /&gt;">
-                                  <ui:Target.TimeoutMS>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:Target.TimeoutMS>
-                                  <ui:Target.WaitForReady>
-                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                  </ui:Target.WaitForReady>
-                                </ui:Target>
-                              </ui:Click.Target>
-                            </ui:Click>
-                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'EMail'" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="Click_36" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                              <ui:Click.CursorPosition>
-                                <ui:CursorPosition Position="Center">
-                                  <ui:CursorPosition.OffsetX>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:CursorPosition.OffsetX>
-                                  <ui:CursorPosition.OffsetY>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:CursorPosition.OffsetY>
-                                </ui:CursorPosition>
-                              </ui:Click.CursorPosition>
-                              <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="37c794c9-3ff8-4dea-96d0-32e9556449bf" InformativeScreenshot="201b332885869a7b3abda1b3ba3cae26" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' /&gt;&lt;ctrl name='EMail' role='list item' /&gt;" TimeoutMS="2500">
-                                  <ui:Target.WaitForReady>
-                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                  </ui:Target.WaitForReady>
-                                </ui:Target>
-                              </ui:Click.Target>
-                            </ui:Click>
-                            <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="selecteditem" DisplayName="Get Selected Contact Type" sap:VirtualizedContainerService.HintSize="484,135" sap2010:WorkflowViewState.IdRef="GetAttribute_8">
-                              <ui:GetAttribute.Result>
-                                <OutArgument x:TypeArguments="x:String">[strSelectedItem]</OutArgument>
-                              </ui:GetAttribute.Result>
-                              <ui:GetAttribute.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e9dec6d0-8ab8-4746-a9f9-789bca3d6e98" InformativeScreenshot="f63c8dc256eefe68e50339f8281435b5" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6ComboBox' idx='2' /&gt;">
-                                  <ui:Target.TimeoutMS>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:Target.TimeoutMS>
-                                  <ui:Target.WaitForReady>
-                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                  </ui:Target.WaitForReady>
-                                </ui:Target>
-                              </ui:GetAttribute.Target>
-                            </ui:GetAttribute>
-                            <If Condition="[NOT(strSelectedItem = &quot;EMail&quot;)]" DisplayName="Incorrect Item Selected?" sap:VirtualizedContainerService.HintSize="484,250" sap2010:WorkflowViewState.IdRef="If_67">
-                              <If.Then>
-                                <Throw Exception="[New Exception(&quot;Failed to select 'EMail' as Contact Type&quot;)]" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Throw_10" />
-                              </If.Then>
-                              <If.Else>
-                                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_101">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </Sequence>
-                              </If.Else>
-                            </If>
-                          </Sequence>
-                        </ActivityAction>
-                      </ui:RetryScope.ActivityBody>
-                      <ui:RetryScope.Condition>
-                        <ActivityFunc x:TypeArguments="x:Boolean" />
-                      </ui:RetryScope.Condition>
-                    </ui:RetryScope>
-                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;reporterEmail&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="588,135" sap2010:WorkflowViewState.IdRef="TypeInto_41" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;reporterEmail&quot;).ToString]">
-                      <ui:TypeInto.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="06f665adc3392f7b0f8138892d2ac96b" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='3' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:TypeInto.Target>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ui:TypeInto>
-                  </Sequence>
-                </If.Then>
-                <If.Else>
-                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_103">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </Sequence>
-                </If.Else>
-              </If>
-              <If Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;reporterPhoneNumber&quot;).ToString))]" DisplayName="&quot;reporterPhoneNumber&quot; Populated?" sap:VirtualizedContainerService.HintSize="1005,1863" sap2010:WorkflowViewState.IdRef="If_71">
-                <If.Then>
-                  <Sequence DisplayName="Enter &quot;reporterPhoneNumber&quot;" sap:VirtualizedContainerService.HintSize="969,1671" sap2010:WorkflowViewState.IdRef="Sequence_86">
-                    <Sequence.Variables>
-                      <Variable x:TypeArguments="x:String" Name="strContactTypeIndex" />
-                      <Variable x:TypeArguments="x:String" Name="strContactDetailsIndex" />
-                    </Sequence.Variables>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <If sap2010:Annotation.AnnotationText="If Email has been populated then Phone Number will be the second row in Contact Details, else it will be the first so we need to assign the Selector Indexes accordingly." Condition="[NOT(String.IsNullOrEmpty(in_jobRoboticsJSON(&quot;reporterEmail&quot;).ToString))]" DisplayName="&quot;reporterEmail&quot; Populated?" sap:VirtualizedContainerService.HintSize="907,338" sap2010:WorkflowViewState.IdRef="If_69">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <If.Then>
-                        <ui:MultipleAssign DisplayName="Assign Selector Index" sap:VirtualizedContainerService.HintSize="431,132" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
-                          <ui:MultipleAssign.AssignOperations>
-                            <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
-                                <ui:AssignOperation.To>
-                                  <OutArgument x:TypeArguments="x:String">[strContactTypeIndex]</OutArgument>
-                                </ui:AssignOperation.To>
-                                <ui:AssignOperation.Value>
-                                  <InArgument x:TypeArguments="x:String">3</InArgument>
-                                </ui:AssignOperation.Value>
-                              </ui:AssignOperation>
-                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
-                                <ui:AssignOperation.To>
-                                  <OutArgument x:TypeArguments="x:String">[strContactDetailsIndex]</OutArgument>
-                                </ui:AssignOperation.To>
-                                <ui:AssignOperation.Value>
-                                  <InArgument x:TypeArguments="x:String">5</InArgument>
-                                </ui:AssignOperation.Value>
-                              </ui:AssignOperation>
-                            </scg:List>
-                          </ui:MultipleAssign.AssignOperations>
-                        </ui:MultipleAssign>
-                      </If.Then>
-                      <If.Else>
-                        <ui:MultipleAssign DisplayName="Assign Selector Indexes" sap:VirtualizedContainerService.HintSize="431,132" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
-                          <ui:MultipleAssign.AssignOperations>
-                            <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
-                                <ui:AssignOperation.To>
-                                  <OutArgument x:TypeArguments="x:String">[strContactTypeIndex]</OutArgument>
-                                </ui:AssignOperation.To>
-                                <ui:AssignOperation.Value>
-                                  <InArgument x:TypeArguments="x:String">2</InArgument>
-                                </ui:AssignOperation.Value>
-                              </ui:AssignOperation>
-                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
-                                <ui:AssignOperation.To>
-                                  <OutArgument x:TypeArguments="x:String">[strContactDetailsIndex]</OutArgument>
-                                </ui:AssignOperation.To>
-                                <ui:AssignOperation.Value>
-                                  <InArgument x:TypeArguments="x:String">3</InArgument>
-                                </ui:AssignOperation.Value>
-                              </ui:AssignOperation>
-                            </scg:List>
-                          </ui:MultipleAssign.AssignOperations>
-                        </ui:MultipleAssign>
-                      </If.Else>
-                    </If>
-                    <ui:RetryScope DisplayName="Retry - Select Mobile Telephone Contact Type" sap:VirtualizedContainerService.HintSize="907,1007" sap2010:WorkflowViewState.IdRef="RetryScope_4" NumberOfRetries="3" RetryInterval="00:00:03">
-                      <ui:RetryScope.ActivityBody>
-                        <ActivityAction>
-                          <Sequence DisplayName="Select Mobile Telephone Contact Type" sap:VirtualizedContainerService.HintSize="546,830" sap2010:WorkflowViewState.IdRef="Sequence_87">
-                            <Sequence.Variables>
-                              <Variable x:TypeArguments="x:String" Name="strSelectedItem" />
-                            </Sequence.Variables>
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click ''Contact Type'" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="Click_37" KeyModifiers="None" MouseButton="BTN_LEFT">
-                              <ui:Click.CursorPosition>
-                                <ui:CursorPosition Position="Center">
-                                  <ui:CursorPosition.OffsetX>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:CursorPosition.OffsetX>
-                                  <ui:CursorPosition.OffsetY>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:CursorPosition.OffsetY>
-                                </ui:CursorPosition>
-                              </ui:Click.CursorPosition>
-                              <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="37c794c9-3ff8-4dea-96d0-32e9556449bf" InformativeScreenshot="c84f785bc3dfb831262fa3052697b8e5" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6ComboBox' idx='{{strContactTypeIndex}}' /&gt;">
-                                  <ui:Target.TimeoutMS>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:Target.TimeoutMS>
-                                  <ui:Target.WaitForReady>
-                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                  </ui:Target.WaitForReady>
-                                </ui:Target>
-                              </ui:Click.Target>
-                            </ui:Click>
-                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Mobile Telephone'" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="Click_38" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                              <ui:Click.CursorPosition>
-                                <ui:CursorPosition Position="Center">
-                                  <ui:CursorPosition.OffsetX>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:CursorPosition.OffsetX>
-                                  <ui:CursorPosition.OffsetY>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:CursorPosition.OffsetY>
-                                </ui:CursorPosition>
-                              </ui:Click.CursorPosition>
-                              <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="37c794c9-3ff8-4dea-96d0-32e9556449bf" InformativeScreenshot="a7d478500d66869c56a4822ebe9e0ee1" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' /&gt;&lt;ctrl name='Mobile Telephone' role='list item' /&gt;" TimeoutMS="2500">
-                                  <ui:Target.WaitForReady>
-                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                  </ui:Target.WaitForReady>
-                                </ui:Target>
-                              </ui:Click.Target>
-                            </ui:Click>
-                            <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="selecteditem" DisplayName="Get Selected Contact Type" sap:VirtualizedContainerService.HintSize="484,135" sap2010:WorkflowViewState.IdRef="GetAttribute_9">
-                              <ui:GetAttribute.Result>
-                                <OutArgument x:TypeArguments="x:String">[strSelectedItem]</OutArgument>
-                              </ui:GetAttribute.Result>
-                              <ui:GetAttribute.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e9dec6d0-8ab8-4746-a9f9-789bca3d6e98" InformativeScreenshot="62e0d6ca06ce072bc00010a3e75806ac" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6ComboBox' idx='{{strContactTypeIndex}}' /&gt;">
-                                  <ui:Target.TimeoutMS>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:Target.TimeoutMS>
-                                  <ui:Target.WaitForReady>
-                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                  </ui:Target.WaitForReady>
-                                </ui:Target>
-                              </ui:GetAttribute.Target>
-                            </ui:GetAttribute>
-                            <If Condition="[NOT(strSelectedItem = &quot;Mobile Telephone&quot;)]" DisplayName="Incorrect Item Selected?" sap:VirtualizedContainerService.HintSize="484,250" sap2010:WorkflowViewState.IdRef="If_70">
-                              <If.Then>
-                                <Throw Exception="[New Exception(&quot;Failed to select 'Mobile Telephone' as Contact Type&quot;)]" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Throw_11" />
-                              </If.Then>
-                              <If.Else>
-                                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_104">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </Sequence>
-                              </If.Else>
-                            </If>
-                          </Sequence>
-                        </ActivityAction>
-                      </ui:RetryScope.ActivityBody>
-                      <ui:RetryScope.Condition>
-                        <ActivityFunc x:TypeArguments="x:Boolean" />
-                      </ui:RetryScope.Condition>
-                    </ui:RetryScope>
-                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;reporterPhoneNumber&quot;" EmptyField="True" sap:VirtualizedContainerService.HintSize="907,135" sap2010:WorkflowViewState.IdRef="TypeInto_42" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;reporterPhoneNumber&quot;).ToString]">
-                      <ui:TypeInto.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21f0a69-85e6-4f1a-934f-f6a7432f7967" InformativeScreenshot="06f665adc3392f7b0f8138892d2ac96b" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd cls='ThunderRT6Frame' idx='1' title='Frame1' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='{{strContactDetailsIndex}}' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:TypeInto.Target>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ui:TypeInto>
-                  </Sequence>
-                </If.Then>
-                <If.Else>
-                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_105">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </Sequence>
-                </If.Else>
-              </If>
-            </Sequence>
-            <FlowStep.Next>
-              <x:Reference>__ReferenceID0</x:Reference>
-            </FlowStep.Next>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Anonymous&quot;" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_50" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a21b54cb-ffe4-4b18-887b-8e9dc22ca14c" InformativeScreenshot="9b2ff313608007d54a82452769a77c7f" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='New Incident' /&gt;&lt;wnd cls='ThunderRT6Frame' title='Reporter Type' /&gt;&lt;wnd aaname='Anonymous' cls='ThunderRT6OptionButton' title='&amp;amp;Anonymous' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
           </FlowStep>
         </FlowSwitch>
       </FlowStep.Next>
@@ -2941,5 +2972,6 @@
     <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID3</x:Reference>
     <x:Reference>__ReferenceID4</x:Reference>
+    <x:Reference>__ReferenceID5</x:Reference>
   </Flowchart>
 </Activity>
