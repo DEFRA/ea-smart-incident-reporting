@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1170,786</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1198,906</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Enter_Attendance_Details_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -81,7 +81,6 @@
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="Enter Attendance Details" sap:VirtualizedContainerService.HintSize="746,703" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -106,7 +105,7 @@
           <av:PointCollection x:Key="ConnectorLocation">300,180.5 300,230.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input - Select Type of Incident" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="BlockUserInput_3" KeyModifiers="Alt" SpecialKey="True">
+      <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input - Select Type of Incident" sap:VirtualizedContainerService.HintSize="582,1323" sap2010:WorkflowViewState.IdRef="BlockUserInput_3" KeyModifiers="Alt" SpecialKey="True">
         <ui:BlockUserInput.Body>
           <Sequence DisplayName="Select Type of Incident" sap:VirtualizedContainerService.HintSize="546,1195" sap2010:WorkflowViewState.IdRef="Sequence_12">
             <Sequence.Variables>
@@ -152,7 +151,7 @@
             </ui:Click>
             <ui:FindChildren Children="[ieChildren]" DisplayName="Retrieve Dropdown Children" Filter="&lt;ctrl /&gt;" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="FindChildren_3" Scope="FIND_DESCENDANTS">
               <ui:FindChildren.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eb40dcb9-a257-4ac1-9d2c-d02060d404ce" InformativeScreenshot="b2ec49b7cd1b57699abd1310a140367d" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' idx='*' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eb40dcb9-a257-4ac1-9d2c-d02060d404ce" InformativeScreenshot="b2ec49b7cd1b57699abd1310a140367d" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -186,7 +185,7 @@
             </If>
             <ui:SetFocus DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Set Focus on Dropdown Option" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="SetFocus_3">
               <ui:SetFocus.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f1868324-4366-4512-9923-c96f9625310b" InformativeScreenshot="fbc7548d576e6b98dffd25b0fcce8f8b" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' idx='*' /&gt;&lt;ctrl name='{{strTypeOfIncident}}' role='list item' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f1868324-4366-4512-9923-c96f9625310b" InformativeScreenshot="fbc7548d576e6b98dffd25b0fcce8f8b" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' /&gt;&lt;ctrl name='{{strTypeOfIncident}}' role='list item' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -208,7 +207,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fb0f1ae1-2ffc-442e-aac3-74d4187931ae" InformativeScreenshot="fbc7548d576e6b98dffd25b0fcce8f8b" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' idx='*' /&gt;&lt;ctrl name='{{strTypeOfIncident}}' role='list item' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fb0f1ae1-2ffc-442e-aac3-74d4187931ae" InformativeScreenshot="fbc7548d576e6b98dffd25b0fcce8f8b" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' /&gt;&lt;ctrl name='{{strTypeOfIncident}}' role='list item' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -230,7 +229,7 @@
               <av:PointCollection x:Key="ConnectorLocation">300,313.5 300,363.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Enter Assessed Date &amp; Time" sap:VirtualizedContainerService.HintSize="548,950" sap2010:WorkflowViewState.IdRef="Sequence_13">
+          <Sequence DisplayName="Enter Assessed Date &amp; Time" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_13">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="strDateAssessed" />
               <Variable x:TypeArguments="x:String" Name="strTimeAssessed" />
@@ -409,7 +408,7 @@
                         </ui:Click>
                         <ui:FindChildren Children="[ieChildren]" DisplayName="Retrieve Dropdown Children" Filter="&lt;ctrl /&gt;" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="FindChildren_4" Scope="FIND_DESCENDANTS">
                           <ui:FindChildren.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eb40dcb9-a257-4ac1-9d2c-d02060d404ce" InformativeScreenshot="0dd33b10ca32b08ee582942ab136f649" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' idx='*' /&gt;">
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eb40dcb9-a257-4ac1-9d2c-d02060d404ce" InformativeScreenshot="0dd33b10ca32b08ee582942ab136f649" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' /&gt;">
                               <ui:Target.TimeoutMS>
                                 <InArgument x:TypeArguments="x:Int32" />
                               </ui:Target.TimeoutMS>
@@ -443,7 +442,7 @@
                         </If>
                         <ui:SetFocus DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Set Focus on Dropdown Option" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="SetFocus_4">
                           <ui:SetFocus.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f1868324-4366-4512-9923-c96f9625310b" InformativeScreenshot="fbc7548d576e6b98dffd25b0fcce8f8b" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' idx='*' /&gt;&lt;ctrl name='{{strInitialAssessment}}' role='list item' /&gt;">
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f1868324-4366-4512-9923-c96f9625310b" InformativeScreenshot="fbc7548d576e6b98dffd25b0fcce8f8b" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' /&gt;&lt;ctrl name='{{strInitialAssessment}}' role='list item' /&gt;">
                               <ui:Target.TimeoutMS>
                                 <InArgument x:TypeArguments="x:Int32" />
                               </ui:Target.TimeoutMS>
@@ -465,7 +464,7 @@
                             </ui:CursorPosition>
                           </ui:Click.CursorPosition>
                           <ui:Click.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fb0f1ae1-2ffc-442e-aac3-74d4187931ae" InformativeScreenshot="fbc7548d576e6b98dffd25b0fcce8f8b" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' idx='*' /&gt;&lt;ctrl name='{{strInitialAssessment}}' role='list item' /&gt;">
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fb0f1ae1-2ffc-442e-aac3-74d4187931ae" InformativeScreenshot="fbc7548d576e6b98dffd25b0fcce8f8b" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' /&gt;&lt;ctrl name='{{strInitialAssessment}}' role='list item' /&gt;">
                               <ui:Target.TimeoutMS>
                                 <InArgument x:TypeArguments="x:Int32" />
                               </ui:Target.TimeoutMS>
@@ -524,7 +523,7 @@
                         </ui:Click>
                         <ui:FindChildren Children="[ieChildren]" DisplayName="Retrieve Dropdown Children" Filter="&lt;ctrl /&gt;" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="FindChildren_5" Scope="FIND_DESCENDANTS">
                           <ui:FindChildren.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eb40dcb9-a257-4ac1-9d2c-d02060d404ce" InformativeScreenshot="2a7c235259e993b4f300630a7d79a8d2" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' idx='*' /&gt;">
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eb40dcb9-a257-4ac1-9d2c-d02060d404ce" InformativeScreenshot="2a7c235259e993b4f300630a7d79a8d2" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' /&gt;">
                               <ui:Target.TimeoutMS>
                                 <InArgument x:TypeArguments="x:Int32" />
                               </ui:Target.TimeoutMS>
@@ -558,7 +557,7 @@
                         </If>
                         <ui:SetFocus DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Set Focus on Dropdown Option" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="SetFocus_5">
                           <ui:SetFocus.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f1868324-4366-4512-9923-c96f9625310b" InformativeScreenshot="79b240a7c5bc4d3aa236671eb001f306" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' idx='*' /&gt;&lt;ctrl name='{{strAttendance}}' role='list item' /&gt;">
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f1868324-4366-4512-9923-c96f9625310b" InformativeScreenshot="79b240a7c5bc4d3aa236671eb001f306" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' /&gt;&lt;ctrl name='{{strAttendance}}' role='list item' /&gt;">
                               <ui:Target.TimeoutMS>
                                 <InArgument x:TypeArguments="x:Int32" />
                               </ui:Target.TimeoutMS>
@@ -580,7 +579,7 @@
                             </ui:CursorPosition>
                           </ui:Click.CursorPosition>
                           <ui:Click.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fb0f1ae1-2ffc-442e-aac3-74d4187931ae" InformativeScreenshot="fbc7548d576e6b98dffd25b0fcce8f8b" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' idx='*' /&gt;&lt;ctrl name='{{strAttendance}}' role='list item' /&gt;">
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fb0f1ae1-2ffc-442e-aac3-74d4187931ae" InformativeScreenshot="fbc7548d576e6b98dffd25b0fcce8f8b" Selector="&lt;wnd app='irs.exe' cls='ComboLBox' isremoteapp='1' /&gt;&lt;ctrl name='{{strAttendance}}' role='list item' /&gt;">
                               <ui:Target.TimeoutMS>
                                 <InArgument x:TypeArguments="x:Int32" />
                               </ui:Target.TimeoutMS>
