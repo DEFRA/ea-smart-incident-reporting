@@ -11,7 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1170,3707</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2331,3707</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetTransactionData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="54">
@@ -206,7 +206,7 @@
                 <InArgument x:TypeArguments="x:String">["Bearer "+objOAuth2Response("access_token").ToString]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" DisplayName="Private: Retrieve Dataverse Records" EnableSSLVerification="True" EndPoint="[io_Config(&quot;Dataverse API URL&quot;).ToString+&quot;api/data/v9.2/&quot;+io_Config(&quot;Dataverse Robotics Table&quot;).ToString+&quot;?$filter=(sbs_parentreportid eq '&quot;+out_TransactionItem.Reference+&quot;')&quot;]" sap:VirtualizedContainerService.HintSize="484,71" sap2010:WorkflowViewState.IdRef="HttpClient_4" Method="GET" Result="[strRecordResponse]" StatusCode="[intRecordResponseStatus]" TimeoutMS="30000">
+            <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" DisplayName="Private: Retrieve Dataverse Records" EnableSSLVerification="True" EndPoint="[io_Config(&quot;Dataverse API URL&quot;).ToString+&quot;api/data/v9.2/&quot;+io_Config(&quot;Dataverse Robotics Table&quot;).ToString+&quot;?$filter=(sbs_parentreportid eq '&quot;+out_TransactionItem.Reference+&quot;' and sbs_roboticsstatus eq 10)&quot;]" sap:VirtualizedContainerService.HintSize="484,71" sap2010:WorkflowViewState.IdRef="HttpClient_4" Method="GET" Result="[strRecordResponse]" StatusCode="[intRecordResponseStatus]" TimeoutMS="30000">
               <ui:HttpClient.Attachments>
                 <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
               </ui:HttpClient.Attachments>
@@ -242,7 +242,7 @@
           <ui:DeserializeJsonArray DisplayName="Deserialize JSON Array - Records" sap:VirtualizedContainerService.HintSize="729,60" sap2010:WorkflowViewState.IdRef="DeserializeJsonArray_1" JsonArray="[jarRecordResponse]" JsonString="[objRecordResponse(&quot;value&quot;).ToString]" />
           <If Condition="[jarRecordResponse.Count = 0]" DisplayName="Dataverse Returned No Records?" sap:VirtualizedContainerService.HintSize="729,414" sap2010:WorkflowViewState.IdRef="If_8">
             <If.Then>
-              <Throw DisplayName="Throw BRE" Exception="[New BusinessRuleException(&quot;No data record retrieved from Dataverse for Report Parent ID: &quot;+out_TransactionItem.Reference)]" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Throw_2" />
+              <Throw DisplayName="Throw BRE" Exception="[New BusinessRuleException(&quot;No data record retrieved from Dataverse for Report Parent ID or invalid Robotics Status flag: &quot;+out_TransactionItem.Reference)]" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Throw_2" />
             </If.Then>
             <If.Else>
               <If Condition="[jarRecordResponse.Count &gt; 1]" DisplayName="Dataverse Returned &gt;1 Record?" sap:VirtualizedContainerService.HintSize="484,252" sap2010:WorkflowViewState.IdRef="If_7">
@@ -289,15 +289,9 @@
             </Assign>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Set Dataverse Record In Progress" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Process\Process Subflows\Update Dataverse Record.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_Config">
-                  <mva:VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="io_Config" />
-                </InOutArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_strBody">
-                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="jBody.ToString" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_RecordID">
-                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="out_jtokDataObject(io_Config(&quot;Dataverse ID Column&quot;).ToString).ToString" />
-                </InArgument>
+                <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_Config">[io_Config]</InOutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_strBody">[jBody.ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_RecordID">[out_jtokDataObject(io_Config("Dataverse ID Column").ToString).ToString]</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
           </Sequence>
