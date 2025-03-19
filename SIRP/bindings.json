@@ -1,4 +1,25 @@
 {
   "version": "1.0",
-  "resources": []
+  "resources": [
+    {
+      "resource": "asset",
+      "metadata": {
+        "name": {
+          "defaultValue": "Consecutive Critical Failures",
+          "isExpression": false,
+          "displayName": "AssetName"
+        }
+      }
+    },
+    {
+      "resource": "asset",
+      "metadata": {
+        "name": {
+          "defaultValue": "Consecutive Critical Failures",
+          "isExpression": false,
+          "displayName": "AssetName"
+        }
+      }
+    }
+  ]
 }
