@@ -1,4 +1,16 @@
 {
   "version": "2.0",
-  "resources": []
+  "resources": [
+    {
+      "resource": "asset",
+      "value": {
+        "name": {
+          "defaultValue": "Consecutive Critical Failures",
+          "isExpression": false,
+          "displayName": "AssetName"
+        }
+      },
+      "metadata": {}
+    }
+  ]
 }
