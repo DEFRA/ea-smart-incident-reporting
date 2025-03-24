@@ -86,8 +86,8 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>Pop Ups</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="2458,8056" sap2010:WorkflowViewState.IdRef="Sequence_9">
@@ -112,7 +112,7 @@
           </sap:WorkflowViewStateService.ViewState>
           <If Condition="[CBool(io_Config(&quot;Dev Flag&quot;))]" DisplayName="Dev?" sap:VirtualizedContainerService.HintSize="2296,5879" sap2010:WorkflowViewState.IdRef="If_22">
             <If.Then>
-              <Sequence DisplayName="Launch NIRS - VMWare" sap:VirtualizedContainerService.HintSize="590,2583" sap2010:WorkflowViewState.IdRef="Sequence_55">
+              <Sequence DisplayName="Launch NIRS - VMWare" sap:VirtualizedContainerService.HintSize="590,2515" sap2010:WorkflowViewState.IdRef="Sequence_55">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="sn:NetworkCredential" Name="credVMWare" />
                   <Variable x:TypeArguments="x:String" Name="strNIRSInstance" />
@@ -239,7 +239,7 @@
                     </Sequence>
                   </ui:BlockUserInput.Body>
                 </ui:BlockUserInput>
-                <TryCatch DisplayName="Wait for Horizon to Load" sap:VirtualizedContainerService.HintSize="528,340" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+                <TryCatch DisplayName="Wait for Horizon to Load" sap:VirtualizedContainerService.HintSize="528,272" sap2010:WorkflowViewState.IdRef="TryCatch_6">
                   <TryCatch.Try>
                     <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Check Horizon Landing Page Loaded" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_10">
                       <ui:WaitUiElementAppear.Target>
@@ -252,10 +252,10 @@
                     </ui:WaitUiElementAppear>
                   </TryCatch.Try>
                   <TryCatch.Catches>
-                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,105" sap2010:WorkflowViewState.IdRef="Catch`1_5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -263,7 +263,7 @@
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                         </ActivityAction.Argument>
-                        <Throw DisplayName="Throw BRE" Exception="[New BusinessRuleException(&quot;Login to Horizon Client has failed.&quot;)]" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                        <Throw DisplayName="Throw Sys Ex" Exception="[New SystemException(&quot;Login to Horizon Client has failed.&quot;)]" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Throw_2" />
                       </ActivityAction>
                     </Catch>
                   </TryCatch.Catches>
@@ -756,7 +756,7 @@
                             </ui:CursorPosition>
                           </ui:Click.CursorPosition>
                           <ui:Click.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="66ddea93-a635-4ec3-97ef-c32cf9698189" InformativeScreenshot="7e30437c9a9e742cf73adb2a5511afd7" Selector="&lt;html app='msedge.exe' title='* | Defra Intelligent Hub' /&gt;&lt;webctrl id='desktop-app-favorite' tag='A' aaname='*Favorites*' /&gt;">
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="66ddea93-a635-4ec3-97ef-c32cf9698189" InformativeScreenshot="7e30437c9a9e742cf73adb2a5511afd7" Selector="&lt;html app='msedge.exe' title='* | Intelligent Hub' /&gt;&lt;webctrl id='desktop-app-favorite' tag='A' aaname='*Favorites*' /&gt;">
                               <ui:Target.TimeoutMS>
                                 <InArgument x:TypeArguments="x:Int32" />
                               </ui:Target.TimeoutMS>
