@@ -277,7 +277,9 @@
     {
       "Path": "Framework/CloseAllApplications.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "booException&Sequence_2"
+      ],
       "ArgumentsSectionElementsOrder": [
         "in_Config"
       ],
