@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2323,1178</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1198,1052</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Enter_Report_Details_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -44,7 +44,6 @@
       <x:String>System.Activities.DynamicUpdate</x:String>
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
       <x:String>System.Runtime.Serialization</x:String>
-      <x:String>System.Globalization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -84,7 +83,6 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="Enter_Report_Details" sap:VirtualizedContainerService.HintSize="1024,987" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -113,7 +111,7 @@
           <av:PointCollection x:Key="ConnectorLocation">390,210.5 390,260.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Enter Reported Date &amp; Time" sap:VirtualizedContainerService.HintSize="594,1620" sap2010:WorkflowViewState.IdRef="Sequence_1">
+      <Sequence DisplayName="Enter Reported Date &amp; Time" sap:VirtualizedContainerService.HintSize="548,950" sap2010:WorkflowViewState.IdRef="Sequence_1">
         <Sequence.Variables>
           <Variable x:TypeArguments="str:Match" Name="matDateReported" />
         </Sequence.Variables>
@@ -122,55 +120,12 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="532,317" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-          <ui:CommentOut.Body>
-            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,238" sap2010:WorkflowViewState.IdRef="Sequence_143">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <Assign sap2010:Annotation.AnnotationText="The Date is reported from Dataverse as yyyy-MM-dd, need to convert this to dd/MM/yyyy for NIRS input." DisplayName="Assign strDateReported" sap:VirtualizedContainerService.HintSize="434,127" sap2010:WorkflowViewState.IdRef="Assign_9">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="x:String">[strDateReported]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">[CDate(in_jobRoboticsJSON("datetimeReported").ToString).ToString("dd/MM/yyyy")]</InArgument>
-                </Assign.Value>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </Assign>
-            </Sequence>
-          </ui:CommentOut.Body>
-        </ui:CommentOut>
-        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="532,273" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-          <ui:CommentOut.Body>
-            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,194" sap2010:WorkflowViewState.IdRef="Sequence_144">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <Assign DisplayName="Assign strTimeReported" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_10">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="x:String">[strTimeReported]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">[CDate(in_jobRoboticsJSON("datetimeReported").ToString).ToString("HH:mm")]</InArgument>
-                </Assign.Value>
-              </Assign>
-            </Sequence>
-          </ui:CommentOut.Body>
-        </ui:CommentOut>
-        <Assign sap2010:Annotation.AnnotationText="The Date is reported from Dataverse as yyyy-MM-dd, need to convert this to dd/MM/yyyy for NIRS input." DisplayName="Assign strDateReported" sap:VirtualizedContainerService.HintSize="532,127" sap2010:WorkflowViewState.IdRef="Assign_46">
+        <Assign sap2010:Annotation.AnnotationText="The Date is reported from Dataverse as yyyy-MM-dd, need to convert this to dd/MM/yyyy for NIRS input." DisplayName="Assign strDateReported" sap:VirtualizedContainerService.HintSize="486,127" sap2010:WorkflowViewState.IdRef="Assign_9">
           <Assign.To>
             <OutArgument x:TypeArguments="x:String">[strDateReported]</OutArgument>
           </Assign.To>
           <Assign.Value>
-            <InArgument x:TypeArguments="x:String">[Date.ParseExact(in_jobRoboticsJSON("datetimeReported").ToString, "yyyy-MM-ddTHH:mm:ssZ", New System.Globalization.CultureInfo("en-GB")).ToString("dd/MM/yyyy")]</InArgument>
+            <InArgument x:TypeArguments="x:String">[CDate(in_jobRoboticsJSON("datetimeReported").ToString).ToString("dd/MM/yyyy")]</InArgument>
           </Assign.Value>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -178,15 +133,15 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </Assign>
-        <Assign DisplayName="Assign strTimeReported" sap:VirtualizedContainerService.HintSize="532,83" sap2010:WorkflowViewState.IdRef="Assign_47">
+        <Assign DisplayName="Assign strTimeReported" sap:VirtualizedContainerService.HintSize="486,83" sap2010:WorkflowViewState.IdRef="Assign_10">
           <Assign.To>
             <OutArgument x:TypeArguments="x:String">[strTimeReported]</OutArgument>
           </Assign.To>
           <Assign.Value>
-            <InArgument x:TypeArguments="x:String">[Date.ParseExact(in_jobRoboticsJSON("datetimeReported").ToString, "yyyy-MM-ddTHH:mm:ssZ", New System.Globalization.CultureInfo("en-GB")).ToString("HH:mm")]</InArgument>
+            <InArgument x:TypeArguments="x:String">[CDate(in_jobRoboticsJSON("datetimeReported").ToString).ToString("HH:mm")]</InArgument>
           </Assign.Value>
         </Assign>
-        <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input - Enter Date/Time Notified" sap:VirtualizedContainerService.HintSize="532,549" sap2010:WorkflowViewState.IdRef="BlockUserInput_7" KeyModifiers="Alt" SpecialKey="True">
+        <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input - Enter Date/Time Notified" sap:VirtualizedContainerService.HintSize="486,549" sap2010:WorkflowViewState.IdRef="BlockUserInput_7" KeyModifiers="Alt" SpecialKey="True">
           <ui:BlockUserInput.Body>
             <Sequence DisplayName="Enter Date/Time Notified" sap:VirtualizedContainerService.HintSize="450,421" sap2010:WorkflowViewState.IdRef="Sequence_142">
               <sap:WorkflowViewStateService.ViewState>
