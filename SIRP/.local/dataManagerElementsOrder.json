@@ -431,25 +431,6 @@
       ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
-    },
-    {
-      "Path": "DeleteMe.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "intFolderID&Sequence_1",
-        "intMachineID&Sequence_1",
-        "strResponse&Sequence_6",
-        "intStatusCode&Sequence_6",
-        "objResponse&Sequence_6",
-        "jarResponse&Sequence_6",
-        "jarResponse&Sequence_4",
-        "objResponse&Sequence_4",
-        "intStatusCode&Sequence_4",
-        "strResponse&Sequence_4"
-      ],
-      "ArgumentsSectionElementsOrder": [],
-      "ConstantsSectionElementsOrder": null,
-      "AddedNamespaces": null
     }
   ]
 }
