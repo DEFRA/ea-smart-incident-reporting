@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1235,4434</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2323,5064</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Enter_Report_Details_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -44,6 +44,7 @@
       <x:String>Newtonsoft.Json.Linq</x:String>
       <x:String>System.Text.RegularExpressions</x:String>
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System.Globalization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -86,13 +87,13 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Enter_Report_Details" sap:VirtualizedContainerService.HintSize="644,4329" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Enter_Report_Details" sap:VirtualizedContainerService.HintSize="656,4999" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="582,1323" sap2010:WorkflowViewState.IdRef="BlockUserInput_5" KeyModifiers="Alt" SpecialKey="True">
+    <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="594,1323" sap2010:WorkflowViewState.IdRef="BlockUserInput_5" KeyModifiers="Alt" SpecialKey="True">
       <ui:BlockUserInput.Body>
         <Sequence DisplayName="Select Type of Report" sap:VirtualizedContainerService.HintSize="546,1195" sap2010:WorkflowViewState.IdRef="Sequence_10">
           <Sequence.Variables>
@@ -207,7 +208,7 @@
         </Sequence>
       </ui:BlockUserInput.Body>
     </ui:BlockUserInput>
-    <If Condition="[in_jobRoboticsJSON(&quot;reportType&quot;).ToString = &quot;Other&quot;]" DisplayName="Report Type of &quot;Other&quot;?" sap:VirtualizedContainerService.HintSize="582,327" sap2010:WorkflowViewState.IdRef="If_11">
+    <If Condition="[in_jobRoboticsJSON(&quot;reportType&quot;).ToString = &quot;Other&quot;]" DisplayName="Report Type of &quot;Other&quot;?" sap:VirtualizedContainerService.HintSize="594,327" sap2010:WorkflowViewState.IdRef="If_11">
       <If.Then>
         <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Event Description&quot;" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_8" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;otherTypeOfReport&quot;).ToString]">
           <ui:TypeInto.Target>
@@ -232,7 +233,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="582,1323" sap2010:WorkflowViewState.IdRef="BlockUserInput_2" KeyModifiers="Alt" SpecialKey="True">
+    <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="594,1323" sap2010:WorkflowViewState.IdRef="BlockUserInput_2" KeyModifiers="Alt" SpecialKey="True">
       <ui:BlockUserInput.Body>
         <Sequence DisplayName="Select Suspected Source" sap:VirtualizedContainerService.HintSize="546,1195" sap2010:WorkflowViewState.IdRef="Sequence_14">
           <Sequence.Variables>
@@ -347,7 +348,7 @@
         </Sequence>
       </ui:BlockUserInput.Body>
     </ui:BlockUserInput>
-    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Event Description&quot;" sap:VirtualizedContainerService.HintSize="582,135" sap2010:WorkflowViewState.IdRef="TypeInto_5" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;Event Description&quot;).ToString]">
+    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Event Description&quot;" sap:VirtualizedContainerService.HintSize="594,135" sap2010:WorkflowViewState.IdRef="TypeInto_5" SimulateType="True" Text="[in_jobRoboticsJSON(&quot;Event Description&quot;).ToString]">
       <ui:TypeInto.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ce6a8ca4-d905-482c-ae73-75d48f353f3c" InformativeScreenshot="c9ac42fe5b26704ae5b59eee6e8b8435" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification*' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='3' /&gt;">
           <ui:Target.TimeoutMS>
@@ -359,7 +360,7 @@
         </ui:Target>
       </ui:TypeInto.Target>
     </ui:TypeInto>
-    <Sequence DisplayName="Enter Observed Date &amp; Time" sap:VirtualizedContainerService.HintSize="582,950" sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <Sequence DisplayName="Enter Observed Date &amp; Time" sap:VirtualizedContainerService.HintSize="594,1620" sap2010:WorkflowViewState.IdRef="Sequence_8">
       <Sequence.Variables>
         <Variable x:TypeArguments="str:Match" Name="matDateReported" />
         <Variable x:TypeArguments="x:String" Name="strDateObserved" />
@@ -370,12 +371,55 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Assign sap2010:Annotation.AnnotationText="The Date is reported from Dataverse as yyyy-MM-dd, need to convert this to dd/MM/yyyy for NIRS input." DisplayName="Assign strDateReported" sap:VirtualizedContainerService.HintSize="486,127" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="532,317" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+        <ui:CommentOut.Body>
+          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,238" sap2010:WorkflowViewState.IdRef="Sequence_22">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap2010:Annotation.AnnotationText="The Date is reported from Dataverse as yyyy-MM-dd, need to convert this to dd/MM/yyyy for NIRS input." DisplayName="Assign strDateReported" sap:VirtualizedContainerService.HintSize="434,127" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[strDateObserved]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[CDate(in_jobRoboticsJSON("datetimeObserved").ToString).ToString("dd/MM/yyyy")]</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+          </Sequence>
+        </ui:CommentOut.Body>
+      </ui:CommentOut>
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="532,273" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+        <ui:CommentOut.Body>
+          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,194" sap2010:WorkflowViewState.IdRef="Sequence_23">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign DisplayName="Assign strTimeReported" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[strTimeObserved]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[CDate(in_jobRoboticsJSON("datetimeObserved").ToString).ToString("HH:mm")]</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </ui:CommentOut.Body>
+      </ui:CommentOut>
+      <Assign sap2010:Annotation.AnnotationText="The Date is reported from Dataverse as yyyy-MM-dd, need to convert this to dd/MM/yyyy for NIRS input." DisplayName="Assign strDateObserved" sap:VirtualizedContainerService.HintSize="532,127" sap2010:WorkflowViewState.IdRef="Assign_11">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[strDateObserved]</OutArgument>
         </Assign.To>
         <Assign.Value>
-          <InArgument x:TypeArguments="x:String">[CDate(in_jobRoboticsJSON("datetimeObserved").ToString).ToString("dd/MM/yyyy")]</InArgument>
+          <InArgument x:TypeArguments="x:String">[DateTime.Parse(in_jobRoboticsJSON("datetimeObserved").ToString, New System.Globalization.CultureInfo("en-GB")).ToString("dd/MM/yyyy")]</InArgument>
         </Assign.Value>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -383,15 +427,15 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </Assign>
-      <Assign DisplayName="Assign strTimeReported" sap:VirtualizedContainerService.HintSize="486,83" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign DisplayName="Assign strTimeObserved" sap:VirtualizedContainerService.HintSize="532,83" sap2010:WorkflowViewState.IdRef="Assign_12">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[strTimeObserved]</OutArgument>
         </Assign.To>
         <Assign.Value>
-          <InArgument x:TypeArguments="x:String">[CDate(in_jobRoboticsJSON("datetimeObserved").ToString).ToString("HH:mm")]</InArgument>
+          <InArgument x:TypeArguments="x:String">[DateTime.Parse(in_jobRoboticsJSON("datetimeObserved").ToString, New System.Globalization.CultureInfo("en-GB")).ToString("HH:mm")]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input - Enter Date/Time Observed" sap:VirtualizedContainerService.HintSize="486,549" sap2010:WorkflowViewState.IdRef="BlockUserInput_3" KeyModifiers="Alt" SpecialKey="True">
+      <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input - Enter Date/Time Observed" sap:VirtualizedContainerService.HintSize="532,549" sap2010:WorkflowViewState.IdRef="BlockUserInput_3" KeyModifiers="Alt" SpecialKey="True">
         <ui:BlockUserInput.Body>
           <Sequence DisplayName="Enter Date/Time Observed" sap:VirtualizedContainerService.HintSize="450,421" sap2010:WorkflowViewState.IdRef="Sequence_20">
             <sap:WorkflowViewStateService.ViewState>
