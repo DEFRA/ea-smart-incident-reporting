@@ -20,7 +20,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2301,1434</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2323,1434</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SetTransactionStatus___Sequence_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -175,7 +175,7 @@
                         <OutArgument x:TypeArguments="njl:JToken">[jBody("sbs_robotcompleteddatetime")]</OutArgument>
                       </ui:AssignOperation.To>
                       <ui:AssignOperation.Value>
-                        <InArgument x:TypeArguments="njl:JToken">[Now.ToString]</InArgument>
+                        <InArgument x:TypeArguments="njl:JToken">[Date.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss.fffZ")]</InArgument>
                       </ui:AssignOperation.Value>
                     </ui:AssignOperation>
                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_17">
@@ -292,7 +292,7 @@
                   <av:Size x:Key="ShapeSize">200,83</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Increment transaction index and reset retries + consecutive sysex" sap:VirtualizedContainerService.HintSize="496,703" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence DisplayName="Increment transaction index and reset retries + consecutive sysex" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -385,7 +385,7 @@
                             <OutArgument x:TypeArguments="njl:JToken">[jBody("sbs_robotcompleteddatetime")]</OutArgument>
                           </ui:AssignOperation.To>
                           <ui:AssignOperation.Value>
-                            <InArgument x:TypeArguments="njl:JToken">[Now.ToString]</InArgument>
+                            <InArgument x:TypeArguments="njl:JToken">[Date.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss.fffZ")]</InArgument>
                           </ui:AssignOperation.Value>
                         </ui:AssignOperation>
                         <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_21">
@@ -505,7 +505,7 @@
                   <av:Size x:Key="ShapeSize">200,175</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence sap2010:Annotation.AnnotationText="If a system exception occurs during the process, the transaction item's status is updated as Failed (Exception Type: Application)." DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="200,175" sap2010:WorkflowViewState.IdRef="Sequence_13">
+              <Sequence sap2010:Annotation.AnnotationText="If a system exception occurs during the process, the transaction item's status is updated as Failed (Exception Type: Application)." DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="657,3606" sap2010:WorkflowViewState.IdRef="Sequence_13">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Boolean" Name="QueueRetry" />
                   <Variable x:TypeArguments="x:String" Name="strLogNote" />
@@ -552,7 +552,7 @@
                             <OutArgument x:TypeArguments="njl:JToken">[jBody("sbs_robotcompleteddatetime")]</OutArgument>
                           </ui:AssignOperation.To>
                           <ui:AssignOperation.Value>
-                            <InArgument x:TypeArguments="njl:JToken">[Now.ToString]</InArgument>
+                            <InArgument x:TypeArguments="njl:JToken">[Date.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss.fffZ")]</InArgument>
                           </ui:AssignOperation.Value>
                         </ui:AssignOperation>
                         <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_25">
