@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2331,1434</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2323,1434</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="66">
@@ -115,6 +115,7 @@
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>UiPath.Web</AssemblyReference>
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <StateMachine InitialState="{x:Reference __ReferenceID5}" sap2010:Annotation.AnnotationText="" DisplayName="Automation Template" sap:VirtualizedContainerService.HintSize="1063,1037.5" sap2010:WorkflowViewState.IdRef="StateMachine_1">
@@ -397,7 +398,7 @@
             <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="TransactionItem IsNot Nothing" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
           </Transition.Condition>
           <Transition.To>
-            <State x:Name="__ReferenceID4" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: &#xA;&#xA;1) Success&#xA;2) Business Exception&#xA;3) System Exception&#xA;4) Last Transaction&#xA;&#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="781,1948" sap2010:WorkflowViewState.IdRef="State_3">
+            <State x:Name="__ReferenceID4" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: &#xA;&#xA;1) Success&#xA;2) Business Exception&#xA;3) System Exception&#xA;4) Last Transaction&#xA;&#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="231,275" sap2010:WorkflowViewState.IdRef="State_3">
               <State.Entry>
                 <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="735,1343" sap2010:WorkflowViewState.IdRef="TryCatch_9">
                   <sap:WorkflowViewStateService.ViewState>
@@ -738,7 +739,7 @@
                           <Transition.To>
                             <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="254,106" sap2010:WorkflowViewState.IdRef="State_2">
                               <State.Entry>
-                                <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="747,1261" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                                <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="1405,4723" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -746,7 +747,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <TryCatch.Try>
-                                    <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="1367,4390" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                    <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="1367,4467" sap2010:WorkflowViewState.IdRef="Sequence_4">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1006,10 +1007,10 @@
                                     </Sequence>
                                   </TryCatch.Try>
                                   <TryCatch.Catches>
-                                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="713,1071" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1371,22" sap2010:WorkflowViewState.IdRef="Catch`1_3">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
@@ -1017,7 +1018,7 @@
                                         <ActivityAction.Argument>
                                           <DelegateInArgument x:TypeArguments="s:Exception" Name="Exception" />
                                         </ActivityAction.Argument>
-                                        <Sequence sap:VirtualizedContainerService.HintSize="707,1001" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                                        <Sequence sap:VirtualizedContainerService.HintSize="707,911" sap2010:WorkflowViewState.IdRef="Sequence_44">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1077,7 +1078,7 @@
                                         </Sequence>
                                       </ActivityAction>
                                     </Catch>
-                                    <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="713,22" sap2010:WorkflowViewState.IdRef="Catch`1_18">
+                                    <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="1371,22" sap2010:WorkflowViewState.IdRef="Catch`1_18">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1158,17 +1159,17 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <Transition.To>
-                                    <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="144,123" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
+                                    <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="1781,6525" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
                                       <State.Entry>
-                                        <Sequence DisplayName="End Process" sap:VirtualizedContainerService.HintSize="1735,6245" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                                        <Sequence DisplayName="End Process" sap:VirtualizedContainerService.HintSize="1735,6379" sap2010:WorkflowViewState.IdRef="Sequence_50">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <If Condition="[boolRunProcess]" DisplayName="Process Has Run?" sap:VirtualizedContainerService.HintSize="1673,6134" sap2010:WorkflowViewState.IdRef="If_21">
+                                          <If Condition="[boolRunProcess]" DisplayName="Process Has Run?" sap:VirtualizedContainerService.HintSize="1673,6268" sap2010:WorkflowViewState.IdRef="If_21">
                                             <If.Then>
-                                              <Sequence sap:VirtualizedContainerService.HintSize="1294,5972" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                                              <Sequence sap:VirtualizedContainerService.HintSize="1294,6106" sap2010:WorkflowViewState.IdRef="Sequence_52">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1329,11 +1330,11 @@
                                                     </Sequence>
                                                   </If.Else>
                                                 </If>
-                                                <If Condition="[Cbool(Config(&quot;Unattended&quot;))]" DisplayName="Unattended?" sap:VirtualizedContainerService.HintSize="1232,4144" sap2010:WorkflowViewState.IdRef="If_37">
+                                                <If Condition="[Cbool(Config(&quot;Unattended&quot;))]" DisplayName="Unattended?" sap:VirtualizedContainerService.HintSize="1232,4278" sap2010:WorkflowViewState.IdRef="If_37">
                                                   <If.Then>
-                                                    <If Condition="[SystemException isNot Nothing]" DisplayName="System Exception?" sap:VirtualizedContainerService.HintSize="987,3982" sap2010:WorkflowViewState.IdRef="If_42">
+                                                    <If Condition="[SystemException isNot Nothing]" DisplayName="System Exception?" sap:VirtualizedContainerService.HintSize="987,4116" sap2010:WorkflowViewState.IdRef="If_42">
                                                       <If.Then>
-                                                        <Sequence DisplayName="Check Consecutive Critical Failures &amp; Rethrow" sap:VirtualizedContainerService.HintSize="951,3790" sap2010:WorkflowViewState.IdRef="Sequence_104">
+                                                        <Sequence DisplayName="Check Consecutive Critical Failures &amp; Rethrow" sap:VirtualizedContainerService.HintSize="951,3924" sap2010:WorkflowViewState.IdRef="Sequence_104">
                                                           <Sequence.Variables>
                                                             <Variable x:TypeArguments="x:String" Name="strMachineName" />
                                                           </Sequence.Variables>
@@ -1351,9 +1352,9 @@
                                                             </Assign.Value>
                                                           </Assign>
                                                           <ui:SetAsset TimeoutMS="{x:Null}" AssetName="Consecutive Critical Failures" DisplayName="Set Consecutive Critical Failures" sap:VirtualizedContainerService.HintSize="889,135" sap2010:WorkflowViewState.IdRef="SetAsset_1" Value="[Config(&quot;Consecutive Critical Failures&quot;)]" />
-                                                          <If Condition="[CInt(Config(&quot;Consecutive Critical Failures&quot;)) = 3]" DisplayName="Max Consecutive Critical Failures?" sap:VirtualizedContainerService.HintSize="889,3316" sap2010:WorkflowViewState.IdRef="If_45">
+                                                          <If Condition="[CInt(Config(&quot;Consecutive Critical Failures&quot;)) = 3]" DisplayName="Max Consecutive Critical Failures?" sap:VirtualizedContainerService.HintSize="889,3450" sap2010:WorkflowViewState.IdRef="If_45">
                                                             <If.Then>
-                                                              <Sequence DisplayName="Set Dataverse Robot Status to Inactive" sap:VirtualizedContainerService.HintSize="853,3124" sap2010:WorkflowViewState.IdRef="Sequence_110">
+                                                              <Sequence DisplayName="Set Dataverse Robot Status to Inactive" sap:VirtualizedContainerService.HintSize="853,3258" sap2010:WorkflowViewState.IdRef="Sequence_110">
                                                                 <Sequence.Variables>
                                                                   <Variable x:TypeArguments="x:String" Name="strToken" />
                                                                   <Variable x:TypeArguments="x:String" Name="strRobotStatusId" />
@@ -1364,6 +1365,7 @@
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
                                                                 <ui:GetEnvironmentVariable DisplayName="Get Host Machine Name" sap:VirtualizedContainerService.HintSize="791,60" sap2010:WorkflowViewState.IdRef="GetEnvironmentVariable_2" Variable="MachineName" VariableValue="[strMachineName]" />
+                                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="791,94" sap2010:WorkflowViewState.IdRef="LogMessage_59" Level="Fatal" Message="[&quot;Reporting VM failure for machine: &quot;+strMachineName]" />
                                                                 <Sequence DisplayName="Retrieve OAuth2 Token" sap:VirtualizedContainerService.HintSize="791,762" sap2010:WorkflowViewState.IdRef="Sequence_112">
                                                                   <Sequence.Variables>
                                                                     <Variable x:TypeArguments="x:String" Name="strOAuth2Response" />
