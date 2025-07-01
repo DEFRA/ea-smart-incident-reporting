@@ -65,6 +65,7 @@
       "Path": "Framework/InitAllApplications.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "booObjectVar&Sequence_74",
         "credVMWare&Sequence_55",
         "strNIRSInstance&Sequence_55",
         "strHorizonInstance&Sequence_55",
@@ -291,6 +292,9 @@
       "Path": "Process/Process Subflows/Reset NIRS.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "booNIRSOpen&Sequence_1",
+        "booExtOrgBox&Sequence_2",
+        "booContactLookupBox&Sequence_9",
         "booDialogBox&Sequence_2",
         "intLoopCounter&Sequence_1",
         "booCancelConfirm&Sequence_2",
@@ -447,6 +451,16 @@
         "objResponse&Sequence_4",
         "intStatusCode&Sequence_4",
         "strResponse&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Delete  Me.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "uiFoundImage&Sequence_2"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": null,

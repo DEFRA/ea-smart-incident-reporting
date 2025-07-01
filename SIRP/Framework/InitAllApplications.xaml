@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2448,8121</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2448,8120</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="54">
@@ -87,9 +87,10 @@
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>Pop Ups</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="2458,8056" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="2458,8055" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <Sequence.Variables>
       <Variable x:TypeArguments="sco:Collection(sd:Process)" Name="collProcesses" />
       <Variable x:TypeArguments="ui:Browser" Name="browsNIRSLaunch" />
@@ -101,17 +102,17 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="2396,94" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Opening applications...&quot;]" />
-    <TryCatch DisplayName="Try Catch - Open NIRS" sap:VirtualizedContainerService.HintSize="2396,7780" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+    <TryCatch DisplayName="Try Catch - Open NIRS" sap:VirtualizedContainerService.HintSize="2396,7779" sap2010:WorkflowViewState.IdRef="TryCatch_5">
       <TryCatch.Try>
-        <Sequence DisplayName="Launch NIRS" sap:VirtualizedContainerService.HintSize="2358,7547" sap2010:WorkflowViewState.IdRef="Sequence_71">
+        <Sequence DisplayName="Launch NIRS" sap:VirtualizedContainerService.HintSize="2358,7546" sap2010:WorkflowViewState.IdRef="Sequence_71">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If Condition="[CBool(io_Config(&quot;Dev Flag&quot;))]" DisplayName="Dev?" sap:VirtualizedContainerService.HintSize="2296,5879" sap2010:WorkflowViewState.IdRef="If_22">
+          <If Condition="[CBool(io_Config(&quot;Dev Flag&quot;))]" DisplayName="Dev?" sap:VirtualizedContainerService.HintSize="2296,5878" sap2010:WorkflowViewState.IdRef="If_22">
             <If.Then>
-              <Sequence DisplayName="Launch NIRS - VMWare" sap:VirtualizedContainerService.HintSize="590,2795" sap2010:WorkflowViewState.IdRef="Sequence_55">
+              <Sequence DisplayName="Launch NIRS - VMWare" sap:VirtualizedContainerService.HintSize="590,2794" sap2010:WorkflowViewState.IdRef="Sequence_55">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="sn:NetworkCredential" Name="credVMWare" />
                   <Variable x:TypeArguments="x:String" Name="strNIRSInstance" />
@@ -277,7 +278,7 @@
                     </ActivityAction>
                   </ui:WindowScope.Body>
                 </ui:WindowScope>
-                <Assign DisplayName="Assign NIRS Instance" sap:VirtualizedContainerService.HintSize="528,83" sap2010:WorkflowViewState.IdRef="Assign_12">
+                <Assign DisplayName="Assign NIRS Instance" sap:VirtualizedContainerService.HintSize="528,82" sap2010:WorkflowViewState.IdRef="Assign_12">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[strNIRSInstance]</OutArgument>
                   </Assign.To>
@@ -314,7 +315,7 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence DisplayName="Launch NIRS - Identity Platform" sap:VirtualizedContainerService.HintSize="1661,5717" sap2010:WorkflowViewState.IdRef="Sequence_56">
+              <Sequence DisplayName="Launch NIRS - Identity Platform" sap:VirtualizedContainerService.HintSize="1661,5716" sap2010:WorkflowViewState.IdRef="Sequence_56">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="ui:Browser" Name="browsLogin" />
                   <Variable x:TypeArguments="x:Boolean" Name="booLogoutPrompt" />
@@ -355,7 +356,7 @@
                             </ui:UiElementExists>
                             <If Condition="[booAccountPopulated]" DisplayName="Account Populated?" sap:VirtualizedContainerService.HintSize="991,553" sap2010:WorkflowViewState.IdRef="If_17">
                               <If.Then>
-                                <Sequence DisplayName="Select Email" sap:VirtualizedContainerService.HintSize="496,341" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                                <Sequence DisplayName="Select Email" sap:VirtualizedContainerService.HintSize="496,340" sap2010:WorkflowViewState.IdRef="Sequence_58">
                                   <Sequence.Variables>
                                     <Variable x:TypeArguments="x:String" Name="strEmail" />
                                   </Sequence.Variables>
@@ -364,7 +365,7 @@
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Assign DisplayName="Assign Email" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                  <Assign DisplayName="Assign Email" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_13">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:String">[strEmail]</OutArgument>
                                     </Assign.To>
@@ -817,7 +818,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:UiElementExists>
-                <If Condition="[booLogoutPrompt]" DisplayName="Logout Prompt?" sap:VirtualizedContainerService.HintSize="1599,299" sap2010:WorkflowViewState.IdRef="If_21">
+                <If Condition="[booLogoutPrompt]" DisplayName="Logout Prompt?" sap:VirtualizedContainerService.HintSize="1599,298" sap2010:WorkflowViewState.IdRef="If_21">
                   <If.Then>
                     <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;OK&quot;" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_55" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                       <ui:Click.CursorPosition>
@@ -998,6 +999,84 @@
                 </ui:BlockUserInput.Body>
               </ui:BlockUserInput>
             </PickBranch>
+            <PickBranch DisplayName="PickBranch - Modal Form" sap:VirtualizedContainerService.HintSize="634,1470" sap2010:WorkflowViewState.IdRef="PickBranch_7">
+              <PickBranch.Trigger>
+                <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="In certain circumstances, NIRS can crash in an unrecoverable way that means that the next launch also fails. Have to check here for the ruuntime error pop-up that informs of the critical error" DisplayName="Find Element 'MKSEmbedded'" sap:VirtualizedContainerService.HintSize="334,183" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_14">
+                  <ui:WaitUiElementAppear.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f06d4e55-dc91-4479-8ce7-623bd499b55d" InformativeScreenshot="f12f861efbfbb5b9e70296480846b493" Selector="&lt;wnd app='vmware-view.exe' cls='VMwareUnityHostWndClass' title='Incidents Recording System' /&gt;&lt;wnd cls='MKSEmbedded' title='MKSWindow#*' /&gt;" TimeoutMS="150000">
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:WaitUiElementAppear.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:WaitUiElementAppear>
+              </PickBranch.Trigger>
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="584,797" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="548,718" sap2010:WorkflowViewState.IdRef="Sequence_75">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="486,607" sap2010:WorkflowViewState.IdRef="BlockUserInput_15" KeyModifiers="Alt" SpecialKey="True">
+                      <ui:BlockUserInput.Body>
+                        <Sequence DisplayName="Close Modal Form Popup &amp; Re-open" sap:VirtualizedContainerService.HintSize="450,479" sap2010:WorkflowViewState.IdRef="Sequence_74">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:Boolean" Name="booObjectVar" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Focus on Pop-Up" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_63" KeyModifiers="None" MouseButton="BTN_LEFT">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="549c17f5-689a-4ff9-81c7-89811c3fef7d" InformativeScreenshot="c6035e2313b79c75656b8d4d79b962b1" Selector="&lt;wnd app='vmware-view.exe' cls='VMwareUnityHostWndClass' title='Incidents Recording System' /&gt;&lt;wnd cls='MKSEmbedded' title='MKSWindow#*' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:Click.Target>
+                          </ui:Click>
+                          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Enter Hotkey" sap:VirtualizedContainerService.HintSize="388,156" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
+                            <ui:SendHotkey.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2610fd74-cd91-4650-b675-00a77af7afc3" InformativeScreenshot="c6035e2313b79c75656b8d4d79b962b1" Selector="&lt;wnd app='vmware-view.exe' cls='VMwareUnityHostWndClass' title='Incidents Recording System' /&gt;&lt;wnd cls='MKSEmbedded' title='MKSWindow#*' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:SendHotkey.Target>
+                          </ui:SendHotkey>
+                          <Throw Exception="[New BusinessRuleException(&quot;NIRS Launched in Unrecoverable State. Pop-Up closed, NIRS will re-launch upon next run.&quot;)]" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                        </Sequence>
+                      </ui:BlockUserInput.Body>
+                    </ui:BlockUserInput>
+                  </Sequence>
+                </ui:CommentOut.Body>
+              </ui:CommentOut>
+            </PickBranch>
           </Pick>
         </Sequence>
       </TryCatch.Try>
@@ -1013,7 +1092,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <If Condition="[Cbool(io_Config(&quot;Unattended&quot;))]" DisplayName="Unattended?" sap:VirtualizedContainerService.HintSize="484,222" sap2010:WorkflowViewState.IdRef="If_24">
+            <If Condition="[Cbool(io_Config(&quot;Unattended&quot;))]" DisplayName="Unattended?" sap:VirtualizedContainerService.HintSize="484,221" sap2010:WorkflowViewState.IdRef="If_24">
               <If.Then>
                 <Rethrow sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Rethrow_1" />
               </If.Then>
