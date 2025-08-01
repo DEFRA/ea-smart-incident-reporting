@@ -25,6 +25,26 @@
       "ApplicationType": "API",
       "ExecutablePath": null,
       "Url": {
+        "Value": "io_Config(\"Dataverse API URL\").ToString+\"api/data/v9.2/\"+io_Config(\"Dataverse Robotics Status Table\").ToString+\"?$filter=(sbs_name eq '\"+strMachineName+\"')\"",
+        "IsExpression": true
+      },
+      "Arguments": null,
+      "Version": null
+    },
+    {
+      "ApplicationType": "API",
+      "ExecutablePath": null,
+      "Url": {
+        "Value": "io_Config(\"Dataverse API URL\").ToString+\"api/data/v9.2/\"+io_Config(\"Dataverse Robotics Status Table\").ToString+\"(\"+strRobotStatusId+\")\"",
+        "IsExpression": true
+      },
+      "Arguments": null,
+      "Version": null
+    },
+    {
+      "ApplicationType": "API",
+      "ExecutablePath": null,
+      "Url": {
         "Value": "https://www.google.co.uk",
         "IsExpression": false
       },
