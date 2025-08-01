@@ -20,6 +20,16 @@
           "displayName": "AssetName"
         }
       }
+    },
+    {
+      "resource": "asset",
+      "metadata": {
+        "name": {
+          "defaultValue": "Consecutive Critical Failures",
+          "isExpression": false,
+          "displayName": "AssetName"
+        }
+      }
     }
   ]
 }
