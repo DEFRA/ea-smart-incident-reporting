@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1223,1349.5</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2255,1460</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="54">
@@ -97,6 +97,7 @@
       <AssemblyReference>UiPath.Web</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialise All Applications" sap:VirtualizedContainerService.HintSize="844,1284.5" sap2010:WorkflowViewState.IdRef="Flowchart_3">
@@ -378,9 +379,9 @@
                   <av:PointCollection x:Key="ConnectorLocation">530,506.5 530,556.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <TryCatch DisplayName="Try Catch - Open NIRS" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="TryCatch_24">
+              <TryCatch DisplayName="Try Catch - Open NIRS" sap:VirtualizedContainerService.HintSize="1782,7572" sap2010:WorkflowViewState.IdRef="TryCatch_24">
                 <TryCatch.Try>
-                  <Sequence DisplayName="Launch NIRS" sap:VirtualizedContainerService.HintSize="1744,7352" sap2010:WorkflowViewState.IdRef="Sequence_198">
+                  <Sequence DisplayName="Launch NIRS" sap:VirtualizedContainerService.HintSize="1744,7339" sap2010:WorkflowViewState.IdRef="Sequence_198">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1135,25 +1136,26 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <Pick DisplayName="Pick - Launch NIRS" sap:VirtualizedContainerService.HintSize="1696,1468" sap2010:WorkflowViewState.IdRef="Pick_7">
-                      <PickBranch DisplayName="PickBranch - Home Screen" sap:VirtualizedContainerService.HintSize="384,1421" sap2010:WorkflowViewState.IdRef="PickBranch_14">
+                    <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Check NIRS Loading" sap:VirtualizedContainerService.HintSize="1696,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_32">
+                      <ui:WaitUiElementAppear.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9bc58b25-089d-486c-9950-d74591b52058" InformativeScreenshot="728e2e09e03f29caf95bed3ef13f1a20" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*' /&gt;" TimeoutMS="300000">
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:WaitUiElementAppear.Target>
+                    </ui:WaitUiElementAppear>
+                    <Pick DisplayName="Pick - NIRS Errors?" sap:VirtualizedContainerService.HintSize="1696,1316" sap2010:WorkflowViewState.IdRef="Pick_7">
+                      <PickBranch DisplayName="PickBranch - Default" sap:VirtualizedContainerService.HintSize="250,1269" sap2010:WorkflowViewState.IdRef="PickBranch_14">
                         <PickBranch.Trigger>
-                          <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Check NIRS Loaded" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_32">
-                            <ui:WaitUiElementAppear.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9bc58b25-089d-486c-9950-d74591b52058" InformativeScreenshot="728e2e09e03f29caf95bed3ef13f1a20" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*' /&gt;" TimeoutMS="300000">
-                                <ui:Target.WaitForReady>
-                                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                                </ui:Target.WaitForReady>
-                              </ui:Target>
-                            </ui:WaitUiElementAppear.Target>
-                          </ui:WaitUiElementAppear>
+                          <Delay Duration="00:00:04.9000000" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Delay_20" />
                         </PickBranch.Trigger>
                       </PickBranch>
-                      <PickBranch DisplayName="PickBranch - Modal Form" sap:VirtualizedContainerService.HintSize="618,1421" sap2010:WorkflowViewState.IdRef="PickBranch_15">
+                      <PickBranch DisplayName="PickBranch - Dialog Box" sap:VirtualizedContainerService.HintSize="502,1269" sap2010:WorkflowViewState.IdRef="PickBranch_16">
                         <PickBranch.Trigger>
-                          <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="In certain circumstances, NIRS can crash in an unrecoverable way that means that the next launch also fails. Have to check here for the modal form pop-up that informs of the critical error." DisplayName="Find Element" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_33">
+                          <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="Check for any Generic Dialog boxes and attempt to click &quot;OK&quot;" ContinueOnError="True" DisplayName="Find Element - Dialog Box" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_35">
                             <ui:WaitUiElementAppear.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f06d4e55-dc91-4479-8ce7-623bd499b55d" Selector="&lt;wnd app='irs.exe' cls='#32770' isremoteapp='1' title='Incidents Recording System' /&gt;&lt;wnd ctrlid='*' title='*show non-modal form when modal form*' /&gt;" TimeoutMS="150000">
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f06d4e55-dc91-4479-8ce7-623bd499b55d" Selector="&lt;wnd app='irs.exe' cls='*' isremoteapp='1' title='Incidents Recording System' /&gt;&lt;ctrl name='Incidents Recording System' role='dialog' /&gt;" TimeoutMS="5000">
                                 <ui:Target.WaitForReady>
                                   <InArgument x:TypeArguments="ui:WaitForReady" />
                                 </ui:Target.WaitForReady>
@@ -1166,9 +1168,9 @@
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:WaitUiElementAppear>
                         </PickBranch.Trigger>
-                        <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="568,1075" sap2010:WorkflowViewState.IdRef="BlockUserInput_35" KeyModifiers="Alt" SpecialKey="True">
+                        <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="452,455" sap2010:WorkflowViewState.IdRef="BlockUserInput_36" KeyModifiers="Alt" SpecialKey="True">
                           <ui:BlockUserInput.Body>
-                            <Sequence DisplayName="Close Modal Form Popup &amp; Re-open" sap:VirtualizedContainerService.HintSize="532,947" sap2010:WorkflowViewState.IdRef="Sequence_188">
+                            <Sequence DisplayName="Close Modal Form Popup &amp; Re-open" sap:VirtualizedContainerService.HintSize="416,327" sap2010:WorkflowViewState.IdRef="Sequence_199">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:Boolean" Name="booObjectVar" />
                               </Sequence.Variables>
@@ -1177,6 +1179,62 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="368,94" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;Dialog box identified whilst opening NIRS. Closing Dialog box...&quot;]" />
+                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;OK&quot; - Dialog Box" sap:VirtualizedContainerService.HintSize="368,107" sap2010:WorkflowViewState.IdRef="Click_135" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                <ui:Click.CursorPosition>
+                                  <ui:CursorPosition Position="Center">
+                                    <ui:CursorPosition.OffsetX>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetX>
+                                    <ui:CursorPosition.OffsetY>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetY>
+                                  </ui:CursorPosition>
+                                </ui:Click.CursorPosition>
+                                <ui:Click.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b2e6efd4-8366-4a26-95d9-7647a383f386" InformativeScreenshot="bb49507916a817cb005a539f32a6cda9" Selector="&lt;wnd app='irs.exe' cls='#32770' isremoteapp='1' title='Incidents Recording System' /&gt;&lt;wnd ctrlid='2' title='OK' /&gt;">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:Click.Target>
+                              </ui:Click>
+                            </Sequence>
+                          </ui:BlockUserInput.Body>
+                        </ui:BlockUserInput>
+                      </PickBranch>
+                      <PickBranch DisplayName="PickBranch - Modal Form" sap:VirtualizedContainerService.HintSize="618,1269" sap2010:WorkflowViewState.IdRef="PickBranch_15">
+                        <PickBranch.Trigger>
+                          <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="In certain circumstances, NIRS can crash in an unrecoverable way that means that the next launch also fails. Have to check here for the modal form pop-up that informs of the critical error." ContinueOnError="True" DisplayName="Find Element - Modal Form" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_33">
+                            <ui:WaitUiElementAppear.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f06d4e55-dc91-4479-8ce7-623bd499b55d" Selector="&lt;wnd app='irs.exe' cls='#32770' isremoteapp='1' title='Incidents Recording System' /&gt;&lt;wnd ctrlid='*' title='*show non-modal form when modal form*' /&gt;" TimeoutMS="5000">
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:WaitUiElementAppear.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:WaitUiElementAppear>
+                        </PickBranch.Trigger>
+                        <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="568,923" sap2010:WorkflowViewState.IdRef="BlockUserInput_35" KeyModifiers="Alt" SpecialKey="True">
+                          <ui:BlockUserInput.Body>
+                            <Sequence DisplayName="Close Modal Form Popup &amp; Re-open" sap:VirtualizedContainerService.HintSize="532,795" sap2010:WorkflowViewState.IdRef="Sequence_188">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="x:Boolean" Name="booObjectVar" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,94" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;Modal form identified whilst opening NIRS. Closing Modal form...&quot;]" />
                               <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;OK&quot; - Modal Form" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="Click_132" KeyModifiers="None" MouseButton="BTN_LEFT">
                                 <ui:Click.CursorPosition>
                                   <ui:CursorPosition Position="Center">
@@ -1243,37 +1301,6 @@
                                   </Sequence>
                                 </If.Else>
                               </If>
-                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Click NIRS Instance" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="Click_134" KeyModifiers="None" MouseButton="BTN_LEFT">
-                                <ui:Click.CursorPosition>
-                                  <ui:CursorPosition Position="Center">
-                                    <ui:CursorPosition.OffsetX>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetX>
-                                    <ui:CursorPosition.OffsetY>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetY>
-                                  </ui:CursorPosition>
-                                </ui:Click.CursorPosition>
-                                <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d39eaec1-4759-4b3b-b114-eb3b59afbe02" InformativeScreenshot="3f14fa7c0b8ffa8c1209cf8de765a583" Selector="&lt;wnd app='vmware-view.exe' cls='HwndWrapper*' title='VMware Horizon Client' /&gt;&lt;ctrl name='{{strNIRSInstance}}' role='list item' /&gt;">
-                                    <ui:Target.TimeoutMS>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:Target.TimeoutMS>
-                                    <ui:Target.WaitForReady>
-                                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                                    </ui:Target.WaitForReady>
-                                  </ui:Target>
-                                </ui:Click.Target>
-                              </ui:Click>
-                              <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Check NIRS Loaded" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_34">
-                                <ui:WaitUiElementAppear.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9bc58b25-089d-486c-9950-d74591b52058" InformativeScreenshot="728e2e09e03f29caf95bed3ef13f1a20" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*' /&gt;" TimeoutMS="150000">
-                                    <ui:Target.WaitForReady>
-                                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                                    </ui:Target.WaitForReady>
-                                  </ui:Target>
-                                </ui:WaitUiElementAppear.Target>
-                              </ui:WaitUiElementAppear>
                             </Sequence>
                           </ui:BlockUserInput.Body>
                         </ui:BlockUserInput>
@@ -1498,7 +1525,7 @@
                                   <av:PointCollection x:Key="ConnectorLocation">370,1068.5 370,1118.5</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Sequence DisplayName="Re-activate Robot" sap:VirtualizedContainerService.HintSize="532,1118" sap2010:WorkflowViewState.IdRef="Sequence_177">
+                              <Sequence DisplayName="Re-activate Robot" sap:VirtualizedContainerService.HintSize="200,69" sap2010:WorkflowViewState.IdRef="Sequence_177">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="njl:JObject" Name="jBody" />
                                   <Variable x:TypeArguments="x:String" Name="strRecordResponse" />
