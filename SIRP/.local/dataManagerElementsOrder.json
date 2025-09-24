@@ -65,6 +65,7 @@
       "Path": "Framework/InitAllApplications.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "booObjectVar&Sequence_199",
         "credVMWare&Sequence_181",
         "strNIRSInstance&Sequence_181",
         "strHorizonInstance&Sequence_181",
