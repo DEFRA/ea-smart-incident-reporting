@@ -10724,15 +10724,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\SA-SIR-PP-ROBOTICS-V\\.nuget\\packages\\": {}
+    "C:\\Users\\ws000012\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "SIRP",
       "projectName": "SIRP",
-      "projectPath": "C:\\Users\\SA-SIR-PP-ROBOTICS-V\\Documents\\GitHub\\ea-smart-incident-reporting\\SIRP\\.local",
-      "packagesPath": "C:\\Users\\SA-SIR-PP-ROBOTICS-V\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SA-SIR-PP-ROBOTICS-V\\Documents\\GitHub\\ea-smart-incident-reporting\\SIRP\\.local"
+      "projectPath": "C:\\Users\\ws000012\\OneDrive - Defra\\UiPath\\Github\\ea-smart-incident-reporting\\SIRP\\.local",
+      "packagesPath": "C:\\Users\\ws000012\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ws000012\\OneDrive - Defra\\UiPath\\Github\\ea-smart-incident-reporting\\SIRP\\.local"
     },
     "frameworks": {
       "net461": {
