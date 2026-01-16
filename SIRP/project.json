@@ -11,7 +11,7 @@
     "UiPath.FormActivityLibrary": "[1.8.0]",
     "UiPath.Mail.Activities": "[1.8.6]",
     "UiPath.System.Activities": "[21.10.3]",
-    "UiPath.UIAutomation.Activities": "[24.10.15]",
+    "UiPath.UIAutomation.Activities": "[20.10.15]",
     "UiPath.WebAPI.Activities": "[1.18.0]"
   },
   "webServices": [],
