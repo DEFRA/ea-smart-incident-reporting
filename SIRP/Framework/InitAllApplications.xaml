@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2333,1493</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2082,1460</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="54">
@@ -99,10 +99,9 @@
       <AssemblyReference>UiPath.Web</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialise All Applications" sap:VirtualizedContainerService.HintSize="844,1338" sap2010:WorkflowViewState.IdRef="Flowchart_3">
+  <Flowchart sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialise All Applications" sap:VirtualizedContainerService.HintSize="844,1339.5" sap2010:WorkflowViewState.IdRef="Flowchart_3">
     <Flowchart.Variables>
       <Variable x:TypeArguments="sco:Collection(sd:Process)" Name="collProcesses" />
       <Variable x:TypeArguments="x:String" Name="strToken" />
@@ -119,7 +118,7 @@
         <x:Double x:Key="Width">810</x:Double>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         <av:PointCollection x:Key="ConnectorLocation">360,77.5 360,127.5</av:PointCollection>
-        <x:Double x:Key="Height">1270.5</x:Double>
+        <x:Double x:Key="Height">1271.5</x:Double>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
@@ -129,11 +128,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">260,230.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,52</av:Size>
+          <av:Size x:Key="ShapeSize">200,53</av:Size>
           <av:PointCollection x:Key="ConnectorLocation">360,282.5 360,312.5 359.25,312.5 359.25,333.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <TryCatch DisplayName="Try Catch - Check Robot Status Flag" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="TryCatch_19">
+      <TryCatch DisplayName="Try Catch - Check Robot Status Flag" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="TryCatch_19">
         <TryCatch.Try>
           <Sequence DisplayName="Check Robot Status Flag" sap:VirtualizedContainerService.HintSize="825,2960" sap2010:WorkflowViewState.IdRef="Sequence_175">
             <sap:WorkflowViewStateService.ViewState>
@@ -347,14 +346,14 @@
         </TryCatch.Catches>
       </TryCatch>
       <FlowStep.Next>
-        <FlowDecision x:Name="__ReferenceID1" Condition="[CBool(strRobotActive) = False AND CBool(strSelfHeal) = False]" DisplayName="Robot Disabled?" sap:VirtualizedContainerService.HintSize="91,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+        <FlowDecision x:Name="__ReferenceID1" Condition="[CBool(strRobotActive) = False AND CBool(strSelfHeal) = False]" DisplayName="Robot Disabled?" sap:VirtualizedContainerService.HintSize="92.5,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <av:Point x:Key="ShapeLocation">313.75,333.5</av:Point>
-              <av:Size x:Key="ShapeSize">91,87</av:Size>
+              <av:Size x:Key="ShapeSize">92.5,87</av:Size>
               <av:PointCollection x:Key="TrueConnector">313.75,377 283.75,377 283.75,376 243.75,376</av:PointCollection>
-              <av:PointCollection x:Key="FalseConnector">404.75,377 530,377 530,453.5</av:PointCollection>
+              <av:PointCollection x:Key="FalseConnector">406.25,377 530,377 530,453.5</av:PointCollection>
               <x:String x:Key="FalseLabel">No</x:String>
               <x:String x:Key="TrueLabel">Yes</x:String>
             </scg:Dictionary>
@@ -364,10 +363,10 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">43.75,342.5</av:Point>
-                  <av:Size x:Key="ShapeSize">200,67</av:Size>
+                  <av:Size x:Key="ShapeSize">200,69</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Stop Processing" sap:VirtualizedContainerService.HintSize="200,67" sap2010:WorkflowViewState.IdRef="Sequence_176">
+              <Sequence DisplayName="Stop Processing" sap:VirtualizedContainerService.HintSize="200,69" sap2010:WorkflowViewState.IdRef="Sequence_176">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -395,11 +394,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">430,453.5</av:Point>
-                  <av:Size x:Key="ShapeSize">200,52</av:Size>
+                  <av:Size x:Key="ShapeSize">200,53</av:Size>
                   <av:PointCollection x:Key="ConnectorLocation">530,505.5 530,556.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <TryCatch DisplayName="Try Catch - Open NIRS" sap:VirtualizedContainerService.HintSize="1670,8663" sap2010:WorkflowViewState.IdRef="TryCatch_24">
+              <TryCatch DisplayName="Try Catch - Open NIRS" sap:VirtualizedContainerService.HintSize="1670,8714" sap2010:WorkflowViewState.IdRef="TryCatch_24">
                 <TryCatch.Variables>
                   <Variable x:TypeArguments="sn:NetworkCredential" Name="credMicrosoft" />
                   <Variable x:TypeArguments="sn:NetworkCredential" Name="credHorizon" />
@@ -408,13 +407,13 @@
                   <Variable x:TypeArguments="ui:Browser" Name="browsNIRSLaunch" />
                 </TryCatch.Variables>
                 <TryCatch.Try>
-                  <Sequence DisplayName="Launch NIRS" sap:VirtualizedContainerService.HintSize="1632,8435" sap2010:WorkflowViewState.IdRef="Sequence_198">
+                  <Sequence DisplayName="Launch NIRS" sap:VirtualizedContainerService.HintSize="1632,8482" sap2010:WorkflowViewState.IdRef="Sequence_198">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Launch NIRS - Identity Platform" sap:VirtualizedContainerService.HintSize="1584,6734" sap2010:WorkflowViewState.IdRef="Sequence_182">
+                    <Sequence DisplayName="Launch NIRS - Identity Platform" sap:VirtualizedContainerService.HintSize="1584,6769" sap2010:WorkflowViewState.IdRef="Sequence_182">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="ui:Browser" Name="browsLogin" />
                         <Variable x:TypeArguments="x:Boolean" Name="booLogoutPrompt" />
@@ -427,17 +426,17 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <If Condition="[Cbool(io_Config(&quot;Unattended&quot;))]" DisplayName="Unattended?" sap:VirtualizedContainerService.HintSize="1189,2764" sap2010:WorkflowViewState.IdRef="If_73">
+                      <If Condition="[Cbool(io_Config(&quot;Unattended&quot;))]" DisplayName="Unattended?" sap:VirtualizedContainerService.HintSize="1189,2780" sap2010:WorkflowViewState.IdRef="If_73">
                         <If.Then>
-                          <Sequence sap:VirtualizedContainerService.HintSize="1153,2575" sap2010:WorkflowViewState.IdRef="Sequence_205">
+                          <Sequence sap:VirtualizedContainerService.HintSize="1153,2588" sap2010:WorkflowViewState.IdRef="Sequence_205">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <If Condition="[CBool(io_Config(&quot;Dev Flag&quot;))]" DisplayName="Dev?" sap:VirtualizedContainerService.HintSize="1105,1210" sap2010:WorkflowViewState.IdRef="If_78">
+                            <If Condition="[CBool(io_Config(&quot;Dev Flag&quot;))]" DisplayName="Dev?" sap:VirtualizedContainerService.HintSize="1105,1219" sap2010:WorkflowViewState.IdRef="If_78">
                               <If.Then>
-                                <Sequence DisplayName="Initialise Dev Variables" sap:VirtualizedContainerService.HintSize="530,1050" sap2010:WorkflowViewState.IdRef="Sequence_181">
+                                <Sequence DisplayName="Initialise Dev Variables" sap:VirtualizedContainerService.HintSize="530,1057" sap2010:WorkflowViewState.IdRef="Sequence_181">
                                   <Sequence.Variables>
                                     <Variable x:TypeArguments="sn:NetworkCredential" Name="credVMWare" />
                                     <Variable x:TypeArguments="x:String" Name="strHorizonInstance" />
@@ -448,7 +447,7 @@
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Sequence DisplayName="Private: Get Dev Microsoft Credentials" sap:VirtualizedContainerService.HintSize="482,291" sap2010:WorkflowViewState.IdRef="Sequence_201">
+                                  <Sequence DisplayName="Private: Get Dev Microsoft Credentials" sap:VirtualizedContainerService.HintSize="482,293" sap2010:WorkflowViewState.IdRef="Sequence_201">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="ss:SecureString" Name="secPassword" />
                                       <Variable x:TypeArguments="x:String" Name="strUsername" />
@@ -458,8 +457,8 @@
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Dev Microsoft Credentials" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="434,80" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[secPassword]" Username="[strUsername]" />
-                                    <Assign DisplayName="Convert to Network Credential" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_55">
+                                    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Dev Microsoft Credentials" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[secPassword]" Username="[strUsername]" />
+                                    <Assign DisplayName="Convert to Network Credential" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_55">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="sn:NetworkCredential">[credMicrosoft]</OutArgument>
                                       </Assign.To>
@@ -468,7 +467,7 @@
                                       </Assign.Value>
                                     </Assign>
                                   </Sequence>
-                                  <Sequence DisplayName="Private: Get Dev VMWare Credentials" sap:VirtualizedContainerService.HintSize="482,291" sap2010:WorkflowViewState.IdRef="Sequence_214">
+                                  <Sequence DisplayName="Private: Get Dev VMWare Credentials" sap:VirtualizedContainerService.HintSize="482,293" sap2010:WorkflowViewState.IdRef="Sequence_214">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="ss:SecureString" Name="secPassword" />
                                       <Variable x:TypeArguments="x:String" Name="strUsername" />
@@ -478,8 +477,8 @@
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Dev VMWare Identity Credentials" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="434,80" sap2010:WorkflowViewState.IdRef="GetRobotCredential_5" Password="[secPassword]" Username="[strUsername]" />
-                                    <Assign DisplayName="Convert to Network Credential" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_58">
+                                    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Dev VMWare Identity Credentials" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="GetRobotCredential_5" Password="[secPassword]" Username="[strUsername]" />
+                                    <Assign DisplayName="Convert to Network Credential" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_58">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="sn:NetworkCredential">[credHorizon]</OutArgument>
                                       </Assign.To>
@@ -488,7 +487,7 @@
                                       </Assign.Value>
                                     </Assign>
                                   </Sequence>
-                                  <Assign DisplayName="Assign Dev Identity Platform URL" sap:VirtualizedContainerService.HintSize="482,82" sap2010:WorkflowViewState.IdRef="Assign_60">
+                                  <Assign DisplayName="Assign Dev Identity Platform URL" sap:VirtualizedContainerService.HintSize="482,83" sap2010:WorkflowViewState.IdRef="Assign_60">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:String">[strIdentityPlatformURL]</OutArgument>
                                     </Assign.To>
@@ -496,7 +495,7 @@
                                       <InArgument x:TypeArguments="x:String">[io_Config("Dev Identity Platform URL").ToString]</InArgument>
                                     </Assign.Value>
                                   </Assign>
-                                  <Assign DisplayName="Assign Dev App Selection" sap:VirtualizedContainerService.HintSize="482,82" sap2010:WorkflowViewState.IdRef="Assign_61">
+                                  <Assign DisplayName="Assign Dev App Selection" sap:VirtualizedContainerService.HintSize="482,83" sap2010:WorkflowViewState.IdRef="Assign_61">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:String">[strAppSelection]</OutArgument>
                                     </Assign.To>
@@ -504,7 +503,7 @@
                                       <InArgument x:TypeArguments="x:String">[io_Config("Dev Identity App Selection").ToString]</InArgument>
                                     </Assign.Value>
                                   </Assign>
-                                  <Assign DisplayName="Assign Dev App Selection" sap:VirtualizedContainerService.HintSize="482,82" sap2010:WorkflowViewState.IdRef="Assign_62">
+                                  <Assign DisplayName="Assign Dev App Selection" sap:VirtualizedContainerService.HintSize="482,83" sap2010:WorkflowViewState.IdRef="Assign_62">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:String">[strNIRSInstance]</OutArgument>
                                     </Assign.To>
@@ -515,7 +514,7 @@
                                 </Sequence>
                               </If.Then>
                               <If.Else>
-                                <Sequence DisplayName="Initialise Live Variables" sap:VirtualizedContainerService.HintSize="530,1050" sap2010:WorkflowViewState.IdRef="Sequence_206">
+                                <Sequence DisplayName="Initialise Live Variables" sap:VirtualizedContainerService.HintSize="530,1057" sap2010:WorkflowViewState.IdRef="Sequence_206">
                                   <Sequence.Variables>
                                     <Variable x:TypeArguments="sn:NetworkCredential" Name="credVMWare" />
                                     <Variable x:TypeArguments="x:String" Name="strNIRSInstance" />
@@ -527,7 +526,7 @@
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Sequence DisplayName="Private: Get Live Microsoft Credentials" sap:VirtualizedContainerService.HintSize="482,291" sap2010:WorkflowViewState.IdRef="Sequence_216">
+                                  <Sequence DisplayName="Private: Get Live Microsoft Credentials" sap:VirtualizedContainerService.HintSize="482,293" sap2010:WorkflowViewState.IdRef="Sequence_216">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="ss:SecureString" Name="secPassword" />
                                       <Variable x:TypeArguments="x:String" Name="strUsername" />
@@ -537,8 +536,8 @@
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Live Microsoft Credentials" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="434,80" sap2010:WorkflowViewState.IdRef="GetRobotCredential_6" Password="[secPassword]" Username="[strUsername]" />
-                                    <Assign DisplayName="Convert to Network Credential" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_66">
+                                    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Live Microsoft Credentials" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="GetRobotCredential_6" Password="[secPassword]" Username="[strUsername]" />
+                                    <Assign DisplayName="Convert to Network Credential" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_66">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="sn:NetworkCredential">[credMicrosoft]</OutArgument>
                                       </Assign.To>
@@ -547,7 +546,7 @@
                                       </Assign.Value>
                                     </Assign>
                                   </Sequence>
-                                  <Sequence DisplayName="Private: Get Live VMWare Credentials" sap:VirtualizedContainerService.HintSize="482,291" sap2010:WorkflowViewState.IdRef="Sequence_217">
+                                  <Sequence DisplayName="Private: Get Live VMWare Credentials" sap:VirtualizedContainerService.HintSize="482,293" sap2010:WorkflowViewState.IdRef="Sequence_217">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="ss:SecureString" Name="secPassword" />
                                       <Variable x:TypeArguments="x:String" Name="strUsername" />
@@ -557,8 +556,8 @@
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Live VMWare Identity Credentials" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="434,80" sap2010:WorkflowViewState.IdRef="GetRobotCredential_7" Password="[secPassword]" Username="[strUsername]" />
-                                    <Assign DisplayName="Convert to Network Credential" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_67">
+                                    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Live VMWare Identity Credentials" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="GetRobotCredential_7" Password="[secPassword]" Username="[strUsername]" />
+                                    <Assign DisplayName="Convert to Network Credential" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_67">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="sn:NetworkCredential">[credHorizon]</OutArgument>
                                       </Assign.To>
@@ -567,7 +566,7 @@
                                       </Assign.Value>
                                     </Assign>
                                   </Sequence>
-                                  <Assign DisplayName="Assign Live Identity Platform URL" sap:VirtualizedContainerService.HintSize="482,82" sap2010:WorkflowViewState.IdRef="Assign_63">
+                                  <Assign DisplayName="Assign Live Identity Platform URL" sap:VirtualizedContainerService.HintSize="482,83" sap2010:WorkflowViewState.IdRef="Assign_63">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:String">[strIdentityPlatformURL]</OutArgument>
                                     </Assign.To>
@@ -575,7 +574,7 @@
                                       <InArgument x:TypeArguments="x:String">[io_Config("Live Identity Platform URL").ToString]</InArgument>
                                     </Assign.Value>
                                   </Assign>
-                                  <Assign DisplayName="Assign Live App Selection" sap:VirtualizedContainerService.HintSize="482,82" sap2010:WorkflowViewState.IdRef="Assign_64">
+                                  <Assign DisplayName="Assign Live App Selection" sap:VirtualizedContainerService.HintSize="482,83" sap2010:WorkflowViewState.IdRef="Assign_64">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:String">[strAppSelection]</OutArgument>
                                     </Assign.To>
@@ -583,7 +582,7 @@
                                       <InArgument x:TypeArguments="x:String">[io_Config("Live Identity App Selection").ToString]</InArgument>
                                     </Assign.Value>
                                   </Assign>
-                                  <Assign DisplayName="Assign Live App Selection" sap:VirtualizedContainerService.HintSize="482,82" sap2010:WorkflowViewState.IdRef="Assign_65">
+                                  <Assign DisplayName="Assign Live App Selection" sap:VirtualizedContainerService.HintSize="482,83" sap2010:WorkflowViewState.IdRef="Assign_65">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:String">[strNIRSInstance]</OutArgument>
                                     </Assign.To>
@@ -594,13 +593,13 @@
                                 </Sequence>
                               </If.Else>
                             </If>
-                            <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Edge" DisplayName="Open Browser - Microsoft Login" sap:VirtualizedContainerService.HintSize="1105,1239" sap2010:WorkflowViewState.IdRef="OpenBrowser_12" UiBrowser="[browsLogin]" Url="[io_Config(&quot;Microsoft Login URL&quot;).ToString]">
+                            <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Edge" DisplayName="Open Browser - Microsoft Login" sap:VirtualizedContainerService.HintSize="1105,1243" sap2010:WorkflowViewState.IdRef="OpenBrowser_12" UiBrowser="[browsLogin]" Url="[io_Config(&quot;Microsoft Login URL&quot;).ToString]">
                               <ui:OpenBrowser.Body>
                                 <ActivityAction x:TypeArguments="x:Object">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Login to Microsoft" sap:VirtualizedContainerService.HintSize="991,1114" sap2010:WorkflowViewState.IdRef="Sequence_183">
+                                  <Sequence DisplayName="Login to Microsoft" sap:VirtualizedContainerService.HintSize="991,1117" sap2010:WorkflowViewState.IdRef="Sequence_183">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="x:Boolean" Name="booMicrosoftLogin" />
                                       <Variable x:TypeArguments="x:Boolean" Name="booAccountPopulated" />
@@ -619,9 +618,9 @@
                                         </ui:Target>
                                       </ui:UiElementExists.Target>
                                     </ui:UiElementExists>
-                                    <If Condition="[booAccountPopulated]" DisplayName="Account Populated?" sap:VirtualizedContainerService.HintSize="943,546" sap2010:WorkflowViewState.IdRef="If_72">
+                                    <If Condition="[booAccountPopulated]" DisplayName="Account Populated?" sap:VirtualizedContainerService.HintSize="943,549" sap2010:WorkflowViewState.IdRef="If_72">
                                       <If.Then>
-                                        <Sequence DisplayName="Select Email" sap:VirtualizedContainerService.HintSize="482,315" sap2010:WorkflowViewState.IdRef="Sequence_184">
+                                        <Sequence DisplayName="Select Email" sap:VirtualizedContainerService.HintSize="482,316" sap2010:WorkflowViewState.IdRef="Sequence_184">
                                           <Sequence.Variables>
                                             <Variable x:TypeArguments="x:String" Name="strEmail" />
                                           </Sequence.Variables>
@@ -630,7 +629,7 @@
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <Assign DisplayName="Assign Email" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_51">
+                                          <Assign DisplayName="Assign Email" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_51">
                                             <Assign.To>
                                               <OutArgument x:TypeArguments="x:String">[strEmail]</OutArgument>
                                             </Assign.To>
@@ -663,13 +662,13 @@
                                         </Sequence>
                                       </If.Then>
                                       <If.Else>
-                                        <Sequence DisplayName="Enter Email" sap:VirtualizedContainerService.HintSize="416,388" sap2010:WorkflowViewState.IdRef="Sequence_191">
+                                        <Sequence DisplayName="Enter Email" sap:VirtualizedContainerService.HintSize="416,389" sap2010:WorkflowViewState.IdRef="Sequence_191">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into 'Email'" EmptyField="True" sap:VirtualizedContainerService.HintSize="368,155" sap2010:WorkflowViewState.IdRef="TypeInto_24" SimulateType="True" Text="[credMicrosoft.Username]">
+                                          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into 'Email'" EmptyField="True" sap:VirtualizedContainerService.HintSize="368,156" sap2010:WorkflowViewState.IdRef="TypeInto_24" SimulateType="True" Text="[credMicrosoft.Username]">
                                             <ui:TypeInto.Target>
                                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="09c71def-0fdf-4a4d-9a52-4dfbcca7ac41" InformativeScreenshot="664ab5f21f89df9e61e23c105e956f84" Selector="&lt;webctrl tag='INPUT' type='email' /&gt;">
                                                 <ui:Target.TimeoutMS>
@@ -745,13 +744,13 @@
                           </Sequence>
                         </If.Then>
                       </If>
-                      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Edge" DisplayName="Open Browser - Identity Platform" sap:VirtualizedContainerService.HintSize="1189,2502" sap2010:WorkflowViewState.IdRef="OpenBrowser_13" UiBrowser="[browsIdentity]" Url="[strIdentityPlatformURL]">
+                      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Edge" DisplayName="Open Browser - Identity Platform" sap:VirtualizedContainerService.HintSize="1189,2515" sap2010:WorkflowViewState.IdRef="OpenBrowser_13" UiBrowser="[browsIdentity]" Url="[strIdentityPlatformURL]">
                         <ui:OpenBrowser.Body>
                           <ActivityAction x:TypeArguments="x:Object">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Launch NIRS" sap:VirtualizedContainerService.HintSize="532,2377" sap2010:WorkflowViewState.IdRef="Sequence_185">
+                            <Sequence DisplayName="Launch NIRS" sap:VirtualizedContainerService.HintSize="532,2389" sap2010:WorkflowViewState.IdRef="Sequence_185">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:Boolean" Name="booIdentityLogin" />
                                 <Variable x:TypeArguments="x:Boolean" Name="booDomainSelection" />
@@ -761,7 +760,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <If Condition="[Cbool(io_Config(&quot;Unattended&quot;))]" DisplayName="If -  Unattended" sap:VirtualizedContainerService.HintSize="484,247" sap2010:WorkflowViewState.IdRef="If_74">
+                              <If Condition="[Cbool(io_Config(&quot;Unattended&quot;))]" DisplayName="If -  Unattended" sap:VirtualizedContainerService.HintSize="484,250" sap2010:WorkflowViewState.IdRef="If_74">
                                 <If.Then>
                                   <ui:CloseTab Browser="[browsLogin]" DisplayName="Close Login Tab" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="CloseTab_11" />
                                 </If.Then>
@@ -784,15 +783,15 @@
                                   </ui:Target>
                                 </ui:UiElementExists.Target>
                               </ui:UiElementExists>
-                              <If Condition="[booDomainSelection]" DisplayName="Domain Selection?" sap:VirtualizedContainerService.HintSize="484,714" sap2010:WorkflowViewState.IdRef="If_75">
+                              <If Condition="[booDomainSelection]" DisplayName="Domain Selection?" sap:VirtualizedContainerService.HintSize="484,718" sap2010:WorkflowViewState.IdRef="If_75">
                                 <If.Then>
-                                  <Sequence DisplayName="Select DT2 Domain" sap:VirtualizedContainerService.HintSize="416,527" sap2010:WorkflowViewState.IdRef="Sequence_193">
+                                  <Sequence DisplayName="Select DT2 Domain" sap:VirtualizedContainerService.HintSize="416,528" sap2010:WorkflowViewState.IdRef="Sequence_193">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Domain" sap:VirtualizedContainerService.HintSize="368,155" sap2010:WorkflowViewState.IdRef="SelectItem_6" Item="[io_Config(&quot;Identity Platform Domain&quot;).ToString]">
+                                    <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Domain" sap:VirtualizedContainerService.HintSize="368,156" sap2010:WorkflowViewState.IdRef="SelectItem_6" Item="[io_Config(&quot;Identity Platform Domain&quot;).ToString]">
                                       <ui:SelectItem.Items>
                                         <scg:List x:TypeArguments="x:String" Capacity="4">
                                           <x:String>System Domain</x:String>
@@ -875,15 +874,15 @@
                                   </ui:Target>
                                 </ui:UiElementExists.Target>
                               </ui:UiElementExists>
-                              <If Condition="[booIdentityLogin]" DisplayName="Identity Login?" sap:VirtualizedContainerService.HintSize="484,714" sap2010:WorkflowViewState.IdRef="If_76">
+                              <If Condition="[booIdentityLogin]" DisplayName="Identity Login?" sap:VirtualizedContainerService.HintSize="484,718" sap2010:WorkflowViewState.IdRef="If_76">
                                 <If.Then>
-                                  <Sequence DisplayName="Login to Identity Platform" sap:VirtualizedContainerService.HintSize="416,527" sap2010:WorkflowViewState.IdRef="Sequence_186">
+                                  <Sequence DisplayName="Login to Identity Platform" sap:VirtualizedContainerService.HintSize="416,528" sap2010:WorkflowViewState.IdRef="Sequence_186">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Username" EmptyField="True" sap:VirtualizedContainerService.HintSize="368,155" sap2010:WorkflowViewState.IdRef="TypeInto_25" SimulateType="True" Text="[credHorizon.UserName]">
+                                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Username" EmptyField="True" sap:VirtualizedContainerService.HintSize="368,156" sap2010:WorkflowViewState.IdRef="TypeInto_25" SimulateType="True" Text="[credHorizon.UserName]">
                                       <ui:TypeInto.Target>
                                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e2b6ba9f-ed84-4147-bb55-821b10cd7217" InformativeScreenshot="0c7fdcec9f41bb1ce7f1e09deb8ec740" Selector="&lt;html app='msedge.exe' title='Defra - Workspace ONE' /&gt;&lt;webctrl tag='INPUT' type='text' /&gt;">
                                           <ui:Target.TimeoutMS>
@@ -941,7 +940,7 @@
                                   </Sequence>
                                 </If.Else>
                               </If>
-                              <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="484,234" sap2010:WorkflowViewState.IdRef="BlockUserInput_34" KeyModifiers="Alt" SpecialKey="True">
+                              <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="484,235" sap2010:WorkflowViewState.IdRef="BlockUserInput_34" KeyModifiers="Alt" SpecialKey="True">
                                 <ui:BlockUserInput.Body>
                                   <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Application Instance" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_128" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="False">
                                     <ui:Click.CursorPosition>
@@ -955,7 +954,7 @@
                                       </ui:CursorPosition>
                                     </ui:Click.CursorPosition>
                                     <ui:Click.Target>
-                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="66ddea93-a635-4ec3-97ef-c32cf9698189" InformativeScreenshot="89c10e16dd122b021e861184e907bf6c" Selector="[string.Format(&quot;&lt;html app='msedge.exe' title='*Intelligent Hub' /&gt;&lt;webctrl class='app-label' parentid='customization0' tag='SPAN' visibleinnertext='{0}' /&gt;&quot;, strAppSelection)]">
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="66ddea93-a635-4ec3-97ef-c32cf9698189" InformativeScreenshot="89c10e16dd122b021e861184e907bf6c" Selector="[string.Format(&quot;&lt;html app='msedge.exe' title='*Intelligent Hub' /&gt;&lt;webctrl class='app-label' parentid='*' tag='SPAN' visibleinnertext='{0}' /&gt;&quot;, strAppSelection)]">
                                         <ui:Target.TimeoutMS>
                                           <InArgument x:TypeArguments="x:Int32" />
                                         </ui:Target.TimeoutMS>
@@ -997,7 +996,7 @@
                                   </ui:CursorPosition>
                                 </ui:Click.CursorPosition>
                                 <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="66ddea93-a635-4ec3-97ef-c32cf9698189" InformativeScreenshot="0e9afbc02b6d4e06608ce37f4e7f0ad5" Selector="[string.Format(&quot;&lt;webctrl class='app-label' parentid='customization0' tag='SPAN' visibleinnertext='{0}' /&gt;&quot;, strNIRSInstance)]">
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="66ddea93-a635-4ec3-97ef-c32cf9698189" InformativeScreenshot="0e9afbc02b6d4e06608ce37f4e7f0ad5" Selector="[string.Format(&quot;&lt;webctrl class='app-label' parentid='*' tag='SPAN' visibleinnertext='{0}' /&gt;&quot;, strNIRSInstance)]">
                                     <ui:Target.TimeoutMS>
                                       <InArgument x:TypeArguments="x:Int32" />
                                     </ui:Target.TimeoutMS>
@@ -1012,9 +1011,9 @@
                         </ui:BrowserScope.Body>
                       </ui:BrowserScope>
                       <Delay Duration="00:00:02.5000000" sap:VirtualizedContainerService.HintSize="1189,25" sap2010:WorkflowViewState.IdRef="Delay_19" />
-                      <ui:UiElementExists sap2010:Annotation.AnnotationText="If a Horizon instance is open from a previous run it will prompt for logout." DisplayName="Check for Horizon Logout Prompt" Exists="[booLogoutPrompt]" sap:VirtualizedContainerService.HintSize="1189,149" sap2010:WorkflowViewState.IdRef="UiElementExists_39">
+                      <ui:UiElementExists sap2010:Annotation.AnnotationText="If a Horizon instance is open from a previous run it will prompt for logout." DisplayName="Check for Horizon Logout Prompt" Exists="[booLogoutPrompt]" sap:VirtualizedContainerService.HintSize="1189,151" sap2010:WorkflowViewState.IdRef="UiElementExists_39">
                         <ui:UiElementExists.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="20d16491-a1fd-4366-9d22-b3a323f4c6cc" InformativeScreenshot="cd6a8c5b4050a538298055a54198eb48" Selector="&lt;wnd aaname='Omnissa Horizon Client Content Dialog' app='horizon-client.exe' cls='HwndWrapper*' title='Omnissa Horizon Client' /&gt;&lt;ctrl name='Log off server?' role='text' /&gt;" TimeoutMS="2500">
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="20d16491-a1fd-4366-9d22-b3a323f4c6cc" InformativeScreenshot="cd6a8c5b4050a538298055a54198eb48" Selector="&lt;wnd aaname='* Horizon Client Content Dialog' cls='HwndWrapper*' title='* Horizon Client' /&gt;&lt;ctrl name='Log off server?' role='text' /&gt;" TimeoutMS="2500">
                             <ui:Target.WaitForReady>
                               <InArgument x:TypeArguments="ui:WaitForReady" />
                             </ui:Target.WaitForReady>
@@ -1026,7 +1025,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:UiElementExists>
-                      <If Condition="[booLogoutPrompt]" DisplayName="Logout Prompt?" sap:VirtualizedContainerService.HintSize="1189,296" sap2010:WorkflowViewState.IdRef="If_77">
+                      <If Condition="[booLogoutPrompt]" DisplayName="Logout Prompt?" sap:VirtualizedContainerService.HintSize="1189,299" sap2010:WorkflowViewState.IdRef="If_77">
                         <If.Then>
                           <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;OK&quot;" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_131" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                             <ui:Click.CursorPosition>
@@ -1040,7 +1039,7 @@
                               </ui:CursorPosition>
                             </ui:Click.CursorPosition>
                             <ui:Click.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5f2d24b9-ed96-4e6e-a8df-2c9b9fb619cf" InformativeScreenshot="b11b62d798fbe652a0540cfe30045f96" Selector="&lt;wnd aaname='Omnissa Horizon Client Content Dialog' app='horizon-client.exe' cls='HwndWrapper*' title='Omnissa Horizon Client' /&gt;&lt;ctrl automationid='PrimaryButton' text='OK' /&gt;">
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5f2d24b9-ed96-4e6e-a8df-2c9b9fb619cf" InformativeScreenshot="b11b62d798fbe652a0540cfe30045f96" Selector="&lt;wnd aaname='* Horizon Client Content Dialog' cls='HwndWrapper*' title='* Horizon Client' /&gt;&lt;ctrl automationid='PrimaryButton' text='OK' /&gt;">
                                 <ui:Target.TimeoutMS>
                                   <InArgument x:TypeArguments="x:Int32" />
                                 </ui:Target.TimeoutMS>
@@ -1061,13 +1060,13 @@
                           </Sequence>
                         </If.Else>
                       </If>
-                      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser - Horizon Launch Screen" sap:VirtualizedContainerService.HintSize="1189,247" sap2010:WorkflowViewState.IdRef="BrowserScope_12" InformativeScreenshot="5acfc4e721e1fe8f69f7d9248f558ae1" Selector="&lt;html app='msedge.exe' title='Omnissa Horizon Client' /&gt;" UiBrowser="[browsHorizonConfirmation]">
+                      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser - Horizon Launch Screen" sap:VirtualizedContainerService.HintSize="1189,248" sap2010:WorkflowViewState.IdRef="BrowserScope_12" InformativeScreenshot="5acfc4e721e1fe8f69f7d9248f558ae1" Selector="&lt;html app='msedge.exe' title='* Horizon Client' /&gt;" UiBrowser="[browsHorizonConfirmation]">
                         <ui:BrowserScope.Body>
                           <ActivityAction x:TypeArguments="x:Object">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,100" sap2010:WorkflowViewState.IdRef="Sequence_215">
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,101" sap2010:WorkflowViewState.IdRef="Sequence_215">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1087,15 +1086,15 @@
                         </ui:Target>
                       </ui:WaitUiElementAppear.Target>
                     </ui:WaitUiElementAppear>
-                    <Pick DisplayName="Pick - NIRS Errors?" sap:VirtualizedContainerService.HintSize="1584,1322" sap2010:WorkflowViewState.IdRef="Pick_7">
-                      <PickBranch DisplayName="PickBranch - Default" sap:VirtualizedContainerService.HintSize="250,1275" sap2010:WorkflowViewState.IdRef="PickBranch_14">
+                    <Pick DisplayName="Pick - NIRS Errors?" sap:VirtualizedContainerService.HintSize="1584,1334" sap2010:WorkflowViewState.IdRef="Pick_7">
+                      <PickBranch DisplayName="PickBranch - Default" sap:VirtualizedContainerService.HintSize="250,1287" sap2010:WorkflowViewState.IdRef="PickBranch_14">
                         <PickBranch.Trigger>
                           <Delay Duration="00:00:04.9000000" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Delay_20" />
                         </PickBranch.Trigger>
                       </PickBranch>
-                      <PickBranch DisplayName="PickBranch - Dialog Box" sap:VirtualizedContainerService.HintSize="502,1275" sap2010:WorkflowViewState.IdRef="PickBranch_16">
+                      <PickBranch DisplayName="PickBranch - Dialog Box" sap:VirtualizedContainerService.HintSize="502,1287" sap2010:WorkflowViewState.IdRef="PickBranch_16">
                         <PickBranch.Trigger>
-                          <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="Check for any Generic Dialog boxes and attempt to click &quot;OK&quot;" ContinueOnError="True" DisplayName="Find Element - Dialog Box" sap:VirtualizedContainerService.HintSize="334,129" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_35">
+                          <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="Check for any Generic Dialog boxes and attempt to click &quot;OK&quot;" ContinueOnError="True" DisplayName="Find Element - Dialog Box" sap:VirtualizedContainerService.HintSize="334,131" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_35">
                             <ui:WaitUiElementAppear.Target>
                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f06d4e55-dc91-4479-8ce7-623bd499b55d" Selector="&lt;wnd app='irs.exe' cls='#32770' isremoteapp='1' title='*' /&gt;&lt;ctrl name='*' role='dialog' /&gt;" TimeoutMS="5000">
                                 <ui:Target.WaitForReady>
@@ -1110,9 +1109,9 @@
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:WaitUiElementAppear>
                         </PickBranch.Trigger>
-                        <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="452,452" sap2010:WorkflowViewState.IdRef="BlockUserInput_36" KeyModifiers="Alt" SpecialKey="True">
+                        <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="452,455" sap2010:WorkflowViewState.IdRef="BlockUserInput_36" KeyModifiers="Alt" SpecialKey="True">
                           <ui:BlockUserInput.Body>
-                            <Sequence DisplayName="Close Modal Form Popup &amp; Re-open" sap:VirtualizedContainerService.HintSize="416,325" sap2010:WorkflowViewState.IdRef="Sequence_199">
+                            <Sequence DisplayName="Close Modal Form Popup &amp; Re-open" sap:VirtualizedContainerService.HintSize="416,327" sap2010:WorkflowViewState.IdRef="Sequence_199">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:Boolean" Name="booObjectVar" />
                               </Sequence.Variables>
@@ -1121,7 +1120,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="368,92" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;Dialog box identified whilst opening NIRS. Closing Dialog box...&quot;]" />
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="368,94" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;Dialog box identified whilst opening NIRS. Closing Dialog box...&quot;]" />
                               <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;OK&quot; - Dialog Box" sap:VirtualizedContainerService.HintSize="368,107" sap2010:WorkflowViewState.IdRef="Click_135" KeyModifiers="None" MouseButton="BTN_LEFT">
                                 <ui:Click.CursorPosition>
                                   <ui:CursorPosition Position="Center">
@@ -1148,9 +1147,9 @@
                           </ui:BlockUserInput.Body>
                         </ui:BlockUserInput>
                       </PickBranch>
-                      <PickBranch DisplayName="PickBranch - Modal Form" sap:VirtualizedContainerService.HintSize="618,1275" sap2010:WorkflowViewState.IdRef="PickBranch_15">
+                      <PickBranch DisplayName="PickBranch - Modal Form" sap:VirtualizedContainerService.HintSize="618,1287" sap2010:WorkflowViewState.IdRef="PickBranch_15">
                         <PickBranch.Trigger>
-                          <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="In certain circumstances, NIRS can crash in an unrecoverable way that means that the next launch also fails. Have to check here for the modal form pop-up that informs of the critical error." ContinueOnError="True" DisplayName="Find Element - Modal Form" sap:VirtualizedContainerService.HintSize="334,159" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_33">
+                          <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="In certain circumstances, NIRS can crash in an unrecoverable way that means that the next launch also fails. Have to check here for the modal form pop-up that informs of the critical error." ContinueOnError="True" DisplayName="Find Element - Modal Form" sap:VirtualizedContainerService.HintSize="334,163" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_33">
                             <ui:WaitUiElementAppear.Target>
                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f06d4e55-dc91-4479-8ce7-623bd499b55d" Selector="&lt;wnd app='irs.exe' cls='#32770' isremoteapp='1' title='Incidents Recording System' /&gt;&lt;wnd ctrlid='*' title='*show non-modal form when modal form*' /&gt;" TimeoutMS="5000">
                                 <ui:Target.WaitForReady>
@@ -1165,9 +1164,9 @@
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:WaitUiElementAppear>
                         </PickBranch.Trigger>
-                        <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="568,917" sap2010:WorkflowViewState.IdRef="BlockUserInput_35" KeyModifiers="Alt" SpecialKey="True">
+                        <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="568,923" sap2010:WorkflowViewState.IdRef="BlockUserInput_35" KeyModifiers="Alt" SpecialKey="True">
                           <ui:BlockUserInput.Body>
-                            <Sequence DisplayName="Close Modal Form Popup &amp; Re-open" sap:VirtualizedContainerService.HintSize="532,790" sap2010:WorkflowViewState.IdRef="Sequence_188">
+                            <Sequence DisplayName="Close Modal Form Popup &amp; Re-open" sap:VirtualizedContainerService.HintSize="532,795" sap2010:WorkflowViewState.IdRef="Sequence_188">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:Boolean" Name="booObjectVar" />
                               </Sequence.Variables>
@@ -1176,7 +1175,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,92" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;Modal form identified whilst opening NIRS. Closing Modal form...&quot;]" />
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,94" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;Modal form identified whilst opening NIRS. Closing Modal form...&quot;]" />
                               <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;OK&quot; - Modal Form" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="Click_132" KeyModifiers="None" MouseButton="BTN_LEFT">
                                 <ui:Click.CursorPosition>
                                   <ui:CursorPosition Position="Center">
@@ -1208,7 +1207,7 @@
                                   </ui:Target>
                                 </ui:UiElementExists.Target>
                               </ui:UiElementExists>
-                              <If Condition="[booObjectVar]" DisplayName="Object Variable Form Present?" sap:VirtualizedContainerService.HintSize="484,294" sap2010:WorkflowViewState.IdRef="If_79">
+                              <If Condition="[booObjectVar]" DisplayName="Object Variable Form Present?" sap:VirtualizedContainerService.HintSize="484,297" sap2010:WorkflowViewState.IdRef="If_79">
                                 <If.Then>
                                   <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;OK&quot; - Object Variable Form" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_133" KeyModifiers="None" MouseButton="BTN_LEFT">
                                     <ui:Click.CursorPosition>
@@ -1281,11 +1280,11 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">430,556.5</av:Point>
-                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+                      <av:Size x:Key="ShapeSize">200,53</av:Size>
                       <av:PointCollection x:Key="ConnectorLocation">530,608.5 530,669.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <TryCatch DisplayName="TryCatch - Reset NIRS" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="TryCatch_20">
+                  <TryCatch DisplayName="TryCatch - Reset NIRS" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="TryCatch_20">
                     <TryCatch.Try>
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Reset NIRS workflow" sap:VirtualizedContainerService.HintSize="379,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Process\Process Subflows\Reset NIRS.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
@@ -1333,11 +1332,11 @@
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">270,788.5</av:Point>
-                              <av:Size x:Key="ShapeSize">200,139</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">370,927.5 370,999.5</av:PointCollection>
+                              <av:Size x:Key="ShapeSize">200,145</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">370,933.5 370,999.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <TryCatch sap2010:Annotation.AnnotationText="If the active flag has been set to False, we should check that we can reach the &quot;Enter New Event&quot; screen before we re-activate the flag." DisplayName="TryCatch - Test Event Screen" sap:VirtualizedContainerService.HintSize="200,139" sap2010:WorkflowViewState.IdRef="TryCatch_21">
+                          <TryCatch sap2010:Annotation.AnnotationText="If the active flag has been set to False, we should check that we can reach the &quot;Enter New Event&quot; screen before we re-activate the flag." DisplayName="TryCatch - Test Event Screen" sap:VirtualizedContainerService.HintSize="200,145" sap2010:WorkflowViewState.IdRef="TryCatch_21">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1465,11 +1464,11 @@
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">270,999.5</av:Point>
-                                  <av:Size x:Key="ShapeSize">200,67</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">370,1066.5 370,1118.5</av:PointCollection>
+                                  <av:Size x:Key="ShapeSize">200,69</av:Size>
+                                  <av:PointCollection x:Key="ConnectorLocation">370,1068.5 370,1118.5</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Sequence DisplayName="Re-activate Robot" sap:VirtualizedContainerService.HintSize="200,67" sap2010:WorkflowViewState.IdRef="Sequence_177">
+                              <Sequence DisplayName="Re-activate Robot" sap:VirtualizedContainerService.HintSize="200,69" sap2010:WorkflowViewState.IdRef="Sequence_177">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="njl:JObject" Name="jBody" />
                                   <Variable x:TypeArguments="x:String" Name="strRecordResponse" />
@@ -1545,10 +1544,10 @@
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <av:Point x:Key="ShapeLocation">270,1118.5</av:Point>
-                                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                      <av:Size x:Key="ShapeSize">200,53</av:Size>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;NIRS Launched. Re-activated Robot Status Flag. Beginning processing...&quot;]">
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;NIRS Launched. Re-activated Robot Status Flag. Beginning processing...&quot;]">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1566,10 +1565,10 @@
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">600,783.5</av:Point>
-                              <av:Size x:Key="ShapeSize">200,52</av:Size>
+                              <av:Size x:Key="ShapeSize">200,53</av:Size>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;NIRS Launched. Beginning processing...&quot;]">
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;NIRS Launched. Beginning processing...&quot;]">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1591,11 +1590,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">260,127.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,52</av:Size>
+          <av:Size x:Key="ShapeSize">200,53</av:Size>
           <av:PointCollection x:Key="ConnectorLocation">360,179.5 360,230.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Opening applications...&quot;]" />
+      <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Opening applications...&quot;]" />
       <FlowStep.Next>
         <x:Reference>__ReferenceID0</x:Reference>
       </FlowStep.Next>
@@ -1613,10 +1612,10 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">270,1218.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,52</av:Size>
+          <av:Size x:Key="ShapeSize">200,53</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Assign sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Assign_59" />
+      <Assign sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="Assign_59" />
     </FlowStep>
   </Flowchart>
 </Activity>
