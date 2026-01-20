@@ -150,39 +150,6 @@
           "lib/DocumentFormat.OpenXml.dll": {}
         }
       },
-      "DRACOE.Microsoft.Graph/1.0.16": {
-        "type": "package",
-        "dependencies": {
-          "UiPath.Excel.Activities": "2.23.3-preview",
-          "UiPath.System.Activities": "23.10.6",
-          "UiPath.WebAPI.Activities": "1.20.1"
-        },
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/DRACOE Microsoft Graph.dll": {},
-          "lib/net45/DRACOE Microsoft Graph_Expressions_13244517.dll": {},
-          "lib/net45/DRACOE Microsoft Graph_Expressions_15794871.dll": {},
-          "lib/net45/DRACOE Microsoft Graph_Expressions_17953920.dll": {},
-          "lib/net45/DRACOE Microsoft Graph_Expressions_1936434.dll": {},
-          "lib/net45/DRACOE Microsoft Graph_Expressions_19520324.dll": {},
-          "lib/net45/DRACOE Microsoft Graph_Expressions_24848943.dll": {},
-          "lib/net45/DRACOE Microsoft Graph_Expressions_37230508.dll": {},
-          "lib/net45/DRACOE Microsoft Graph_Expressions_40309319.dll": {},
-          "lib/net45/DRACOE Microsoft Graph_Expressions_48936643.dll": {},
-          "lib/net45/DRACOE Microsoft Graph_Expressions_55400036.dll": {},
-          "lib/net45/DRACOE Microsoft Graph_Expressions_5627823.dll": {},
-          "lib/net45/DRACOE Microsoft Graph_Expressions_7324207.dll": {}
-        },
-        "contentFiles": {
-          "contentFiles/any/any/_._": {
-            "buildAction": "None",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          }
-        }
-      },
       "Extended.Wpf.Toolkit/3.8.1": {
         "type": "package",
         "compile": {
@@ -2854,7 +2821,7 @@
         }
       }
     },
-    ".NETFramework,Version=v4.6.1/win10-x64": {
+    ".NETFramework,Version=v4.6.1/win-x86": {
       "AForge/2.2.5": {
         "type": "package",
         "compile": {
@@ -3001,39 +2968,6 @@
         },
         "runtime": {
           "lib/DocumentFormat.OpenXml.dll": {}
-        }
-      },
-      "DRACOE.Microsoft.Graph/1.0.16": {
-        "type": "package",
-        "dependencies": {
-          "UiPath.Excel.Activities": "2.23.3-preview",
-          "UiPath.System.Activities": "23.10.6",
-          "UiPath.WebAPI.Activities": "1.20.1"
-        },
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/DRACOE Microsoft Graph.dll": {},
-          "lib/net45/DRACOE Microsoft Graph_Expressions_13244517.dll": {},
-          "lib/net45/DRACOE Microsoft Graph_Expressions_15794871.dll": {},
-          "lib/net45/DRACOE Microsoft Graph_Expressions_17953920.dll": {},
-          "lib/net45/DRACOE Microsoft Graph_Expressions_1936434.dll": {},
-          "lib/net45/DRACOE Microsoft Graph_Expressions_19520324.dll": {},
-          "lib/net45/DRACOE Microsoft Graph_Expressions_24848943.dll": {},
-          "lib/net45/DRACOE Microsoft Graph_Expressions_37230508.dll": {},
-          "lib/net45/DRACOE Microsoft Graph_Expressions_40309319.dll": {},
-          "lib/net45/DRACOE Microsoft Graph_Expressions_48936643.dll": {},
-          "lib/net45/DRACOE Microsoft Graph_Expressions_55400036.dll": {},
-          "lib/net45/DRACOE Microsoft Graph_Expressions_5627823.dll": {},
-          "lib/net45/DRACOE Microsoft Graph_Expressions_7324207.dll": {}
-        },
-        "contentFiles": {
-          "contentFiles/any/any/_._": {
-            "buildAction": "None",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          }
         }
       },
       "Extended.Wpf.Toolkit/3.8.1": {
@@ -5868,57 +5802,6 @@
         "documentformat.openxml.2.5.0.nupkg.sha512",
         "documentformat.openxml.nuspec",
         "lib/DocumentFormat.OpenXml.dll"
-      ]
-    },
-    "DRACOE.Microsoft.Graph/1.0.16": {
-      "sha512": "B/h+AK2ZWgEA+BmVMNnCKRrGrXZYHhKyrVts+aZHDiWYDN94OC9YwM7r3XGQ+zmKyCS5xl2nQt93sMNqkuOhPA==",
-      "type": "package",
-      "path": "dracoe.microsoft.graph/1.0.16",
-      "files": [
-        ".nupkg.metadata",
-        "contentFiles/any/any/.objects/.metadata",
-        "contentFiles/any/any/.objects/.type",
-        "dracoe.microsoft.graph.1.0.16.nupkg.sha512",
-        "dracoe.microsoft.graph.nuspec",
-        "lib/net45/.project/PackageBindingsMetadata.json",
-        "lib/net45/.project/design.json",
-        "lib/net45/.settings/Design/settings-5190454b.json",
-        "lib/net45/.settings/Design/settings-a1b2dac1.json",
-        "lib/net45/.settings/Design/settings-afad0842.json",
-        "lib/net45/.settings/Release/settings-1a5b880a.json",
-        "lib/net45/.settings/Release/settings-5190454b.json",
-        "lib/net45/.settings/Release/settings-590bb27b.json",
-        "lib/net45/.settings/Release/settings-9e9290da.json",
-        "lib/net45/.settings/Release/settings-a1b2dac1.json",
-        "lib/net45/.settings/Release/settings-afad0842.json",
-        "lib/net45/Authentication/Get Bearer Token.xaml",
-        "lib/net45/DRACOE Microsoft Graph.dll",
-        "lib/net45/DRACOE Microsoft Graph_Expressions_13244517.dll",
-        "lib/net45/DRACOE Microsoft Graph_Expressions_15794871.dll",
-        "lib/net45/DRACOE Microsoft Graph_Expressions_17953920.dll",
-        "lib/net45/DRACOE Microsoft Graph_Expressions_1936434.dll",
-        "lib/net45/DRACOE Microsoft Graph_Expressions_19520324.dll",
-        "lib/net45/DRACOE Microsoft Graph_Expressions_24848943.dll",
-        "lib/net45/DRACOE Microsoft Graph_Expressions_37230508.dll",
-        "lib/net45/DRACOE Microsoft Graph_Expressions_40309319.dll",
-        "lib/net45/DRACOE Microsoft Graph_Expressions_48936643.dll",
-        "lib/net45/DRACOE Microsoft Graph_Expressions_55400036.dll",
-        "lib/net45/DRACOE Microsoft Graph_Expressions_5627823.dll",
-        "lib/net45/DRACOE Microsoft Graph_Expressions_7324207.dll",
-        "lib/net45/Error Handling/Response Codes.xaml",
-        "lib/net45/Exchange/Apply Category.xaml",
-        "lib/net45/Exchange/Forward Email.xaml",
-        "lib/net45/Exchange/Generate Email Object.xaml",
-        "lib/net45/Exchange/Get Conversation.xaml",
-        "lib/net45/Exchange/Get Emails.xaml",
-        "lib/net45/Exchange/Get Folder List.xaml",
-        "lib/net45/Exchange/Get Folder Name.xaml",
-        "lib/net45/Exchange/Move Email.xaml",
-        "lib/net45/Exchange/Reply Email.xaml",
-        "lib/net45/Test Sequence.xaml",
-        "lib/net45/bindings.json",
-        "lib/net45/bindings_v2.json",
-        "lib/net45/project.json"
       ]
     },
     "Extended.Wpf.Toolkit/3.8.1": {
@@ -8977,7 +8860,6 @@
   "projectFileDependencyGroups": {
     "": [],
     ".NETFramework,Version=v4.6.1": [
-      "DRACOE.Microsoft.Graph >= 1.0.16 <= 1.0.16",
       "Logging >= 1.0.16 <= 1.0.16",
       "Pop.Ups >= 1.0.3 <= 1.0.3",
       "UiPath.Excel.Activities >= 2.11.4 <= 2.11.4",
@@ -8990,24 +8872,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ws000012\\.nuget\\packages\\": {}
+    "C:\\Users\\SA-SIR-PP-ROBOTICS-V\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "SIRP",
       "projectName": "SIRP",
-      "projectPath": "C:\\Users\\ws000012\\OneDrive - Defra\\UiPath\\Github\\ea-smart-incident-reporting\\SIRP\\.local",
-      "packagesPath": "C:\\Users\\ws000012\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ws000012\\OneDrive - Defra\\UiPath\\Github\\ea-smart-incident-reporting\\SIRP\\.local"
+      "projectPath": "C:\\Users\\SA-SIR-PP-ROBOTICS-V\\Documents\\GitHub\\ea-smart-incident-reporting\\SIRP\\.local",
+      "packagesPath": "C:\\Users\\SA-SIR-PP-ROBOTICS-V\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\SA-SIR-PP-ROBOTICS-V\\Documents\\GitHub\\ea-smart-incident-reporting\\SIRP\\.local"
     },
     "frameworks": {
       "net461": {
         "dependencies": {
-          "DRACOE.Microsoft.Graph": {
-            "include": "Runtime",
-            "target": "Package",
-            "version": "[1.0.16, 1.0.16]"
-          },
           "Logging": {
             "include": "Runtime",
             "target": "Package",
@@ -9054,48 +8931,13 @@
             "version": "[1.18.0, 1.18.0]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\UiPath\\Studio\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
-      "win10-x64": {
+      "win-x86": {
         "#import": []
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package downgrade: UiPath.Excel.Activities from 2.23.3-preview to 2.11.4. Reference the package directly from the project to select a different version. \r\n SIRP -> DRACOE.Microsoft.Graph 1.0.16 -> UiPath.Excel.Activities (>= 2.23.3-preview) \r\n SIRP -> UiPath.Excel.Activities (= 2.11.4)",
-      "libraryId": "UiPath.Excel.Activities",
-      "targetGraphs": [
-        ".NETFramework,Version=v4.6.1",
-        ".NETFramework,Version=v4.6.1/win10-x64"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package downgrade: UiPath.System.Activities from 23.10.6 to 21.10.3. Reference the package directly from the project to select a different version. \r\n SIRP -> DRACOE.Microsoft.Graph 1.0.16 -> UiPath.System.Activities (>= 23.10.6) \r\n SIRP -> UiPath.System.Activities (= 21.10.3)",
-      "libraryId": "UiPath.System.Activities",
-      "targetGraphs": [
-        ".NETFramework,Version=v4.6.1",
-        ".NETFramework,Version=v4.6.1/win10-x64"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package downgrade: UiPath.WebAPI.Activities from 1.20.1 to 1.18.0. Reference the package directly from the project to select a different version. \r\n SIRP -> DRACOE.Microsoft.Graph 1.0.16 -> UiPath.WebAPI.Activities (>= 1.20.1) \r\n SIRP -> UiPath.WebAPI.Activities (= 1.18.0)",
-      "libraryId": "UiPath.WebAPI.Activities",
-      "targetGraphs": [
-        ".NETFramework,Version=v4.6.1",
-        ".NETFramework,Version=v4.6.1/win10-x64"
-      ]
-    }
-  ]
+  }
 }

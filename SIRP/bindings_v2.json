@@ -1,0 +1,66 @@
+{
+  "version": "2.0",
+  "resources": [
+    {
+      "resource": "asset",
+      "value": {
+        "name": {
+          "defaultValue": "Dataverse API Credentials",
+          "isExpression": false
+        }
+      },
+      "metadata": {}
+    },
+    {
+      "resource": "asset",
+      "value": {
+        "name": {
+          "defaultValue": "Consecutive Critical Failures",
+          "isExpression": false,
+          "displayName": "AssetName"
+        }
+      },
+      "metadata": {}
+    },
+    {
+      "resource": "asset",
+      "value": {
+        "name": {
+          "defaultValue": "Dev Microsoft Credentials",
+          "isExpression": false
+        }
+      },
+      "metadata": {}
+    },
+    {
+      "resource": "asset",
+      "value": {
+        "name": {
+          "defaultValue": "Dev VMWare Identity Credentials",
+          "isExpression": false
+        }
+      },
+      "metadata": {}
+    },
+    {
+      "resource": "asset",
+      "value": {
+        "name": {
+          "defaultValue": "Live Microsoft Credentials",
+          "isExpression": false
+        }
+      },
+      "metadata": {}
+    },
+    {
+      "resource": "asset",
+      "value": {
+        "name": {
+          "defaultValue": "Live VMWare Identity Credentials",
+          "isExpression": false
+        }
+      },
+      "metadata": {}
+    }
+  ]
+}
