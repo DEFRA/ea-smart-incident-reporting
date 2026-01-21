@@ -1,0 +1,98 @@
+{
+  "version": "1.0",
+  "resources": [
+    {
+      "resource": "asset",
+      "metadata": {
+        "name": {
+          "defaultValue": "Dataverse API Credentials",
+          "isExpression": false
+        }
+      }
+    },
+    {
+      "resource": "asset",
+      "metadata": {
+        "name": {
+          "defaultValue": "Dataverse API Credentials",
+          "isExpression": false
+        }
+      }
+    },
+    {
+      "resource": "asset",
+      "metadata": {
+        "name": {
+          "defaultValue": "Consecutive Critical Failures",
+          "isExpression": false,
+          "displayName": "AssetName"
+        }
+      }
+    },
+    {
+      "resource": "asset",
+      "metadata": {
+        "name": {
+          "defaultValue": "Dev Microsoft Credentials",
+          "isExpression": false
+        }
+      }
+    },
+    {
+      "resource": "asset",
+      "metadata": {
+        "name": {
+          "defaultValue": "Dev VMWare Identity Credentials",
+          "isExpression": false
+        }
+      }
+    },
+    {
+      "resource": "asset",
+      "metadata": {
+        "name": {
+          "defaultValue": "Live Microsoft Credentials",
+          "isExpression": false
+        }
+      }
+    },
+    {
+      "resource": "asset",
+      "metadata": {
+        "name": {
+          "defaultValue": "Live VMWare Identity Credentials",
+          "isExpression": false
+        }
+      }
+    },
+    {
+      "resource": "asset",
+      "metadata": {
+        "name": {
+          "defaultValue": "Consecutive Critical Failures",
+          "isExpression": false,
+          "displayName": "AssetName"
+        }
+      }
+    },
+    {
+      "resource": "asset",
+      "metadata": {
+        "name": {
+          "defaultValue": "Consecutive Critical Failures",
+          "isExpression": false,
+          "displayName": "AssetName"
+        }
+      }
+    },
+    {
+      "resource": "asset",
+      "metadata": {
+        "name": {
+          "defaultValue": "Dataverse API Credentials",
+          "isExpression": false
+        }
+      }
+    }
+  ]
+}
