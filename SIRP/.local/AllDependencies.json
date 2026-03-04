@@ -11352,7 +11352,7 @@
   "projectFileDependencyGroups": {
     "": [],
     ".NETFramework,Version=v4.6.1": [
-      "Logging >= 1.0.22 <= 1.0.22",
+      "Logging >= 1.0.22",
       "Pop.Ups >= 1.0.3 <= 1.0.3",
       "UiPath.Excel.Activities >= 2.22.3 <= 2.22.3",
       "UiPath.Form.Activities >= 1.8.0 <= 1.8.0",
@@ -11364,15 +11364,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ws000012\\.nuget\\packages\\": {}
+    "C:\\Users\\SA-SIR-DEV-ROBOTICS-\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "SIRP",
       "projectName": "SIRP",
-      "projectPath": "C:\\Users\\ws000012\\OneDrive - Defra\\UiPath\\Github\\ea-smart-incident-reporting\\SIRP\\.local",
-      "packagesPath": "C:\\Users\\ws000012\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ws000012\\OneDrive - Defra\\UiPath\\Github\\ea-smart-incident-reporting\\SIRP\\.local"
+      "projectPath": "C:\\Users\\SA-SIR-DEV-ROBOTICS-\\Documents\\GitHub\\ea-smart-incident-reporting\\SIRP\\.local",
+      "packagesPath": "C:\\Users\\SA-SIR-DEV-ROBOTICS-\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\SA-SIR-DEV-ROBOTICS-\\Documents\\GitHub\\ea-smart-incident-reporting\\SIRP\\.local"
     },
     "frameworks": {
       "net461": {
@@ -11380,7 +11380,7 @@
           "Logging": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[1.0.22, 1.0.22]"
+            "version": "[1.0.22, )"
           },
           "Pop.Ups": {
             "include": "Runtime",
