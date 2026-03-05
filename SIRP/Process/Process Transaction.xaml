@@ -13,7 +13,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2323,4638</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2305,4638</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Process_Transaction_2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -51,6 +51,9 @@
       <x:String>System.Collections.Specialized</x:String>
       <x:String>System.Text.RegularExpressions</x:String>
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -90,6 +93,8 @@
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " sap:VirtualizedContainerService.HintSize="1067.5,4573" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -216,11 +221,11 @@
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">180,798.5</av:Point>
-                              <av:Size x:Key="ShapeSize">200,83</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">280,881.5 280,911.5 460,911.5 460,953.5</av:PointCollection>
+                              <av:Size x:Key="ShapeSize">200,69</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">280,867.5 280,980 360,980</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Sequence DisplayName="Pause Point 1" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                          <Sequence DisplayName="Pause Point 1" sap:VirtualizedContainerService.HintSize="200,69" sap2010:WorkflowViewState.IdRef="Sequence_3">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:String" Name="strPausePointText" />
                             </Sequence.Variables>
@@ -282,11 +287,11 @@
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <av:Point x:Key="ShapeLocation">360,1056.5</av:Point>
-                                      <av:Size x:Key="ShapeSize">200,83</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">460,1139.5 460,1189.5</av:PointCollection>
+                                      <av:Size x:Key="ShapeSize">200,69</av:Size>
+                                      <av:PointCollection x:Key="ConnectorLocation">460,1125.5 460,1189.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Sequence DisplayName="Retrieve NIRS ID" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                  <Sequence DisplayName="Retrieve NIRS ID" sap:VirtualizedContainerService.HintSize="200,69" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="x:String" Name="strNIRSIdMessage" />
                                     </Sequence.Variables>
@@ -416,11 +421,11 @@
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <av:Point x:Key="ShapeLocation">360,1498.5</av:Point>
-                                                      <av:Size x:Key="ShapeSize">200,83</av:Size>
-                                                      <av:PointCollection x:Key="ConnectorLocation">460,1581.5 460,1631.5</av:PointCollection>
+                                                      <av:Size x:Key="ShapeSize">200,69</av:Size>
+                                                      <av:PointCollection x:Key="ConnectorLocation">460,1567.5 460,1631.5</av:PointCollection>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <Sequence DisplayName="Enter Location Details" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                                  <Sequence DisplayName="Enter Location Details" sap:VirtualizedContainerService.HintSize="200,69" sap2010:WorkflowViewState.IdRef="Sequence_6">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -532,11 +537,11 @@
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <av:Point x:Key="ShapeLocation">360,1631.5</av:Point>
-                                                          <av:Size x:Key="ShapeSize">200,83</av:Size>
-                                                          <av:PointCollection x:Key="ConnectorLocation">460,1714.5 460,1764.5</av:PointCollection>
+                                                          <av:Size x:Key="ShapeSize">200,69</av:Size>
+                                                          <av:PointCollection x:Key="ConnectorLocation">460,1700.5 460,1764.5</av:PointCollection>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <Sequence DisplayName="Submit Map Tab" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                                      <Sequence DisplayName="Submit Map Tab" sap:VirtualizedContainerService.HintSize="622,1631" sap2010:WorkflowViewState.IdRef="Sequence_7">
                                                         <Sequence.Variables>
                                                           <Variable x:TypeArguments="x:Boolean" Name="booMapWarning" />
                                                         </Sequence.Variables>
@@ -545,7 +550,7 @@
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Wait for Map Tab to Load" sap:VirtualizedContainerService.HintSize="588,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_4">
+                                                        <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Wait for Map Tab to Load" sap:VirtualizedContainerService.HintSize="574,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_4">
                                                           <ui:WaitUiElementAppear.Target>
                                                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e4df3df0-cc16-4473-9e81-6eac6f39d7d2" InformativeScreenshot="63e4426327903d4cc7bfc4e378a24472" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification*' /&gt;&lt;wnd aaname='Zoom In' cls='ThunderRT6CommandButton' title='Zoom &amp;amp;In' /&gt;">
                                                               <ui:Target.TimeoutMS>
@@ -557,37 +562,10 @@
                                                             </ui:Target>
                                                           </ui:WaitUiElementAppear.Target>
                                                         </ui:WaitUiElementAppear>
-                                                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Next&quot; - Map" sap:VirtualizedContainerService.HintSize="588,107" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                                                          <ui:Click.CursorPosition>
-                                                            <ui:CursorPosition Position="Center">
-                                                              <ui:CursorPosition.OffsetX>
-                                                                <InArgument x:TypeArguments="x:Int32" />
-                                                              </ui:CursorPosition.OffsetX>
-                                                              <ui:CursorPosition.OffsetY>
-                                                                <InArgument x:TypeArguments="x:Int32" />
-                                                              </ui:CursorPosition.OffsetY>
-                                                            </ui:CursorPosition>
-                                                          </ui:Click.CursorPosition>
-                                                          <ui:Click.Target>
-                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="de3a0312-b037-4f15-bbad-6947274ee8da" InformativeScreenshot="1bd36ca60eec598da2920c5e9dc88d8b" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification*' /&gt;&lt;wnd aaname='Next  &amp;gt;&amp;gt;' cls='ThunderRT6CommandButton' title='&amp;amp;Next  &amp;gt;&amp;gt;' /&gt;">
-                                                              <ui:Target.TimeoutMS>
-                                                                <InArgument x:TypeArguments="x:Int32" />
-                                                              </ui:Target.TimeoutMS>
-                                                              <ui:Target.WaitForReady>
-                                                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                              </ui:Target.WaitForReady>
-                                                            </ui:Target>
-                                                          </ui:Click.Target>
-                                                          <sap:WorkflowViewStateService.ViewState>
-                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                            </scg:Dictionary>
-                                                          </sap:WorkflowViewStateService.ViewState>
-                                                        </ui:Click>
-                                                        <ui:RetryScope DisplayName="Retry Scope - Close Map Pop-Up &amp; Confirm Duplicates Loaded" sap:VirtualizedContainerService.HintSize="588,1297" sap2010:WorkflowViewState.IdRef="RetryScope_7" NumberOfRetries="20" RetryInterval="00:00:00">
+                                                        <ui:RetryScope DisplayName="Retry Scope - Close Map Pop-Up &amp; Confirm Duplicates Loaded" sap:VirtualizedContainerService.HintSize="574,1395" sap2010:WorkflowViewState.IdRef="RetryScope_7" NumberOfRetries="20" RetryInterval="00:00:00">
                                                           <ui:RetryScope.ActivityBody>
                                                             <ActivityAction>
-                                                              <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="546,1120" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                                              <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="532,1218" sap2010:WorkflowViewState.IdRef="Sequence_41">
                                                                 <Sequence.Variables>
                                                                   <Variable x:TypeArguments="x:Boolean" Name="booDuplicatesLoaded" />
                                                                 </Sequence.Variables>
@@ -596,6 +574,33 @@
                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
+                                                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Next&quot; - Map" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                                                  <ui:Click.CursorPosition>
+                                                                    <ui:CursorPosition Position="Center">
+                                                                      <ui:CursorPosition.OffsetX>
+                                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                                      </ui:CursorPosition.OffsetX>
+                                                                      <ui:CursorPosition.OffsetY>
+                                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                                      </ui:CursorPosition.OffsetY>
+                                                                    </ui:CursorPosition>
+                                                                  </ui:Click.CursorPosition>
+                                                                  <ui:Click.Target>
+                                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="de3a0312-b037-4f15-bbad-6947274ee8da" InformativeScreenshot="1bd36ca60eec598da2920c5e9dc88d8b" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification*' /&gt;&lt;wnd aaname='Next  &amp;gt;&amp;gt;' cls='ThunderRT6CommandButton' title='&amp;amp;Next  &amp;gt;&amp;gt;' /&gt;">
+                                                                      <ui:Target.TimeoutMS>
+                                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                                      </ui:Target.TimeoutMS>
+                                                                      <ui:Target.WaitForReady>
+                                                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                      </ui:Target.WaitForReady>
+                                                                    </ui:Target>
+                                                                  </ui:Click.Target>
+                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                    </scg:Dictionary>
+                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                </ui:Click>
                                                                 <ui:UiElementExists DisplayName="Check for Map Pop-up" Exists="[booMapWarning]" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="UiElementExists_12">
                                                                   <ui:UiElementExists.Target>
                                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="571e05e9-e7cb-4d9a-a606-55f4a493addb" InformativeScreenshot="db3e6be7311cbf26aec29b4d036e1586" Selector="&lt;wnd app='irs.exe' cls='#32770' isremoteapp='1' title='*' /&gt;&lt;ctrl name='*' role='dialog' /&gt;" TimeoutMS="3000">
@@ -684,13 +689,13 @@
                                                           <ui:RetryScope DisplayName="Retry Scope - Click &quot;Next&quot; - Possible Duplicates" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="6" RetryInterval="00:00:00">
                                                             <ui:RetryScope.ActivityBody>
                                                               <ActivityAction>
-                                                                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="450,365" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                                                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,340" sap2010:WorkflowViewState.IdRef="Sequence_32">
                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                     </scg:Dictionary>
                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Next&quot; - Possible Duplicates" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_51" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                                                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Next&quot; - Possible Duplicates" sap:VirtualizedContainerService.HintSize="368,107" sap2010:WorkflowViewState.IdRef="Click_51" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                                                                     <ui:Click.CursorPosition>
                                                                       <ui:CursorPosition Position="Center">
                                                                         <ui:CursorPosition.OffsetX>
@@ -717,7 +722,7 @@
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
                                                                   </ui:Click>
-                                                                  <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Check Action Tab Loaded" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_3">
+                                                                  <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Check Action Tab Loaded" sap:VirtualizedContainerService.HintSize="368,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_3">
                                                                     <ui:WaitUiElementAppear.Target>
                                                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="917e0e2b-ec3a-42ec-94b8-a571e9d73544" InformativeScreenshot="6db25cab746ec78df74d36b374419768" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='1' title='*Input New Notification*' /&gt;&lt;wnd cls='ThunderRT6OptionButton' title='Forward notification to another staff member/team for assessment*' /&gt;" TimeoutMS="10000">
                                                                         <ui:Target.WaitForReady>
@@ -798,11 +803,11 @@
                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                               <av:Point x:Key="ShapeLocation">0,2298.5</av:Point>
-                                                                              <av:Size x:Key="ShapeSize">200,83</av:Size>
-                                                                              <av:PointCollection x:Key="ConnectorLocation">100,2381.5 100,2411.5 280,2411.5 280,2438.5</av:PointCollection>
+                                                                              <av:Size x:Key="ShapeSize">200,69</av:Size>
+                                                                              <av:PointCollection x:Key="ConnectorLocation">100,2367.5 100,2397.5 280,2397.5 280,2438.5</av:PointCollection>
                                                                             </scg:Dictionary>
                                                                           </sap:WorkflowViewStateService.ViewState>
-                                                                          <Sequence DisplayName="Pause Point 2" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                                                          <Sequence DisplayName="Pause Point 2" sap:VirtualizedContainerService.HintSize="200,69" sap2010:WorkflowViewState.IdRef="Sequence_11">
                                                                             <Sequence.Variables>
                                                                               <Variable x:TypeArguments="x:String" Name="strPausePointText" />
                                                                             </Sequence.Variables>
@@ -828,11 +833,11 @@
                                                                               <sap:WorkflowViewStateService.ViewState>
                                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                   <av:Point x:Key="ShapeLocation">180,2438.5</av:Point>
-                                                                                  <av:Size x:Key="ShapeSize">200,83</av:Size>
-                                                                                  <av:PointCollection x:Key="ConnectorLocation">280,2521.5 280,2581.5</av:PointCollection>
+                                                                                  <av:Size x:Key="ShapeSize">200,69</av:Size>
+                                                                                  <av:PointCollection x:Key="ConnectorLocation">280,2507.5 280,2537.5 397,2537.5 397,2581.5</av:PointCollection>
                                                                                 </scg:Dictionary>
                                                                               </sap:WorkflowViewStateService.ViewState>
-                                                                              <Sequence DisplayName="Forward Notification" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                                                              <Sequence DisplayName="Forward Notification" sap:VirtualizedContainerService.HintSize="200,69" sap2010:WorkflowViewState.IdRef="Sequence_10">
                                                                                 <Sequence.Variables>
                                                                                   <Variable x:TypeArguments="x:Boolean" Name="booValidationError" />
                                                                                 </Sequence.Variables>
@@ -1022,10 +1027,10 @@
                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                       <av:Point x:Key="ShapeLocation">180,2581.5</av:Point>
-                                                                                      <av:Size x:Key="ShapeSize">200,53</av:Size>
+                                                                                      <av:Size x:Key="ShapeSize">434,53</av:Size>
                                                                                     </scg:Dictionary>
                                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                                  <ui:MultipleAssign DisplayName="Store NIRS ID &amp; Update Case ID" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+                                                                                  <ui:MultipleAssign DisplayName="Store NIRS ID &amp; Update Case ID" sap:VirtualizedContainerService.HintSize="434,53" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
                                                                                     <ui:MultipleAssign.AssignOperations>
                                                                                       <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                                                                                         <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
@@ -1112,11 +1117,11 @@
                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                               <av:Point x:Key="ShapeLocation">440,2298.5</av:Point>
-                                                                              <av:Size x:Key="ShapeSize">200,83</av:Size>
-                                                                              <av:PointCollection x:Key="ConnectorLocation">540,2381.5 540,2411.5 690,2411.5 690,2438.5</av:PointCollection>
+                                                                              <av:Size x:Key="ShapeSize">200,69</av:Size>
+                                                                              <av:PointCollection x:Key="ConnectorLocation">540,2367.5 540,2397.5 690,2397.5 690,2438.5</av:PointCollection>
                                                                             </scg:Dictionary>
                                                                           </sap:WorkflowViewStateService.ViewState>
-                                                                          <Sequence DisplayName="Pause Point 2" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                                                          <Sequence DisplayName="Pause Point 2" sap:VirtualizedContainerService.HintSize="200,69" sap2010:WorkflowViewState.IdRef="Sequence_15">
                                                                             <Sequence.Variables>
                                                                               <Variable x:TypeArguments="x:String" Name="strPausePointText" />
                                                                             </Sequence.Variables>
@@ -1142,11 +1147,11 @@
                                                                               <sap:WorkflowViewStateService.ViewState>
                                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                   <av:Point x:Key="ShapeLocation">590,2438.5</av:Point>
-                                                                                  <av:Size x:Key="ShapeSize">200,83</av:Size>
-                                                                                  <av:PointCollection x:Key="ConnectorLocation">690,2521.5 690,2571.5</av:PointCollection>
+                                                                                  <av:Size x:Key="ShapeSize">200,69</av:Size>
+                                                                                  <av:PointCollection x:Key="ConnectorLocation">690,2507.5 690,2537.5 807,2537.5 807,2571.5</av:PointCollection>
                                                                                 </scg:Dictionary>
                                                                               </sap:WorkflowViewStateService.ViewState>
-                                                                              <Sequence DisplayName="Create Notification" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                                                              <Sequence DisplayName="Create Notification" sap:VirtualizedContainerService.HintSize="200,69" sap2010:WorkflowViewState.IdRef="Sequence_16">
                                                                                 <Sequence.Variables>
                                                                                   <Variable x:TypeArguments="x:Boolean" Name="booValidationError" />
                                                                                 </Sequence.Variables>
@@ -1319,11 +1324,11 @@
                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                       <av:Point x:Key="ShapeLocation">590,2571.5</av:Point>
-                                                                                      <av:Size x:Key="ShapeSize">200,53</av:Size>
-                                                                                      <av:PointCollection x:Key="ConnectorLocation">690,2624.5 690,2674.5</av:PointCollection>
+                                                                                      <av:Size x:Key="ShapeSize">434,53</av:Size>
+                                                                                      <av:PointCollection x:Key="ConnectorLocation">807,2624.5 807,2664.5 690,2664.5 690,2674.5</av:PointCollection>
                                                                                     </scg:Dictionary>
                                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                                  <ui:MultipleAssign DisplayName="Store NIRS ID &amp; Update Case ID" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+                                                                                  <ui:MultipleAssign DisplayName="Store NIRS ID &amp; Update Case ID" sap:VirtualizedContainerService.HintSize="434,53" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
                                                                                     <ui:MultipleAssign.AssignOperations>
                                                                                       <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                                                                                         <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
@@ -1377,11 +1382,11 @@
                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                               <av:Point x:Key="ShapeLocation">590,2784.5</av:Point>
-                                                                                              <av:Size x:Key="ShapeSize">200,83</av:Size>
-                                                                                              <av:PointCollection x:Key="ConnectorLocation">690,2867.5 690,2917.5</av:PointCollection>
+                                                                                              <av:Size x:Key="ShapeSize">200,69</av:Size>
+                                                                                              <av:PointCollection x:Key="ConnectorLocation">690,2853.5 690,2917.5</av:PointCollection>
                                                                                             </scg:Dictionary>
                                                                                           </sap:WorkflowViewStateService.ViewState>
-                                                                                          <Sequence DisplayName="Click &quot;Next&quot; through tabs" sap:VirtualizedContainerService.HintSize="554,1094" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                                                                          <Sequence DisplayName="Click &quot;Next&quot; through tabs" sap:VirtualizedContainerService.HintSize="200,69" sap2010:WorkflowViewState.IdRef="Sequence_19">
                                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1542,11 +1547,11 @@
                                                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                           <av:Point x:Key="ShapeLocation">430,3148.5</av:Point>
-                                                                                                          <av:Size x:Key="ShapeSize">200,83</av:Size>
-                                                                                                          <av:PointCollection x:Key="ConnectorLocation">530,3231.5 530,3261.5 700,3261.5 700,3298.54</av:PointCollection>
+                                                                                                          <av:Size x:Key="ShapeSize">200,69</av:Size>
+                                                                                                          <av:PointCollection x:Key="ConnectorLocation">530,3217.5 530,3247.5 700,3247.5 700,3298.54</av:PointCollection>
                                                                                                         </scg:Dictionary>
                                                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                                                      <Sequence DisplayName="Pause Point 3" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                                                                                      <Sequence DisplayName="Pause Point 3" sap:VirtualizedContainerService.HintSize="200,69" sap2010:WorkflowViewState.IdRef="Sequence_20">
                                                                                                         <Sequence.Variables>
                                                                                                           <Variable x:TypeArguments="x:String" Name="strPausePointText" />
                                                                                                         </Sequence.Variables>
@@ -1572,11 +1577,11 @@
                                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                               <av:Point x:Key="ShapeLocation">600,3298.54</av:Point>
-                                                                                                              <av:Size x:Key="ShapeSize">200,83</av:Size>
-                                                                                                              <av:PointCollection x:Key="ConnectorLocation">700,3381.54 700,3431.54</av:PointCollection>
+                                                                                                              <av:Size x:Key="ShapeSize">200,69</av:Size>
+                                                                                                              <av:PointCollection x:Key="ConnectorLocation">700,3367.54 700,3431.54</av:PointCollection>
                                                                                                             </scg:Dictionary>
                                                                                                           </sap:WorkflowViewStateService.ViewState>
-                                                                                                          <Sequence DisplayName="Submit Attendance Details" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                                                                                          <Sequence DisplayName="Submit Attendance Details" sap:VirtualizedContainerService.HintSize="200,69" sap2010:WorkflowViewState.IdRef="Sequence_21">
                                                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1665,11 +1670,11 @@
                                                                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                           <av:Point x:Key="ShapeLocation">180,3668.5</av:Point>
-                                                                                                                          <av:Size x:Key="ShapeSize">200,83</av:Size>
-                                                                                                                          <av:PointCollection x:Key="ConnectorLocation">280,3751.5 280,3801.5</av:PointCollection>
+                                                                                                                          <av:Size x:Key="ShapeSize">200,69</av:Size>
+                                                                                                                          <av:PointCollection x:Key="ConnectorLocation">280,3737.5 280,3801.5</av:PointCollection>
                                                                                                                         </scg:Dictionary>
                                                                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                                                                      <Sequence DisplayName="Open Record for Closure" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                                                                                                      <Sequence DisplayName="Open Record for Closure" sap:VirtualizedContainerService.HintSize="200,69" sap2010:WorkflowViewState.IdRef="Sequence_24">
                                                                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1756,11 +1761,11 @@
                                                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                               <av:Point x:Key="ShapeLocation">180,3801.5</av:Point>
-                                                                                                                              <av:Size x:Key="ShapeSize">200,83</av:Size>
-                                                                                                                              <av:PointCollection x:Key="ConnectorLocation">280,3884.5 280,3934.5</av:PointCollection>
+                                                                                                                              <av:Size x:Key="ShapeSize">200,69</av:Size>
+                                                                                                                              <av:PointCollection x:Key="ConnectorLocation">280,3870.5 280,3934.5</av:PointCollection>
                                                                                                                             </scg:Dictionary>
                                                                                                                           </sap:WorkflowViewStateService.ViewState>
-                                                                                                                          <Sequence DisplayName="Click &quot;Next&quot; " sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                                                                                                          <Sequence DisplayName="Click &quot;Next&quot; " sap:VirtualizedContainerService.HintSize="200,69" sap2010:WorkflowViewState.IdRef="Sequence_25">
                                                                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1870,11 +1875,11 @@
                                                                                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                                           <av:Point x:Key="ShapeLocation">20,4158.5</av:Point>
-                                                                                                                                          <av:Size x:Key="ShapeSize">200,83</av:Size>
-                                                                                                                                          <av:PointCollection x:Key="ConnectorLocation">120,4241.5 120,4271.5 280,4271.5 280,4308.54</av:PointCollection>
+                                                                                                                                          <av:Size x:Key="ShapeSize">200,69</av:Size>
+                                                                                                                                          <av:PointCollection x:Key="ConnectorLocation">120,4227.5 120,4257.5 280,4257.5 280,4308.54</av:PointCollection>
                                                                                                                                         </scg:Dictionary>
                                                                                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                                                                                      <Sequence DisplayName="Pause Point 5" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                                                                                                                      <Sequence DisplayName="Pause Point 5" sap:VirtualizedContainerService.HintSize="200,69" sap2010:WorkflowViewState.IdRef="Sequence_26">
                                                                                                                                         <Sequence.Variables>
                                                                                                                                           <Variable x:TypeArguments="x:String" Name="strPausePointText" />
                                                                                                                                         </Sequence.Variables>
@@ -2141,11 +2146,11 @@
                                                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                               <av:Point x:Key="ShapeLocation">680,3828.54</av:Point>
-                                                                                                                              <av:Size x:Key="ShapeSize">200,83</av:Size>
-                                                                                                                              <av:PointCollection x:Key="ConnectorLocation">780,3911.54 780,3966.52</av:PointCollection>
+                                                                                                                              <av:Size x:Key="ShapeSize">200,69</av:Size>
+                                                                                                                              <av:PointCollection x:Key="ConnectorLocation">780,3897.54 780,3966.52</av:PointCollection>
                                                                                                                             </scg:Dictionary>
                                                                                                                           </sap:WorkflowViewStateService.ViewState>
-                                                                                                                          <Sequence DisplayName="Enter Pass User Details" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                                                                                                          <Sequence DisplayName="Enter Pass User Details" sap:VirtualizedContainerService.HintSize="200,69" sap2010:WorkflowViewState.IdRef="Sequence_23">
                                                                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2277,11 +2282,11 @@
                                                                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                                       <av:Point x:Key="ShapeLocation">520,4108.5</av:Point>
-                                                                                                                                      <av:Size x:Key="ShapeSize">200,83</av:Size>
-                                                                                                                                      <av:PointCollection x:Key="ConnectorLocation">620,4191.5 620,4221.5 780,4221.5 780,4263.5</av:PointCollection>
+                                                                                                                                      <av:Size x:Key="ShapeSize">200,69</av:Size>
+                                                                                                                                      <av:PointCollection x:Key="ConnectorLocation">620,4177.5 620,4207.5 780,4207.5 780,4263.5</av:PointCollection>
                                                                                                                                     </scg:Dictionary>
                                                                                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                                                                                  <Sequence DisplayName="Pause Point 4" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                                                                                                                  <Sequence DisplayName="Pause Point 4" sap:VirtualizedContainerService.HintSize="200,69" sap2010:WorkflowViewState.IdRef="Sequence_22">
                                                                                                                                     <Sequence.Variables>
                                                                                                                                       <Variable x:TypeArguments="x:String" Name="strPausePointText" />
                                                                                                                                     </Sequence.Variables>
@@ -2418,11 +2423,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">360,127.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,83</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">460,210.5 460,260.5</av:PointCollection>
+          <av:Size x:Key="ShapeSize">200,69</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">460,196.5 460,260.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Extract Robotics JSON Object" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_1">
+      <Sequence DisplayName="Extract Robotics JSON Object" sap:VirtualizedContainerService.HintSize="200,69" sap2010:WorkflowViewState.IdRef="Sequence_1">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:String" Name="strPassDetailsToRobotics" />
           <Variable x:TypeArguments="njl:JObject" Name="jobPassDetailsToRoboticsJSON" />
@@ -2441,7 +2446,7 @@
             <InArgument x:TypeArguments="x:String">[in_jtokDataObject("sbs_roboticsjson").ToString]</InArgument>
           </Assign.Value>
         </Assign>
-        <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize PassDetailsToRobotics JSON" sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[jobPassDetailsToRoboticsJSON]" JsonString="[strPassDetailsToRobotics]" />
+        <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" DisplayName="Deserialize PassDetailsToRobotics JSON" sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[jobPassDetailsToRoboticsJSON]" JsonString="[strPassDetailsToRobotics]" />
         <Assign DisplayName="Assign Serializer Settings" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_10">
           <Assign.To>
             <OutArgument x:TypeArguments="nj:DateParseHandling">[mySerializeSetting.DateParseHandling]</OutArgument>
