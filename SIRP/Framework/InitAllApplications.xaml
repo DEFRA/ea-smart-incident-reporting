@@ -1109,7 +1109,7 @@
                     </Sequence>
                     <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Check NIRS Loading" sap:VirtualizedContainerService.HintSize="1584,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_32">
                       <ui:WaitUiElementAppear.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9bc58b25-089d-486c-9950-d74591b52058" InformativeScreenshot="728e2e09e03f29caf95bed3ef13f1a20" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='0' title='*' /&gt;" TimeoutMS="300000">
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9bc58b25-089d-486c-9950-d74591b52058" InformativeScreenshot="728e2e09e03f29caf95bed3ef13f1a20" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='*' /&gt;" TimeoutMS="300000">
                           <ui:Target.WaitForReady>
                             <InArgument x:TypeArguments="ui:WaitForReady" />
                           </ui:Target.WaitForReady>
@@ -1126,7 +1126,7 @@
                         <PickBranch.Trigger>
                           <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="Check for any Generic Dialog boxes and attempt to click &quot;OK&quot;" ContinueOnError="True" DisplayName="Find Element - Dialog Box" sap:VirtualizedContainerService.HintSize="334,131" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_35">
                             <ui:WaitUiElementAppear.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f06d4e55-dc91-4479-8ce7-623bd499b55d" Selector="&lt;wnd app='irs.exe' cls='#32770' isremoteapp='0' title='*' /&gt;&lt;ctrl name='*' role='dialog' /&gt;" TimeoutMS="5000">
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f06d4e55-dc91-4479-8ce7-623bd499b55d" Selector="&lt;wnd app='irs.exe' cls='#32770'  title='*' /&gt;&lt;ctrl name='*' role='dialog' /&gt;" TimeoutMS="5000">
                                 <ui:Target.WaitForReady>
                                   <InArgument x:TypeArguments="ui:WaitForReady" />
                                 </ui:Target.WaitForReady>
@@ -1163,7 +1163,7 @@
                                   </ui:CursorPosition>
                                 </ui:Click.CursorPosition>
                                 <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b2e6efd4-8366-4a26-95d9-7647a383f386" InformativeScreenshot="bb49507916a817cb005a539f32a6cda9" Selector="&lt;wnd app='irs.exe' cls='#32770' isremoteapp='0' title='*' /&gt;&lt;wnd ctrlid='2' title='OK' /&gt;">
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b2e6efd4-8366-4a26-95d9-7647a383f386" InformativeScreenshot="bb49507916a817cb005a539f32a6cda9" Selector="&lt;wnd app='irs.exe' cls='#32770'  title='*' /&gt;&lt;wnd ctrlid='2' title='OK' /&gt;">
                                     <ui:Target.TimeoutMS>
                                       <InArgument x:TypeArguments="x:Int32" />
                                     </ui:Target.TimeoutMS>
@@ -1181,7 +1181,7 @@
                         <PickBranch.Trigger>
                           <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="In certain circumstances, NIRS can crash in an unrecoverable way that means that the next launch also fails. Have to check here for the modal form pop-up that informs of the critical error." ContinueOnError="True" DisplayName="Find Element - Modal Form" sap:VirtualizedContainerService.HintSize="334,163" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_33">
                             <ui:WaitUiElementAppear.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f06d4e55-dc91-4479-8ce7-623bd499b55d" Selector="&lt;wnd app='irs.exe' cls='#32770' isremoteapp='0' title='Incidents Recording System' /&gt;&lt;wnd ctrlid='*' title='*show non-modal form when modal form*' /&gt;" TimeoutMS="5000">
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f06d4e55-dc91-4479-8ce7-623bd499b55d" Selector="&lt;wnd app='irs.exe' cls='#32770'  title='Incidents Recording System' /&gt;&lt;wnd ctrlid='*' title='*show non-modal form when modal form*' /&gt;" TimeoutMS="5000">
                                 <ui:Target.WaitForReady>
                                   <InArgument x:TypeArguments="ui:WaitForReady" />
                                 </ui:Target.WaitForReady>
@@ -1218,7 +1218,7 @@
                                   </ui:CursorPosition>
                                 </ui:Click.CursorPosition>
                                 <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b2e6efd4-8366-4a26-95d9-7647a383f386" InformativeScreenshot="bb49507916a817cb005a539f32a6cda9" Selector="&lt;wnd app='irs.exe' cls='#32770' isremoteapp='0' title='Incidents Recording System' /&gt;&lt;wnd ctrlid='2' title='OK' /&gt;">
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b2e6efd4-8366-4a26-95d9-7647a383f386" InformativeScreenshot="bb49507916a817cb005a539f32a6cda9" Selector="&lt;wnd app='irs.exe' cls='#32770'  title='Incidents Recording System' /&gt;&lt;wnd ctrlid='2' title='OK' /&gt;">
                                     <ui:Target.TimeoutMS>
                                       <InArgument x:TypeArguments="x:Int32" />
                                     </ui:Target.TimeoutMS>
@@ -1230,7 +1230,7 @@
                               </ui:Click>
                               <ui:UiElementExists DisplayName="Check for Object Variable Error" Exists="[booObjectVar]" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="UiElementExists_40">
                                 <ui:UiElementExists.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59e54223-fcaa-4815-a010-c8d57c3c7b91" InformativeScreenshot="27801961a7cb2d68f2deda04c59e87b7" Selector="&lt;wnd app='irs.exe' cls='#32770' isremoteapp='0' title='Incidents Recording System' /&gt;&lt;wnd ctrlid='65535' title='Run-time error &amp;apos;91&amp;apos;:Object variable or With block variable not s*' /&gt;" TimeoutMS="5000">
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59e54223-fcaa-4815-a010-c8d57c3c7b91" InformativeScreenshot="27801961a7cb2d68f2deda04c59e87b7" Selector="&lt;wnd app='irs.exe' cls='#32770'  title='Incidents Recording System' /&gt;&lt;wnd ctrlid='65535' title='Run-time error &amp;apos;91&amp;apos;:Object variable or With block variable not s*' /&gt;" TimeoutMS="5000">
                                     <ui:Target.WaitForReady>
                                       <InArgument x:TypeArguments="ui:WaitForReady" />
                                     </ui:Target.WaitForReady>
@@ -1251,7 +1251,7 @@
                                       </ui:CursorPosition>
                                     </ui:Click.CursorPosition>
                                     <ui:Click.Target>
-                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b2e6efd4-8366-4a26-95d9-7647a383f386" InformativeScreenshot="2540b55f4345e652c8440708a0274afb" Selector="&lt;wnd app='irs.exe' cls='#32770' isremoteapp='0' title='Incidents Recording System' /&gt;&lt;wnd ctrlid='2' title='OK' /&gt;">
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b2e6efd4-8366-4a26-95d9-7647a383f386" InformativeScreenshot="2540b55f4345e652c8440708a0274afb" Selector="&lt;wnd app='irs.exe' cls='#32770'  title='Incidents Recording System' /&gt;&lt;wnd ctrlid='2' title='OK' /&gt;">
                                         <ui:Target.TimeoutMS>
                                           <InArgument x:TypeArguments="x:Int32" />
                                         </ui:Target.TimeoutMS>
@@ -1408,7 +1408,7 @@
                                     </ui:CursorPosition>
                                   </ui:Click.CursorPosition>
                                   <ui:Click.Target>
-                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a68f7de4-feab-4ede-9512-4bacc6f9dde0" InformativeScreenshot="0e7716bcf768af0957d76cfd12975806" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='0' title='Incident Recording System*' /&gt;&lt;wnd aaname='Enter New Event' cls='ThunderRT6CommandButton' title='Enter &amp;amp;New Event' /&gt;">
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a68f7de4-feab-4ede-9512-4bacc6f9dde0" InformativeScreenshot="0e7716bcf768af0957d76cfd12975806" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='Incident Recording System*' /&gt;&lt;wnd aaname='Enter New Event' cls='ThunderRT6CommandButton' title='Enter &amp;amp;New Event' /&gt;">
                                       <ui:Target.TimeoutMS>
                                         <InArgument x:TypeArguments="x:Int32" />
                                       </ui:Target.TimeoutMS>
@@ -1435,7 +1435,7 @@
                                     </ui:CursorPosition>
                                   </ui:Click.CursorPosition>
                                   <ui:Click.Target>
-                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3ba85ad1-572e-4600-b38e-5a50ece1996d" InformativeScreenshot="f1192f476c91c43c40a0a76f849c8b02" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='0' title='*' /&gt;&lt;wnd aaname='Cancel' cls='ThunderRT6CommandButton' title='&amp;amp;Cancel' /&gt;" TimeoutMS="1000">
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3ba85ad1-572e-4600-b38e-5a50ece1996d" InformativeScreenshot="f1192f476c91c43c40a0a76f849c8b02" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='*' /&gt;&lt;wnd aaname='Cancel' cls='ThunderRT6CommandButton' title='&amp;amp;Cancel' /&gt;" TimeoutMS="1000">
                                       <ui:Target.WaitForReady>
                                         <InArgument x:TypeArguments="ui:WaitForReady" />
                                       </ui:Target.WaitForReady>
@@ -1444,7 +1444,7 @@
                                 </ui:Click>
                                 <ui:UiElementExists DisplayName="Check for Cancel Confirmation" Exists="[booCancelConfirm]" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="UiElementExists_35">
                                   <ui:UiElementExists.Target>
-                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="571e05e9-e7cb-4d9a-a606-55f4a493addb" InformativeScreenshot="6fa70fcaa03deefe6ef194bd4403f579" Selector="&lt;wnd app='irs.exe' cls='#32770' isremoteapp='0' title='E*' /&gt;" TimeoutMS="1000">
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="571e05e9-e7cb-4d9a-a606-55f4a493addb" InformativeScreenshot="6fa70fcaa03deefe6ef194bd4403f579" Selector="&lt;wnd app='irs.exe' cls='#32770'  title='E*' /&gt;" TimeoutMS="1000">
                                       <ui:Target.WaitForReady>
                                         <InArgument x:TypeArguments="ui:WaitForReady" />
                                       </ui:Target.WaitForReady>
@@ -1465,7 +1465,7 @@
                                         </ui:CursorPosition>
                                       </ui:Click.CursorPosition>
                                       <ui:Click.Target>
-                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3ba85ad1-572e-4600-b38e-5a50ece1996d" InformativeScreenshot="d7c5e1e069b94ce7e400e3285da2abde" Selector="&lt;wnd app='irs.exe' cls='#32770' isremoteapp='0' title='E*' /&gt;&lt;wnd ctrlid='6' title='&amp;amp;Yes' /&gt;" TimeoutMS="1000">
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3ba85ad1-572e-4600-b38e-5a50ece1996d" InformativeScreenshot="d7c5e1e069b94ce7e400e3285da2abde" Selector="&lt;wnd app='irs.exe' cls='#32770'  title='E*' /&gt;&lt;wnd ctrlid='6' title='&amp;amp;Yes' /&gt;" TimeoutMS="1000">
                                           <ui:Target.WaitForReady>
                                             <InArgument x:TypeArguments="ui:WaitForReady" />
                                           </ui:Target.WaitForReady>
