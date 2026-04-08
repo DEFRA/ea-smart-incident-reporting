@@ -115,7 +115,7 @@
         </sap:WorkflowViewStateService.ViewState>
         <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Event Number&quot; Field 1" EmptyField="True" sap:VirtualizedContainerService.HintSize="388,135" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[in_Config(&quot;NIRS ID&quot;).ToString]">
           <ui:TypeInto.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b3903c9c-2e90-4c9f-a05a-2663daaa6429" InformativeScreenshot="d93b248bf36c20ef99505e28f58e1b21" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='0' title='Search Criteria' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='7' /&gt;">
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b3903c9c-2e90-4c9f-a05a-2663daaa6429" InformativeScreenshot="d93b248bf36c20ef99505e28f58e1b21" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='Search Criteria' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='7' /&gt;">
               <ui:Target.TimeoutMS>
                 <InArgument x:TypeArguments="x:Int32" />
               </ui:Target.TimeoutMS>
@@ -127,7 +127,7 @@
         </ui:TypeInto>
         <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Event Number&quot; Field 2" EmptyField="True" sap:VirtualizedContainerService.HintSize="388,135" sap2010:WorkflowViewState.IdRef="TypeInto_2" SimulateType="True" Text="[in_Config(&quot;NIRS ID&quot;).ToString]">
           <ui:TypeInto.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b3903c9c-2e90-4c9f-a05a-2663daaa6429" InformativeScreenshot="b4184414383a89f04ee0da6a2330a106" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='0' title='Search Criteria' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='5' /&gt;">
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b3903c9c-2e90-4c9f-a05a-2663daaa6429" InformativeScreenshot="b4184414383a89f04ee0da6a2330a106" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='Search Criteria' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='5' /&gt;">
               <ui:Target.TimeoutMS>
                 <InArgument x:TypeArguments="x:Int32" />
               </ui:Target.TimeoutMS>
@@ -149,7 +149,7 @@
             </ui:CursorPosition>
           </ui:Click.CursorPosition>
           <ui:Click.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1e460339-91d9-4977-8c30-c086c8eb8a64" InformativeScreenshot="0eed7f6f1f01b84f3142c9634030826b" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='0' title='Search Criteria' /&gt;&lt;wnd aaname='OK' cls='ThunderRT6CommandButton' title='&amp;amp;OK' /&gt;">
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1e460339-91d9-4977-8c30-c086c8eb8a64" InformativeScreenshot="0eed7f6f1f01b84f3142c9634030826b" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='Search Criteria' /&gt;&lt;wnd aaname='OK' cls='ThunderRT6CommandButton' title='&amp;amp;OK' /&gt;">
               <ui:Target.TimeoutMS>
                 <InArgument x:TypeArguments="x:Int32" />
               </ui:Target.TimeoutMS>
@@ -181,7 +181,7 @@
           </ui:CursorPosition>
         </ui:Click.CursorPosition>
         <ui:Click.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6225009f-284f-48ed-8b1f-8280a8b80f58" InformativeScreenshot="1f648292c397a40651ee5c0603bd9e81" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='0' title='Search Criteria' /&gt;&lt;wnd cls='ThunderRT6CheckBox' title='Event Number' /&gt;">
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6225009f-284f-48ed-8b1f-8280a8b80f58" InformativeScreenshot="1f648292c397a40651ee5c0603bd9e81" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='Search Criteria' /&gt;&lt;wnd cls='ThunderRT6CheckBox' title='Event Number' /&gt;">
             <ui:Target.TimeoutMS>
               <InArgument x:TypeArguments="x:Int32" />
             </ui:Target.TimeoutMS>
@@ -224,7 +224,7 @@
           <OutArgument x:TypeArguments="x:String">[strFilterStatus]</OutArgument>
         </ui:GetAttribute.Result>
         <ui:GetAttribute.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="937138d6-35d1-4a81-a47c-126df6f0a9fd" InformativeScreenshot="def3e53373d3ae43bfe250154dd87938" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='0' title='Search Criteria' /&gt;&lt;wnd cls='ThunderRT6CheckBox' title='Event Number' /&gt;">
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="937138d6-35d1-4a81-a47c-126df6f0a9fd" InformativeScreenshot="def3e53373d3ae43bfe250154dd87938" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='Search Criteria' /&gt;&lt;wnd cls='ThunderRT6CheckBox' title='Event Number' /&gt;">
             <ui:Target.TimeoutMS>
               <InArgument x:TypeArguments="x:Int32" />
             </ui:Target.TimeoutMS>
@@ -258,7 +258,7 @@
           </ui:CursorPosition>
         </ui:Click.CursorPosition>
         <ui:Click.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="53511c0b-0e13-4772-91cf-2079a9ca2e3e" InformativeScreenshot="8469a446682e8efbadf3722c87982e07" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='0' title='Incident Recording System*' /&gt;&lt;wnd cls='ThunderRT6CommandButton' title='Set Criteria...' /&gt;">
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="53511c0b-0e13-4772-91cf-2079a9ca2e3e" InformativeScreenshot="8469a446682e8efbadf3722c87982e07" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='Incident Recording System*' /&gt;&lt;wnd cls='ThunderRT6CommandButton' title='Set Criteria...' /&gt;">
             <ui:Target.TimeoutMS>
               <InArgument x:TypeArguments="x:Int32" />
             </ui:Target.TimeoutMS>
@@ -297,7 +297,7 @@
           </ui:CursorPosition>
         </ui:Click.CursorPosition>
         <ui:Click.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="53511c0b-0e13-4772-91cf-2079a9ca2e3e" InformativeScreenshot="bcbef4bb9328e3c931fa3f3a15280555" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='0' title='Incident Recording System*' /&gt;&lt;wnd cls='ThunderRT6OptionButton' title='Events that match search criteria' /&gt;">
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="53511c0b-0e13-4772-91cf-2079a9ca2e3e" InformativeScreenshot="bcbef4bb9328e3c931fa3f3a15280555" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='Incident Recording System*' /&gt;&lt;wnd cls='ThunderRT6OptionButton' title='Events that match search criteria' /&gt;">
             <ui:Target.TimeoutMS>
               <InArgument x:TypeArguments="x:Int32" />
             </ui:Target.TimeoutMS>
@@ -340,7 +340,7 @@
           <OutArgument x:TypeArguments="x:String">[strSearchOpen]</OutArgument>
         </ui:GetAttribute.Result>
         <ui:GetAttribute.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="937138d6-35d1-4a81-a47c-126df6f0a9fd" InformativeScreenshot="bcbef4bb9328e3c931fa3f3a15280555" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='0' title='Incident Recording System*' /&gt;&lt;wnd cls='ThunderRT6OptionButton' title='Events that match search criteria' /&gt;">
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="937138d6-35d1-4a81-a47c-126df6f0a9fd" InformativeScreenshot="bcbef4bb9328e3c931fa3f3a15280555" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='Incident Recording System*' /&gt;&lt;wnd cls='ThunderRT6OptionButton' title='Events that match search criteria' /&gt;">
             <ui:Target.TimeoutMS>
               <InArgument x:TypeArguments="x:Int32" />
             </ui:Target.TimeoutMS>
