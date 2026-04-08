@@ -80,7 +80,7 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:UiElementExists DisplayName="Check for NIRS" Exists="[booNIRSOpen]" sap:VirtualizedContainerService.HintSize="778,107" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
       <ui:UiElementExists.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="571e05e9-e7cb-4d9a-a606-55f4a493addb" InformativeScreenshot="4aa5539fe31b1cf564e5181a84909754" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='0' title='*' /&gt;" TimeoutMS="1000">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="571e05e9-e7cb-4d9a-a606-55f4a493addb" InformativeScreenshot="4aa5539fe31b1cf564e5181a84909754" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='*' /&gt;" TimeoutMS="1000">
           <ui:Target.WaitForReady>
             <InArgument x:TypeArguments="ui:WaitForReady" />
           </ui:Target.WaitForReady>
@@ -121,7 +121,7 @@
               </If>
               <ui:UiElementExists DisplayName="Check for Home Page" Exists="[booHomePage]" sap:VirtualizedContainerService.HintSize="644,107" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                 <ui:UiElementExists.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="571e05e9-e7cb-4d9a-a606-55f4a493addb" InformativeScreenshot="8e8d4c358caf381f040be33a699daf76" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='0' title='Incident Recording System*' /&gt;&lt;wnd aaname='Enter New Event' cls='ThunderRT6CommandButton' title='Enter &amp;amp;New Event' /&gt;" TimeoutMS="1000">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="571e05e9-e7cb-4d9a-a606-55f4a493addb" InformativeScreenshot="8e8d4c358caf381f040be33a699daf76" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='Incident Recording System*' /&gt;&lt;wnd aaname='Enter New Event' cls='ThunderRT6CommandButton' title='Enter &amp;amp;New Event' /&gt;" TimeoutMS="1000">
                     <ui:Target.WaitForReady>
                       <InArgument x:TypeArguments="ui:WaitForReady" />
                     </ui:Target.WaitForReady>
@@ -152,7 +152,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:UiElementExists DisplayName="Check for Ext Org Popup Window" Exists="[booExtOrgBox]" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
                         <ui:UiElementExists.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="571e05e9-e7cb-4d9a-a606-55f4a493addb" InformativeScreenshot="f6e9102bf59b8ad0ec6ad747a9791bd9" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='0' title='External Organisation Lookup' /&gt;" TimeoutMS="1000">
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="571e05e9-e7cb-4d9a-a606-55f4a493addb" InformativeScreenshot="f6e9102bf59b8ad0ec6ad747a9791bd9" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='External Organisation Lookup' /&gt;" TimeoutMS="1000">
                             <ui:Target.WaitForReady>
                               <InArgument x:TypeArguments="ui:WaitForReady" />
                             </ui:Target.WaitForReady>
@@ -175,7 +175,7 @@
                                   </ui:CursorPosition>
                                 </ui:Click.CursorPosition>
                                 <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3ba85ad1-572e-4600-b38e-5a50ece1996d" InformativeScreenshot="21aefa6ebe8841234b6fe42933778130" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='0' title='External Organisation Lookup' /&gt;&lt;wnd aaname='Cancel' cls='ThunderRT6CommandButton' title='&amp;amp;Cancel' /&gt;" TimeoutMS="1000">
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3ba85ad1-572e-4600-b38e-5a50ece1996d" InformativeScreenshot="21aefa6ebe8841234b6fe42933778130" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='External Organisation Lookup' /&gt;&lt;wnd aaname='Cancel' cls='ThunderRT6CommandButton' title='&amp;amp;Cancel' /&gt;" TimeoutMS="1000">
                                     <ui:Target.WaitForReady>
                                       <InArgument x:TypeArguments="ui:WaitForReady" />
                                     </ui:Target.WaitForReady>
@@ -197,7 +197,7 @@
                       </If>
                       <ui:UiElementExists DisplayName="Check for Contact Name Popup Window" Exists="[booContactLookupBox]" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
                         <ui:UiElementExists.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="571e05e9-e7cb-4d9a-a606-55f4a493addb" InformativeScreenshot="1c50f0c24754e208c687be296e22da37" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='0' title='Contact Name Lookup' /&gt;" TimeoutMS="1000">
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="571e05e9-e7cb-4d9a-a606-55f4a493addb" InformativeScreenshot="1c50f0c24754e208c687be296e22da37" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='Contact Name Lookup' /&gt;" TimeoutMS="1000">
                             <ui:Target.WaitForReady>
                               <InArgument x:TypeArguments="ui:WaitForReady" />
                             </ui:Target.WaitForReady>
@@ -220,7 +220,7 @@
                                   </ui:CursorPosition>
                                 </ui:Click.CursorPosition>
                                 <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3ba85ad1-572e-4600-b38e-5a50ece1996d" InformativeScreenshot="4eb624d4d1f4928c49247ef506db2bfb" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='0' title='Contact Name Lookup' /&gt;&lt;wnd aaname='OK' cls='ThunderRT6CommandButton' title='&amp;amp;OK' /&gt;" TimeoutMS="1000">
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3ba85ad1-572e-4600-b38e-5a50ece1996d" InformativeScreenshot="4eb624d4d1f4928c49247ef506db2bfb" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='Contact Name Lookup' /&gt;&lt;wnd aaname='OK' cls='ThunderRT6CommandButton' title='&amp;amp;OK' /&gt;" TimeoutMS="1000">
                                     <ui:Target.WaitForReady>
                                       <InArgument x:TypeArguments="ui:WaitForReady" />
                                     </ui:Target.WaitForReady>
@@ -242,7 +242,7 @@
                       </If>
                       <ui:UiElementExists DisplayName="Check for Dialog Windows" Exists="[booDialogBox]" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
                         <ui:UiElementExists.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="571e05e9-e7cb-4d9a-a606-55f4a493addb" InformativeScreenshot="db3e6be7311cbf26aec29b4d036e1586" Selector="&lt;wnd app='irs.exe' cls='#32770' isremoteapp='0' title='*' /&gt;&lt;ctrl name='*' role='dialog' /&gt;" TimeoutMS="1000">
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="571e05e9-e7cb-4d9a-a606-55f4a493addb" InformativeScreenshot="db3e6be7311cbf26aec29b4d036e1586" Selector="&lt;wnd app='irs.exe' cls='#32770'  title='*' /&gt;&lt;ctrl name='*' role='dialog' /&gt;" TimeoutMS="1000">
                             <ui:Target.WaitForReady>
                               <InArgument x:TypeArguments="ui:WaitForReady" />
                             </ui:Target.WaitForReady>
@@ -265,7 +265,7 @@
                                   </ui:CursorPosition>
                                 </ui:Click.CursorPosition>
                                 <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3ba85ad1-572e-4600-b38e-5a50ece1996d" InformativeScreenshot="a21587615206f3770a488323fcadcf2e" Selector="&lt;wnd app='irs.exe' cls='#32770' isremoteapp='0' title='*' /&gt;&lt;wnd ctrlid='*' title='OK' /&gt;" TimeoutMS="1000">
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3ba85ad1-572e-4600-b38e-5a50ece1996d" InformativeScreenshot="a21587615206f3770a488323fcadcf2e" Selector="&lt;wnd app='irs.exe' cls='#32770'  title='*' /&gt;&lt;wnd ctrlid='*' title='OK' /&gt;" TimeoutMS="1000">
                                     <ui:Target.WaitForReady>
                                       <InArgument x:TypeArguments="ui:WaitForReady" />
                                     </ui:Target.WaitForReady>
@@ -298,7 +298,7 @@
                         </ui:CursorPosition>
                       </ui:Click.CursorPosition>
                       <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3ba85ad1-572e-4600-b38e-5a50ece1996d" InformativeScreenshot="f1192f476c91c43c40a0a76f849c8b02" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' isremoteapp='0' title='*' /&gt;&lt;wnd aaname='Cancel' cls='ThunderRT6CommandButton' title='&amp;amp;Cancel' /&gt;" TimeoutMS="1000">
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3ba85ad1-572e-4600-b38e-5a50ece1996d" InformativeScreenshot="f1192f476c91c43c40a0a76f849c8b02" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='*' /&gt;&lt;wnd aaname='Cancel' cls='ThunderRT6CommandButton' title='&amp;amp;Cancel' /&gt;" TimeoutMS="1000">
                           <ui:Target.WaitForReady>
                             <InArgument x:TypeArguments="ui:WaitForReady" />
                           </ui:Target.WaitForReady>
@@ -307,7 +307,7 @@
                     </ui:Click>
                     <ui:UiElementExists DisplayName="Check for Cancel Confirmation" Exists="[booCancelConfirm]" sap:VirtualizedContainerService.HintSize="546,107" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
                       <ui:UiElementExists.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="571e05e9-e7cb-4d9a-a606-55f4a493addb" InformativeScreenshot="6fa70fcaa03deefe6ef194bd4403f579" Selector="&lt;wnd app='irs.exe' cls='#32770' isremoteapp='0' title='E*' /&gt;" TimeoutMS="1000">
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="571e05e9-e7cb-4d9a-a606-55f4a493addb" InformativeScreenshot="6fa70fcaa03deefe6ef194bd4403f579" Selector="&lt;wnd app='irs.exe' cls='#32770'  title='E*' /&gt;" TimeoutMS="1000">
                           <ui:Target.WaitForReady>
                             <InArgument x:TypeArguments="ui:WaitForReady" />
                           </ui:Target.WaitForReady>
@@ -328,7 +328,7 @@
                             </ui:CursorPosition>
                           </ui:Click.CursorPosition>
                           <ui:Click.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3ba85ad1-572e-4600-b38e-5a50ece1996d" InformativeScreenshot="d7c5e1e069b94ce7e400e3285da2abde" Selector="&lt;wnd app='irs.exe' cls='#32770' isremoteapp='0' title='E*' /&gt;&lt;wnd ctrlid='6' title='&amp;amp;Yes' /&gt;" TimeoutMS="1000">
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3ba85ad1-572e-4600-b38e-5a50ece1996d" InformativeScreenshot="d7c5e1e069b94ce7e400e3285da2abde" Selector="&lt;wnd app='irs.exe' cls='#32770'  title='E*' /&gt;&lt;wnd ctrlid='6' title='&amp;amp;Yes' /&gt;" TimeoutMS="1000">
                               <ui:Target.WaitForReady>
                                 <InArgument x:TypeArguments="ui:WaitForReady" />
                               </ui:Target.WaitForReady>
