@@ -48,7 +48,15 @@
     "processOptions": {
       "ignoredFiles": []
     },
-    "fileInfoCollection": [],
+    "fileInfoCollection": [
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "034c4720-66bc-4ba6-a678-106cc3d9d609",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Framework\\tc01 InitAllApplications NEW.xaml"
+      }
+    ],
     "modernBehavior": false,
     "saveToCloud": false
   },
