@@ -11364,15 +11364,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ws000012\\.nuget\\packages\\": {}
+    "C:\\Users\\rm000121\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "SIRP",
       "projectName": "SIRP",
-      "projectPath": "C:\\Users\\ws000012\\OneDrive - Defra\\UiPath\\Github\\ea-smart-incident-reporting\\SIRP\\.local",
-      "packagesPath": "C:\\Users\\ws000012\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ws000012\\OneDrive - Defra\\UiPath\\Github\\ea-smart-incident-reporting\\SIRP\\.local"
+      "projectPath": "C:\\Users\\rm000121\\Documents\\GitHub\\ea-smart-incident-reporting\\SIRP\\.local",
+      "packagesPath": "C:\\Users\\rm000121\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rm000121\\Documents\\GitHub\\ea-smart-incident-reporting\\SIRP\\.local"
     },
     "frameworks": {
       "net461": {

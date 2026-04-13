@@ -512,6 +512,90 @@
       ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllApplications NEW.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "booObjectVar&Sequence_226",
+        "booObjectVar&Sequence_228",
+        "collProcesses&Flowchart_3",
+        "browsNIRSLaunch&Flowchart_3",
+        "strToken&Flowchart_3",
+        "strRobotActive&Flowchart_3",
+        "strSelfHeal&Flowchart_3",
+        "strMachineName&Flowchart_3",
+        "strRobotStatusId&Flowchart_3",
+        "strOAuth2Response&Sequence_161",
+        "intOAuthResponseStatus&Sequence_161",
+        "credDataverse&Sequence_161",
+        "objOAuth2Response&Sequence_161",
+        "secPassword&Sequence_200",
+        "strUsername&Sequence_200",
+        "strRecordResponse&Sequence_162",
+        "intRecordResponseStatus&Sequence_162",
+        "objRecordResponse&Sequence_162",
+        "jarRecordResponse&Sequence_162",
+        "jBody&Sequence_177",
+        "strRecordResponse&Sequence_177",
+        "intRecordResponseStatus&Sequence_177",
+        "booCancelConfirm&Sequence_179",
+        "browsHorizonConfirmation&TryCatch_24",
+        "browsLogin&Sequence_182",
+        "booLogoutPrompt&Sequence_182",
+        "browsIdentity&Sequence_182",
+        "credMicrosoft&Sequence_182",
+        "credHorizon&Sequence_182",
+        "strIdentityPlatformURL&Sequence_182",
+        "strAppSelection&Sequence_182",
+        "strNIRSInstance&Sequence_182",
+        "credVMWare&Sequence_208",
+        "strHorizonInstance&Sequence_208",
+        "booModalForm&Sequence_208",
+        "secPassword&Sequence_209",
+        "strUsername&Sequence_209",
+        "secPassword&Sequence_210",
+        "strUsername&Sequence_210",
+        "credVMWare&Sequence_211",
+        "strHorizonInstance&Sequence_211",
+        "booModalForm&Sequence_211",
+        "secPassword&Sequence_212",
+        "strUsername&Sequence_212",
+        "secPassword&Sequence_213",
+        "strUsername&Sequence_213",
+        "booMicrosoftLogin&Sequence_183",
+        "booAccountPopulated&Sequence_183",
+        "strEmail&Sequence_184",
+        "booIdentityLogin&Sequence_185",
+        "booDomainSelection&Sequence_185",
+        "booObjectVar&Sequence_199",
+        "booObjectVar&Sequence_188"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_Config"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/KillAllProcesses NEW.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/tc01 InitAllApplications NEW.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dictConfig&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
     }
   ]
 }
