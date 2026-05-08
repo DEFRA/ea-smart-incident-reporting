@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Reset_NIRS" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1198,4193" sap2010:WorkflowViewState.IdRef="Reset_NIRS_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Reset_NIRS" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1408.8,4529.6" sap2010:WorkflowViewState.IdRef="Reset_NIRS_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>Microsoft.VisualBasic</x:String>
@@ -28,6 +28,8 @@
       <x:String>System.Collections.ObjectModel</x:String>
       <x:String>System.Activities.DynamicUpdate</x:String>
       <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -65,9 +67,10 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Reset_NIRS" sap:VirtualizedContainerService.HintSize="840,4128" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Reset_NIRS" sap:VirtualizedContainerService.HintSize="782.8,4424.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="booHomePage" />
       <Variable x:TypeArguments="x:Int32" Default="0" Name="intLoopCounter" />
@@ -78,7 +81,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:UiElementExists DisplayName="Check for NIRS" Exists="[booNIRSOpen]" sap:VirtualizedContainerService.HintSize="778,107" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
+    <ui:UiElementExists DisplayName="Check for NIRS" Exists="[booNIRSOpen]" sap:VirtualizedContainerService.HintSize="734.8,106.8" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
       <ui:UiElementExists.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="571e05e9-e7cb-4d9a-a606-55f4a493addb" InformativeScreenshot="4aa5539fe31b1cf564e5181a84909754" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='*' /&gt;" TimeoutMS="1000">
           <ui:Target.WaitForReady>
@@ -87,17 +90,17 @@
         </ui:Target>
       </ui:UiElementExists.Target>
     </ui:UiElementExists>
-    <If Condition="[booNIRSOpen]" DisplayName="NIRS Open?" sap:VirtualizedContainerService.HintSize="778,3870" sap2010:WorkflowViewState.IdRef="If_7">
+    <If Condition="[booNIRSOpen]" DisplayName="NIRS Open?" sap:VirtualizedContainerService.HintSize="734.8,4188.4" sap2010:WorkflowViewState.IdRef="If_7">
       <If.Then>
-        <ui:InterruptibleDoWhile Condition="[NOT(booHomePage)]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="742,3678" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+        <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[NOT(booHomePage)]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="699.2,3996.4" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
           <ui:InterruptibleDoWhile.Body>
-            <Sequence DisplayName="Reset NIRS" sap:VirtualizedContainerService.HintSize="706,3510" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence DisplayName="Reset NIRS" sap:VirtualizedContainerService.HintSize="663.6,3828.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign DisplayName="Increment intLoopCounter" sap:VirtualizedContainerService.HintSize="644,83" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign DisplayName="Increment intLoopCounter" sap:VirtualizedContainerService.HintSize="615.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_1">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Int32">[intLoopCounter]</OutArgument>
                 </Assign.To>
@@ -105,9 +108,9 @@
                   <InArgument x:TypeArguments="x:Int32">[intLoopCounter+1]</InArgument>
                 </Assign.Value>
               </Assign>
-              <If Condition="[intLoopCounter = 11]" DisplayName="&gt;10 Retries?" sap:VirtualizedContainerService.HintSize="644,250" sap2010:WorkflowViewState.IdRef="If_3">
+              <If Condition="[intLoopCounter = 11]" DisplayName="&gt;10 Retries?" sap:VirtualizedContainerService.HintSize="615.6,250.8" sap2010:WorkflowViewState.IdRef="If_3">
                 <If.Then>
-                  <Throw DisplayName="Throw Sys Ex" Exception="[New SystemException(&quot;Unable to reset NIRS to home screen - Max Retry Counter Reached&quot;)]" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                  <Throw DisplayName="Throw Sys Ex" Exception="[New SystemException(&quot;Unable to reset NIRS to home screen - Max Retry Counter Reached&quot;)]" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="Throw_1" />
                 </If.Then>
                 <If.Else>
                   <Sequence sap2010:WorkflowViewState.IdRef="Sequence_7">
@@ -119,18 +122,43 @@
                   </Sequence>
                 </If.Else>
               </If>
-              <ui:UiElementExists DisplayName="Check for Home Page" Exists="[booHomePage]" sap:VirtualizedContainerService.HintSize="644,107" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
-                <ui:UiElementExists.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="571e05e9-e7cb-4d9a-a606-55f4a493addb" InformativeScreenshot="8e8d4c358caf381f040be33a699daf76" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='Incident Recording System*' /&gt;&lt;wnd aaname='Enter New Event' cls='ThunderRT6CommandButton' title='Enter &amp;amp;New Event' /&gt;" TimeoutMS="1000">
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="615.6,279.6" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,201.2" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:UiElementExists DisplayName="Check for Home Page" Exists="[booHomePage]" sap:VirtualizedContainerService.HintSize="368,106.8" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                      <ui:UiElementExists.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="571e05e9-e7cb-4d9a-a606-55f4a493addb" InformativeScreenshot="8e8d4c358caf381f040be33a699daf76" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='Incident Recording System*' /&gt;&lt;wnd aaname='Enter New Event' cls='ThunderRT6CommandButton' title='Enter &amp;amp;New Event' /&gt;" TimeoutMS="1000">
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:UiElementExists.Target>
+                    </ui:UiElementExists>
+                  </Sequence>
+                </ui:CommentOut.Body>
+              </ui:CommentOut>
+              <ui:TextExists FormattedText="{x:Null}" sap2010:Annotation.AnnotationText="Element Exists was returning true as long as WIMS was open, regardless of page.&#xD;&#xA;&#xD;&#xA;Note: also tried looking at attributes e.g. visibility, hasForeground. These are unchanged during navigation." DisplayName="Check for Home Page (text exists)" sap:VirtualizedContainerService.HintSize="615.6,246.4" sap2010:WorkflowViewState.IdRef="TextExists_1" Occurrence="1" Result="[booHomePage]" Text="Enter New Event">
+                <ui:TextExists.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d9d08362-0a40-4a02-b600-0308d874421c" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='Incident Recording System*' /&gt;&lt;wnd aaname='Enter New Event' cls='ThunderRT6CommandButton' title='Enter &amp;amp;New Event' /&gt;" TimeoutMS="1000">
                     <ui:Target.WaitForReady>
                       <InArgument x:TypeArguments="ui:WaitForReady" />
                     </ui:Target.WaitForReady>
                   </ui:Target>
-                </ui:UiElementExists.Target>
-              </ui:UiElementExists>
-              <If Condition="[NOT(booHomePage)]" DisplayName="NIRS Not on Home Page?" sap:VirtualizedContainerService.HintSize="644,2839" sap2010:WorkflowViewState.IdRef="If_1">
+                </ui:TextExists.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:TextExists>
+              <If Condition="[NOT(booHomePage)]" DisplayName="NIRS Not on Home Page?" sap:VirtualizedContainerService.HintSize="615.6,2746.8" sap2010:WorkflowViewState.IdRef="If_1">
                 <If.Then>
-                  <Sequence DisplayName="Close Pop-Ups &amp; Cancel Input" sap:VirtualizedContainerService.HintSize="608,2649" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence DisplayName="Close Pop-Ups &amp; Cancel Input" sap:VirtualizedContainerService.HintSize="580,2556" sap2010:WorkflowViewState.IdRef="Sequence_2">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:Boolean" Name="booCancelConfirm" />
                       <Variable x:TypeArguments="x:Boolean" Name="booExtOrgBox" />
@@ -141,7 +169,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Close Pop-Ups" sap:VirtualizedContainerService.HintSize="546,1907" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                    <Sequence DisplayName="Close Pop-Ups" sap:VirtualizedContainerService.HintSize="532,1854.4" sap2010:WorkflowViewState.IdRef="Sequence_9">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:Boolean" Name="booContactLookupBox" />
                       </Sequence.Variables>
@@ -150,7 +178,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:UiElementExists DisplayName="Check for Ext Org Popup Window" Exists="[booExtOrgBox]" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+                      <ui:UiElementExists DisplayName="Check for Ext Org Popup Window" Exists="[booExtOrgBox]" sap:VirtualizedContainerService.HintSize="484,106.8" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
                         <ui:UiElementExists.Target>
                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="571e05e9-e7cb-4d9a-a606-55f4a493addb" InformativeScreenshot="f6e9102bf59b8ad0ec6ad747a9791bd9" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='External Organisation Lookup' /&gt;" TimeoutMS="1000">
                             <ui:Target.WaitForReady>
@@ -159,11 +187,11 @@
                           </ui:Target>
                         </ui:UiElementExists.Target>
                       </ui:UiElementExists>
-                      <If Condition="[booExtOrgBox]" DisplayName="Ext Org Box Open?" sap:VirtualizedContainerService.HintSize="484,425" sap2010:WorkflowViewState.IdRef="If_4">
+                      <If Condition="[booExtOrgBox]" DisplayName="Ext Org Box Open?" sap:VirtualizedContainerService.HintSize="484,425.6" sap2010:WorkflowViewState.IdRef="If_4">
                         <If.Then>
-                          <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input - Click OK" sap:VirtualizedContainerService.HintSize="436,235" sap2010:WorkflowViewState.IdRef="BlockUserInput_1" KeyModifiers="Alt" SpecialKey="True">
+                          <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input - Click OK" sap:VirtualizedContainerService.HintSize="435.6,234.8" sap2010:WorkflowViewState.IdRef="BlockUserInput_1" KeyModifiers="Alt" SpecialKey="True">
                             <ui:BlockUserInput.Body>
-                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Cancel&quot;" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Cancel&quot;" sap:VirtualizedContainerService.HintSize="334,106.8" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
                                 <ui:Click.CursorPosition>
                                   <ui:CursorPosition Position="Center">
                                     <ui:CursorPosition.OffsetX>
@@ -195,7 +223,7 @@
                           </Sequence>
                         </If.Else>
                       </If>
-                      <ui:UiElementExists DisplayName="Check for Contact Name Popup Window" Exists="[booContactLookupBox]" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
+                      <ui:UiElementExists DisplayName="Check for Contact Name Popup Window" Exists="[booContactLookupBox]" sap:VirtualizedContainerService.HintSize="484,106.8" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
                         <ui:UiElementExists.Target>
                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="571e05e9-e7cb-4d9a-a606-55f4a493addb" InformativeScreenshot="1c50f0c24754e208c687be296e22da37" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='Contact Name Lookup' /&gt;" TimeoutMS="1000">
                             <ui:Target.WaitForReady>
@@ -204,11 +232,11 @@
                           </ui:Target>
                         </ui:UiElementExists.Target>
                       </ui:UiElementExists>
-                      <If Condition="[booContactLookupBox]" DisplayName="Contact Name Box Open?" sap:VirtualizedContainerService.HintSize="484,425" sap2010:WorkflowViewState.IdRef="If_6">
+                      <If Condition="[booContactLookupBox]" DisplayName="Contact Name Box Open?" sap:VirtualizedContainerService.HintSize="484,425.6" sap2010:WorkflowViewState.IdRef="If_6">
                         <If.Then>
-                          <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input - Click OK" sap:VirtualizedContainerService.HintSize="436,235" sap2010:WorkflowViewState.IdRef="BlockUserInput_3" KeyModifiers="Alt" SpecialKey="True">
+                          <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input - Click OK" sap:VirtualizedContainerService.HintSize="435.6,234.8" sap2010:WorkflowViewState.IdRef="BlockUserInput_3" KeyModifiers="Alt" SpecialKey="True">
                             <ui:BlockUserInput.Body>
-                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;OK&quot;" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;OK&quot;" sap:VirtualizedContainerService.HintSize="334,106.8" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
                                 <ui:Click.CursorPosition>
                                   <ui:CursorPosition Position="Center">
                                     <ui:CursorPosition.OffsetX>
@@ -240,7 +268,7 @@
                           </Sequence>
                         </If.Else>
                       </If>
-                      <ui:UiElementExists DisplayName="Check for Dialog Windows" Exists="[booDialogBox]" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
+                      <ui:UiElementExists DisplayName="Check for Dialog Windows" Exists="[booDialogBox]" sap:VirtualizedContainerService.HintSize="484,106.8" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
                         <ui:UiElementExists.Target>
                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="571e05e9-e7cb-4d9a-a606-55f4a493addb" InformativeScreenshot="db3e6be7311cbf26aec29b4d036e1586" Selector="&lt;wnd app='irs.exe' cls='#32770'  title='*' /&gt;&lt;ctrl name='*' role='dialog' /&gt;" TimeoutMS="1000">
                             <ui:Target.WaitForReady>
@@ -249,11 +277,11 @@
                           </ui:Target>
                         </ui:UiElementExists.Target>
                       </ui:UiElementExists>
-                      <If Condition="[booDialogBox]" DisplayName="Dialog Box Open?" sap:VirtualizedContainerService.HintSize="484,425" sap2010:WorkflowViewState.IdRef="If_5">
+                      <If Condition="[booDialogBox]" DisplayName="Dialog Box Open?" sap:VirtualizedContainerService.HintSize="484,425.6" sap2010:WorkflowViewState.IdRef="If_5">
                         <If.Then>
-                          <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input - Click OK" sap:VirtualizedContainerService.HintSize="436,235" sap2010:WorkflowViewState.IdRef="BlockUserInput_2" KeyModifiers="Alt" SpecialKey="True">
+                          <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input - Click OK" sap:VirtualizedContainerService.HintSize="435.6,234.8" sap2010:WorkflowViewState.IdRef="BlockUserInput_2" KeyModifiers="Alt" SpecialKey="True">
                             <ui:BlockUserInput.Body>
-                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;OK&quot;" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;OK&quot;" sap:VirtualizedContainerService.HintSize="334,106.8" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
                                 <ui:Click.CursorPosition>
                                   <ui:CursorPosition Position="Center">
                                     <ui:CursorPosition.OffsetX>
@@ -286,7 +314,7 @@
                         </If.Else>
                       </If>
                     </Sequence>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click &quot;Cancel&quot;" sap:VirtualizedContainerService.HintSize="546,107" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click &quot;Cancel&quot;" sap:VirtualizedContainerService.HintSize="532,106.8" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -305,7 +333,7 @@
                         </ui:Target>
                       </ui:Click.Target>
                     </ui:Click>
-                    <ui:UiElementExists DisplayName="Check for Cancel Confirmation" Exists="[booCancelConfirm]" sap:VirtualizedContainerService.HintSize="546,107" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                    <ui:UiElementExists DisplayName="Check for Cancel Confirmation" Exists="[booCancelConfirm]" sap:VirtualizedContainerService.HintSize="532,106.8" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
                       <ui:UiElementExists.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="571e05e9-e7cb-4d9a-a606-55f4a493addb" InformativeScreenshot="6fa70fcaa03deefe6ef194bd4403f579" Selector="&lt;wnd app='irs.exe' cls='#32770'  title='E*' /&gt;" TimeoutMS="1000">
                           <ui:Target.WaitForReady>
@@ -314,9 +342,9 @@
                         </ui:Target>
                       </ui:UiElementExists.Target>
                     </ui:UiElementExists>
-                    <If Condition="[booCancelConfirm]" DisplayName="Cancel Confirm?" sap:VirtualizedContainerService.HintSize="546,297" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If Condition="[booCancelConfirm]" DisplayName="Cancel Confirm?" sap:VirtualizedContainerService.HintSize="532,297.6" sap2010:WorkflowViewState.IdRef="If_2">
                       <If.Then>
-                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Yes&quot;" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Yes&quot;" sap:VirtualizedContainerService.HintSize="334,106.8" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                           <ui:Click.CursorPosition>
                             <ui:CursorPosition Position="Center">
                               <ui:CursorPosition.OffsetX>
@@ -349,7 +377,7 @@
                   </Sequence>
                 </If.Then>
                 <If.Else>
-                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence sap:VirtualizedContainerService.HintSize="416,101.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
