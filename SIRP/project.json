@@ -55,6 +55,13 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "Framework\\tc01 InitAllApplications NEW.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "66cf5ae8-c430-4327-818a-0a1b16a4dfce",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Process\\Process Subflows\\tc01 Reset NIRS.xaml"
       }
     ],
     "modernBehavior": false,
