@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1198,1492</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1408.8,1532</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Enter_Closure_Attendance_Details_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -48,6 +48,7 @@
       <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
       <x:String>UiPath.OCR.Activities</x:String>
       <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -89,14 +90,19 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="Enter Closure Attendance Details" sap:VirtualizedContainerService.HintSize="651,1427" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="Enter Closure Attendance Details" sap:VirtualizedContainerService.HintSize="650.8,1426.8" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
-        <av:Size x:Key="ShapeSize">60,75</av:Size>
+        <av:Size x:Key="ShapeSize">60,75.2</av:Size>
         <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,127.5</av:PointCollection>
         <x:Double x:Key="Height">1390</x:Double>
         <x:Double x:Key="Width">617</x:Double>
@@ -109,13 +115,13 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,127.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,53</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">300,180.5 300,230.5</av:PointCollection>
+          <av:Size x:Key="ShapeSize">200,53.2</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">300,180.7 300,230.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input - Select Type of Incident" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="BlockUserInput_1" KeyModifiers="Alt" SpecialKey="True">
+      <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input - Select Type of Incident" sap:VirtualizedContainerService.HintSize="657.6,2341.6" sap2010:WorkflowViewState.IdRef="BlockUserInput_1" KeyModifiers="Alt" SpecialKey="True">
         <ui:BlockUserInput.Body>
-          <Sequence DisplayName="Select Type of Incident" sap:VirtualizedContainerService.HintSize="554,1630" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Select Type of Incident" sap:VirtualizedContainerService.HintSize="622,2213.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="ieChildren" />
               <Variable x:TypeArguments="scg:List(x:String)" Default="[New List(Of String)]" Name="listDropdownOptions" />
@@ -127,7 +133,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign DisplayName="Assign strTypeOfIncident" sap:VirtualizedContainerService.HintSize="492,83" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign DisplayName="Assign strTypeOfIncident" sap:VirtualizedContainerService.HintSize="574,82.4" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[strTypeOfIncident]</OutArgument>
               </Assign.To>
@@ -135,16 +141,19 @@
                 <InArgument x:TypeArguments="x:String">[in_jobRoboticsJSON("typeOfIncident").ToString]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:RetryScope DisplayName="Retry Scope - Open 'Type of Incident' Dropdown" sap:VirtualizedContainerService.HintSize="492,542" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="3" RetryInterval="00:00:00">
+            <ui:RetryScope DisplayName="Retry Scope - Open 'Type of Incident' Dropdown" sap:VirtualizedContainerService.HintSize="574,1191.2" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="3" RetryInterval="00:00:00">
               <ui:RetryScope.ActivityBody>
                 <ActivityAction>
-                  <Sequence DisplayName="Open 'Type of Incident' Dropdown" sap:VirtualizedContainerService.HintSize="450,365" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                  <Sequence DisplayName="Open 'Type of Incident' Dropdown" sap:VirtualizedContainerService.HintSize="532,1013.6" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="strState" />
+                    </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Type of Incident' Dropdown" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Type of Incident' Dropdown" sap:VirtualizedContainerService.HintSize="484,106.8" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -166,15 +175,55 @@
                         </ui:Target>
                       </ui:Click.Target>
                     </ui:Click>
-                    <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Dropdown Open?" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
-                      <ui:WaitUiElementAppear.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e48a5a9c-4cdd-4052-9607-f1314fe48a67" InformativeScreenshot="9b7ae95b7ecee4e650a541a7cc876273" Selector="&lt;wnd app='irs.exe' cls='ComboLBox'  /&gt;" TimeoutMS="1500">
+                    <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="aastate" DisplayName="Get Attribute - dropdown state" sap:VirtualizedContainerService.HintSize="484,186" sap2010:WorkflowViewState.IdRef="GetAttribute_4">
+                      <ui:GetAttribute.Result>
+                        <OutArgument x:TypeArguments="x:String">[strState]</OutArgument>
+                      </ui:GetAttribute.Result>
+                      <ui:GetAttribute.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="52716e17-ef26-4770-99db-c9523a2d5b25" Selector="&lt;wnd app='irs.exe' cls='ComboLBox'  /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
                           <ui:Target.WaitForReady>
                             <InArgument x:TypeArguments="ui:WaitForReady" />
                           </ui:Target.WaitForReady>
                         </ui:Target>
-                      </ui:WaitUiElementAppear.Target>
-                    </ui:WaitUiElementAppear>
+                      </ui:GetAttribute.Target>
+                    </ui:GetAttribute>
+                    <If Condition="[strState.Contains(&quot;invisible&quot;)]" DisplayName="If dropdown not visible" sap:VirtualizedContainerService.HintSize="484,250.8" sap2010:WorkflowViewState.IdRef="If_7">
+                      <If.Then>
+                        <Throw DisplayName="Throw SE - dropdown not visible" Exception="[new System.Exception(&quot;Type of Incident dropdown not visible to select from&quot;)]" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="Throw_7" />
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_30">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484,279.6" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,201.2" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Dropdown Open?" sap:VirtualizedContainerService.HintSize="368,106.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
+                            <ui:WaitUiElementAppear.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e48a5a9c-4cdd-4052-9607-f1314fe48a67" InformativeScreenshot="9b7ae95b7ecee4e650a541a7cc876273" Selector="&lt;wnd app='irs.exe' cls='ComboLBox'  /&gt;" TimeoutMS="1500">
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:WaitUiElementAppear.Target>
+                          </ui:WaitUiElementAppear>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                    </ui:CommentOut>
                   </Sequence>
                 </ActivityAction>
               </ui:RetryScope.ActivityBody>
@@ -182,7 +231,7 @@
                 <ActivityFunc x:TypeArguments="x:Boolean" />
               </ui:RetryScope.Condition>
             </ui:RetryScope>
-            <ui:FindChildren Children="[ieChildren]" DisplayName="Retrieve Dropdown Children" Filter="&lt;ctrl /&gt;" sap:VirtualizedContainerService.HintSize="492,107" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_DESCENDANTS">
+            <ui:FindChildren Children="[ieChildren]" DisplayName="Retrieve Dropdown Children" Filter="&lt;ctrl /&gt;" sap:VirtualizedContainerService.HintSize="574,106.8" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_DESCENDANTS">
               <ui:FindChildren.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eb40dcb9-a257-4ac1-9d2c-d02060d404ce" InformativeScreenshot="b2ec49b7cd1b57699abd1310a140367d" Selector="&lt;wnd app='irs.exe' cls='ComboLBox'  /&gt;">
                   <ui:Target.TimeoutMS>
@@ -194,7 +243,7 @@
                 </ui:Target>
               </ui:FindChildren.Target>
             </ui:FindChildren>
-            <Assign DisplayName="Search List for Provided Report Type" sap:VirtualizedContainerService.HintSize="492,83" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign DisplayName="Search List for Provided Report Type" sap:VirtualizedContainerService.HintSize="574,82.4" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="scg:List(ui:UiElement)">[listValidChildren]</OutArgument>
               </Assign.To>
@@ -202,9 +251,9 @@
                 <InArgument x:TypeArguments="scg:List(ui:UiElement)">[ieChildren.Where(function(x) x.Selector.ToString.Contains(strTypeOfIncident.Replace("&amp;","&amp;amp;"))).ToList]</InArgument>
               </Assign.Value>
             </Assign>
-            <If Condition="[listValidChildren.Count &lt;&gt; 1]" DisplayName="Invalid Option?" sap:VirtualizedContainerService.HintSize="492,250" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[listValidChildren.Count &lt;&gt; 1]" DisplayName="Invalid Option?" sap:VirtualizedContainerService.HintSize="574,250.8" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Throw DisplayName="Throw BRE" Exception="[New BusinessRuleException(&quot;Invalid typeOfIncident  - Option not found in NIRS: &quot;+strTypeOfIncident)]" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                <Throw DisplayName="Throw BRE" Exception="[New BusinessRuleException(&quot;Invalid typeOfIncident  - Option not found in NIRS: &quot;+strTypeOfIncident)]" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="Throw_1" />
               </If.Then>
               <If.Else>
                 <Sequence sap2010:WorkflowViewState.IdRef="Sequence_2">
@@ -216,7 +265,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <ui:SetFocus DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Set Focus on Dropdown Option" sap:VirtualizedContainerService.HintSize="492,107" sap2010:WorkflowViewState.IdRef="SetFocus_1">
+            <ui:SetFocus DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Set Focus on Dropdown Option" sap:VirtualizedContainerService.HintSize="574,106.8" sap2010:WorkflowViewState.IdRef="SetFocus_1">
               <ui:SetFocus.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f1868324-4366-4512-9923-c96f9625310b" InformativeScreenshot="1eae51f25b15f83f2d26a3aa2df774b1" Selector="&lt;wnd app='irs.exe' cls='ComboLBox'  /&gt;&lt;ctrl name='{{strTypeOfIncident}}' role='list item' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -228,7 +277,7 @@
                 </ui:Target>
               </ui:SetFocus.Target>
             </ui:SetFocus>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Type of Incident'" sap:VirtualizedContainerService.HintSize="492,107" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Type of Incident'" sap:VirtualizedContainerService.HintSize="574,106.8" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -258,11 +307,11 @@
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">200,230.5</av:Point>
-              <av:Size x:Key="ShapeSize">200,53</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">300,283.5 300,333.5</av:PointCollection>
+              <av:Size x:Key="ShapeSize">200,53.2</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">300,283.7 300,333.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;No&quot; - Event Attended" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;No&quot; - Event Attended" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
             <ui:Click.CursorPosition>
               <ui:CursorPosition Position="Center">
                 <ui:CursorPosition.OffsetX>
@@ -294,11 +343,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">200,333.5</av:Point>
-                  <av:Size x:Key="ShapeSize">200,53</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">300,386.5 300,436.5</av:PointCollection>
+                  <av:Size x:Key="ShapeSize">200,53.2</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">300,386.7 300,436.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Yes&quot; - Actual/Potential EA Incident" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Yes&quot; - Actual/Potential EA Incident" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -330,11 +379,11 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">200,436.5</av:Point>
-                      <av:Size x:Key="ShapeSize">200,53</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">300,489.5 300,539.5</av:PointCollection>
+                      <av:Size x:Key="ShapeSize">200,53.2</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">300,489.7 300,539.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Next&quot; - Attendance" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Next&quot; - Attendance" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                     <ui:Click.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -366,11 +415,11 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">200,539.5</av:Point>
-                          <av:Size x:Key="ShapeSize">200,53</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">300,592.5 300,642.5</av:PointCollection>
+                          <av:Size x:Key="ShapeSize">200,53.2</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">300,592.7 300,642.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Next&quot; - Duplicates" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Next&quot; - Duplicates" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                         <ui:Click.CursorPosition>
                           <ui:CursorPosition Position="Center">
                             <ui:CursorPosition.OffsetX>
@@ -402,11 +451,11 @@
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">200,642.5</av:Point>
-                              <av:Size x:Key="ShapeSize">200,53</av:Size>
+                              <av:Size x:Key="ShapeSize">200,53.2</av:Size>
                               <av:PointCollection x:Key="ConnectorLocation">300,695.5 300,745.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Yes&quot; - Enter Incident Details" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Yes&quot; - Enter Incident Details" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                             <ui:Click.CursorPosition>
                               <ui:CursorPosition Position="Center">
                                 <ui:CursorPosition.OffsetX>
@@ -438,28 +487,33 @@
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">200,745.5</av:Point>
-                                  <av:Size x:Key="ShapeSize">200,83</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">300,828.5 300,878.5</av:PointCollection>
+                                  <av:Size x:Key="ShapeSize">200,69.6</av:Size>
+                                  <av:PointCollection x:Key="ConnectorLocation">300,815.1 300,878.5</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Sequence DisplayName="Enter Agency Impact Details" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                              <Sequence DisplayName="Enter Agency Impact Details" sap:VirtualizedContainerService.HintSize="200,69.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="x:String" Name="strLeadOfficer" />
+                                  <Variable x:TypeArguments="x:String" Name="strSelectedOfficer" />
+                                </Sequence.Variables>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="590,1499" sap2010:WorkflowViewState.IdRef="BlockUserInput_2" KeyModifiers="Alt" SpecialKey="True">
+                                <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="657.6,2434.8" sap2010:WorkflowViewState.IdRef="BlockUserInput_8" KeyModifiers="Alt" SpecialKey="True">
                                   <ui:BlockUserInput.Body>
-                                    <Sequence DisplayName="Select &quot;Agency Impact&quot; Tab &amp; Enter Lead Officer" sap:VirtualizedContainerService.HintSize="554,1371" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                    <Sequence DisplayName="Select &quot;Agency Impact&quot; Tab &amp; Enter Lead Officer" sap:VirtualizedContainerService.HintSize="622,2306.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                       <Sequence.Variables>
                                         <Variable x:TypeArguments="x:String" Name="strLeadOfficer" />
+                                        <Variable x:TypeArguments="x:Boolean" Name="boolAgencyImpactLoaded" />
                                       </Sequence.Variables>
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:ClickOCRText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="OCR Click &quot;Agency Impact&quot; Tab" sap:VirtualizedContainerService.HintSize="492,261" sap2010:WorkflowViewState.IdRef="ClickOCRText_1" KeyModifiers="None" MouseButton="BTN_LEFT" Occurrence="1" Text="Agency Impact">
+                                      <ui:ClickOCRText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="OCR Click &quot;Agency Impact&quot; Tab" sap:VirtualizedContainerService.HintSize="574,226" sap2010:WorkflowViewState.IdRef="ClickOCRText_1" KeyModifiers="None" MouseButton="BTN_LEFT" Occurrence="1" Text="Agency Impact">
                                         <ui:ClickOCRText.CursorPosition>
                                           <ui:CursorPosition Position="Center">
                                             <ui:CursorPosition.OffsetX>
@@ -475,7 +529,7 @@
                                             <ActivityFunc.Argument>
                                               <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
                                             </ActivityFunc.Argument>
-                                            <p:UiPathScreenOCR Output="{x:Null}" Text="{x:Null}" ApiKey="Removed_Key" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" Endpoint="https://ocr.uipath.com" ExtractWords="True" sap:VirtualizedContainerService.HintSize="284,81" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_1" Image="[Image]" Language="auto" Profile="Screen" Scale="1" />
+                                            <p:UiPathScreenOCR Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseAccents="{x:Null}" UseLocalServer="{x:Null}" ApiKey="Removed_Key" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" Endpoint="https://ocr.uipath.com" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_1" Image="[Image]" Language="auto" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
                                           </ActivityFunc>
                                         </ui:ClickOCRText.OCREngine>
                                         <ui:ClickOCRText.Target>
@@ -489,16 +543,47 @@
                                           </ui:Target>
                                         </ui:ClickOCRText.Target>
                                       </ui:ClickOCRText>
-                                      <ui:RetryScope DisplayName="Retry Scope - Open Lead Officer Dropdown" sap:VirtualizedContainerService.HintSize="492,542" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+                                      <ui:TextExists FormattedText="{x:Null}" sap2010:Annotation.AnnotationText="Element Exists is patchy in NIRS, doesn't require tabs to be visible to claim it &quot;exists&quot;. Text Exists is more reliable here.&#xA;&#xA;We do this just to slow the bot down a little and make sure elements have loaded properly before interacting with them." DisplayName="Text Exists - verify tab loaded" sap:VirtualizedContainerService.HintSize="574,282.8" sap2010:WorkflowViewState.IdRef="TextExists_2" Occurrence="1" Result="[boolAgencyImpactLoaded]" Text="Lead Officer">
+                                        <ui:TextExists.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="872cbeb4-eaa7-4df0-8878-f51e618d16dc" InformativeScreenshot="81bcc3c851c26e52f9640315cf4739eb" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' title='*Event*' /&gt;" TimeoutMS="5000">
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:TextExists.Target>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:TextExists>
+                                      <If Condition="[not boolAgencyImpactLoaded]" DisplayName="If &quot;Lead Officer&quot; text not found" sap:VirtualizedContainerService.HintSize="574,250.8" sap2010:WorkflowViewState.IdRef="If_5">
+                                        <If.Then>
+                                          <Throw DisplayName="Throw SE - agency impact tab exception" Exception="[new System.Exception(&quot;Could not verify that Agency Impact tab loaded&quot;)]" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="Throw_5" />
+                                        </If.Then>
+                                        <If.Else>
+                                          <Sequence sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </Sequence>
+                                        </If.Else>
+                                      </If>
+                                      <ui:RetryScope DisplayName="Retry Scope - Open Lead Officer Dropdown" sap:VirtualizedContainerService.HintSize="574,964.8" sap2010:WorkflowViewState.IdRef="RetryScope_1">
                                         <ui:RetryScope.ActivityBody>
                                           <ActivityAction>
-                                            <Sequence DisplayName="Open Lead Officer Dropdown" sap:VirtualizedContainerService.HintSize="450,365" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                            <Sequence DisplayName="Open Lead Officer Dropdown" sap:VirtualizedContainerService.HintSize="532,787.2" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                              <Sequence.Variables>
+                                                <Variable x:TypeArguments="x:String" Name="strState" />
+                                              </Sequence.Variables>
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Lead Officer' Dropdown" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Lead Officer' Dropdown" sap:VirtualizedContainerService.HintSize="484,106.8" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                 <ui:Click.CursorPosition>
                                                   <ui:CursorPosition Position="Center">
                                                     <ui:CursorPosition.OffsetX>
@@ -520,15 +605,61 @@
                                                   </ui:Target>
                                                 </ui:Click.Target>
                                               </ui:Click>
-                                              <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Dropdown Open?" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
-                                                <ui:WaitUiElementAppear.Target>
-                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e48a5a9c-4cdd-4052-9607-f1314fe48a67" InformativeScreenshot="b136270a096737a3d5a389fb09a6941f" Selector="&lt;wnd app='irs.exe' cls='ComboLBox'  /&gt;" TimeoutMS="1500">
+                                              <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="aastate" DisplayName="Get Attribute - dropdown state" sap:VirtualizedContainerService.HintSize="484,186" sap2010:WorkflowViewState.IdRef="GetAttribute_3">
+                                                <ui:GetAttribute.Result>
+                                                  <OutArgument x:TypeArguments="x:String">[strState]</OutArgument>
+                                                </ui:GetAttribute.Result>
+                                                <ui:GetAttribute.Target>
+                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="52716e17-ef26-4770-99db-c9523a2d5b25" Selector="&lt;wnd app='irs.exe' cls='ComboLBox'  /&gt;">
+                                                    <ui:Target.TimeoutMS>
+                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                    </ui:Target.TimeoutMS>
                                                     <ui:Target.WaitForReady>
                                                       <InArgument x:TypeArguments="ui:WaitForReady" />
                                                     </ui:Target.WaitForReady>
                                                   </ui:Target>
-                                                </ui:WaitUiElementAppear.Target>
-                                              </ui:WaitUiElementAppear>
+                                                </ui:GetAttribute.Target>
+                                              </ui:GetAttribute>
+                                              <If Condition="[strState.Contains(&quot;invisible&quot;)]" DisplayName="If dropdown not visible" sap:VirtualizedContainerService.HintSize="484,250.8" sap2010:WorkflowViewState.IdRef="If_6">
+                                                <If.Then>
+                                                  <Throw DisplayName="Throw SE - dropdown not visible" Exception="[new System.Exception(&quot;Lead officer dropdown not visible to select from&quot;)]" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="Throw_6" />
+                                                </If.Then>
+                                                <If.Else>
+                                                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </Sequence>
+                                                </If.Else>
+                                              </If>
+                                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484,53.2" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+                                                <ui:CommentOut.Body>
+                                                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,201.2" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Dropdown Open?" sap:VirtualizedContainerService.HintSize="368,106.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+                                                      <ui:WaitUiElementAppear.Target>
+                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e48a5a9c-4cdd-4052-9607-f1314fe48a67" InformativeScreenshot="b136270a096737a3d5a389fb09a6941f" Selector="&lt;wnd app='irs.exe' cls='ComboLBox'  /&gt;" TimeoutMS="1500">
+                                                          <ui:Target.WaitForReady>
+                                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                          </ui:Target.WaitForReady>
+                                                        </ui:Target>
+                                                      </ui:WaitUiElementAppear.Target>
+                                                    </ui:WaitUiElementAppear>
+                                                  </Sequence>
+                                                </ui:CommentOut.Body>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </ui:CommentOut>
                                             </Sequence>
                                           </ActivityAction>
                                         </ui:RetryScope.ActivityBody>
@@ -536,7 +667,7 @@
                                           <ActivityFunc x:TypeArguments="x:Boolean" />
                                         </ui:RetryScope.Condition>
                                       </ui:RetryScope>
-                                      <Assign DisplayName="Assign strLeadOfficer" sap:VirtualizedContainerService.HintSize="492,83" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                      <Assign DisplayName="Assign strLeadOfficer" sap:VirtualizedContainerService.HintSize="574,82.4" sap2010:WorkflowViewState.IdRef="Assign_3">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="x:String">[strLeadOfficer]</OutArgument>
                                         </Assign.To>
@@ -544,7 +675,7 @@
                                           <InArgument x:TypeArguments="x:String">[io_Config("Robot NIRS Account").ToString]</InArgument>
                                         </Assign.Value>
                                       </Assign>
-                                      <ui:SetFocus DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Set Focus on Dropdown Option" sap:VirtualizedContainerService.HintSize="492,107" sap2010:WorkflowViewState.IdRef="SetFocus_4">
+                                      <ui:SetFocus DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Set Focus on Dropdown Option" sap:VirtualizedContainerService.HintSize="574,106.8" sap2010:WorkflowViewState.IdRef="SetFocus_4">
                                         <ui:SetFocus.Target>
                                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f1868324-4366-4512-9923-c96f9625310b" InformativeScreenshot="31c228f34c3799fbd7b62289d3666561" Selector="&lt;wnd app='irs.exe' cls='ComboLBox'  /&gt;&lt;ctrl name='{{strLeadOfficer}}' role='list item' /&gt;">
                                             <ui:Target.TimeoutMS>
@@ -556,7 +687,7 @@
                                           </ui:Target>
                                         </ui:SetFocus.Target>
                                       </ui:SetFocus>
-                                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Lead Officer'" sap:VirtualizedContainerService.HintSize="492,107" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Lead Officer'" sap:VirtualizedContainerService.HintSize="574,106.8" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT">
                                         <ui:Click.CursorPosition>
                                           <ui:CursorPosition Position="Center">
                                             <ui:CursorPosition.OffsetX>
@@ -581,7 +712,162 @@
                                     </Sequence>
                                   </ui:BlockUserInput.Body>
                                 </ui:BlockUserInput>
-                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'No Attendance'" sap:VirtualizedContainerService.HintSize="590,107" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="657.6,53.2" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                                  <ui:CommentOut.Body>
+                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="705.6,2370.8" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="657.6,2276.4" sap2010:WorkflowViewState.IdRef="BlockUserInput_7" KeyModifiers="Alt" SpecialKey="True">
+                                        <ui:BlockUserInput.Body>
+                                          <Sequence DisplayName="Select &quot;Agency Impact&quot; Tab &amp; Enter Lead Officer" sap:VirtualizedContainerService.HintSize="622,2148.4" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                            <Sequence.Variables>
+                                              <Variable x:TypeArguments="x:Boolean" Name="boolAgencyImpactLoaded" />
+                                            </Sequence.Variables>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:ClickOCRText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="OCR Click &quot;Agency Impact&quot; Tab" sap:VirtualizedContainerService.HintSize="574,266" sap2010:WorkflowViewState.IdRef="ClickOCRText_6" KeyModifiers="None" MouseButton="BTN_LEFT" Occurrence="1" Text="Agency Impact">
+                                              <ui:ClickOCRText.CursorPosition>
+                                                <ui:CursorPosition Position="Center">
+                                                  <ui:CursorPosition.OffsetX>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:CursorPosition.OffsetX>
+                                                  <ui:CursorPosition.OffsetY>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:CursorPosition.OffsetY>
+                                                </ui:CursorPosition>
+                                              </ui:ClickOCRText.CursorPosition>
+                                              <ui:ClickOCRText.OCREngine>
+                                                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                                                  <ActivityFunc.Argument>
+                                                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                                  </ActivityFunc.Argument>
+                                                  <p:UiPathScreenOCR Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseAccents="{x:Null}" UseLocalServer="{x:Null}" ApiKey="Removed_Key" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" Endpoint="https://ocr.uipath.com" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_6" Image="[Image]" Language="auto" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
+                                                </ActivityFunc>
+                                              </ui:ClickOCRText.OCREngine>
+                                              <ui:ClickOCRText.Target>
+                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f8fc64e3-e146-4343-8310-f622b1cbbd2e" InformativeScreenshot="1cc3618fa5bc45e26aed399a34b6697e" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='*Event*' /&gt;&lt;wnd cls='TabStrip20WndClass' /&gt;">
+                                                  <ui:Target.TimeoutMS>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:Target.TimeoutMS>
+                                                  <ui:Target.WaitForReady>
+                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                  </ui:Target.WaitForReady>
+                                                </ui:Target>
+                                              </ui:ClickOCRText.Target>
+                                            </ui:ClickOCRText>
+                                            <ui:TextExists FormattedText="{x:Null}" sap2010:Annotation.AnnotationText="Element Exists is patchy in NIRS, doesn't require tabs to be visible to claim it &quot;exists&quot;. Text Exists is more reliable here.&#xD;&#xA;&#xD;&#xA;We do this just to slow the bot down a little and make sure elements have loaded properly before interacting with them." DisplayName="Text Exists - verify tab loaded" sap:VirtualizedContainerService.HintSize="574,282.8" sap2010:WorkflowViewState.IdRef="TextExists_1" Occurrence="1" Result="[boolAgencyImpactLoaded]" Text="Lead Officer">
+                                              <ui:TextExists.Target>
+                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="872cbeb4-eaa7-4df0-8878-f51e618d16dc" InformativeScreenshot="81bcc3c851c26e52f9640315cf4739eb" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' title='*Event*' /&gt;" TimeoutMS="5000">
+                                                  <ui:Target.WaitForReady>
+                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                  </ui:Target.WaitForReady>
+                                                </ui:Target>
+                                              </ui:TextExists.Target>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:TextExists>
+                                            <If Condition="[not boolAgencyImpactLoaded]" DisplayName="If &quot;Lead Officer&quot; text not found" sap:VirtualizedContainerService.HintSize="574,250.8" sap2010:WorkflowViewState.IdRef="If_4">
+                                              <If.Then>
+                                                <Throw DisplayName="Throw SE - agency impact tab exception" Exception="[new System.Exception(&quot;Could not verify that Agency Impact tab loaded&quot;)]" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="Throw_4" />
+                                              </If.Then>
+                                              <If.Else>
+                                                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </Sequence>
+                                              </If.Else>
+                                            </If>
+                                            <Assign DisplayName="Assign strLeadOfficer" sap:VirtualizedContainerService.HintSize="574,82.4" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:String">[strLeadOfficer]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:String">[io_Config("Robot NIRS Account").ToString]</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="574,63.2" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[strLeadOfficer]" />
+                                            <ui:RetryScope DisplayName="Retry Scope - select lead officer" sap:VirtualizedContainerService.HintSize="574,948.8" sap2010:WorkflowViewState.IdRef="RetryScope_5">
+                                              <ui:RetryScope.ActivityBody>
+                                                <ActivityAction>
+                                                  <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="532,771.2" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Items="{x:Null}" DisplayName="Select Item" sap:VirtualizedContainerService.HintSize="484,156" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="[strLeadOfficer]">
+                                                      <ui:SelectItem.Target>
+                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="474d80b9-ae6b-49ae-b643-ee2445d66010" InformativeScreenshot="f7430148f9eecd0cb287db148548db06" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' title='*Event*' /&gt;&lt;wnd cls='ThunderRT6FormDC' idx='1' title='Form1' /&gt;&lt;wnd cls='ThunderRT6ComboBox' /&gt;&lt;ctrl role='combo box' /&gt;">
+                                                          <ui:Target.TimeoutMS>
+                                                            <InArgument x:TypeArguments="x:Int32" />
+                                                          </ui:Target.TimeoutMS>
+                                                          <ui:Target.WaitForReady>
+                                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                          </ui:Target.WaitForReady>
+                                                        </ui:Target>
+                                                      </ui:SelectItem.Target>
+                                                    </ui:SelectItem>
+                                                    <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="selectedItem" DisplayName="Get Attribute - selected item" sap:VirtualizedContainerService.HintSize="484,206" sap2010:WorkflowViewState.IdRef="GetAttribute_2">
+                                                      <ui:GetAttribute.Result>
+                                                        <OutArgument x:TypeArguments="x:String">[strSelectedOfficer]</OutArgument>
+                                                      </ui:GetAttribute.Result>
+                                                      <ui:GetAttribute.Target>
+                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="27475353-a243-418f-845c-6a62969f09dd" InformativeScreenshot="3452a85caaf5c0e6363466f8f29cbf6f" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' title='*Event*' /&gt;&lt;wnd cls='ThunderRT6FormDC' idx='1' title='Form1' /&gt;&lt;wnd cls='ThunderRT6ComboBox' /&gt;&lt;ctrl role='combo box' /&gt;">
+                                                          <ui:Target.TimeoutMS>
+                                                            <InArgument x:TypeArguments="x:Int32" />
+                                                          </ui:Target.TimeoutMS>
+                                                          <ui:Target.WaitForReady>
+                                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                          </ui:Target.WaitForReady>
+                                                        </ui:Target>
+                                                      </ui:GetAttribute.Target>
+                                                    </ui:GetAttribute>
+                                                    <If Condition="[strSelectedOfficer &lt;&gt; strLeadOfficer]" DisplayName="If selected officer not lead officer" sap:VirtualizedContainerService.HintSize="484,250.8" sap2010:WorkflowViewState.IdRef="If_3">
+                                                      <If.Then>
+                                                        <Throw DisplayName="Throw SE - select lead officer exception" Exception="[new System.Exception(&quot;Could not verify that lead officer was selected&quot;)]" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                                                      </If.Then>
+                                                      <If.Else>
+                                                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                        </Sequence>
+                                                      </If.Else>
+                                                    </If>
+                                                  </Sequence>
+                                                </ActivityAction>
+                                              </ui:RetryScope.ActivityBody>
+                                              <ui:RetryScope.Condition>
+                                                <ActivityFunc x:TypeArguments="x:Boolean" />
+                                              </ui:RetryScope.Condition>
+                                            </ui:RetryScope>
+                                          </Sequence>
+                                        </ui:BlockUserInput.Body>
+                                      </ui:BlockUserInput>
+                                    </Sequence>
+                                  </ui:CommentOut.Body>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:CommentOut>
+                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'No Attendance'" sap:VirtualizedContainerService.HintSize="657.6,106.8" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT">
                                   <ui:Click.CursorPosition>
                                     <ui:CursorPosition Position="Center">
                                       <ui:CursorPosition.OffsetX>
@@ -609,19 +895,19 @@
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <av:Point x:Key="ShapeLocation">200,878.5</av:Point>
-                                      <av:Size x:Key="ShapeSize">200,83</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">300,961.5 300,1011.5</av:PointCollection>
+                                      <av:Size x:Key="ShapeSize">200,69.6</av:Size>
+                                      <av:PointCollection x:Key="ConnectorLocation">300,948.1 300,1011.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Sequence DisplayName="Enter Env. Impact Details" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                  <Sequence DisplayName="Enter Env. Impact Details" sap:VirtualizedContainerService.HintSize="200,69.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="486,500" sap2010:WorkflowViewState.IdRef="BlockUserInput_3" KeyModifiers="Alt" SpecialKey="True">
+                                    <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="451.6,448.4" sap2010:WorkflowViewState.IdRef="BlockUserInput_3" KeyModifiers="Alt" SpecialKey="True">
                                       <ui:BlockUserInput.Body>
-                                        <Sequence DisplayName="Select &quot;Env. Impact&quot; Tab" sap:VirtualizedContainerService.HintSize="450,372" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                        <Sequence DisplayName="Select &quot;Env. Impact&quot; Tab" sap:VirtualizedContainerService.HintSize="416,320.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
                                           <Sequence.Variables>
                                             <Variable x:TypeArguments="x:String" Name="strLeadOfficer" />
                                           </Sequence.Variables>
@@ -630,7 +916,7 @@
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:ClickOCRText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="OCR Click &quot;Env. Impact&quot; Tab" sap:VirtualizedContainerService.HintSize="388,261" sap2010:WorkflowViewState.IdRef="ClickOCRText_2" KeyModifiers="None" MouseButton="BTN_LEFT" Occurrence="1" Text="Env. Impact">
+                                          <ui:ClickOCRText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="OCR Click &quot;Env. Impact&quot; Tab" sap:VirtualizedContainerService.HintSize="368,226" sap2010:WorkflowViewState.IdRef="ClickOCRText_2" KeyModifiers="None" MouseButton="BTN_LEFT" Occurrence="1" Text="Env. Impact">
                                             <ui:ClickOCRText.CursorPosition>
                                               <ui:CursorPosition Position="Center">
                                                 <ui:CursorPosition.OffsetX>
@@ -646,7 +932,7 @@
                                                 <ActivityFunc.Argument>
                                                   <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
                                                 </ActivityFunc.Argument>
-                                                <p:UiPathScreenOCR Output="{x:Null}" Text="{x:Null}" ApiKey="Removed_Key" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" Endpoint="https://ocr.uipath.com" ExtractWords="True" sap:VirtualizedContainerService.HintSize="284,81" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_2" Image="[Image]" Language="auto" Profile="Screen" Scale="1" />
+                                                <p:UiPathScreenOCR Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseAccents="{x:Null}" UseLocalServer="{x:Null}" ApiKey="Removed_Key" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" Endpoint="https://ocr.uipath.com" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_2" Image="[Image]" Language="auto" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
                                               </ActivityFunc>
                                             </ui:ClickOCRText.OCREngine>
                                             <ui:ClickOCRText.Target>
@@ -663,7 +949,7 @@
                                         </Sequence>
                                       </ui:BlockUserInput.Body>
                                     </ui:BlockUserInput>
-                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'No' - Incident Substantiated" sap:VirtualizedContainerService.HintSize="486,107" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'No' - Incident Substantiated" sap:VirtualizedContainerService.HintSize="451.6,106.8" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                                       <ui:Click.CursorPosition>
                                         <ui:CursorPosition Position="Center">
                                           <ui:CursorPosition.OffsetX>
@@ -691,11 +977,11 @@
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <av:Point x:Key="ShapeLocation">200,1011.5</av:Point>
-                                          <av:Size x:Key="ShapeSize">200,83</av:Size>
-                                          <av:PointCollection x:Key="ConnectorLocation">300,1094.5 300,1144.5</av:PointCollection>
+                                          <av:Size x:Key="ShapeSize">200,69.6</av:Size>
+                                          <av:PointCollection x:Key="ConnectorLocation">300,1081.1 300,1144.5</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Sequence DisplayName="Enter Details" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                      <Sequence DisplayName="Enter Details" sap:VirtualizedContainerService.HintSize="200,69.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -728,7 +1014,7 @@
                                                     <ActivityFunc.Argument>
                                                       <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
                                                     </ActivityFunc.Argument>
-                                                    <p:UiPathScreenOCR Output="{x:Null}" Text="{x:Null}" ApiKey="Removed_Key" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" Endpoint="https://ocr.uipath.com" ExtractWords="True" sap:VirtualizedContainerService.HintSize="284,81" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_3" Image="[Image]" Language="auto" Profile="Screen" Scale="1" />
+                                                    <p:UiPathScreenOCR Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseAccents="{x:Null}" UseLocalServer="{x:Null}" ApiKey="Removed_Key" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" Endpoint="https://ocr.uipath.com" ExtractWords="True" sap:VirtualizedContainerService.HintSize="284,81" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_3" Image="[Image]" Language="auto" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
                                                   </ActivityFunc>
                                                 </ui:ClickOCRText.OCREngine>
                                                 <ui:ClickOCRText.Target>
@@ -763,19 +1049,19 @@
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <av:Point x:Key="ShapeLocation">200,1144.5</av:Point>
-                                              <av:Size x:Key="ShapeSize">200,83</av:Size>
-                                              <av:PointCollection x:Key="ConnectorLocation">300,1227.5 300,1277.5</av:PointCollection>
+                                              <av:Size x:Key="ShapeSize">200,69.6</av:Size>
+                                              <av:PointCollection x:Key="ConnectorLocation">300,1214.1 300,1277.5</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <Sequence DisplayName="Enter Review Details" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                          <Sequence DisplayName="Enter Review Details" sap:VirtualizedContainerService.HintSize="200,69.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="686,1778" sap2010:WorkflowViewState.IdRef="BlockUserInput_5" KeyModifiers="Alt" SpecialKey="True">
+                                            <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="671.6,1763.6" sap2010:WorkflowViewState.IdRef="BlockUserInput_5" KeyModifiers="Alt" SpecialKey="True">
                                               <ui:BlockUserInput.Body>
-                                                <Sequence DisplayName="Select &quot;Review&quot; Tab" sap:VirtualizedContainerService.HintSize="650,1650" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                                <Sequence DisplayName="Select &quot;Review&quot; Tab" sap:VirtualizedContainerService.HintSize="636,1635.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
                                                   <Sequence.Variables>
                                                     <Variable x:TypeArguments="x:String" Name="strLeadOfficer" />
                                                   </Sequence.Variables>
@@ -784,7 +1070,7 @@
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <ui:ClickOCRText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="OCR Click &quot;Review&quot; Tab" sap:VirtualizedContainerService.HintSize="588,261" sap2010:WorkflowViewState.IdRef="ClickOCRText_4" KeyModifiers="None" MouseButton="BTN_LEFT" Occurrence="1" Text="Review">
+                                                  <ui:ClickOCRText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="OCR Click &quot;Review&quot; Tab" sap:VirtualizedContainerService.HintSize="588,226" sap2010:WorkflowViewState.IdRef="ClickOCRText_4" KeyModifiers="None" MouseButton="BTN_LEFT" Occurrence="1" Text="Review">
                                                     <ui:ClickOCRText.CursorPosition>
                                                       <ui:CursorPosition Position="Center">
                                                         <ui:CursorPosition.OffsetX>
@@ -800,7 +1086,7 @@
                                                         <ActivityFunc.Argument>
                                                           <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
                                                         </ActivityFunc.Argument>
-                                                        <p:UiPathScreenOCR Output="{x:Null}" Text="{x:Null}" ApiKey="Removed_Key" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" Endpoint="https://ocr.uipath.com" ExtractWords="True" sap:VirtualizedContainerService.HintSize="284,81" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_4" Image="[Image]" Language="auto" Profile="Screen" Scale="1" />
+                                                        <p:UiPathScreenOCR Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseAccents="{x:Null}" UseLocalServer="{x:Null}" ApiKey="Removed_Key" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" Endpoint="https://ocr.uipath.com" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_4" Image="[Image]" Language="auto" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
                                                       </ActivityFunc>
                                                     </ui:ClickOCRText.OCREngine>
                                                     <ui:ClickOCRText.Target>
@@ -814,10 +1100,10 @@
                                                       </ui:Target>
                                                     </ui:ClickOCRText.Target>
                                                   </ui:ClickOCRText>
-                                                  <ui:RetryScope DisplayName="Retry Scope - Set Hot Debrief" sap:VirtualizedContainerService.HintSize="588,888" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="5" RetryInterval="00:00:00">
+                                                  <ui:RetryScope DisplayName="Retry Scope - Set Hot Debrief" sap:VirtualizedContainerService.HintSize="588,948.8" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="5" RetryInterval="00:00:00">
                                                     <ui:RetryScope.ActivityBody>
                                                       <ActivityAction>
-                                                        <Sequence DisplayName="Set Hot Debrief" sap:VirtualizedContainerService.HintSize="546,711" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                                        <Sequence DisplayName="Set Hot Debrief" sap:VirtualizedContainerService.HintSize="532,771.2" sap2010:WorkflowViewState.IdRef="Sequence_15">
                                                           <Sequence.Variables>
                                                             <Variable x:TypeArguments="x:String" Name="strValue" />
                                                           </Sequence.Variables>
@@ -826,7 +1112,7 @@
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type &quot;No&quot; - Hot Debrief" sap:VirtualizedContainerService.HintSize="484,135" sap2010:WorkflowViewState.IdRef="TypeInto_9" Text="N[k(enter)]">
+                                                          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type &quot;No&quot; - Hot Debrief" sap:VirtualizedContainerService.HintSize="484,156" sap2010:WorkflowViewState.IdRef="TypeInto_9" Text="N[k(enter)]">
                                                             <ui:TypeInto.Target>
                                                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="227ee117-dc3f-4ae7-bb13-2cc2e5ffd842" InformativeScreenshot="3d918c53150185ba803f5c81d127d1f2" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='*Event*' /&gt;&lt;wnd cls='ThunderRT6FormDC' idx='1' title='Form1' /&gt;&lt;wnd cls='ThunderRT6ComboBox' idx='3' /&gt;">
                                                                 <ui:Target.TimeoutMS>
@@ -838,7 +1124,7 @@
                                                               </ui:Target>
                                                             </ui:TypeInto.Target>
                                                           </ui:TypeInto>
-                                                          <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="text" DisplayName="Get &quot;Hot Debrief&quot; Value" sap:VirtualizedContainerService.HintSize="484,135" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
+                                                          <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="text" DisplayName="Get &quot;Hot Debrief&quot; Value" sap:VirtualizedContainerService.HintSize="484,206" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
                                                             <ui:GetAttribute.Result>
                                                               <OutArgument x:TypeArguments="x:String">[strValue]</OutArgument>
                                                             </ui:GetAttribute.Result>
@@ -853,9 +1139,9 @@
                                                               </ui:Target>
                                                             </ui:GetAttribute.Target>
                                                           </ui:GetAttribute>
-                                                          <If Condition="[strValue &lt;&gt; &quot;No&quot;]" DisplayName="Value Not Set Correctly?" sap:VirtualizedContainerService.HintSize="484,250" sap2010:WorkflowViewState.IdRef="If_2">
+                                                          <If Condition="[strValue &lt;&gt; &quot;No&quot;]" DisplayName="Value Not Set Correctly?" sap:VirtualizedContainerService.HintSize="484,250.8" sap2010:WorkflowViewState.IdRef="If_2">
                                                             <If.Then>
-                                                              <Throw Exception="[New SystemException(&quot;Hot Debrief value not set correctly.&quot;)]" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                                                              <Throw Exception="[New SystemException(&quot;Hot Debrief value not set correctly.&quot;)]" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="Throw_2" />
                                                             </If.Then>
                                                             <If.Else>
                                                               <Sequence sap2010:WorkflowViewState.IdRef="Sequence_16">
@@ -907,12 +1193,12 @@
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <av:Point x:Key="ShapeLocation">200,1277.5</av:Point>
-                                                  <av:Size x:Key="ShapeSize">200,53</av:Size>
+                                                  <av:Size x:Key="ShapeSize">200,53.2</av:Size>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input - Return to Activities Tab" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="BlockUserInput_6" KeyModifiers="Alt" SpecialKey="True">
+                                              <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input - Return to Activities Tab" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="BlockUserInput_6" KeyModifiers="Alt" SpecialKey="True">
                                                 <ui:BlockUserInput.Body>
-                                                  <Sequence DisplayName="Select &quot;Activities&quot; Tab" sap:VirtualizedContainerService.HintSize="450,372" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                                  <Sequence DisplayName="Select &quot;Activities&quot; Tab" sap:VirtualizedContainerService.HintSize="416,320.4" sap2010:WorkflowViewState.IdRef="Sequence_12">
                                                     <Sequence.Variables>
                                                       <Variable x:TypeArguments="x:String" Name="strLeadOfficer" />
                                                     </Sequence.Variables>
@@ -921,7 +1207,7 @@
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                    <ui:ClickOCRText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="OCR Click &quot;Activities&quot; Tab" sap:VirtualizedContainerService.HintSize="388,261" sap2010:WorkflowViewState.IdRef="ClickOCRText_5" KeyModifiers="None" MouseButton="BTN_LEFT" Occurrence="1" Text="Activities">
+                                                    <ui:ClickOCRText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="OCR Click &quot;Activities&quot; Tab" sap:VirtualizedContainerService.HintSize="368,226" sap2010:WorkflowViewState.IdRef="ClickOCRText_5" KeyModifiers="None" MouseButton="BTN_LEFT" Occurrence="1" Text="Activities">
                                                       <ui:ClickOCRText.CursorPosition>
                                                         <ui:CursorPosition Position="Center">
                                                           <ui:CursorPosition.OffsetX>
@@ -937,7 +1223,7 @@
                                                           <ActivityFunc.Argument>
                                                             <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
                                                           </ActivityFunc.Argument>
-                                                          <p:UiPathScreenOCR Output="{x:Null}" Text="{x:Null}" ApiKey="Removed_Key" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" Endpoint="https://ocr.uipath.com" ExtractWords="True" sap:VirtualizedContainerService.HintSize="284,81" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_5" Image="[Image]" Language="auto" Profile="Screen" Scale="1" />
+                                                          <p:UiPathScreenOCR Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseAccents="{x:Null}" UseLocalServer="{x:Null}" ApiKey="Removed_Key" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" Endpoint="https://ocr.uipath.com" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_5" Image="[Image]" Language="auto" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
                                                         </ActivityFunc>
                                                       </ui:ClickOCRText.OCREngine>
                                                       <ui:ClickOCRText.Target>

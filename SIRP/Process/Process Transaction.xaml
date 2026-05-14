@@ -13,7 +13,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1408.8,4639.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1102.8,4639.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Process_Transaction_2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -102,7 +102,6 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
@@ -111,6 +110,7 @@
       <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " sap:VirtualizedContainerService.HintSize="1067.6,4574.4" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -1241,7 +1241,7 @@
                                                                       <av:PointCollection x:Key="ConnectorLocation">700,2088.14 700,2118.14 699.75,2118.14 699.75,2176.5</av:PointCollection>
                                                                     </scg:Dictionary>
                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                  <Sequence DisplayName="Click &quot;Perform assessment yourself&quot;" sap:VirtualizedContainerService.HintSize="532,1080.8" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                                                                  <Sequence DisplayName="Click &quot;Perform assessment yourself&quot;" sap:VirtualizedContainerService.HintSize="200,69.6" sap2010:WorkflowViewState.IdRef="Sequence_57">
                                                                     <Sequence.Variables>
                                                                       <Variable x:TypeArguments="x:Boolean" Name="boolChecked" />
                                                                     </Sequence.Variables>
@@ -1250,7 +1250,7 @@
                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
-                                                                    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Max iterations = 3" DisplayName="Do While - click &quot;Perform assessment yourself&quot;" sap:VirtualizedContainerService.HintSize="484,699.6" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1" MaxIterations="3">
+                                                                    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Max iterations = 3" Condition="[not boolChecked]" DisplayName="Do While - click &quot;Perform assessment yourself&quot;" sap:VirtualizedContainerService.HintSize="484,699.6" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1" MaxIterations="3">
                                                                       <ui:InterruptibleDoWhile.Body>
                                                                         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,500.4" sap2010:WorkflowViewState.IdRef="Sequence_58">
                                                                           <sap:WorkflowViewStateService.ViewState>
@@ -1299,9 +1299,6 @@
                                                                           </ui:GetAttribute>
                                                                         </Sequence>
                                                                       </ui:InterruptibleDoWhile.Body>
-                                                                      <ui:InterruptibleDoWhile.Condition>
-                                                                        <mva:VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="not boolChecked" />
-                                                                      </ui:InterruptibleDoWhile.Condition>
                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1373,7 +1370,7 @@
                                                                                   <av:PointCollection x:Key="ConnectorLocation">690,2508.1 690,2538.1 807,2538.1 807,2571.5</av:PointCollection>
                                                                                 </scg:Dictionary>
                                                                               </sap:WorkflowViewStateService.ViewState>
-                                                                              <Sequence DisplayName="Create Notification" sap:VirtualizedContainerService.HintSize="532,1479.2" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                                                              <Sequence DisplayName="Create Notification" sap:VirtualizedContainerService.HintSize="200,69.6" sap2010:WorkflowViewState.IdRef="Sequence_16">
                                                                                 <Sequence.Variables>
                                                                                   <Variable x:TypeArguments="x:Boolean" Name="booValidationError" />
                                                                                 </Sequence.Variables>
@@ -1809,7 +1806,7 @@
                                                                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                                               </scg:Dictionary>
                                                                                                             </sap:WorkflowViewStateService.ViewState>
-                                                                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Next&quot; - Attendance" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_28" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                                                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Next&quot; - Attendance" sap:VirtualizedContainerService.HintSize="402,106.8" sap2010:WorkflowViewState.IdRef="Click_28" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                                                                                                               <ui:Click.CursorPosition>
                                                                                                                 <ui:CursorPosition Position="Center">
                                                                                                                   <ui:CursorPosition.OffsetX>
@@ -1831,7 +1828,7 @@
                                                                                                                 </ui:Target>
                                                                                                               </ui:Click.Target>
                                                                                                             </ui:Click>
-                                                                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;OK&quot; - Attendance Confirmation" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_29" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                                                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;OK&quot; - Attendance Confirmation" sap:VirtualizedContainerService.HintSize="402,106.8" sap2010:WorkflowViewState.IdRef="Click_29" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                                                                                                               <ui:Click.CursorPosition>
                                                                                                                 <ui:CursorPosition Position="Center">
                                                                                                                   <ui:CursorPosition.OffsetX>
@@ -1902,25 +1899,25 @@
                                                                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                                                           </scg:Dictionary>
                                                                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                                                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Search for NIRS ID workflow" sap:VirtualizedContainerService.HintSize="540,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Process\Process Subflows\Search for NIRS ID.xaml">
+                                                                                                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Search for NIRS ID workflow" sap:VirtualizedContainerService.HintSize="525.6,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Process\Process Subflows\Search for NIRS ID.xaml">
                                                                                                                           <ui:InvokeWorkflowFile.Arguments>
                                                                                                                             <InArgument x:TypeArguments="njl:JToken" x:Key="in_jtokDataObject">[in_jtokDataObject]</InArgument>
                                                                                                                             <InArgument x:TypeArguments="njl:JObject" x:Key="in_jobRoboticsJSON">[jobRoboticsJSON]</InArgument>
                                                                                                                             <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[io_Config]</InArgument>
                                                                                                                           </ui:InvokeWorkflowFile.Arguments>
                                                                                                                         </ui:InvokeWorkflowFile>
-                                                                                                                        <ui:RetryScope DisplayName="Retry Scope - Open Record for Closure" sap:VirtualizedContainerService.HintSize="540,866" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:00">
+                                                                                                                        <ui:RetryScope DisplayName="Retry Scope - Open Record for Closure" sap:VirtualizedContainerService.HintSize="525.6,833.2" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:00">
                                                                                                                           <ui:RetryScope.ActivityBody>
                                                                                                                             <ActivityAction>
-                                                                                                                              <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="498,689" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                                                                                                              <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="483.6,655.6" sap2010:WorkflowViewState.IdRef="Sequence_30">
                                                                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                                                                   </scg:Dictionary>
                                                                                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                                                                                <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="436,235" sap2010:WorkflowViewState.IdRef="BlockUserInput_3" KeyModifiers="Alt" SpecialKey="True">
+                                                                                                                                <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="435.6,234.8" sap2010:WorkflowViewState.IdRef="BlockUserInput_3" KeyModifiers="Alt" SpecialKey="True">
                                                                                                                                   <ui:BlockUserInput.Body>
-                                                                                                                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Results" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_50" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                                                                                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Results" sap:VirtualizedContainerService.HintSize="334,106.8" sap2010:WorkflowViewState.IdRef="Click_50" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                                                                                                       <ui:Click.CursorPosition>
                                                                                                                                         <ui:CursorPosition Position="Center">
                                                                                                                                           <ui:CursorPosition.OffsetX>
@@ -1949,7 +1946,7 @@
                                                                                                                                     </ui:Click>
                                                                                                                                   </ui:BlockUserInput.Body>
                                                                                                                                 </ui:BlockUserInput>
-                                                                                                                                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Enter" sap:VirtualizedContainerService.HintSize="436,156" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="enter" KeyModifiers="None" SpecialKey="True">
+                                                                                                                                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Enter" sap:VirtualizedContainerService.HintSize="435.6,155.6" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="enter" KeyModifiers="None" SpecialKey="True">
                                                                                                                                   <ui:SendHotkey.Target>
                                                                                                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="15dffcd9-ab26-47df-a015-961bb974b350" InformativeScreenshot="4f0c2979ca011a4f1a9e1f7fb89f4629" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='Incident Recording System*' /&gt;&lt;wnd cls='ListView20WndClass' /&gt;&lt;ctrl role='client' /&gt;">
                                                                                                                                       <ui:Target.TimeoutMS>
@@ -1961,7 +1958,7 @@
                                                                                                                                     </ui:Target>
                                                                                                                                   </ui:SendHotkey.Target>
                                                                                                                                 </ui:SendHotkey>
-                                                                                                                                <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Event Screen Open?" sap:VirtualizedContainerService.HintSize="436,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+                                                                                                                                <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Event Screen Open?" sap:VirtualizedContainerService.HintSize="435.6,106.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
                                                                                                                                   <ui:WaitUiElementAppear.Target>
                                                                                                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="231b79a0-3bc2-4fd6-ac8b-1fbd03cde895" InformativeScreenshot="f91c546cca476e66e3dfa5ad7d30c7b1" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='*Assessment of Event*' /&gt;&lt;wnd cls='ThunderRT6FormDC' title='Form1' /&gt;&lt;wnd cls='ThunderRT6CommandButton' title='Edit' /&gt;" TimeoutMS="2000">
                                                                                                                                       <ui:Target.WaitForReady>
@@ -1993,7 +1990,7 @@
                                                                                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                                                               </scg:Dictionary>
                                                                                                                             </sap:WorkflowViewStateService.ViewState>
-                                                                                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Next&quot; - Notification Tab" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_37" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                                                                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Next&quot; - Notification Tab" sap:VirtualizedContainerService.HintSize="402,106.8" sap2010:WorkflowViewState.IdRef="Click_37" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                                                                                                                               <ui:Click.CursorPosition>
                                                                                                                                 <ui:CursorPosition Position="Center">
                                                                                                                                   <ui:CursorPosition.OffsetX>
@@ -2015,7 +2012,7 @@
                                                                                                                                 </ui:Target>
                                                                                                                               </ui:Click.Target>
                                                                                                                             </ui:Click>
-                                                                                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Next&quot; - Details Tab" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_38" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                                                                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Next&quot; - Details Tab" sap:VirtualizedContainerService.HintSize="402,106.8" sap2010:WorkflowViewState.IdRef="Click_38" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                                                                                                                               <ui:Click.CursorPosition>
                                                                                                                                 <ui:CursorPosition Position="Center">
                                                                                                                                   <ui:CursorPosition.OffsetX>
@@ -2037,7 +2034,7 @@
                                                                                                                                 </ui:Target>
                                                                                                                               </ui:Click.Target>
                                                                                                                             </ui:Click>
-                                                                                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Next&quot; - Location Tab" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_39" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                                                                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Next&quot; - Location Tab" sap:VirtualizedContainerService.HintSize="402,106.8" sap2010:WorkflowViewState.IdRef="Click_39" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                                                                                                                               <ui:Click.CursorPosition>
                                                                                                                                 <ui:CursorPosition Position="Center">
                                                                                                                                   <ui:CursorPosition.OffsetX>
@@ -2130,7 +2127,7 @@
                                                                                                                                               <av:Size x:Key="ShapeSize">200,69.6</av:Size>
                                                                                                                                             </scg:Dictionary>
                                                                                                                                           </sap:WorkflowViewStateService.ViewState>
-                                                                                                                                          <Sequence DisplayName="Submit Record Closure" sap:VirtualizedContainerService.HintSize="200,69.6" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                                                                                                                          <Sequence DisplayName="Submit Record Closure" sap:VirtualizedContainerService.HintSize="1784.4,1550.8" sap2010:WorkflowViewState.IdRef="Sequence_27">
                                                                                                                                             <Sequence.Variables>
                                                                                                                                               <Variable x:TypeArguments="x:Boolean" Name="booSpellCheck" />
                                                                                                                                             </Sequence.Variables>
@@ -2139,7 +2136,7 @@
                                                                                                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                                                                               </scg:Dictionary>
                                                                                                                                             </sap:WorkflowViewStateService.ViewState>
-                                                                                                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Set Response Complete&quot;" sap:VirtualizedContainerService.HintSize="829,107" sap2010:WorkflowViewState.IdRef="Click_40" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                                                                                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Set Response Complete&quot;" sap:VirtualizedContainerService.HintSize="1736.4,106.8" sap2010:WorkflowViewState.IdRef="Click_40" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                                                                                                                                               <ui:Click.CursorPosition>
                                                                                                                                                 <ui:CursorPosition Position="Center">
                                                                                                                                                   <ui:CursorPosition.OffsetX>
@@ -2161,7 +2158,7 @@
                                                                                                                                                 </ui:Target>
                                                                                                                                               </ui:Click.Target>
                                                                                                                                             </ui:Click>
-                                                                                                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Yes&quot; - Complete Confirmation" sap:VirtualizedContainerService.HintSize="829,107" sap2010:WorkflowViewState.IdRef="Click_41" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                                                                                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Yes&quot; - Complete Confirmation" sap:VirtualizedContainerService.HintSize="1736.4,106.8" sap2010:WorkflowViewState.IdRef="Click_41" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                                                                                                                                               <ui:Click.CursorPosition>
                                                                                                                                                 <ui:CursorPosition Position="Center">
                                                                                                                                                   <ui:CursorPosition.OffsetX>
@@ -2183,24 +2180,35 @@
                                                                                                                                                 </ui:Target>
                                                                                                                                               </ui:Click.Target>
                                                                                                                                             </ui:Click>
-                                                                                                                                            <ui:UiElementExists DisplayName="Check for Spell Check Failure" Exists="[booSpellCheck]" sap:VirtualizedContainerService.HintSize="829,107" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
-                                                                                                                                              <ui:UiElementExists.Target>
-                                                                                                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="78785b57-d3a2-4af9-8492-7bced2a64a05" InformativeScreenshot="f97aa459bf9690fce07134d0908e3b76" Selector="&lt;wnd app='winword.exe' cls='bosa_sdm_msword'  title='Spelling: English (United States)' /&gt;" TimeoutMS="5000">
-                                                                                                                                                  <ui:Target.WaitForReady>
-                                                                                                                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                                                                                                                  </ui:Target.WaitForReady>
-                                                                                                                                                </ui:Target>
-                                                                                                                                              </ui:UiElementExists.Target>
-                                                                                                                                            </ui:UiElementExists>
-                                                                                                                                            <If Condition="[booSpellCheck]" DisplayName="Spell Check Failure?" sap:VirtualizedContainerService.HintSize="829,527" sap2010:WorkflowViewState.IdRef="If_4">
-                                                                                                                                              <If.Then>
-                                                                                                                                                <Sequence DisplayName="Close Spell Check &amp; Throw BRE" sap:VirtualizedContainerService.HintSize="450,365" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                                                                                                                            <Pick DisplayName="Pick - spell check" sap:VirtualizedContainerService.HintSize="1736.4,674.4" sap2010:WorkflowViewState.IdRef="Pick_1">
+                                                                                                                                              <PickBranch DisplayName="Default" sap:VirtualizedContainerService.HintSize="249.6,627.6" sap2010:WorkflowViewState.IdRef="PickBranch_1">
+                                                                                                                                                <PickBranch.Trigger>
+                                                                                                                                                  <Delay DisplayName="Delay - timeout" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                                                                                                                                                </PickBranch.Trigger>
+                                                                                                                                                <Throw DisplayName="Throw SE - no spell check" Exception="[new SystemException(&quot;Unrecognised automated spell check result&quot;)]" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="Throw_10" />
+                                                                                                                                              </PickBranch>
+                                                                                                                                              <PickBranch DisplayName="Spell check failure" sap:VirtualizedContainerService.HintSize="465.6,627.6" sap2010:WorkflowViewState.IdRef="PickBranch_2">
+                                                                                                                                                <PickBranch.Trigger>
+                                                                                                                                                  <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Spell check failure" sap:VirtualizedContainerService.HintSize="334,86.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_8">
+                                                                                                                                                    <ui:WaitUiElementAppear.Target>
+                                                                                                                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8dc72ab9-3cd1-4b49-9342-67d5506161fd" Selector="&lt;wnd app='winword.exe' cls='bosa_sdm_msword'  title='Spelling: English (United States)' /&gt;">
+                                                                                                                                                        <ui:Target.TimeoutMS>
+                                                                                                                                                          <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                                                        </ui:Target.TimeoutMS>
+                                                                                                                                                        <ui:Target.WaitForReady>
+                                                                                                                                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                                                                                                        </ui:Target.WaitForReady>
+                                                                                                                                                      </ui:Target>
+                                                                                                                                                    </ui:WaitUiElementAppear.Target>
+                                                                                                                                                  </ui:WaitUiElementAppear>
+                                                                                                                                                </PickBranch.Trigger>
+                                                                                                                                                <Sequence DisplayName="Cancel spell check and click OK" sap:VirtualizedContainerService.HintSize="416,340" sap2010:WorkflowViewState.IdRef="Sequence_62">
                                                                                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                                                                                     </scg:Dictionary>
                                                                                                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                                                                                                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Cancel&quot; - Spell Check" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_43" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                                                                                                                                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Cancel&quot; - Spell Check" sap:VirtualizedContainerService.HintSize="368,106.8" sap2010:WorkflowViewState.IdRef="Click_64" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                                                                                                                                                     <ui:Click.CursorPosition>
                                                                                                                                                       <ui:CursorPosition Position="Center">
                                                                                                                                                         <ui:CursorPosition.OffsetX>
@@ -2222,7 +2230,7 @@
                                                                                                                                                       </ui:Target>
                                                                                                                                                     </ui:Click.Target>
                                                                                                                                                   </ui:Click>
-                                                                                                                                                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;OK&quot; - Spell Check Completion" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_44" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                                                                                                                                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;OK&quot; - Spell Check Completion" sap:VirtualizedContainerService.HintSize="368,106.8" sap2010:WorkflowViewState.IdRef="Click_65" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                                                                                                                                                     <ui:Click.CursorPosition>
                                                                                                                                                       <ui:CursorPosition Position="Center">
                                                                                                                                                         <ui:CursorPosition.OffsetX>
@@ -2245,9 +2253,23 @@
                                                                                                                                                     </ui:Click.Target>
                                                                                                                                                   </ui:Click>
                                                                                                                                                 </Sequence>
-                                                                                                                                              </If.Then>
-                                                                                                                                              <If.Else>
-                                                                                                                                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;OK&quot; - Spell Check Completion" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_45" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                                                                                                                              </PickBranch>
+                                                                                                                                              <PickBranch DisplayName="Spell check completion" sap:VirtualizedContainerService.HintSize="383.6,627.6" sap2010:WorkflowViewState.IdRef="PickBranch_3">
+                                                                                                                                                <PickBranch.Trigger>
+                                                                                                                                                  <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Spell check completion" sap:VirtualizedContainerService.HintSize="334,86.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_9">
+                                                                                                                                                    <ui:WaitUiElementAppear.Target>
+                                                                                                                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="29ddc320-f933-4b97-b011-b4ad6f2e0df8" Selector="&lt;wnd app='irs.exe' cls='#32770' title='Notification Details' /&gt;&lt;wnd ctrlid='2' title='OK' /&gt;">
+                                                                                                                                                        <ui:Target.TimeoutMS>
+                                                                                                                                                          <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                                                        </ui:Target.TimeoutMS>
+                                                                                                                                                        <ui:Target.WaitForReady>
+                                                                                                                                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                                                                                                        </ui:Target.WaitForReady>
+                                                                                                                                                      </ui:Target>
+                                                                                                                                                    </ui:WaitUiElementAppear.Target>
+                                                                                                                                                  </ui:WaitUiElementAppear>
+                                                                                                                                                </PickBranch.Trigger>
+                                                                                                                                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;OK&quot; - Spell Check Completion" sap:VirtualizedContainerService.HintSize="334,106.8" sap2010:WorkflowViewState.IdRef="Click_63" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                                                                                                                                                   <ui:Click.CursorPosition>
                                                                                                                                                     <ui:CursorPosition Position="Center">
                                                                                                                                                       <ui:CursorPosition.OffsetX>
@@ -2269,9 +2291,152 @@
                                                                                                                                                     </ui:Target>
                                                                                                                                                   </ui:Click.Target>
                                                                                                                                                 </ui:Click>
-                                                                                                                                              </If.Else>
-                                                                                                                                            </If>
-                                                                                                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Event Closure&quot;" sap:VirtualizedContainerService.HintSize="829,107" sap2010:WorkflowViewState.IdRef="Click_46" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                                                                                                                              </PickBranch>
+                                                                                                                                              <PickBranch DisplayName="Missing component" sap:VirtualizedContainerService.HintSize="383.6,627.6" sap2010:WorkflowViewState.IdRef="PickBranch_4">
+                                                                                                                                                <PickBranch.Trigger>
+                                                                                                                                                  <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Missing component" sap:VirtualizedContainerService.HintSize="334,86.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_10">
+                                                                                                                                                    <ui:WaitUiElementAppear.Target>
+                                                                                                                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="290cf5a6-4aa0-4dbf-9ee9-c6797fa1e43c" Selector="&lt;wnd app='irs.exe' cls='#32770' title='Spell Check Error' /&gt;&lt;wnd ctrlid='2' title='OK' /&gt;">
+                                                                                                                                                        <ui:Target.TimeoutMS>
+                                                                                                                                                          <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                                                        </ui:Target.TimeoutMS>
+                                                                                                                                                        <ui:Target.WaitForReady>
+                                                                                                                                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                                                                                                        </ui:Target.WaitForReady>
+                                                                                                                                                      </ui:Target>
+                                                                                                                                                    </ui:WaitUiElementAppear.Target>
+                                                                                                                                                  </ui:WaitUiElementAppear>
+                                                                                                                                                </PickBranch.Trigger>
+                                                                                                                                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;OK&quot; - missing component" sap:VirtualizedContainerService.HintSize="334,106.8" sap2010:WorkflowViewState.IdRef="Click_66" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                                                                                                                  <ui:Click.CursorPosition>
+                                                                                                                                                    <ui:CursorPosition Position="Center">
+                                                                                                                                                      <ui:CursorPosition.OffsetX>
+                                                                                                                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                                                      </ui:CursorPosition.OffsetX>
+                                                                                                                                                      <ui:CursorPosition.OffsetY>
+                                                                                                                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                                                      </ui:CursorPosition.OffsetY>
+                                                                                                                                                    </ui:CursorPosition>
+                                                                                                                                                  </ui:Click.CursorPosition>
+                                                                                                                                                  <ui:Click.Target>
+                                                                                                                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a0ab7c8f-e4cd-488a-9786-d6eefdf8e46a" InformativeScreenshot="2baef17c46158709ba5830dd04ccc77d" Selector="&lt;wnd app='irs.exe' cls='#32770' title='Spell Check Error' /&gt;&lt;wnd ctrlid='2' title='OK' /&gt;">
+                                                                                                                                                      <ui:Target.TimeoutMS>
+                                                                                                                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                                                      </ui:Target.TimeoutMS>
+                                                                                                                                                      <ui:Target.WaitForReady>
+                                                                                                                                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                                                                                                      </ui:Target.WaitForReady>
+                                                                                                                                                    </ui:Target>
+                                                                                                                                                  </ui:Click.Target>
+                                                                                                                                                </ui:Click>
+                                                                                                                                              </PickBranch>
+                                                                                                                                            </Pick>
+                                                                                                                                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1736.4,53.2" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                                                                                                                                              <ui:CommentOut.Body>
+                                                                                                                                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="842.4,733.6" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                                                                                                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                                                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                                                                    </scg:Dictionary>
+                                                                                                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                                                                                                  <ui:UiElementExists DisplayName="Check for Spell Check Failure" Exists="[booSpellCheck]" sap:VirtualizedContainerService.HintSize="794.4,106.8" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
+                                                                                                                                                    <ui:UiElementExists.Target>
+                                                                                                                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="78785b57-d3a2-4af9-8492-7bced2a64a05" InformativeScreenshot="f97aa459bf9690fce07134d0908e3b76" Selector="&lt;wnd app='winword.exe' cls='bosa_sdm_msword'  title='Spelling: English (United States)' /&gt;" TimeoutMS="5000">
+                                                                                                                                                        <ui:Target.WaitForReady>
+                                                                                                                                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                                                                                                        </ui:Target.WaitForReady>
+                                                                                                                                                      </ui:Target>
+                                                                                                                                                    </ui:UiElementExists.Target>
+                                                                                                                                                  </ui:UiElementExists>
+                                                                                                                                                  <If Condition="[booSpellCheck]" DisplayName="Spell Check Failure?" sap:VirtualizedContainerService.HintSize="794.4,500.4" sap2010:WorkflowViewState.IdRef="If_4">
+                                                                                                                                                    <If.Then>
+                                                                                                                                                      <Sequence DisplayName="Close Spell Check &amp; Throw BRE" sap:VirtualizedContainerService.HintSize="416,340" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                                                                                                                                        <sap:WorkflowViewStateService.ViewState>
+                                                                                                                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                                                                          </scg:Dictionary>
+                                                                                                                                                        </sap:WorkflowViewStateService.ViewState>
+                                                                                                                                                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Cancel&quot; - Spell Check" sap:VirtualizedContainerService.HintSize="368,106.8" sap2010:WorkflowViewState.IdRef="Click_43" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                                                                                                                                          <ui:Click.CursorPosition>
+                                                                                                                                                            <ui:CursorPosition Position="Center">
+                                                                                                                                                              <ui:CursorPosition.OffsetX>
+                                                                                                                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                                                              </ui:CursorPosition.OffsetX>
+                                                                                                                                                              <ui:CursorPosition.OffsetY>
+                                                                                                                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                                                              </ui:CursorPosition.OffsetY>
+                                                                                                                                                            </ui:CursorPosition>
+                                                                                                                                                          </ui:Click.CursorPosition>
+                                                                                                                                                          <ui:Click.Target>
+                                                                                                                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d010a56e-3026-41b2-a96c-9c1357fdf38c" InformativeScreenshot="affb888bd62e8e93ba62f28b3bdf2418" Selector="&lt;wnd app='winword.exe' cls='bosa_sdm_msword'  title='Spelling: English (United States)' /&gt;&lt;ctrl idx='1' name='Cancel' role='push button' /&gt;">
+                                                                                                                                                              <ui:Target.TimeoutMS>
+                                                                                                                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                                                              </ui:Target.TimeoutMS>
+                                                                                                                                                              <ui:Target.WaitForReady>
+                                                                                                                                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                                                                                                              </ui:Target.WaitForReady>
+                                                                                                                                                            </ui:Target>
+                                                                                                                                                          </ui:Click.Target>
+                                                                                                                                                        </ui:Click>
+                                                                                                                                                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;OK&quot; - Spell Check Completion" sap:VirtualizedContainerService.HintSize="368,106.8" sap2010:WorkflowViewState.IdRef="Click_44" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                                                                                                                                          <ui:Click.CursorPosition>
+                                                                                                                                                            <ui:CursorPosition Position="Center">
+                                                                                                                                                              <ui:CursorPosition.OffsetX>
+                                                                                                                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                                                              </ui:CursorPosition.OffsetX>
+                                                                                                                                                              <ui:CursorPosition.OffsetY>
+                                                                                                                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                                                              </ui:CursorPosition.OffsetY>
+                                                                                                                                                            </ui:CursorPosition>
+                                                                                                                                                          </ui:Click.CursorPosition>
+                                                                                                                                                          <ui:Click.Target>
+                                                                                                                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2315ee8a-a341-4c7c-b63a-d3d98b2a797e" InformativeScreenshot="caaebd944bd5abe4340ad5fb3859b3a9" Selector="&lt;wnd app='irs.exe' cls='#32770'  title='Notification Details' /&gt;&lt;wnd ctrlid='2' title='OK' /&gt;">
+                                                                                                                                                              <ui:Target.TimeoutMS>
+                                                                                                                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                                                              </ui:Target.TimeoutMS>
+                                                                                                                                                              <ui:Target.WaitForReady>
+                                                                                                                                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                                                                                                              </ui:Target.WaitForReady>
+                                                                                                                                                            </ui:Target>
+                                                                                                                                                          </ui:Click.Target>
+                                                                                                                                                        </ui:Click>
+                                                                                                                                                      </Sequence>
+                                                                                                                                                    </If.Then>
+                                                                                                                                                    <If.Else>
+                                                                                                                                                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;OK&quot; - Spell Check Completion" sap:VirtualizedContainerService.HintSize="334,106.8" sap2010:WorkflowViewState.IdRef="Click_45" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                                                                                                                                        <ui:Click.CursorPosition>
+                                                                                                                                                          <ui:CursorPosition Position="Center">
+                                                                                                                                                            <ui:CursorPosition.OffsetX>
+                                                                                                                                                              <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                                                            </ui:CursorPosition.OffsetX>
+                                                                                                                                                            <ui:CursorPosition.OffsetY>
+                                                                                                                                                              <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                                                            </ui:CursorPosition.OffsetY>
+                                                                                                                                                          </ui:CursorPosition>
+                                                                                                                                                        </ui:Click.CursorPosition>
+                                                                                                                                                        <ui:Click.Target>
+                                                                                                                                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2315ee8a-a341-4c7c-b63a-d3d98b2a797e" InformativeScreenshot="caaebd944bd5abe4340ad5fb3859b3a9" Selector="&lt;wnd app='irs.exe' cls='#32770'  title='Notification Details' /&gt;&lt;wnd ctrlid='2' title='OK' /&gt;">
+                                                                                                                                                            <ui:Target.TimeoutMS>
+                                                                                                                                                              <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                                                            </ui:Target.TimeoutMS>
+                                                                                                                                                            <ui:Target.WaitForReady>
+                                                                                                                                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                                                                                                            </ui:Target.WaitForReady>
+                                                                                                                                                          </ui:Target>
+                                                                                                                                                        </ui:Click.Target>
+                                                                                                                                                      </ui:Click>
+                                                                                                                                                    </If.Else>
+                                                                                                                                                  </If>
+                                                                                                                                                </Sequence>
+                                                                                                                                              </ui:CommentOut.Body>
+                                                                                                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                                                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                                                                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                                                                                </scg:Dictionary>
+                                                                                                                                              </sap:WorkflowViewStateService.ViewState>
+                                                                                                                                            </ui:CommentOut>
+                                                                                                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Event Closure&quot;" sap:VirtualizedContainerService.HintSize="1736.4,106.8" sap2010:WorkflowViewState.IdRef="Click_46" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                                                                                                                                               <ui:Click.CursorPosition>
                                                                                                                                                 <ui:CursorPosition Position="Center">
                                                                                                                                                   <ui:CursorPosition.OffsetX>
@@ -2293,7 +2458,7 @@
                                                                                                                                                 </ui:Target>
                                                                                                                                               </ui:Click.Target>
                                                                                                                                             </ui:Click>
-                                                                                                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;OK&quot; - Event Closure Confirmation" sap:VirtualizedContainerService.HintSize="829,107" sap2010:WorkflowViewState.IdRef="Click_47" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                                                                                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;OK&quot; - Event Closure Confirmation" sap:VirtualizedContainerService.HintSize="1736.4,106.8" sap2010:WorkflowViewState.IdRef="Click_47" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                                                                                                                                               <ui:Click.CursorPosition>
                                                                                                                                                 <ui:CursorPosition Position="Center">
                                                                                                                                                   <ui:CursorPosition.OffsetX>
@@ -2315,7 +2480,7 @@
                                                                                                                                                 </ui:Target>
                                                                                                                                               </ui:Click.Target>
                                                                                                                                             </ui:Click>
-                                                                                                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;OK&quot; - Close Event Window" sap:VirtualizedContainerService.HintSize="829,107" sap2010:WorkflowViewState.IdRef="Click_48" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                                                                                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;OK&quot; - Close Event Window" sap:VirtualizedContainerService.HintSize="1736.4,106.8" sap2010:WorkflowViewState.IdRef="Click_48" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                                                                                                                                               <ui:Click.CursorPosition>
                                                                                                                                                 <ui:CursorPosition Position="Center">
                                                                                                                                                   <ui:CursorPosition.OffsetX>
