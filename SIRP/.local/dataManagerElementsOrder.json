@@ -211,6 +211,9 @@
       "Path": "Process/Process Transaction.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "boolSubmitMapTabLoaded&Sequence_7",
+        "bool10kMapWarning&Sequence_7",
+        "boolChecked&Sequence_57",
         "mySerializeSetting&Sequence_1",
         "booDuplicatesLoaded&Sequence_41",
         "booSpellCheck&Sequence_27",
@@ -440,6 +443,12 @@
       "Path": "Process/Process Subflows/Enter Closure Details.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "strState&Sequence_14",
+        "strState&Sequence_13",
+        "boolAgencyImpactLoaded&Sequence_5",
+        "boolAgencyImpactLoaded&Sequence_17",
+        "strSelectedOfficer&Sequence_4",
+        "strLeadOfficer&Sequence_4",
         "strValue&Sequence_15",
         "strLeadOfficer&Sequence_12",
         "strLeadOfficer&Sequence_10",
@@ -571,17 +580,6 @@
       "Path": "Process/Process Subflows/tc01 Reset NIRS.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
-      "ArgumentsSectionElementsOrder": [],
-      "ConstantsSectionElementsOrder": null,
-      "AddedNamespaces": null
-    },
-    {
-      "Path": "Sequence.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "boolVisible&Sequence_1",
-        "vis&Sequence_1"
-      ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
