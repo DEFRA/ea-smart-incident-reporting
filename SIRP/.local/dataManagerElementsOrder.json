@@ -64,68 +64,6 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Framework/InitAllApplications OLD.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "browsHorizonConfirmation&TryCatch_24",
-        "credMicrosoft&Sequence_182",
-        "credHorizon&Sequence_182",
-        "strIdentityPlatformURL&Sequence_182",
-        "strAppSelection&Sequence_182",
-        "strNIRSInstance&Sequence_182",
-        "credVMWare&Sequence_208",
-        "strHorizonInstance&Sequence_208",
-        "booModalForm&Sequence_208",
-        "secPassword&Sequence_209",
-        "strUsername&Sequence_209",
-        "secPassword&Sequence_210",
-        "strUsername&Sequence_210",
-        "credVMWare&Sequence_211",
-        "strHorizonInstance&Sequence_211",
-        "booModalForm&Sequence_211",
-        "secPassword&Sequence_212",
-        "strUsername&Sequence_212",
-        "secPassword&Sequence_213",
-        "strUsername&Sequence_213",
-        "strUsername&Sequence_200",
-        "secPassword&Sequence_200",
-        "booObjectVar&Sequence_199",
-        "browsLogin&Sequence_182",
-        "booLogoutPrompt&Sequence_182",
-        "browsIdentity&Sequence_182",
-        "booMicrosoftLogin&Sequence_183",
-        "booAccountPopulated&Sequence_183",
-        "strEmail&Sequence_184",
-        "booIdentityLogin&Sequence_185",
-        "booDomainSelection&Sequence_185",
-        "booObjectVar&Sequence_188",
-        "booCancelConfirm&Sequence_179",
-        "strRobotStatusId&Flowchart_3",
-        "jBody&Sequence_177",
-        "strRecordResponse&Sequence_177",
-        "intRecordResponseStatus&Sequence_177",
-        "strSelfHeal&Flowchart_3",
-        "strRobotActive&Flowchart_3",
-        "strOAuth2Response&Sequence_161",
-        "intOAuthResponseStatus&Sequence_161",
-        "credDataverse&Sequence_161",
-        "objOAuth2Response&Sequence_161",
-        "strRecordResponse&Sequence_162",
-        "intRecordResponseStatus&Sequence_162",
-        "objRecordResponse&Sequence_162",
-        "jarRecordResponse&Sequence_162",
-        "strMachineName&Flowchart_3",
-        "strToken&Flowchart_3",
-        "browsNIRSLaunch&Flowchart_3",
-        "collProcesses&Flowchart_3"
-      ],
-      "ArgumentsSectionElementsOrder": [
-        "io_Config"
-      ],
-      "ConstantsSectionElementsOrder": null,
-      "AddedNamespaces": null
-    },
-    {
       "Path": "Framework/SetTransactionStatus.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
@@ -307,16 +245,6 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Framework/KillAllProcesses.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
-      "ArgumentsSectionElementsOrder": [
-        "in_Config"
-      ],
-      "ConstantsSectionElementsOrder": null,
-      "AddedNamespaces": null
-    },
-    {
       "Path": "Framework/CloseAllApplications.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
@@ -332,13 +260,14 @@
       "Path": "Process/Process Subflows/Reset NIRS.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "booNIRSOpen&Sequence_1",
-        "booExtOrgBox&Sequence_2",
-        "booContactLookupBox&Sequence_9",
-        "booDialogBox&Sequence_2",
+        "booHomePage&Sequence_1",
         "intLoopCounter&Sequence_1",
+        "booNIRSOpen&Sequence_1",
         "booCancelConfirm&Sequence_2",
-        "booHomePage&Sequence_1"
+        "booExtOrgBox&Sequence_2",
+        "booDialogBox&Sequence_2",
+        "booContactLookupBox&Sequence_9",
+        "booException&Sequence_2"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": null,
@@ -548,8 +477,7 @@
         "booCancelConfirm&Sequence_179",
         "jBody&Sequence_177",
         "strRecordResponse&Sequence_177",
-        "intRecordResponseStatus&Sequence_177",
-        "dictConfig&Sequence_1"
+        "intRecordResponseStatus&Sequence_177"
       ],
       "ArgumentsSectionElementsOrder": [
         "io_Config"
@@ -558,30 +486,12 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Framework/KillAllProcesses NEW.xaml",
+      "Path": "Framework/KillAllProcesses.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
         "in_Config"
       ],
-      "ConstantsSectionElementsOrder": null,
-      "AddedNamespaces": null
-    },
-    {
-      "Path": "Framework/tc01 InitAllApplications NEW.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "dictConfig&Sequence_1"
-      ],
-      "ArgumentsSectionElementsOrder": [],
-      "ConstantsSectionElementsOrder": null,
-      "AddedNamespaces": null
-    },
-    {
-      "Path": "Process/Process Subflows/tc01 Reset NIRS.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
-      "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
     }
