@@ -443,6 +443,7 @@
       "Path": "Process/Process Subflows/Enter Closure Details.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "sstrOCRKey&Flowchart_1",
         "strState&Sequence_14",
         "strState&Sequence_13",
         "boolAgencyImpactLoaded&Sequence_5",

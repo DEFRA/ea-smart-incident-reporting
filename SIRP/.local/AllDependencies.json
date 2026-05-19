@@ -11370,9 +11370,9 @@
     "restore": {
       "projectUniqueName": "SIRP",
       "projectName": "SIRP",
-      "projectPath": "C:\\Users\\rm000121\\Documents\\GitHub\\ea-smart-incident-reporting\\SIRP\\.local",
+      "projectPath": "C:\\Users\\rm000121\\OneDrive - Defra\\UiPath\\ea-smart-incident-reporting\\SIRP\\.local",
       "packagesPath": "C:\\Users\\rm000121\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rm000121\\Documents\\GitHub\\ea-smart-incident-reporting\\SIRP\\.local"
+      "outputPath": "C:\\Users\\rm000121\\OneDrive - Defra\\UiPath\\ea-smart-incident-reporting\\SIRP\\.local"
     },
     "frameworks": {
       "net461": {
