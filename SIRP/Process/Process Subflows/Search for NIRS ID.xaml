@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1170,1033.5</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1408.8,702</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Search_for_NIRS_ID_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -41,6 +41,10 @@
       <x:String>System.Reflection</x:String>
       <x:String>Newtonsoft.Json</x:String>
       <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -79,174 +83,37 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="Search_for_NIRS_ID" sap:VirtualizedContainerService.HintSize="634,968.5" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="Search_for_NIRS_ID" sap:VirtualizedContainerService.HintSize="634,701.6" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="strSearchOpen" />
       <Variable x:TypeArguments="x:String" Name="strFilterStatus" />
+      <Variable x:TypeArguments="x:Boolean" Name="boolSearchExists" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        <av:Point x:Key="ShapeLocation">260,2.5</av:Point>
-        <av:Size x:Key="ShapeSize">60,75</av:Size>
-        <x:Double x:Key="Height">931.54</x:Double>
-        <av:PointCollection x:Key="ConnectorLocation">290,77.5 290,127.5</av:PointCollection>
+        <av:Point x:Key="ShapeLocation">260,0</av:Point>
+        <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+        <av:PointCollection x:Key="ConnectorLocation">290,75.2 290,95.2</av:PointCollection>
+        <x:Double x:Key="Height">664.80000000000007</x:Double>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID7</x:Reference>
+      <x:Reference>__ReferenceID4</x:Reference>
     </Flowchart.StartNode>
-    <FlowStep x:Name="__ReferenceID0">
+    <FlowStep x:Name="__ReferenceID1" sap2010:WorkflowViewState.IdRef="FlowStep_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">210,848.54</av:Point>
-          <av:Size x:Key="ShapeSize">200,83</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">320,931.54 320,981.54</av:PointCollection>
+          <av:Point x:Key="ShapeLocation">270,353.5</av:Point>
+          <av:Size x:Key="ShapeSize">200,53.2</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">370,406.7 370,436.7 290,436.7 290,465.2</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Filter to NIRS ID" sap:VirtualizedContainerService.HintSize="450,568" sap2010:WorkflowViewState.IdRef="Sequence_1">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Event Number&quot; Field 1" EmptyField="True" sap:VirtualizedContainerService.HintSize="388,135" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[in_Config(&quot;NIRS ID&quot;).ToString]">
-          <ui:TypeInto.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b3903c9c-2e90-4c9f-a05a-2663daaa6429" InformativeScreenshot="d93b248bf36c20ef99505e28f58e1b21" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='Search Criteria' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='7' /&gt;">
-              <ui:Target.TimeoutMS>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:Target.TimeoutMS>
-              <ui:Target.WaitForReady>
-                <InArgument x:TypeArguments="ui:WaitForReady" />
-              </ui:Target.WaitForReady>
-            </ui:Target>
-          </ui:TypeInto.Target>
-        </ui:TypeInto>
-        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Event Number&quot; Field 2" EmptyField="True" sap:VirtualizedContainerService.HintSize="388,135" sap2010:WorkflowViewState.IdRef="TypeInto_2" SimulateType="True" Text="[in_Config(&quot;NIRS ID&quot;).ToString]">
-          <ui:TypeInto.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b3903c9c-2e90-4c9f-a05a-2663daaa6429" InformativeScreenshot="b4184414383a89f04ee0da6a2330a106" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='Search Criteria' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='5' /&gt;">
-              <ui:Target.TimeoutMS>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:Target.TimeoutMS>
-              <ui:Target.WaitForReady>
-                <InArgument x:TypeArguments="ui:WaitForReady" />
-              </ui:Target.WaitForReady>
-            </ui:Target>
-          </ui:TypeInto.Target>
-        </ui:TypeInto>
-        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Submit Search Criteria" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-          <ui:Click.CursorPosition>
-            <ui:CursorPosition Position="Center">
-              <ui:CursorPosition.OffsetX>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:CursorPosition.OffsetX>
-              <ui:CursorPosition.OffsetY>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:CursorPosition.OffsetY>
-            </ui:CursorPosition>
-          </ui:Click.CursorPosition>
-          <ui:Click.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1e460339-91d9-4977-8c30-c086c8eb8a64" InformativeScreenshot="0eed7f6f1f01b84f3142c9634030826b" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='Search Criteria' /&gt;&lt;wnd aaname='OK' cls='ThunderRT6CommandButton' title='&amp;amp;OK' /&gt;">
-              <ui:Target.TimeoutMS>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:Target.TimeoutMS>
-              <ui:Target.WaitForReady>
-                <InArgument x:TypeArguments="ui:WaitForReady" />
-              </ui:Target.WaitForReady>
-            </ui:Target>
-          </ui:Click.Target>
-        </ui:Click>
-      </Sequence>
-    </FlowStep>
-    <FlowStep x:Name="__ReferenceID1">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">350,713.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,53</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">450,766.5 450,815 310,815 310,848.54</av:PointCollection>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Tick &quot;Event Number&quot; Filter" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-        <ui:Click.CursorPosition>
-          <ui:CursorPosition Position="Center">
-            <ui:CursorPosition.OffsetX>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:CursorPosition.OffsetX>
-            <ui:CursorPosition.OffsetY>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:CursorPosition.OffsetY>
-          </ui:CursorPosition>
-        </ui:Click.CursorPosition>
-        <ui:Click.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6225009f-284f-48ed-8b1f-8280a8b80f58" InformativeScreenshot="1f648292c397a40651ee5c0603bd9e81" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='Search Criteria' /&gt;&lt;wnd cls='ThunderRT6CheckBox' title='Event Number' /&gt;">
-            <ui:Target.TimeoutMS>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:Target.TimeoutMS>
-            <ui:Target.WaitForReady>
-              <InArgument x:TypeArguments="ui:WaitForReady" />
-            </ui:Target.WaitForReady>
-          </ui:Target>
-        </ui:Click.Target>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:Click>
-      <FlowStep.Next>
-        <x:Reference>__ReferenceID0</x:Reference>
-      </FlowStep.Next>
-    </FlowStep>
-    <FlowDecision x:Name="__ReferenceID2" Condition="[strFilterStatus = &quot;checked&quot;]" DisplayName="Filter Enabled?" sap:VirtualizedContainerService.HintSize="84,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1" True="{x:Reference __ReferenceID0}" False="{x:Reference __ReferenceID1}">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <av:Point x:Key="ShapeLocation">258,586.5</av:Point>
-          <av:Size x:Key="ShapeSize">84,87</av:Size>
-          <av:PointCollection x:Key="FalseConnector">342,630 450,630 450,713.5</av:PointCollection>
-          <av:PointCollection x:Key="TrueConnector">258,630 137,630 137,814 310,814 310,848.54</av:PointCollection>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </FlowDecision>
-    <FlowStep x:Name="__ReferenceID3">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">200,483.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,53</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">300,536.5 300,586.5</av:PointCollection>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="text" DisplayName="Get State of Event Number Filter" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
-        <ui:GetAttribute.Result>
-          <OutArgument x:TypeArguments="x:String">[strFilterStatus]</OutArgument>
-        </ui:GetAttribute.Result>
-        <ui:GetAttribute.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="937138d6-35d1-4a81-a47c-126df6f0a9fd" InformativeScreenshot="def3e53373d3ae43bfe250154dd87938" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='Search Criteria' /&gt;&lt;wnd cls='ThunderRT6CheckBox' title='Event Number' /&gt;">
-            <ui:Target.TimeoutMS>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:Target.TimeoutMS>
-            <ui:Target.WaitForReady>
-              <InArgument x:TypeArguments="ui:WaitForReady" />
-            </ui:Target.WaitForReady>
-          </ui:Target>
-        </ui:GetAttribute.Target>
-      </ui:GetAttribute>
-      <FlowStep.Next>
-        <x:Reference>__ReferenceID2</x:Reference>
-      </FlowStep.Next>
-    </FlowStep>
-    <FlowStep x:Name="__ReferenceID4">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">10,353.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,53</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">110,406.5 110,436.5 300,436.5 300,483.5</av:PointCollection>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Set Criteria...&quot;" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Set Criteria...&quot;" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
         <ui:Click.CursorPosition>
           <ui:CursorPosition Position="Center">
             <ui:CursorPosition.OffsetX>
@@ -274,18 +141,146 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:Click>
       <FlowStep.Next>
-        <x:Reference>__ReferenceID3</x:Reference>
+        <FlowStep x:Name="__ReferenceID0">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">190,465.2</av:Point>
+              <av:Size x:Key="ShapeSize">200,69.6</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">330,941.54 330,991.54</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Filter to NIRS ID" sap:VirtualizedContainerService.HintSize="200,69.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:RetryScope sap2010:Annotation.AnnotationText="Type activity will fail if event number not checked properly due to field being disabled, triggering retry" DisplayName="Retry Scope - check event number and type into" sap:VirtualizedContainerService.HintSize="458,611.6" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+              <ui:RetryScope.ActivityBody>
+                <ActivityAction>
+                  <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,389.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check Event Number" sap:VirtualizedContainerService.HintSize="368,106.8" sap2010:WorkflowViewState.IdRef="Check_1">
+                      <ui:Check.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="32a1cf23-8a3a-4a15-b4d0-0f9c9f3f4520" InformativeScreenshot="d195e900e741d9ade15ca39b6d912cc6" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' title='Search Criteria' /&gt;&lt;wnd ctrlid='10' title='Event Number' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Check.Target>
+                    </ui:Check>
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Event Number&quot; Field 1" EmptyField="True" sap:VirtualizedContainerService.HintSize="368,156" sap2010:WorkflowViewState.IdRef="TypeInto_3" SimulateType="True" Text="[in_Config(&quot;NIRS ID&quot;).ToString]">
+                      <ui:TypeInto.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b3903c9c-2e90-4c9f-a05a-2663daaa6429" InformativeScreenshot="d93b248bf36c20ef99505e28f58e1b21" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='Search Criteria' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='7' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:TypeInto.Target>
+                    </ui:TypeInto>
+                  </Sequence>
+                </ActivityAction>
+              </ui:RetryScope.ActivityBody>
+              <ui:RetryScope.Condition>
+                <ActivityFunc x:TypeArguments="x:Boolean" />
+              </ui:RetryScope.Condition>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:RetryScope>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type &quot;Event Number&quot; Field 2" EmptyField="True" sap:VirtualizedContainerService.HintSize="458,156" sap2010:WorkflowViewState.IdRef="TypeInto_4" SimulateType="True" Text="[in_Config(&quot;NIRS ID&quot;).ToString]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b3903c9c-2e90-4c9f-a05a-2663daaa6429" InformativeScreenshot="b4184414383a89f04ee0da6a2330a106" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='Search Criteria' /&gt;&lt;wnd cls='ThunderRT6TextBox' idx='5' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Submit Search Criteria" sap:VirtualizedContainerService.HintSize="458,106.8" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1e460339-91d9-4977-8c30-c086c8eb8a64" InformativeScreenshot="0eed7f6f1f01b84f3142c9634030826b" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='Search Criteria' /&gt;&lt;wnd aaname='OK' cls='ThunderRT6CommandButton' title='&amp;amp;OK' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+          </Sequence>
+        </FlowStep>
       </FlowStep.Next>
     </FlowStep>
-    <FlowStep x:Name="__ReferenceID5">
+    <FlowDecision x:Name="__ReferenceID2" Condition="[boolSearchExists]" DisplayName="Search Open?" sap:VirtualizedContainerService.HintSize="79.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_2" True="{x:Reference __ReferenceID0}" False="{x:Reference __ReferenceID1}">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">370,353.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,53</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">470,406.5 470,436.5 300,436.5 300,483.5</av:PointCollection>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <av:Point x:Key="ShapeLocation">250,250.5</av:Point>
+          <av:Size x:Key="ShapeSize">79.2,87.2</av:Size>
+          <av:PointCollection x:Key="TrueConnector">250,294.1 230,294.1 230,435.2 290,435.2 290,465.2</av:PointCollection>
+          <av:PointCollection x:Key="FalseConnector">329.2,294.1 370,294.1 370,353.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Events that match search criteria&quot;" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+    </FlowDecision>
+    <FlowStep x:Name="__ReferenceID3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">190,167.7</av:Point>
+          <av:Size x:Key="ShapeSize">200,53.2</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">290,220.9 289.6,220.9 289.6,250.5</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:UiElementExists DisplayName="Check search window open" Exists="[boolSearchExists]" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+        <ui:UiElementExists.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f4e939cf-4c6e-45d2-a48c-f67ec523e955" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC' title='Search Criteria' /&gt;&lt;ctrl name='Search Criteria' role='client' /&gt;" TimeoutMS="3000" WaitForReady="NONE" />
+        </ui:UiElementExists.Target>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:UiElementExists>
+      <FlowStep.Next>
+        <x:Reference>__ReferenceID2</x:Reference>
+      </FlowStep.Next>
+    </FlowStep>
+    <x:Reference>__ReferenceID0</x:Reference>
+    <FlowStep x:Name="__ReferenceID4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">190,95.2</av:Point>
+          <av:Size x:Key="ShapeSize">200,53.2</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">290,148.4 290,167.7</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Events that match search criteria&quot;" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
         <ui:Click.CursorPosition>
           <ui:CursorPosition Position="Center">
             <ui:CursorPosition.OffsetX>
@@ -314,44 +309,6 @@
       </ui:Click>
       <FlowStep.Next>
         <x:Reference>__ReferenceID3</x:Reference>
-      </FlowStep.Next>
-    </FlowStep>
-    <FlowDecision x:Name="__ReferenceID6" Condition="[strSearchOpen = &quot;checked&quot;]" DisplayName="Search Open?" sap:VirtualizedContainerService.HintSize="80,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2" True="{x:Reference __ReferenceID4}" False="{x:Reference __ReferenceID5}">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <av:Point x:Key="ShapeLocation">250,230.5</av:Point>
-          <av:Size x:Key="ShapeSize">80,87</av:Size>
-          <av:PointCollection x:Key="TrueConnector">250,274 110,274 110,353.5</av:PointCollection>
-          <av:PointCollection x:Key="FalseConnector">330,274 470,274 470,353.5</av:PointCollection>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </FlowDecision>
-    <FlowStep x:Name="__ReferenceID7">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">190,127.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,53</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">290,180.5 290,230.5</av:PointCollection>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="text" DisplayName="Get State of Search Screen" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="GetAttribute_2">
-        <ui:GetAttribute.Result>
-          <OutArgument x:TypeArguments="x:String">[strSearchOpen]</OutArgument>
-        </ui:GetAttribute.Result>
-        <ui:GetAttribute.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="937138d6-35d1-4a81-a47c-126df6f0a9fd" InformativeScreenshot="bcbef4bb9328e3c931fa3f3a15280555" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='Incident Recording System*' /&gt;&lt;wnd cls='ThunderRT6OptionButton' title='Events that match search criteria' /&gt;">
-            <ui:Target.TimeoutMS>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:Target.TimeoutMS>
-            <ui:Target.WaitForReady>
-              <InArgument x:TypeArguments="ui:WaitForReady" />
-            </ui:Target.WaitForReady>
-          </ui:Target>
-        </ui:GetAttribute.Target>
-      </ui:GetAttribute>
-      <FlowStep.Next>
-        <x:Reference>__ReferenceID6</x:Reference>
       </FlowStep.Next>
     </FlowStep>
   </Flowchart>

@@ -73,11 +73,13 @@
       <AssemblyReference>mscorlib</AssemblyReference>
       <AssemblyReference>netstandard</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>Pop Ups</AssemblyReference>
       <AssemblyReference>PresentationCore</AssemblyReference>
       <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
       <AssemblyReference>System.Configuration.Install</AssemblyReference>
@@ -90,6 +92,7 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.ObjectModel</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
@@ -100,6 +103,7 @@
       <AssemblyReference>UiPath.CV</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.IntelligentOCR</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
@@ -110,11 +114,11 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>UiPath.Word</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>UiPath.Web</AssemblyReference>
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <StateMachine InitialState="{x:Reference __ReferenceID5}" sap2010:Annotation.AnnotationText="" DisplayName="Automation Template" sap:VirtualizedContainerService.HintSize="1062.8,1038" sap2010:WorkflowViewState.IdRef="StateMachine_1">
@@ -791,7 +795,7 @@
                           </sap:WorkflowViewStateService.ViewState>
                           <Transition.Condition>[boolContinue AND SystemException IsNot Nothing]</Transition.Condition>
                           <Transition.To>
-                            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="1378,4928" sap2010:WorkflowViewState.IdRef="State_2">
+                            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="254,106.4" sap2010:WorkflowViewState.IdRef="State_2">
                               <State.Entry>
                                 <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="1332.4,4476" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                                   <sap:WorkflowViewStateService.ViewState>
@@ -1055,9 +1059,7 @@
                                       </If>
                                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllApplications workflow" sap:VirtualizedContainerService.HintSize="1246.8,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Framework\InitAllApplications.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
-                                          <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_Config">
-                                            <mva:VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="Config" />
-                                          </InOutArgument>
+                                          <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_Config">[Config]</InOutArgument>
                                         </ui:InvokeWorkflowFile.Arguments>
                                       </ui:InvokeWorkflowFile>
                                     </Sequence>
@@ -1215,32 +1217,37 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <Transition.To>
-                                    <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="144,124" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
+                                    <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="1708,7028" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
                                       <State.Entry>
-                                        <Sequence DisplayName="End Process" sap:VirtualizedContainerService.HintSize="1665,6836" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                                        <Sequence DisplayName="End Process" sap:VirtualizedContainerService.HintSize="1662.4,6882" sap2010:WorkflowViewState.IdRef="Sequence_50">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <If Condition="[boolRunProcess]" DisplayName="Process Has Run?" sap:VirtualizedContainerService.HintSize="1617,6742" sap2010:WorkflowViewState.IdRef="If_21">
+                                          <If Condition="[boolRunProcess]" DisplayName="Process Has Run?" sap:VirtualizedContainerService.HintSize="1614.4,6787.6" sap2010:WorkflowViewState.IdRef="If_21">
                                             <If.Then>
-                                              <Sequence sap:VirtualizedContainerService.HintSize="1238,6580" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                                              <Sequence sap:VirtualizedContainerService.HintSize="1236,6626" sap2010:WorkflowViewState.IdRef="Sequence_52">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="1190,347" sap2010:WorkflowViewState.IdRef="TryCatch_13">
+                                                <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="1188,378.4" sap2010:WorkflowViewState.IdRef="TryCatch_13">
                                                   <TryCatch.Try>
-                                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CloseAllApplications workflow" sap:VirtualizedContainerService.HintSize="365,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Framework\CloseAllApplications.xaml">
+                                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Asset controlled timeout" DisplayName="Invoke CloseAllApplications workflow" sap:VirtualizedContainerService.HintSize="334,145.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" Timeout="[TimeSpan.Parse(Config(&quot;CloseAppsTimeout&quot;).ToString)]" UnSafe="False" WorkflowFileName="Framework\CloseAllApplications.xaml">
                                                       <ui:InvokeWorkflowFile.Arguments>
                                                         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
                                                       </ui:InvokeWorkflowFile.Arguments>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
                                                     </ui:InvokeWorkflowFile>
                                                   </TryCatch.Try>
                                                   <TryCatch.Catches>
-                                                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_15">
+                                                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.6,22.8" sap2010:WorkflowViewState.IdRef="Catch`1_15">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1251,13 +1258,13 @@
                                                         <ActivityAction.Argument>
                                                           <DelegateInArgument x:TypeArguments="s:Exception" Name="Exception" />
                                                         </ActivityAction.Argument>
-                                                        <Sequence DisplayName="Failed to close applications, so kill processes" sap:VirtualizedContainerService.HintSize="416,334" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                                                        <Sequence DisplayName="Failed to close applications, so kill processes" sap:VirtualizedContainerService.HintSize="416,334.8" sap2010:WorkflowViewState.IdRef="Sequence_51">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <ui:LogMessage DisplayName="Log message (Failed to close applications)" sap:VirtualizedContainerService.HintSize="368,94" sap2010:WorkflowViewState.IdRef="LogMessage_42" Level="Warn" Message="[&quot;Applications failed to close gracefully. &quot;+Exception.Message+&quot; at Source: &quot;+Exception.Source]" />
+                                                          <ui:LogMessage DisplayName="Log message (Failed to close applications)" sap:VirtualizedContainerService.HintSize="368,94.4" sap2010:WorkflowViewState.IdRef="LogMessage_42" Level="Warn" Message="[&quot;Applications failed to close gracefully. &quot;+Exception.Message+&quot; at Source: &quot;+Exception.Source]" />
                                                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke KillAllProcesses workflow" sap:VirtualizedContainerService.HintSize="368,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Framework\KillAllProcesses.xaml">
                                                             <ui:InvokeWorkflowFile.Arguments>
                                                               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
@@ -1268,15 +1275,15 @@
                                                     </Catch>
                                                   </TryCatch.Catches>
                                                 </TryCatch>
-                                                <If Condition="[TransactionNumber &gt; 1]" DisplayName="SQL Transactions to Upload?" sap:VirtualizedContainerService.HintSize="1190,1234" sap2010:WorkflowViewState.IdRef="If_36">
+                                                <If Condition="[TransactionNumber &gt; 1]" DisplayName="SQL Transactions to Upload?" sap:VirtualizedContainerService.HintSize="1188,1236" sap2010:WorkflowViewState.IdRef="If_36">
                                                   <If.Then>
-                                                    <Sequence sap:VirtualizedContainerService.HintSize="618,1042" sap2010:WorkflowViewState.IdRef="Sequence_96">
+                                                    <Sequence sap:VirtualizedContainerService.HintSize="617.2,1044" sap2010:WorkflowViewState.IdRef="Sequence_96">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <TryCatch DisplayName="Try Upload SQL to Storage Bucket" sap:VirtualizedContainerService.HintSize="570,293" sap2010:WorkflowViewState.IdRef="TryCatch_21">
+                                                      <TryCatch DisplayName="Try Upload SQL to Storage Bucket" sap:VirtualizedContainerService.HintSize="569.2,293.2" sap2010:WorkflowViewState.IdRef="TryCatch_21">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1284,10 +1291,10 @@
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
                                                         <TryCatch.Try>
-                                                          <l:Upload_SQL_to_Storage_Bucket DisplayName="Upload SQL to Storage Bucket" sap:VirtualizedContainerService.HintSize="200,25" IN_strSQLFilePath="[Config(&quot;SQLTransactionLogFilepath&quot;).ToString]" sap2010:WorkflowViewState.IdRef="Upload_SQL_to_Storage_Bucket_1" />
+                                                          <l:Upload_SQL_to_Storage_Bucket DisplayName="Upload SQL to Storage Bucket" sap:VirtualizedContainerService.HintSize="200,24.8" IN_strSQLFilePath="[Config(&quot;SQLTransactionLogFilepath&quot;).ToString]" sap2010:WorkflowViewState.IdRef="Upload_SQL_to_Storage_Bucket_1" />
                                                         </TryCatch.Try>
                                                         <TryCatch.Catches>
-                                                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_28">
+                                                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.6,22.8" sap2010:WorkflowViewState.IdRef="Catch`1_28">
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1298,7 +1305,7 @@
                                                               <ActivityAction.Argument>
                                                                 <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                                               </ActivityAction.Argument>
-                                                              <ui:LogMessage DisplayName="Log Upload Failure" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_52" Level="Fatal" Message="[&quot;SQL Transaction Upload Failure: &quot;+exception.Message]">
+                                                              <ui:LogMessage DisplayName="Log Upload Failure" sap:VirtualizedContainerService.HintSize="334,94.4" sap2010:WorkflowViewState.IdRef="LogMessage_52" Level="Fatal" Message="[&quot;SQL Transaction Upload Failure: &quot;+exception.Message]">
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1310,15 +1317,15 @@
                                                           </Catch>
                                                         </TryCatch.Catches>
                                                       </TryCatch>
-                                                      <ui:CommentOut sap2010:Annotation.AnnotationText="Only necessary in Document Understanding work packages to upload license usage.&#xA;&#xA;Delete if not required." DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="570,623" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                                                      <ui:CommentOut sap2010:Annotation.AnnotationText="Only necessary in Document Understanding work packages to upload license usage.&#xA;&#xA;Delete if not required." DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="569.2,624.4" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                                                         <ui:CommentOut.Body>
-                                                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="534,484" sap2010:WorkflowViewState.IdRef="Sequence_86">
+                                                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="533.6,484.8" sap2010:WorkflowViewState.IdRef="Sequence_86">
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
-                                                            <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Insert SQL Transactions &amp; Check Outcome (DU Consumption)" sap:VirtualizedContainerService.HintSize="486,390" sap2010:WorkflowViewState.IdRef="Sequence_85">
+                                                            <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Insert SQL Transactions &amp; Check Outcome (DU Consumption)" sap:VirtualizedContainerService.HintSize="485.6,390.4" sap2010:WorkflowViewState.IdRef="Sequence_85">
                                                               <Sequence.Variables>
                                                                 <Variable x:TypeArguments="x:String" Name="strOutcome" />
                                                                 <Variable x:TypeArguments="x:String" Name="strOutcomeMessage" />
@@ -1329,7 +1336,7 @@
                                                                   <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
-                                                              <TryCatch DisplayName="Try Upload SQL to Storage Bucket" sap:VirtualizedContainerService.HintSize="438,293" sap2010:WorkflowViewState.IdRef="TryCatch_22">
+                                                              <TryCatch DisplayName="Try Upload SQL to Storage Bucket" sap:VirtualizedContainerService.HintSize="437.6,293.2" sap2010:WorkflowViewState.IdRef="TryCatch_22">
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1337,10 +1344,10 @@
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
                                                                 <TryCatch.Try>
-                                                                  <l:Upload_SQL_to_Storage_Bucket DisplayName="Upload SQL to Storage Bucket (DU Consumption)" sap:VirtualizedContainerService.HintSize="200,25" IN_strSQLFilePath="[Config(&quot;SQLTransactionLogFilepath&quot;).ToString.Replace(&quot;.csv&quot;, &quot; - DU.csv&quot;)]" sap2010:WorkflowViewState.IdRef="Upload_SQL_to_Storage_Bucket_2" />
+                                                                  <l:Upload_SQL_to_Storage_Bucket DisplayName="Upload SQL to Storage Bucket (DU Consumption)" sap:VirtualizedContainerService.HintSize="200,24.8" IN_strSQLFilePath="[Config(&quot;SQLTransactionLogFilepath&quot;).ToString.Replace(&quot;.csv&quot;, &quot; - DU.csv&quot;)]" sap2010:WorkflowViewState.IdRef="Upload_SQL_to_Storage_Bucket_2" />
                                                                 </TryCatch.Try>
                                                                 <TryCatch.Catches>
-                                                                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_29">
+                                                                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.6,22.8" sap2010:WorkflowViewState.IdRef="Catch`1_29">
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1351,7 +1358,7 @@
                                                                       <ActivityAction.Argument>
                                                                         <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                                                       </ActivityAction.Argument>
-                                                                      <ui:LogMessage DisplayName="Log Upload Failure" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_53" Level="Fatal" Message="[&quot;SQL Transaction Upload Failure (DU Consumption): &quot;+exception.Message]">
+                                                                      <ui:LogMessage DisplayName="Log Upload Failure" sap:VirtualizedContainerService.HintSize="334,94.4" sap2010:WorkflowViewState.IdRef="LogMessage_53" Level="Fatal" Message="[&quot;SQL Transaction Upload Failure (DU Consumption): &quot;+exception.Message]">
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1386,20 +1393,17 @@
                                                     </Sequence>
                                                   </If.Else>
                                                 </If>
-                                                <If Condition="[Cbool(Config(&quot;Unattended&quot;))]" DisplayName="Unattended?" sap:VirtualizedContainerService.HintSize="1190,4841" sap2010:WorkflowViewState.IdRef="If_37">
+                                                <If Condition="[Cbool(Config(&quot;Unattended&quot;))]" DisplayName="Unattended?" sap:VirtualizedContainerService.HintSize="1188,4853.2" sap2010:WorkflowViewState.IdRef="If_37">
                                                   <If.Then>
-                                                    <If Condition="[SystemException isNot Nothing]" DisplayName="System Exception?" sap:VirtualizedContainerService.HintSize="945,4679" sap2010:WorkflowViewState.IdRef="If_42">
+                                                    <If Condition="[SystemException isNot Nothing]" DisplayName="System Exception?" sap:VirtualizedContainerService.HintSize="943.6,4691.6" sap2010:WorkflowViewState.IdRef="If_42">
                                                       <If.Then>
-                                                        <Sequence DisplayName="Check Consecutive Critical Failures &amp; Rethrow" sap:VirtualizedContainerService.HintSize="909,4487" sap2010:WorkflowViewState.IdRef="Sequence_104">
-                                                          <Sequence.Variables>
-                                                            <Variable x:TypeArguments="x:String" Name="strMachineName" />
-                                                          </Sequence.Variables>
+                                                        <Sequence DisplayName="Check Consecutive Critical Failures &amp; Rethrow" sap:VirtualizedContainerService.HintSize="908,4499.6" sap2010:WorkflowViewState.IdRef="Sequence_104">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <Assign DisplayName="Increment Critical Failure Counter" sap:VirtualizedContainerService.HintSize="861,83" sap2010:WorkflowViewState.IdRef="Assign_107">
+                                                          <Assign DisplayName="Increment Critical Failure Counter" sap:VirtualizedContainerService.HintSize="860,82.4" sap2010:WorkflowViewState.IdRef="Assign_107">
                                                             <Assign.To>
                                                               <OutArgument x:TypeArguments="x:Object">[Config("Consecutive Critical Failures")]</OutArgument>
                                                             </Assign.To>
@@ -1407,10 +1411,10 @@
                                                               <InArgument x:TypeArguments="x:Object">[CInt(Config("Consecutive Critical Failures"))+1]</InArgument>
                                                             </Assign.Value>
                                                           </Assign>
-                                                          <ui:SetAsset TimeoutMS="{x:Null}" AssetName="Consecutive Critical Failures" DisplayName="Set Consecutive Critical Failures" sap:VirtualizedContainerService.HintSize="861,135" sap2010:WorkflowViewState.IdRef="SetAsset_1" Value="[Config(&quot;Consecutive Critical Failures&quot;)]" />
-                                                          <If Condition="[CInt(Config(&quot;Consecutive Critical Failures&quot;)) = 3]" DisplayName="Max Consecutive Critical Failures?" sap:VirtualizedContainerService.HintSize="861,4054" sap2010:WorkflowViewState.IdRef="If_45">
+                                                          <ui:SetAsset TimeoutMS="{x:Null}" AssetName="Consecutive Critical Failures" DisplayName="Set Consecutive Critical Failures" sap:VirtualizedContainerService.HintSize="860,135.6" sap2010:WorkflowViewState.IdRef="SetAsset_1" Value="[Config(&quot;Consecutive Critical Failures&quot;)]" />
+                                                          <If Condition="[CInt(Config(&quot;Consecutive Critical Failures&quot;)) = 3]" DisplayName="Max Consecutive Critical Failures?" sap:VirtualizedContainerService.HintSize="860,4066.4" sap2010:WorkflowViewState.IdRef="If_45">
                                                             <If.Then>
-                                                              <Sequence DisplayName="Set Dataverse Robot Status to Inactive" sap:VirtualizedContainerService.HintSize="825,3862" sap2010:WorkflowViewState.IdRef="Sequence_110">
+                                                              <Sequence DisplayName="Set Dataverse Robot Status to Inactive" sap:VirtualizedContainerService.HintSize="824.4,3874.4" sap2010:WorkflowViewState.IdRef="Sequence_110">
                                                                 <Sequence.Variables>
                                                                   <Variable x:TypeArguments="x:String" Name="strToken" />
                                                                   <Variable x:TypeArguments="x:String" Name="strRobotStatusId" />
@@ -1420,9 +1424,8 @@
                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                <ui:GetEnvironmentVariable DisplayName="Get Host Machine Name" sap:VirtualizedContainerService.HintSize="777,60" sap2010:WorkflowViewState.IdRef="GetEnvironmentVariable_2" Variable="MachineName" VariableValue="[strMachineName]" />
-                                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="777,94" sap2010:WorkflowViewState.IdRef="LogMessage_59" Level="Fatal" Message="[&quot;Reporting VM failure for machine: &quot;+strMachineName]" />
-                                                                <Sequence DisplayName="Retrieve OAuth2 Token" sap:VirtualizedContainerService.HintSize="777,1161" sap2010:WorkflowViewState.IdRef="Sequence_112">
+                                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="776.4,94.4" sap2010:WorkflowViewState.IdRef="LogMessage_59" Level="Fatal" Message="[&quot;Reporting VM failure for machine alias: &quot;+Config(&quot;Dataverse Alias&quot;).ToString]" />
+                                                                <Sequence DisplayName="Retrieve OAuth2 Token" sap:VirtualizedContainerService.HintSize="776.4,1264.8" sap2010:WorkflowViewState.IdRef="Sequence_112">
                                                                   <Sequence.Variables>
                                                                     <Variable x:TypeArguments="x:String" Name="strOAuth2Response" />
                                                                     <Variable x:TypeArguments="x:Int32" Name="intOAuthResponseStatus" />
@@ -1434,7 +1437,7 @@
                                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                     </scg:Dictionary>
                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                  <Sequence DisplayName="Private: Get Dataverse Credentials" sap:VirtualizedContainerService.HintSize="484,293" sap2010:WorkflowViewState.IdRef="Sequence_123">
+                                                                  <Sequence DisplayName="Private: Get Dataverse Credentials" sap:VirtualizedContainerService.HintSize="484,396.4" sap2010:WorkflowViewState.IdRef="Sequence_123">
                                                                     <Sequence.Variables>
                                                                       <Variable x:TypeArguments="ss:SecureString" Name="secPassword" />
                                                                       <Variable x:TypeArguments="x:String" Name="strUsername" />
@@ -1444,8 +1447,8 @@
                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
-                                                                    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Dataverse API Credentials" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[secPassword]" Username="[strUsername]" />
-                                                                    <Assign DisplayName="Convert to Network Credential" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_118">
+                                                                    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Dataverse API Credentials" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="434,184.8" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[secPassword]" Username="[strUsername]" />
+                                                                    <Assign DisplayName="Convert to Network Credential" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_118">
                                                                       <Assign.To>
                                                                         <OutArgument x:TypeArguments="sn:NetworkCredential">[credDataverse]</OutArgument>
                                                                       </Assign.To>
@@ -1454,10 +1457,10 @@
                                                                       </Assign.Value>
                                                                     </Assign>
                                                                   </Sequence>
-                                                                  <ui:RetryScope DisplayName="Retry Scope - Retrieve OAuth2 Token" sap:VirtualizedContainerService.HintSize="484,248" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:00">
+                                                                  <ui:RetryScope DisplayName="Retry Scope - Retrieve OAuth2 Token" sap:VirtualizedContainerService.HintSize="484,248.8" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:00">
                                                                     <ui:RetryScope.ActivityBody>
                                                                       <ActivityAction>
-                                                                        <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" DisplayName="Private: Retrieve OAuth2 Token" EnableSSLVerification="True" EndPoint="[&quot;https://login.microsoftonline.com/&quot;+Config(&quot;Dataverse Tenant ID&quot;).ToString+&quot;/oauth2/v2.0/token&quot;]" sap:VirtualizedContainerService.HintSize="204,71" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="POST" Result="[strOAuth2Response]" StatusCode="[intOAuthResponseStatus]" TimeoutMS="30000">
+                                                                        <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" DisplayName="Private: Retrieve OAuth2 Token" EnableSSLVerification="True" EndPoint="[&quot;https://login.microsoftonline.com/&quot;+Config(&quot;Dataverse Tenant ID&quot;).ToString+&quot;/oauth2/v2.0/token&quot;]" sap:VirtualizedContainerService.HintSize="204,71.2" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="POST" Result="[strOAuth2Response]" StatusCode="[intOAuthResponseStatus]" TimeoutMS="30000">
                                                                           <ui:HttpClient.Attachments>
                                                                             <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                                                                           </ui:HttpClient.Attachments>
@@ -1485,7 +1488,7 @@
                                                                   </ui:RetryScope>
                                                                   <If Condition="[intOAuthResponseStatus &lt;&gt; 200]" DisplayName="Unsuccessful OAuth Response? " sap:VirtualizedContainerService.HintSize="484,252" sap2010:WorkflowViewState.IdRef="If_46">
                                                                     <If.Then>
-                                                                      <Throw DisplayName="Throw Sys Ex" Exception="[New Exception(&quot;OAuth2 API call has been unsuccesful - Status Code: &quot;+intOAuthResponseStatus.ToString)]" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                                                                      <Throw DisplayName="Throw Sys Ex" Exception="[New Exception(&quot;OAuth2 API call has been unsuccesful - Status Code: &quot;+intOAuthResponseStatus.ToString)]" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="Throw_2" />
                                                                     </If.Then>
                                                                     <If.Else>
                                                                       <Sequence sap2010:WorkflowViewState.IdRef="Sequence_113">
@@ -1498,7 +1501,7 @@
                                                                     </If.Else>
                                                                   </If>
                                                                   <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" DisplayName="Deserialize OAuth2 Response" sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_2" JsonObject="[objOAuth2Response]" JsonString="[strOAuth2Response]" />
-                                                                  <Assign DisplayName="Assign OAuth2 Token" sap:VirtualizedContainerService.HintSize="484,83" sap2010:WorkflowViewState.IdRef="Assign_110">
+                                                                  <Assign DisplayName="Assign OAuth2 Token" sap:VirtualizedContainerService.HintSize="484,82.4" sap2010:WorkflowViewState.IdRef="Assign_110">
                                                                     <Assign.To>
                                                                       <OutArgument x:TypeArguments="x:String">[strToken]</OutArgument>
                                                                     </Assign.To>
@@ -1507,7 +1510,7 @@
                                                                     </Assign.Value>
                                                                   </Assign>
                                                                 </Sequence>
-                                                                <Sequence DisplayName="Retrieve Record ID for Machine Name" sap:VirtualizedContainerService.HintSize="777,1374" sap2010:WorkflowViewState.IdRef="Sequence_115">
+                                                                <Sequence DisplayName="Retrieve Record ID for Machine Alias" sap:VirtualizedContainerService.HintSize="776.4,1374" sap2010:WorkflowViewState.IdRef="Sequence_115">
                                                                   <Sequence.Variables>
                                                                     <Variable x:TypeArguments="x:String" Name="strRecordResponse" />
                                                                     <Variable x:TypeArguments="x:Int32" Name="intRecordResponseStatus" />
@@ -1519,10 +1522,10 @@
                                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                     </scg:Dictionary>
                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                  <ui:RetryScope DisplayName="Retry Scope - Retrieve Dataverse Record" sap:VirtualizedContainerService.HintSize="729,248" sap2010:WorkflowViewState.IdRef="RetryScope_2">
+                                                                  <ui:RetryScope DisplayName="Retry Scope - Retrieve Dataverse Record" sap:VirtualizedContainerService.HintSize="728.4,248.8" sap2010:WorkflowViewState.IdRef="RetryScope_2">
                                                                     <ui:RetryScope.ActivityBody>
                                                                       <ActivityAction>
-                                                                        <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" DisplayName="Private: Retrieve Dataverse Record" EnableSSLVerification="True" EndPoint="[Config(&quot;Dataverse API URL&quot;).ToString+&quot;api/data/v9.2/&quot;+Config(&quot;Dataverse Robotics Status Table&quot;).ToString+&quot;?$filter=(sbs_name eq '&quot;+strMachineName+&quot;')&quot;]" sap:VirtualizedContainerService.HintSize="204,71" sap2010:WorkflowViewState.IdRef="HttpClient_3" Method="GET" Result="[strRecordResponse]" StatusCode="[intRecordResponseStatus]" TimeoutMS="30000">
+                                                                        <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" DisplayName="Private: Retrieve Dataverse Record" EnableSSLVerification="True" EndPoint="[Config(&quot;Dataverse API URL&quot;).ToString+&quot;api/data/v9.2/&quot;+Config(&quot;Dataverse Robotics Status Table&quot;).ToString+&quot;?$filter=(sbs_name eq '&quot;+Config(&quot;Dataverse Alias&quot;).ToString+&quot;')&quot;]" sap:VirtualizedContainerService.HintSize="204,71.2" sap2010:WorkflowViewState.IdRef="HttpClient_3" Method="GET" Result="[strRecordResponse]" StatusCode="[intRecordResponseStatus]" TimeoutMS="30000">
                                                                           <ui:HttpClient.Attachments>
                                                                             <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                                                                           </ui:HttpClient.Attachments>
@@ -1545,9 +1548,9 @@
                                                                       <ActivityFunc x:TypeArguments="x:Boolean" />
                                                                     </ui:RetryScope.Condition>
                                                                   </ui:RetryScope>
-                                                                  <If Condition="[intRecordResponseStatus &lt;&gt; 200]" DisplayName="Unsuccessful Record Response? " sap:VirtualizedContainerService.HintSize="729,252" sap2010:WorkflowViewState.IdRef="If_47">
+                                                                  <If Condition="[intRecordResponseStatus &lt;&gt; 200]" DisplayName="Unsuccessful Record Response? " sap:VirtualizedContainerService.HintSize="728.4,252" sap2010:WorkflowViewState.IdRef="If_47">
                                                                     <If.Then>
-                                                                      <Throw DisplayName="Throw Sys Ex" Exception="[New Exception(&quot;Robot Status read API call has been unsuccesful - Status Code: &quot;+intRecordResponseStatus.ToString)]" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                                                                      <Throw DisplayName="Throw Sys Ex" Exception="[New Exception(&quot;Robot Status read API call has been unsuccesful - Status Code: &quot;+intRecordResponseStatus.ToString)]" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="Throw_3" />
                                                                     </If.Then>
                                                                     <If.Else>
                                                                       <Sequence sap2010:WorkflowViewState.IdRef="Sequence_114">
@@ -1559,16 +1562,16 @@
                                                                       </Sequence>
                                                                     </If.Else>
                                                                   </If>
-                                                                  <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" DisplayName="Deserialize Record Response" sap:VirtualizedContainerService.HintSize="729,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_3" JsonObject="[objRecordResponse]" JsonString="[strRecordResponse]" />
-                                                                  <ui:DeserializeJsonArray DisplayName="Deserialize JSON Array - Records" sap:VirtualizedContainerService.HintSize="729,60" sap2010:WorkflowViewState.IdRef="DeserializeJsonArray_1" JsonArray="[jarRecordResponse]" JsonString="[objRecordResponse(&quot;value&quot;).ToString]" />
-                                                                  <If Condition="[jarRecordResponse.Count = 0]" DisplayName="Dataverse Returned No Records?" sap:VirtualizedContainerService.HintSize="729,414" sap2010:WorkflowViewState.IdRef="If_49">
+                                                                  <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" DisplayName="Deserialize Record Response" sap:VirtualizedContainerService.HintSize="728.4,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_3" JsonObject="[objRecordResponse]" JsonString="[strRecordResponse]" />
+                                                                  <ui:DeserializeJsonArray DisplayName="Deserialize JSON Array - Records" sap:VirtualizedContainerService.HintSize="728.4,60" sap2010:WorkflowViewState.IdRef="DeserializeJsonArray_1" JsonArray="[jarRecordResponse]" JsonString="[objRecordResponse(&quot;value&quot;).ToString]" />
+                                                                  <If Condition="[jarRecordResponse.Count = 0]" DisplayName="Dataverse Returned No Records?" sap:VirtualizedContainerService.HintSize="728.4,413.6" sap2010:WorkflowViewState.IdRef="If_49">
                                                                     <If.Then>
-                                                                      <Throw DisplayName="Throw BRE" Exception="[New BusinessRuleException(&quot;No Robot Status record retrieved from Dataverse for Machine Name: &quot;+strMachineName)]" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Throw_4" />
+                                                                      <Throw DisplayName="Throw BRE" Exception="[New BusinessRuleException(&quot;No Robot Status record retrieved from Dataverse for Machine Alias: &quot;+Config(&quot;Dataverse Alias&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="Throw_4" />
                                                                     </If.Then>
                                                                     <If.Else>
                                                                       <If Condition="[jarRecordResponse.Count &gt; 1]" DisplayName="Dataverse Returned &gt;1 Record?" sap:VirtualizedContainerService.HintSize="484,252" sap2010:WorkflowViewState.IdRef="If_48">
                                                                         <If.Then>
-                                                                          <Throw DisplayName="Throw BRE" Exception="[New BusinessRuleException(&quot;Multiple Robot Status rows retrieved from Dataverse for Machine Name: &quot;+strMachineName)]" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Throw_5" />
+                                                                          <Throw DisplayName="Throw BRE" Exception="[New BusinessRuleException(&quot;Multiple Robot Status rows retrieved from Dataverse for Machine Alias: &quot;+Config(&quot;Dataverse Alias&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="Throw_5" />
                                                                         </If.Then>
                                                                         <If.Else>
                                                                           <Sequence sap2010:WorkflowViewState.IdRef="Sequence_116">
@@ -1582,7 +1585,7 @@
                                                                       </If>
                                                                     </If.Else>
                                                                   </If>
-                                                                  <Assign DisplayName="Assign RobotStatusId" sap:VirtualizedContainerService.HintSize="729,83" sap2010:WorkflowViewState.IdRef="Assign_111">
+                                                                  <Assign DisplayName="Assign RobotStatusId" sap:VirtualizedContainerService.HintSize="728.4,82.4" sap2010:WorkflowViewState.IdRef="Assign_111">
                                                                     <Assign.To>
                                                                       <OutArgument x:TypeArguments="x:String">[strRobotStatusId]</OutArgument>
                                                                     </Assign.To>
@@ -1591,7 +1594,7 @@
                                                                     </Assign.Value>
                                                                   </Assign>
                                                                 </Sequence>
-                                                                <Sequence DisplayName="Update Robot Status" sap:VirtualizedContainerService.HintSize="777,951" sap2010:WorkflowViewState.IdRef="Sequence_117">
+                                                                <Sequence DisplayName="Update Robot Status" sap:VirtualizedContainerService.HintSize="776.4,950.8" sap2010:WorkflowViewState.IdRef="Sequence_117">
                                                                   <Sequence.Variables>
                                                                     <Variable x:TypeArguments="njl:JObject" Name="jBody" />
                                                                     <Variable x:TypeArguments="x:String" Name="strRecordResponse" />
@@ -1603,7 +1606,7 @@
                                                                     </scg:Dictionary>
                                                                   </sap:WorkflowViewStateService.ViewState>
                                                                   <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" DisplayName="Deserialize JSON Body" sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_4" JsonObject="[jBody]" JsonString="[Config(&quot;Dataverse Robot Status JSON&quot;).ToString]" />
-                                                                  <Assign DisplayName="Set Flag" sap:VirtualizedContainerService.HintSize="484,83" sap2010:WorkflowViewState.IdRef="Assign_112">
+                                                                  <Assign DisplayName="Set Flag" sap:VirtualizedContainerService.HintSize="484,82.4" sap2010:WorkflowViewState.IdRef="Assign_112">
                                                                     <Assign.To>
                                                                       <OutArgument x:TypeArguments="njl:JToken">[jBody("sbs_isactive")]</OutArgument>
                                                                     </Assign.To>
@@ -1611,7 +1614,7 @@
                                                                       <InArgument x:TypeArguments="njl:JToken">[false]</InArgument>
                                                                     </Assign.Value>
                                                                   </Assign>
-                                                                  <Assign DisplayName="Set Status Error" sap:VirtualizedContainerService.HintSize="484,83" sap2010:WorkflowViewState.IdRef="Assign_113">
+                                                                  <Assign DisplayName="Set Status Error" sap:VirtualizedContainerService.HintSize="484,82.4" sap2010:WorkflowViewState.IdRef="Assign_113">
                                                                     <Assign.To>
                                                                       <OutArgument x:TypeArguments="njl:JToken">[jBody("sbs_error")]</OutArgument>
                                                                     </Assign.To>
@@ -1619,10 +1622,10 @@
                                                                       <InArgument x:TypeArguments="njl:JToken">[LEFT(SystemException.Source+" - "+SystemException.Message,3999)]</InArgument>
                                                                     </Assign.Value>
                                                                   </Assign>
-                                                                  <ui:RetryScope DisplayName="Retry Scope - Update Dataverse Record" sap:VirtualizedContainerService.HintSize="484,248" sap2010:WorkflowViewState.IdRef="RetryScope_3">
+                                                                  <ui:RetryScope DisplayName="Retry Scope - Update Dataverse Record" sap:VirtualizedContainerService.HintSize="484,248.8" sap2010:WorkflowViewState.IdRef="RetryScope_3">
                                                                     <ui:RetryScope.ActivityBody>
                                                                       <ActivityAction>
-                                                                        <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" Body="[jBody.ToString]" BodyFormat="application/json" DisplayName="Private: Update Dataverse Record" EnableSSLVerification="True" EndPoint="[Config(&quot;Dataverse API URL&quot;).ToString+&quot;api/data/v9.2/&quot;+Config(&quot;Dataverse Robotics Status Table&quot;).ToString+&quot;(&quot;+strRobotStatusId+&quot;)&quot;]" sap:VirtualizedContainerService.HintSize="204,71" sap2010:WorkflowViewState.IdRef="HttpClient_4" Method="PATCH" Result="[strRecordResponse]" StatusCode="[intRecordResponseStatus]" TimeoutMS="30000">
+                                                                        <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" Body="[jBody.ToString]" BodyFormat="application/json" DisplayName="Private: Update Dataverse Record" EnableSSLVerification="True" EndPoint="[Config(&quot;Dataverse API URL&quot;).ToString+&quot;api/data/v9.2/&quot;+Config(&quot;Dataverse Robotics Status Table&quot;).ToString+&quot;(&quot;+strRobotStatusId+&quot;)&quot;]" sap:VirtualizedContainerService.HintSize="204,71.2" sap2010:WorkflowViewState.IdRef="HttpClient_4" Method="PATCH" Result="[strRecordResponse]" StatusCode="[intRecordResponseStatus]" TimeoutMS="30000">
                                                                           <ui:HttpClient.Attachments>
                                                                             <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                                                                           </ui:HttpClient.Attachments>
@@ -1648,7 +1651,7 @@
                                                                   </ui:RetryScope>
                                                                   <If Condition="[intRecordResponseStatus &lt;&gt; 204]" DisplayName="Unsuccessful Record Response? " sap:VirtualizedContainerService.HintSize="484,252" sap2010:WorkflowViewState.IdRef="If_50">
                                                                     <If.Then>
-                                                                      <Throw DisplayName="Throw Sys Ex" Exception="[New Exception(&quot;Update Dataverse Robot Status API call has been unsuccesful - Status Code: &quot;+intRecordResponseStatus.ToString)]" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Throw_6" />
+                                                                      <Throw DisplayName="Throw Sys Ex" Exception="[New Exception(&quot;Update Dataverse Robot Status API call has been unsuccesful - Status Code: &quot;+intRecordResponseStatus.ToString)]" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="Throw_6" />
                                                                     </If.Then>
                                                                     <If.Else>
                                                                       <Sequence sap2010:WorkflowViewState.IdRef="Sequence_118">
@@ -1673,7 +1676,7 @@
                                                               </Sequence>
                                                             </If.Else>
                                                           </If>
-                                                          <Throw DisplayName="Throw Sys Ex" Exception="[SystemException]" sap:VirtualizedContainerService.HintSize="861,25" sap2010:WorkflowViewState.IdRef="Throw_7" />
+                                                          <Throw DisplayName="Throw Sys Ex" Exception="[SystemException]" sap:VirtualizedContainerService.HintSize="860,24.8" sap2010:WorkflowViewState.IdRef="Throw_7" />
                                                         </Sequence>
                                                       </If.Then>
                                                       <If.Else>
@@ -1688,13 +1691,13 @@
                                                     </If>
                                                   </If.Then>
                                                   <If.Else>
-                                                    <p:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="End Process Form" sap:VirtualizedContainerService.HintSize="200,25" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\EndForm.css&quot;]" IN_ErrorMessage="The stop button was pressed" IN_PopupMessage="&lt;h1&gt;Robot Complete&lt;/h1&gt;&lt;P&gt;The Robot has completed processing, click OK to close.&lt;/P&gt;&lt;BR&gt;" IN_PopupTitle="Department for Environment, Food and Rural Affairs" IN_WidthHeight="[{550,250}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_7" />
+                                                    <p:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="End Process Form" sap:VirtualizedContainerService.HintSize="200,24.8" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\EndForm.css&quot;]" IN_ErrorMessage="The stop button was pressed" IN_PopupMessage="&lt;h1&gt;Robot Complete&lt;/h1&gt;&lt;P&gt;The Robot has completed processing, click OK to close.&lt;/P&gt;&lt;BR&gt;" IN_PopupTitle="Department for Environment, Food and Rural Affairs" IN_WidthHeight="[{550,250}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_7" />
                                                   </If.Else>
                                                 </If>
                                               </Sequence>
                                             </If.Then>
                                             <If.Else>
-                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_43" Level="Info" Message="[&quot;User requested process stop&quot;]" />
+                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.4" sap2010:WorkflowViewState.IdRef="LogMessage_43" Level="Info" Message="[&quot;User requested process stop&quot;]" />
                                             </If.Else>
                                           </If>
                                         </Sequence>
