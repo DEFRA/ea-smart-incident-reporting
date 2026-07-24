@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Reset_NIRS" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1408.8,4529.6" sap2010:WorkflowViewState.IdRef="Reset_NIRS_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Reset_NIRS" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1408.8,4178" sap2010:WorkflowViewState.IdRef="Reset_NIRS_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>Microsoft.VisualBasic</x:String>
@@ -30,6 +30,7 @@
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>UiPath.UIAutomationCore.Contracts</x:String>
       <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -68,9 +69,10 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Reset_NIRS" sap:VirtualizedContainerService.HintSize="782.8,4424.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Reset_NIRS" sap:VirtualizedContainerService.HintSize="782.8,4112.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="booHomePage" />
       <Variable x:TypeArguments="x:Int32" Default="0" Name="intLoopCounter" />
@@ -90,11 +92,11 @@
         </ui:Target>
       </ui:UiElementExists.Target>
     </ui:UiElementExists>
-    <If Condition="[booNIRSOpen]" DisplayName="NIRS Open?" sap:VirtualizedContainerService.HintSize="734.8,4188.4" sap2010:WorkflowViewState.IdRef="If_7">
+    <If Condition="[booNIRSOpen]" DisplayName="NIRS Open?" sap:VirtualizedContainerService.HintSize="734.8,3876.8" sap2010:WorkflowViewState.IdRef="If_7">
       <If.Then>
-        <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[NOT(booHomePage)]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="699.2,3996.4" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+        <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[NOT(booHomePage)]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="699.2,3684.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
           <ui:InterruptibleDoWhile.Body>
-            <Sequence DisplayName="Reset NIRS" sap:VirtualizedContainerService.HintSize="663.6,3828.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence DisplayName="Reset NIRS" sap:VirtualizedContainerService.HintSize="663.6,3516.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -122,27 +124,7 @@
                   </Sequence>
                 </If.Else>
               </If>
-              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="615.6,279.6" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                <ui:CommentOut.Body>
-                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,201.2" sap2010:WorkflowViewState.IdRef="Sequence_13">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:UiElementExists DisplayName="Check for Home Page" Exists="[booHomePage]" sap:VirtualizedContainerService.HintSize="368,106.8" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
-                      <ui:UiElementExists.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="571e05e9-e7cb-4d9a-a606-55f4a493addb" InformativeScreenshot="8e8d4c358caf381f040be33a699daf76" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='Incident Recording System*' /&gt;&lt;wnd aaname='Enter New Event' cls='ThunderRT6CommandButton' title='Enter &amp;amp;New Event' /&gt;" TimeoutMS="1000">
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:UiElementExists.Target>
-                    </ui:UiElementExists>
-                  </Sequence>
-                </ui:CommentOut.Body>
-              </ui:CommentOut>
-              <ui:TextExists FormattedText="{x:Null}" sap2010:Annotation.AnnotationText="Element Exists was returning true as long as WIMS was open, regardless of page.&#xD;&#xA;&#xD;&#xA;Note: also tried looking at attributes e.g. visibility, hasForeground. These are unchanged during navigation." DisplayName="Check for Home Page (text exists)" sap:VirtualizedContainerService.HintSize="615.6,246.4" sap2010:WorkflowViewState.IdRef="TextExists_1" Occurrence="1" Result="[booHomePage]" Text="Enter New Event">
+              <ui:TextExists FormattedText="{x:Null}" sap2010:Annotation.AnnotationText="Element Exists was returning true as long as WIMS was open, regardless of page.&#xA;&#xA;Note: also tried looking at attributes e.g. visibility, hasForeground. These are unchanged during navigation." DisplayName="Check for Home Page (text exists)" sap:VirtualizedContainerService.HintSize="615.6,246.4" sap2010:WorkflowViewState.IdRef="TextExists_1" Occurrence="1" Result="[booHomePage]" Text="Enter New Event">
                 <ui:TextExists.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d9d08362-0a40-4a02-b600-0308d874421c" Selector="&lt;wnd app='irs.exe' cls='ThunderRT6FormDC'  title='Incident Recording System*' /&gt;&lt;wnd aaname='Enter New Event' cls='ThunderRT6CommandButton' title='Enter &amp;amp;New Event' /&gt;" TimeoutMS="1000">
                     <ui:Target.WaitForReady>
