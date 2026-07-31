@@ -61,6 +61,76 @@
       ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Transaction.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "booLocationUnconfirmed&Sequence_7",
+        "jobRoboticsJSON&Flowchart_1",
+        "strNIRSID&Flowchart_1",
+        "strPassDetailsToRobotics&Sequence_1",
+        "jobPassDetailsToRoboticsJSON&Sequence_1",
+        "mySerializeSetting&Sequence_1",
+        "strPausePointText&Sequence_3",
+        "strNIRSIdMessage&Sequence_5",
+        "booMapWarning&Sequence_7",
+        "bool10kMapWarning&Sequence_7",
+        "boolNoCatchmentOrAuthority&Sequence_7",
+        "boolNoCatchment&Sequence_7",
+        "boolNoLA&Sequence_7",
+        "boolUnableToDisplay&Sequence_7",
+        "boolSubmitMapTabLoaded&Sequence_90",
+        "intMapLoadAttempt&Sequence_90",
+        "timeMapLoadTimer&Sequence_90",
+        "boolNIRSOpen&Sequence_91",
+        "booDuplicatesLoaded&Sequence_41",
+        "strPausePointText&Sequence_11",
+        "booValidationError&Sequence_10",
+        "strValidationError&Sequence_13",
+        "boolChecked&Sequence_57",
+        "strPausePointText&Sequence_15",
+        "booValidationError&Sequence_16",
+        "strValidationError&Sequence_17",
+        "boolTabLoaded&Sequence_19",
+        "boolRuntimeError&Sequence_19",
+        "boolUnableToDisplay&Sequence_19",
+        "strPausePointText&Sequence_20",
+        "boolAttendanceTab&Sequence_63",
+        "strPausePointText&Sequence_26",
+        "booSpellCheck&Sequence_27",
+        "strPausePointText&Sequence_22"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionItem",
+        "io_arrExitPoint",
+        "io_swProcessingTimer",
+        "io_Config",
+        "io_arrCaseID",
+        "in_jtokDataObject"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Subflows/Validate JSON Schema.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "listDataErrors&Flowchart_1",
+        "dtFieldGroupings&Flowchart_1",
+        "dtNotificationFields&Sequence_3",
+        "dtMoPFields&Sequence_7",
+        "dtExtOrgFields&Sequence_9",
+        "dtOpRepFields&Sequence_17",
+        "dtAssessmentFields&Sequence_11",
+        "dtPassFields&Sequence_13"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_jtokDataObject",
+        "in_jobRoboticsJSON"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
     }
   ]
 }
