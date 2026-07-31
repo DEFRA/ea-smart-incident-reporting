@@ -6697,6 +6697,7 @@
       "path": "documentformat.openxml/2.7.2",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "documentformat.openxml.2.7.2.nupkg.sha512",
         "documentformat.openxml.nuspec",
         "lib/net35/DocumentFormat.OpenXml.dll",
@@ -6732,6 +6733,7 @@
       "path": "interop.domino.dll/1.0.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "interop.domino.dll.1.0.0.nupkg.sha512",
         "interop.domino.dll.nuspec",
         "lib/Interop.Domino.dll"
@@ -7795,6 +7797,7 @@
       "path": "polly/7.1.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "lib/netstandard1.1/Polly.dll",
         "lib/netstandard1.1/Polly.xml",
         "lib/netstandard2.0/Polly.dll",
@@ -8204,6 +8207,7 @@
       "path": "system.io.filesystem.primitives/4.0.1",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -8242,6 +8246,7 @@
       "path": "system.io.packaging/4.0.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/net46/System.IO.Packaging.dll",
@@ -9610,6 +9615,7 @@
       "path": "uipath.form.activities/1.8.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "content/web/css/bootstrap-material.css",
         "content/web/css/bootstrap.min.css",
         "content/web/css/bootstrap_materia.css",
@@ -9711,6 +9717,7 @@
       "path": "uipath.formactivitylibrary/1.8.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "content/Resources/UIPATH_Logo.png",
         "content/UI/Designer/assets/fonts/fontawesome-webfont.svg",
         "content/UI/Designer/assets/fonts/glyphicons-halflings-regular.svg",
@@ -11364,15 +11371,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rm000121\\.nuget\\packages\\": {}
+    "C:\\Users\\sn000060\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "SIRP",
       "projectName": "SIRP",
-      "projectPath": "C:\\Users\\rm000121\\OneDrive - Defra\\UiPath\\ea-smart-incident-reporting\\SIRP\\.local",
-      "packagesPath": "C:\\Users\\rm000121\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rm000121\\OneDrive - Defra\\UiPath\\ea-smart-incident-reporting\\SIRP\\.local"
+      "projectPath": "C:\\Users\\sn000060\\Documents\\GitHub\\ea-smart-incident-reporting\\SIRP\\.local",
+      "packagesPath": "C:\\Users\\sn000060\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sn000060\\Documents\\GitHub\\ea-smart-incident-reporting\\SIRP\\.local"
     },
     "frameworks": {
       "net461": {

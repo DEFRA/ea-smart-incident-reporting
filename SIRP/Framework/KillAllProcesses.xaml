@@ -80,7 +80,7 @@
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
-    <ui:InvokeCode Code="For Each proc In System.Diagnostics.Process.GetProcessesByName(&quot;IRS&quot;)     &#xD;&#xA;&#x9;proc.Kill() &#xD;&#xA;Next" ContinueOnError="True" DisplayName="Kill NIRS" sap:VirtualizedContainerService.HintSize="368,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_4">
+    <ui:InvokeCode Code="For Each proc In System.Diagnostics.Process.GetProcessesByName(&quot;IRS&quot;)     &#xA;&#x9;proc.Kill() &#xA;Next" ContinueOnError="True" DisplayName="Kill NIRS" sap:VirtualizedContainerService.HintSize="368,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_4">
       <ui:InvokeCode.Arguments>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeCode.Arguments>
